@@ -2,7 +2,7 @@
 
 import sys
 import numpy as np
-import cPickle as pickle
+import pickle as pickle
 import qe_manipulate 
 from spring_cluster import spring_cluster
 
@@ -84,9 +84,9 @@ mysc.do_all_fitting()
 #f = forces reference
 #s = stresses reference
 
-print
-print 'IN SAMPLE TESTING'
-print
+print()
+print('IN SAMPLE TESTING')
+print()
 
 e,f,s,er,fr,sr = mysc.calc_energy_qe_output_list(file_list_train)
 
@@ -98,13 +98,13 @@ fil=open('data/Si_diamond.scf.in','r')
 pos, A, types = qe_manipulate.generate_supercell(fil, [4,4,4], [])
 fil.close()
 
-print 'A'
-print A
-print 'pos'
-print pos
-print 'types'
-print types
-print
+print('A')
+print(A)
+print('pos')
+print(pos)
+print('types')
+print(types)
+print()
 
 
 temp = 400 #Kelvin

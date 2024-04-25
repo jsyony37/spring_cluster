@@ -20,16 +20,18 @@ from cpython cimport bool
 #####from phi_prim_usec import phi
 
 DTYPE=np.float64
-DTYPE_complex=np.complex
-DTYPE_int=np.int
+DTYPE_complex=complex #np.complex
+DTYPE_int=int #np.int
 DTYPE_single=np.float32
 
 #DTYPE_int_small=np.int8
 
 ctypedef np.float32_t DTYPE_single_t
 ctypedef np.float64_t DTYPE_t
-ctypedef np.complex_t DTYPE_complex_t
-ctypedef np.int_t DTYPE_int_t
+#ctypedef np.complex_t DTYPE_complex_t
+#ctypedef np.int_t DTYPE_int_t
+ctypedef complex DTYPE_complex_t
+ctypedef np.int64_t DTYPE_int_t
 
 cdef int atom_index_inv(np.ndarray[DTYPE_int_t, ndim=1] a, int nat):
 #returns the atom index from a set of atom numbers
@@ -52,7 +54,7 @@ cdef int atom_index_inv(np.ndarray[DTYPE_int_t, ndim=1] a, int nat):
     elif dim == 8:
         ret = a[0]*nat*nat*nat*nat*nat*nat*nat+a[1]*nat*nat*nat*nat*nat*nat+a[2]*nat*nat*nat*nat*nat+a[3]*nat*nat*nat*nat+a[4]*nat*nat*nat+a[5]*nat*nat+a[6]*nat+a[7]
     else:
-        print 'index not currently implmented atom_index_inv find_nonzero_highdim.pyx'
+        print('index not currently implmented atom_index_inv find_nonzero_highdim.pyx')
     return ret
 
 
@@ -98,8 +100,8 @@ def find_nonzero_highdim( phiobj, int dim, float dist_cutoff, int bodycount, flo
 
 
     if phiobj.verbosity == 'High':
-        print 'dim_allowed'
-        print dim_allowed
+        print('dim_allowed')
+        print(dim_allowed)
 #    print 'at_list'
 #    print atlist
 

@@ -18,16 +18,18 @@ from make_dist_array_fortran_parallel import make_dist_array_fortran
 #####from phi_prim_usec import phi
 
 DTYPE=np.float64
-DTYPE_complex=np.complex
-DTYPE_int=np.int
+DTYPE_complex=complex #np.complex
+DTYPE_int=int #np.int
 DTYPE_single=np.float32
 
 #DTYPE_int_small=np.int8
 
 ctypedef np.float32_t DTYPE_single_t
 ctypedef np.float64_t DTYPE_t
-ctypedef np.complex_t DTYPE_complex_t
-ctypedef np.int_t DTYPE_int_t
+#ctypedef np.complex_t DTYPE_complex_t
+#ctypedef np.int_t DTYPE_int_t
+ctypedef complex DTYPE_complex_t
+ctypedef np.int64_t DTYPE_int_t
 
 ##@cython.boundscheck(False)
 
@@ -60,7 +62,7 @@ def make_dist_array(np.ndarray[DTYPE_t, ndim=2] coords_super, np.ndarray[DTYPE_t
   cdef np.ndarray[DTYPE_t, ndim=2] XYZ = np.zeros((27,3),dtype=DTYPE)
   cdef int c = 0
   
-  if coords_super2==[]:
+  if len(coords_super2)==0: #==[]:
     other_coords = coords_super
     dosym=True
   else:

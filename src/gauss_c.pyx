@@ -4,8 +4,8 @@ import sys
 import numpy as np
 cimport numpy as np
 
-DTYPE=np.float
-DTYPE_int=np.int
+DTYPE=float #np.float
+DTYPE_int=int #np.int
 ctypedef np.float_t DTYPE_t
 ctypedef np.int_t DTYPE_int_t
 
@@ -43,7 +43,7 @@ def theirgauss(np.ndarray [DTYPE_t, ndim=2] A):
     ta = 0.0
     tb = 0.0
     
-    print 'gauss'
+    print('gauss')
     for k in range(min(m,n)):
         t0 = time.time()
         for i in range(m):
@@ -89,7 +89,7 @@ def theirgauss(np.ndarray [DTYPE_t, ndim=2] A):
         ta += t1 - t0
         tb += t2 - t1
 #    B = np.zeros((n,n), dtype=float)
-    print 'ta ' + str(ta) + ' tb ' + str(tb)
+    print('ta ' + str(ta) + ' tb ' + str(tb))
     tx = time.time()
     if Nind > 0:
         for i in range(Ndep):
@@ -97,7 +97,7 @@ def theirgauss(np.ndarray [DTYPE_t, ndim=2] A):
                 B[Inddep[i],j] = -A[i,Indind[j]]
         for j in range(Nind):
             B[Indind[j],j] = 1.0
-    print 'tx ' + str(time.time() - tx)
+    print('tx ' + str(time.time() - tx))
 #    print 'NDep ' + str(Ndep)
 #    print Inddep
 #    print 'NInd ' + str(Nind)

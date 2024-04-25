@@ -2,7 +2,7 @@
 
 import sys
 import numpy as np
-import cPickle as pickle
+import pickle as pickle
 import qe_manipulate
 from spring_cluster import spring_cluster
 from subprocess import call
@@ -24,22 +24,22 @@ def DFT(infile, number=0):
     try:
         outfile = infile+'.'+str(number)+'.out'
         runstr = '/usr/bin/mpirun -np 16 /users/kfg/codes/espresso-5.1/bin/pw.x < ' + infile+'.'+str(number) +' > ' + outfile   #EDIT ME!!!!!!!!!!!!!!!!!
-        print 'Trying to run following command:'
-        print runstr
-        print
+        print('Trying to run following command:')
+        print(runstr)
+        print()
 
         retcode = call([runstr], shell=True)
 
-        print
-        print 'ret code ' + str(retcode)
+        print()
+        print('ret code ' + str(retcode))
         if retcode != 0:
-            print 'warning!!!!!!!!!!!!'
-        print
+            print('warning!!!!!!!!!!!!')
+        print()
         return retcode, outfile
 
     except OSError as e:
-        print 'ERROR running DFT code!!!!!!!!!!!!!!!!'
-        print e
+        print('ERROR running DFT code!!!!!!!!!!!!!!!!')
+        print(e)
         exit()
 
 
@@ -83,9 +83,9 @@ mysc.load_filelist(file_list_train)
 mysc.do_all_fitting()
 
 
-print
-print 'IN SAMPLE TESTING'
-print
+print()
+print('IN SAMPLE TESTING')
+print()
 
 e,f,s,er,fr,sr = mysc.calc_energy_qe_output_list(file_list_train)
 mysc.plot_comparison(f,fr,filename='forces_in_samp.pdf', show=False)
@@ -108,9 +108,9 @@ fil.close()
 final_file_list = mysc.recursive_update(DFT, file_list_train, 10, A1, C1, T1, 500,  'Si_diamond.scf.in.super.222.replace',directory='data/')
 
 
-print
-print 'FINAL TESTING'
-print
+print()
+print('FINAL TESTING')
+print()
 
 e,f,s,er,fr,sr = mysc.calc_energy_qe_output_list(final_file_list)
 mysc.plot_comparison(f,fr,filename='forces_final.pdf', show=False)

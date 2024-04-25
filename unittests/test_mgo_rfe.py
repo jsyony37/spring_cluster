@@ -42,10 +42,10 @@ class CLUSTERSPRINGtests(myunittest):
 
         e,f,s,er,fr,sr = self.mysc.calc_energy_qe_file('testing_files/MgO_rocksalt.relax.in.up_1.00.super.444.01.out')
 
-        print 'Forces'
-        print f
-        print 'Forces ref'
-        print fr
+        print('Forces')
+        print(f)
+        print('Forces ref')
+        print(fr)
 
 
         self.assertAlmostEqual(e, 0.038275330000033,places=3)

@@ -130,7 +130,7 @@ class CLUSTERSPRINGtests(myunittest):
             lines = filopen.readlines()
             filopen.close()
         except:
-            print 'failed to open ' + file
+            print('failed to open ' + file)
             exit()
 
         C1, A1, T1 = qe_manipulate.generate_supercell(lines, [2,2,2],[])

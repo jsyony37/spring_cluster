@@ -40,12 +40,12 @@ class CLUSTERSPRINGtests(myunittest):
 
         e,f,s,er,fr,sr = self.mysc.calc_energy_qe_file('testing_files/MgO_rocksalt.relax.in.up_1.00.super.444.01.out')
 
-        print 'Forces'
-        print f
-        print
-        print 'Forces ref'
-        print fr
-        print
+        print('Forces')
+        print(f)
+        print()
+        print('Forces ref')
+        print(fr)
+        print()
 
         self.assertAlmostEqual(e, 0.038275330000033,places=3)
         force_target = 0.12574058E-01
@@ -112,7 +112,7 @@ class CLUSTERSPRINGtests(myunittest):
             lines = filopen.readlines()
             filopen.close()
         except:
-            print 'failed to open ' + file
+            print('failed to open ' + file)
             exit()
 
         self.mysc.myphi.set_supercell([4,4,4])

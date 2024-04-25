@@ -2,7 +2,7 @@
 
 import sys
 import numpy as np
-import cPickle as pickle
+import pickle as pickle
 
 from spring_cluster import spring_cluster
 from qe_manipulate import generate_supercell
@@ -55,14 +55,14 @@ mysc.load_filelist(file_list_train)
 #run the entire fitting procedure
 mysc.do_all_fitting()
 
-print
-print 'IN SAMPLE TESTING'
-print
+print()
+print('IN SAMPLE TESTING')
+print()
 
 e,f,s,er,fr,sr = mysc.calc_energy_qe_output_list(file_list_train)
 
 
-print
+print()
 
 
 #create a 6x6x1 supercell to run Monte Carlo on. Obviously not enough to converge the Monte Carlo near the magnetic phase transition.

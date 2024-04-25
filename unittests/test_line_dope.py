@@ -124,11 +124,11 @@ class CLUSTERSPRINGtests(myunittest):
             lines = filopen.readlines()
             filopen.close()
         except:
-            print 'failed to open ' + file
+            print('failed to open ' + file)
             exit()
 
         C1, A1, T1 = qe_manipulate.generate_supercell(lines, [2,2,2],[])
-        print 'T1', T1
+        print('T1', T1)
         starting_energy = self.mysc.run_mc_test(A1,C1,T1)
 
         self.assertAlmostEqual(starting_energy, 0.00800)

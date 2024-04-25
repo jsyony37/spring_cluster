@@ -66,26 +66,26 @@ mysc.do_all_fitting()
 
 e,f,s,er,fr,sr = mysc.calc_energy_qe_file(distorted)
 
-print 'testing'
-print
-print 'Energy', e, er, e-er
-print
-print 'Forces'
-print f
-print
-print 'reference force'
-print fr
-print
-print 'Stress'
-print
-print s
-print
-print'reference stress'
-print
-print sr
-print
+print('testing')
+print()
+print('Energy', e, er, e-er)
+print()
+print('Forces')
+print(f)
+print()
+print('reference force')
+print(fr)
+print()
+print('Stress')
+print()
+print(s)
+print()
+print('reference stress')
+print()
+print(sr)
+print()
 
-print 'all done'
-print
+print('all done')
+print()
 
 ###e,f,s,er,fr,sr = mysc.calc_energy_qe_output_list([distorted])

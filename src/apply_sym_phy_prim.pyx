@@ -15,17 +15,19 @@ from cpython cimport bool
 ########cimport cython
 #####from phi_prim_usec import phi
 
-DTYPE=np.float
-DTYPE_complex=np.complex
-DTYPE_int=np.int
+DTYPE=float #np.float
+DTYPE_complex=complex #np.complex
+DTYPE_int=int #np.int
 DTYPE_single=np.float32
 
 #DTYPE_int_small=np.int8
 
 ctypedef np.float32_t DTYPE_single_t
 ctypedef np.float_t DTYPE_t
-ctypedef np.complex_t DTYPE_complex_t
-ctypedef np.int_t DTYPE_int_t
+#ctypedef np.complex_t DTYPE_complex_t
+#ctypedef np.int_t DTYPE_int_t
+ctypedef complex DTYPE_complex_t
+ctypedef np.int64_t DTYPE_int_t
 
 ##@cython.boundscheck(False)
 

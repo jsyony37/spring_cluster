@@ -205,7 +205,7 @@
 
 
 !!!!!!!!!xF2PY INTENT(IN) :: dim,phi(nnonero),nonzero(nnonzero,dim*2+(dim-1)*3),nnonzero,ncells,nat,us(ncells*nat,3),mod(ncells*ncells*nat*nat,3)
-
+    print *, 'ATOMCODE DIM:', shape(atomcode)
     allocate(Umat_local(unitsize,ntotal_ind))
 
     call cpu_time(time_start)
@@ -238,8 +238,6 @@
 
 !       write(*,*) 'binomial_stress', d,d+1, binomial_stress(d+1), binomial_force(d+1)
     enddo
-
-
 
 !    energy_factor = energy_weight * dimfloatinv / dimfloatinv_force
 !    stress_factor = energy_weight * dimfloatinv_stress / dimfloatinv_force

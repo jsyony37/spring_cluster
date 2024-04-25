@@ -45,7 +45,7 @@ class CLUSTERSPRINGtests(myunittest):
         self.assertAlmostEqual(e, 0.00049056567906*2*2)
         self.assertAlmostEqual(er, 0.00049056567906*2*2)
 
-        print 'energy ', e, er
+        print('energy ', e, er)
 
         force_target = np.array([
             [  0.00138742037818, -0.00201023163237, -0.000296816719525      ],

@@ -15,15 +15,16 @@ from energy_dope4_parallel import energy_fortran_dope
 
 
 DTYPE=np.float64
-DTYPE_complex=np.complex
-DTYPE_int=np.int
+DTYPE_complex=complex #np.complex
+DTYPE_int=int #np.int
 DTYPE_single=np.float32
-
 
 ctypedef np.float32_t DTYPE_single_t
 ctypedef np.float64_t DTYPE_t
-ctypedef np.complex_t DTYPE_complex_t
-ctypedef np.int_t DTYPE_int_t
+#ctypedef np.complex_t DTYPE_complex_t
+#ctypedef np.int_t DTYPE_int_t
+ctypedef complex DTYPE_complex_t
+ctypedef np.int64_t DTYPE_int_t
 
 ##@cython.boundscheck(False)
 
@@ -110,24 +111,24 @@ def prepare_for_energy(phiobj, supercell, np.ndarray[DTYPE_t, ndim=2] coords, np
 
   TIME.append(time.time())
   if phiobj.verbosity == 'High':
-    print 'A'
-    print A
-    print 'Supercell detected: ' + str(supercell)
+    print('A')
+    print(A)
+    print('Supercell detected: ' + str(supercell))
 
-    print 'my new correspond'
+    print('my new correspond')
     for c in correspond:
-      print c
-    print '--'
-    print 'coords'
-    print coords
+      print(c)
+    print('--')
+    print('coords')
+    print(coords)
     sys.stdout.flush()
-    print 'coords_super'
-    print phiobj.coords_super
-    print 'vacancies'
-    print vacancies
-    print 'types'
-    print types
-    print '??????????????????'
+    print('coords_super')
+    print(phiobj.coords_super)
+    print('vacancies')
+    print(vacancies)
+    print('types')
+    print(types)
+    print('??????????????????')
 
 
   us = np.zeros((phiobj.nat,np.prod(supercell),3),dtype=DTYPE)
@@ -181,7 +182,7 @@ def prepare_for_energy(phiobj, supercell, np.ndarray[DTYPE_t, ndim=2] coords, np
 #  if True:
     umean = np.mean(np.mean(us[:,:,:],1),0)
     urms = np.sum((us[:,:,:]-np.tile(umean,(phiobj.nat,ncells,1)))**2,2)**0.5
-    print 'u max rms (bohr): ' + str(np.max(np.max(urms)))
+    print('u max rms (bohr): ' + str(np.max(np.max(urms))))
 #  if phiobj.verbosity == 'High':
 #    print 'us'
 #    for na in range(nat):
@@ -250,10 +251,10 @@ def prepare_for_energy(phiobj, supercell, np.ndarray[DTYPE_t, ndim=2] coords, np
   if phiobj.verbosity == 'High':
 
     TIME.append(time.time())
-    print 'TIME_energy calculate_energy_fortran.pyx prepare'
-    print TIME
+    print('TIME_energy calculate_energy_fortran.pyx prepare')
+    print(TIME)
     for T2, T1 in zip(TIME[1:],TIME[0:-1]):
-      print T2 - T1
+      print(T2 - T1)
 
   return supercell_add, strain, UTT, UTT0, UTT0_strain, UTT_ss, UTYPES, nsym, correspond, us, mod_matrix, types_reorder
 
@@ -309,7 +310,7 @@ def calculate_energy_fortran(phiobj, np.ndarray[DTYPE_t, ndim=2] A, np.ndarray[D
   #get matricies ready
   supercell_add, strain, UTT, UTT0, UTT0_strain, UTT_ss, UTYPES, nsym, correspond, us, mod_matrix, types_reorder =   prepare_for_energy(phiobj, supercell, coords, A, types)
 
-  print 'done prepare'
+  print('done prepare')
   sys.stdout.flush()
 
 
@@ -330,10 +331,10 @@ def calculate_energy_fortran(phiobj, np.ndarray[DTYPE_t, ndim=2] A, np.ndarray[D
     energy_t = 0.0
     t1=time.time()
 
-    print 'dim phi n', dim, phi.shape, nonzero.shape
+    print('dim phi n', dim, phi.shape, nonzero.shape)
     sys.stdout.flush()
     if phi.shape[0] == 0:
-      print 'WARNING: dim '+str(dim)+' has no nonzero phi components, skipping energy contribution'
+      print('WARNING: dim '+str(dim)+' has no nonzero phi components, skipping energy contribution')
     else:
       #this does the actual calculation
       forces_super_t, energy_t, stress_t = energy_fortran_dope(supercell_add, nonzero, phi, strain, UTT, UTT0, UTT0_strain, UTT_ss, UTYPES, phiobj.magnetic, phiobj.vacancy, nsym, supercell, dim[0], dim[1], ncells, nat, nonzero.shape[0], nonzero.shape[1], supercell_add.shape[0],supercell_add.shape[1])
@@ -344,9 +345,9 @@ def calculate_energy_fortran(phiobj, np.ndarray[DTYPE_t, ndim=2] A, np.ndarray[D
     stress += stress_t
     t2=time.time()
     if phiobj.verbosity == 'High': #perform some checks
-      print 'FORCES SUM ' + str(dim) + ' ' + str(np.sum(np.sum(forces_super_t,0),0))
-      print 'etimedim ' + str(dim) + ' ' + str(t2-t1) + ' ' + str(energy_t)
-    print 'done dim', dim
+      print('FORCES SUM ' + str(dim) + ' ' + str(np.sum(np.sum(forces_super_t,0),0)))
+      print('etimedim ' + str(dim) + ' ' + str(t2-t1) + ' ' + str(energy_t))
+    print('done dim', dim)
     sys.stdout.flush()
 
   TIME.append(time.time())
@@ -361,17 +362,17 @@ def calculate_energy_fortran(phiobj, np.ndarray[DTYPE_t, ndim=2] A, np.ndarray[D
   TIME.append(time.time())
 
   if phiobj.verbosity == 'High':
-    print 'energy ' + str(energy)
-    print 'forces'
-    print forces
-    print 'stress'
-    print stress
+    print('energy ' + str(energy))
+    print('forces')
+    print(forces)
+    print('stress')
+    print(stress)
 
     TIME.append(time.time())
-    print 'TIME_energy working_duo3.pyx'
-    print TIME
+    print('TIME_energy working_duo3.pyx')
+    print(TIME)
     for T2, T1 in zip(TIME[1:],TIME[0:-1]):
-      print T2 - T1
+      print(T2 - T1)
 
 
   return energy, forces, stress

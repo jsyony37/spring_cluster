@@ -26,16 +26,18 @@ cimport cython
 #####from phi_prim_usec import phi
 
 DTYPE=np.float64
-DTYPE_complex=np.complex
-DTYPE_int=np.int
+DTYPE_complex=complex #np.complex
+DTYPE_int=np.int64
 DTYPE_single=np.float32
 
 #DTYPE_int_small=np.int8
 
 ctypedef np.float32_t DTYPE_single_t
 ctypedef np.float64_t DTYPE_t
-ctypedef np.complex_t DTYPE_complex_t
-ctypedef np.int_t DTYPE_int_t
+#ctypedef np.complex_t DTYPE_complex_t
+#ctypedef np.int_t DTYPE_int_t
+ctypedef complex DTYPE_complex_t
+ctypedef np.int64_t DTYPE_int_t
 
 @cython.boundscheck(False) # turn off bounds-checking for entire function
 @cython.wraparound(False)  # turn off negative index wrapping for entire function
@@ -59,8 +61,8 @@ cdef int supercell_index_f(np.ndarray[DTYPE_int_t, ndim=1] supercell, np.ndarray
     return dat[0]*supercell[1]*supercell[2] + dat[1]*supercell[2] + dat[2]
 
 
-cdef np.ndarray[DTYPE_int_t, ndim=1] index_supercell_f(int ssind,np.ndarray[DTYPE_int_t, ndim=1] supercell, np.ndarray[DTYPE_int_t, ndim=1] dat):
-
+#cdef np.ndarray[DTYPE_int_t, ndim=1] index_supercell_f(int ssind,np.ndarray[DTYPE_int_t, ndim=1] supercell, np.ndarray[DTYPE_int_t, ndim=1] dat):
+cdef np.ndarray[DTYPE_int_t, ndim=1] index_supercell_f(int ssind,np.ndarray[DTYPE_int_t, ndim=1] supercell, np.ndarray[DTYPE_t, ndim=1] dat):
     dat[0] = ssind/(supercell[1]*supercell[2])
     dat[1] = (ssind/supercell[2])%supercell[1]
     dat[2] = ssind%(supercell[2])
@@ -86,52 +88,73 @@ cdef int index_ijk(np.ndarray[DTYPE_int_t, ndim=1] ijk, int dim):
     elif dim == 6:
       return   ijk[0]*n*n*n*n*n + ijk[1]*n*n*n*n + ijk[2]*n*n*n + ijk[3]*n*n + ijk[4]*n + ijk[5]
     else:
-      print 'index not currently implmented index_ijk ' + str(dim)
+      print('index not currently implmented index_ijk ' + str(dim))
 
     
       
 #np.ndarray[DTYPE_int_t, ndim=1]
 cdef    ijk_index(int a,int dim, np.ndarray[DTYPE_int_t, ndim=1]  ret):
-
+#cdef    ijk_index(int a,int dim, np.ndarray[DTYPE_t, ndim=1]  ret):
 #    cdef np.ndarray[DTYPE_int_t, ndim=1] ret = np.zeros((dim),dtype=DTYPE_int)
 #    cdef int n=3
+    cdef float tmp
     if dim == 1:
         ret[0] =  a
     elif dim == 2:
 #        ret[0:2] = [a/n,a%n]
-        ret[1] = a%3
-        ret[0] = a/3
+        tmp = a%3
+        ret[1] = int(tmp) #a%3
+        tmp = a/3
+        ret[0] = int(tmp) #a/3
     elif dim == 3:
 #        ret[0:3] =  [a/n/n,(a/n)%n, a%n]
-        ret[2] =   a%3
-        ret[1] =  (a/3)%3
-        ret[0] =  a/3/3
+        tmp = a%3
+        ret[2] =  int(tmp) #  a%3
+        tmp = (a/3)%3
+        ret[1] =  int(tmp) #(a/3)%3
+        tmp = a/3/3
+        ret[0] =  int(tmp) #a/3/3
     elif dim == 4:
 #        ret[0:4] = [a/n/n/n,(a/n/n)%n,(a/n)%n, a%n]
-        ret[3] =  a%3
-        ret[2] = (a/3)%3
-        ret[1] = (a/3/3)%3
-        ret[0] = a/3/3/3
+        tmp = a%3
+        ret[3] = int(tmp) # a%3
+        tmp = (a/3)%3
+        ret[2] = int(tmp) # (a/3)%3
+        tmp = (a/3/3)%3
+        ret[1] = int(tmp) # (a/3/3)%3
+        tmp = a/3/3/3
+        ret[0] = int(tmp) # a/3/3/3
     elif dim == 5:
 #        ret[0:5] = [a/n/n/n/n,(a/n/n/n)%n,(a/n/n)%n,(a/n)%n, a%n]
-        ret[4] =  a%3
-        ret[3] = (a/3)%3
-        ret[2] = (a/3/3)%3
-        ret[1] = (a/3/3/3)%3
-        ret[0] = a/3/3/3/3
+        tmp = a%3
+        ret[4] = int(tmp) # a%3
+        tmp = (a/3)%3
+        ret[3] = int(tmp) #(a/3)%3
+        tmp = (a/3/3)%3
+        ret[2] = int(tmp) #(a/3/3)%3
+        tmp = (a/3/3/3)%3
+        ret[1] = int(tmp) # (a/3/3/3)%3
+        tmp = a/3/3/3/3
+        ret[0] = int(tmp) # a/3/3/3/3
     elif dim == 6:
 #        ret[0:6] = [a/n/n/n/n/n,(a/n/n/n/n)%n,(a/n/n/n)%n,(a/n/n)%n,(a/n)%n, a%n]
-        ret[5] =  a%3
-        ret[4] = (a/3)%3
-        ret[3] = (a/3/3)%3
-        ret[2] = (a/3/3/3)%3
-        ret[1] = (a/3/3/3/3)%3
-        ret[0] = a/3/3/3/3/3
+        tmp = a%3
+        ret[5] = int(tmp) # a%3
+        tmp = (a/3)%3
+        ret[4] = int(tmp) # (a/3)%3
+        tmp = (a/3/3)%3
+        ret[3] = int(tmp) # (a/3/3)%3
+        tmp = (a/3/3/3)%3
+        ret[2] = int(tmp) # (a/3/3/3)%3
+        tmp = (a/3/3/3/3)%3
+        ret[1] = int(tmp) # (a/3/3/3/3)%3
+        tmp = a/3/3/3/3/3
+        ret[0] = int(tmp) # a/3/3/3/3/3
     elif dim == 0:
 #        return ret
         pass
     else:
-        print 'index not currently implmented ijk_index ' + str(dim)
+        print('index not currently implmented ijk_index ' + str(dim))
 
 #    print 'a ' + str(a) + ' ' + str(dim) + ' ' + str(ret)
 #    return ret
@@ -285,7 +308,7 @@ def analyze_syms(np.ndarray[DTYPE_int_t, ndim=3] dataset, list groups, np.ndarra
 #    else:
 #      eye[c_ijk,c_ijk] = 0
 
-    print 'limit to xy modes ' , len(keep), ' out of ', tensordim
+    print('limit to xy modes ' , len(keep), ' out of ', tensordim)
   else:
     keep = range(tensordim)
 
@@ -486,7 +509,7 @@ def analyze_syms(np.ndarray[DTYPE_int_t, ndim=3] dataset, list groups, np.ndarra
 
   if phiobj.verbosity == 'High':
 
-    print 'TIME first loop = ', time.time()-timefirstloop
+    print('TIME first loop = ', time.time()-timefirstloop)
 
   timefirstloop=time.time()
 #  for symm_count in range(nsymm):  # enumerate(zip(CORR,RR)):
@@ -516,7 +539,7 @@ def analyze_syms(np.ndarray[DTYPE_int_t, ndim=3] dataset, list groups, np.ndarra
 
   if phiobj.verbosity == 'High':
 
-    print 'TIME first1a loop = ', time.time()-timefirstloop
+    print('TIME first1a loop = ', time.time()-timefirstloop)
 
 
 #  if phiobj.verbosity == 'High':
@@ -562,9 +585,9 @@ def analyze_syms(np.ndarray[DTYPE_int_t, ndim=3] dataset, list groups, np.ndarra
 #    print Scompact
     
     if phiobj.verbosity == 'High':
-      print 'Scompact shape ' + str([len(SSS[groupcount]),len(keep)])
+      print('Scompact shape ' + str([len(SSS[groupcount]),len(keep)]))
 #      print 'Scompact shape ' + str([scount,tensordim])
-      print 'Scompact bytes ' + str(Scompact.nbytes)
+      print('Scompact bytes ' + str(Scompact.nbytes))
     sys.stdout.flush()
     SSS[groupcount] = [] #free memory
 
@@ -583,7 +606,7 @@ def analyze_syms(np.ndarray[DTYPE_int_t, ndim=3] dataset, list groups, np.ndarra
       B[cci,0:len(keep)] = B1[cc,0:len(keep)]
 
     if phiobj.verbosity == 'High':
-      print 'ind_ind',indexind
+      print('ind_ind',indexind)
 
     #ndep are the dependent fcs, B is the transformation, ni are the number of indept, and indexind are their indicies
 
@@ -621,23 +644,23 @@ def analyze_syms(np.ndarray[DTYPE_int_t, ndim=3] dataset, list groups, np.ndarra
     TIME_small.append(time.time())
     if phiobj.verbosity == 'High':
 
-      print 'TIME_small_usec'
-      print TIME_small
+      print('TIME_small_usec')
+      print(TIME_small)
       for T2, T1 in zip(TIME_small[1:],TIME_small[0:-1]):
-        print T2 - T1
-      print 'ssssssssssssssssssss'
+        print(T2 - T1)
+      print('ssssssssssssssssssss')
   TIME.append(time.time())
 
 
   if phiobj.verbosity == 'High':
 
-    print 'TIME second loop = ', time.time()-timesecondloop
+    print('TIME second loop = ', time.time()-timesecondloop)
 
-    print 'TIME_usec'
-    print TIME
+    print('TIME_usec')
+    print(TIME)
     for T2, T1 in zip(TIME[1:],TIME[0:-1]):
-      print T2 - T1
-    print 'ttttttttttttttttttttttt'
+      print(T2 - T1)
+    print('ttttttttttttttttttttttt')
 
 
   NONZERO_list_smaller = NONZERO_list[0:nonzero_counter, :]
@@ -1654,5 +1677,4 @@ def analyze_syms(np.ndarray[DTYPE_int_t, ndim=3] dataset, list groups, np.ndarra
 ##
 ##  return energy, forces, stress
 ##eee
-
 

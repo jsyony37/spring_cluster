@@ -17,16 +17,16 @@ from calculate_energy_fortran import prepare_for_energy
 from calculate_energy_fortran import calc_supercell_add
 
 DTYPE=np.float64
-DTYPE_complex=np.complex
-DTYPE_int=np.int
+DTYPE_complex=complex #np.complex
+DTYPE_int=int #np.int
 DTYPE_single=np.float32
-
 
 ctypedef np.float32_t DTYPE_single_t
 ctypedef np.float64_t DTYPE_t
-ctypedef np.complex_t DTYPE_complex_t
-ctypedef np.int_t DTYPE_int_t
-
+#ctypedef np.complex_t DTYPE_complex_t
+#ctypedef np.int_t DTYPE_int_t
+ctypedef complex DTYPE_complex_t
+ctypedef np.int64_t DTYPE_int_t
 
 def index_supercell_f(int ssind, np.ndarray[DTYPE_int_t, ndim=1] supercell, np.ndarray[DTYPE_int_t, ndim=1] mem):
   
@@ -65,7 +65,7 @@ def construct_elastic(phiobj,nonzeros, phi, np.ndarray[DTYPE_int_t, ndim=1] supe
 
 
   if phiobj.verbosity == 'High':
-    print 'construct_elastic ' , supercell, ' ,  ' , phiobj.supercell
+    print('construct_elastic ' , supercell, ' ,  ' , phiobj.supercell)
 
   TIME = [time.time()]
 
@@ -597,7 +597,7 @@ def construct_elastic(phiobj,nonzeros, phi, np.ndarray[DTYPE_int_t, ndim=1] supe
         nz += 1
 
         
-  print 'CONSTRUCT TOTAL ' + str(l) + ' REMAIN ' + str(nz) + ' CULLED ' + str(l-(nz)) + ' using permutation symmetry'
+  print('CONSTRUCT TOTAL ' + str(l) + ' REMAIN ' + str(nz) + ' CULLED ' + str(l-(nz)) + ' using permutation symmetry')
 
 #now nonzero_huge_huge and phi_huge_huge have the data we need to run the model
 
@@ -687,9 +687,9 @@ def construct_elastic(phiobj,nonzeros, phi, np.ndarray[DTYPE_int_t, ndim=1] supe
 
   if phiobj.verbosity == 'High':
 #  if True:
-    print 'TIME construct_elastic'
+    print('TIME construct_elastic')
     for T2, T1 in zip(TIME[1:],TIME[0:-1]):
-      print T2 - T1
+      print(T2 - T1)
 
 
 #  print 'COMBINED'

@@ -2,7 +2,7 @@
 
 import sys
 import numpy as np
-import cPickle as pickle
+import pickle as pickle
 
 from spring_cluster import spring_cluster
 

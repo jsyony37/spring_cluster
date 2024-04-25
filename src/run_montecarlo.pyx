@@ -30,16 +30,18 @@ from calculate_energy_fortran import calc_supercell_add
 from construct_elastic_cy import construct_elastic
 
 DTYPE=np.float64
-DTYPE_complex=np.complex
-DTYPE_int=np.int
+DTYPE_complex=complex #np.complex
+DTYPE_int=int #np.int
 DTYPE_single=np.float32
 
 #DTYPE_int_small=np.int8
 
 ctypedef np.float32_t DTYPE_single_t
 ctypedef np.float64_t DTYPE_t
-ctypedef np.complex_t DTYPE_complex_t
-ctypedef np.int_t DTYPE_int_t
+#ctypedef np.complex_t DTYPE_complex_t
+#ctypedef np.int_t DTYPE_int_t
+ctypedef complex DTYPE_complex_t
+ctypedef np.int64_t DTYPE_int_t
 
 ##@cython.boundscheck(False)
 
@@ -96,10 +98,10 @@ def output_struct(phiobj, ncells, pos, strain, utypes, output_magnetic=True):
   A=np.dot(phiobj.Acell_super, (eye + strain))
   for i in range(3):
     outstr +=  str(A[i,0]) + '  ' + str(A[i,1]) + '  ' + str(A[i,2])+'\n'
-  print 'sssssssssss'
-  print outstr
-  print 'fffffffffff'
-  print
+  print('sssssssssss')
+  print(outstr)
+  print('fffffffffff')
+  print()
   return outstr
 
 def run_montecarlo(phiobj,starting_energy, use_atom_strain_cluster, beta, chem_pot, nsteps_arr, step_size_arr, report_freq, A, np.ndarray[DTYPE_t, ndim=2] coords, types, list dims, list phi_tensors, list nonzeros, cell = [], runaway_energy=-20.0, startonly=False):
@@ -166,14 +168,14 @@ def run_montecarlo(phiobj,starting_energy, use_atom_strain_cluster, beta, chem_p
   ncells = np.prod(supercell)
 
   supercell_c = supercell
-  print
-  print 'supercell detected' + str(supercell) + ' : ' +str(ncells)
+  print()
+  print('supercell detected' + str(supercell) + ' : ' +str(ncells))
 
   phiobj.set_supercell(supercell, nodist=True)
 
   if coords.shape[0] != phiobj.natsuper:
-    print 'atoms do not match supercell detected'
-    print [coords.shape[0] , phiobj.natsuper]
+    print('atoms do not match supercell detected')
+    print([coords.shape[0] , phiobj.natsuper])
 
 
   supercell_add, supercell_sub = calc_supercell_add(supercell)
@@ -227,12 +229,12 @@ def run_montecarlo(phiobj,starting_energy, use_atom_strain_cluster, beta, chem_p
 
     dim_u = 5
     
-    print 'starting utypes heisenberg'
-    print 'theta, phi, x,y,z'
+    print('starting utypes heisenberg')
+    print('theta, phi, x,y,z')
     for i in range(ncells*nat):
-      print str(UTYPES[i,0])+'\t'+str(UTYPES[i,1])+'\t'+str(UTYPES[i,2:5])
-    print '--'
-    print
+      print(str(UTYPES[i,0])+'\t'+str(UTYPES[i,1])+'\t'+str(UTYPES[i,2:5]))
+    print('--')
+    print()
 
 
   u_crys = np.zeros((phiobj.nat,ncells,3),dtype=float, order='F')             
@@ -354,7 +356,7 @@ def run_montecarlo(phiobj,starting_energy, use_atom_strain_cluster, beta, chem_p
   if phiobj.useewald:
     useewald = 1
     #we look up the force constants if possible
-    print 'calculating dipole f.c.s'
+    print('calculating dipole f.c.s')
     harm_normal, v, vf, hq = phiobj.get_dipole_harm(phiobj.Acell_super,phiobj.coords_super, low_memory=True)
   else:
     useewald = 0    
@@ -413,9 +415,9 @@ def run_montecarlo(phiobj,starting_energy, use_atom_strain_cluster, beta, chem_p
 
 
 #Print some information on the starting structure
-  print
-  print 
-  print 'Starting Energy ' + str(energy) + ' time: ' + str(tb-ta)
+  print()
+  print()
+  print('Starting Energy ' + str(energy) + ' time: ' + str(tb-ta))
 
   sys.stdout.flush()
 
@@ -429,14 +431,14 @@ def run_montecarlo(phiobj,starting_energy, use_atom_strain_cluster, beta, chem_p
   if phiobj.verbosity == 'High':
   
 
-    print
-    print 'starting u'
-    print u
-    print
+    print()
+    print('starting u')
+    print(u)
+    print()
 
-  print 
-  print 'starting u averaged 1 unit cell'
-  print 
+  print() 
+  print('starting u averaged 1 unit cell')
+  print()
   u_aver = np.zeros((phiobj.nat,3),dtype=float)
 
   u_aver[:,:] = np.sum(u,1)/float(np.prod(supercell))
@@ -444,16 +446,16 @@ def run_montecarlo(phiobj,starting_energy, use_atom_strain_cluster, beta, chem_p
   u_aver[:,1] = u_aver[:,1] * supercell[1]
   u_aver[:,2] = u_aver[:,2] * supercell[2]
 
-  print u_aver
-  print
-  print 'starting strain'
-  print strain
-  print 'starting utypes'
-  print UTYPES[:,0]
-  print 'average UTYPES ', np.mean(UTYPES[:,0])
-  print
+  print(u_aver)
+  print()
+  print('starting strain')
+  print(strain)
+  print('starting utypes')
+  print(UTYPES[:,0])
+  print('average UTYPES ', np.mean(UTYPES[:,0]))
+  print()
 
-  print '----------------'
+  print('----------------')
 
   TIME.append(time.time())
 
@@ -545,9 +547,9 @@ def run_montecarlo(phiobj,starting_energy, use_atom_strain_cluster, beta, chem_p
   TIME.append(time.time())
 
   if phiobj.verbosity == 'High':
-    print 'run_mc preamble TIME'
+    print('run_mc preamble TIME')
     for T2, T1 in zip(TIME[1:],TIME[0:-1]):
-      print T2 - T1
+      print(T2 - T1)
 
 
   denergy = 0.0
@@ -563,9 +565,9 @@ def run_montecarlo(phiobj,starting_energy, use_atom_strain_cluster, beta, chem_p
 
 
 #here is the first big section of actual MC
-  print
-  print 'DOING STEP SIZE DETERMINATION'
-  print '-----------------------------'
+  print()
+  print('DOING STEP SIZE DETERMINATION')
+  print('-----------------------------')
 
   for s in range(nsteps_arr[0]):
 
@@ -579,9 +581,9 @@ def run_montecarlo(phiobj,starting_energy, use_atom_strain_cluster, beta, chem_p
       elif accept_reject[0] < accept_reject[1]:
         step_size_arr[0] = step_size_arr[0] * 0.95
 
-      print 'New step size POS   ' + str(step_size_arr[0]) + ' due to  ' + str(accept_reject) + ' , energy is ' + str(energy)
+      print('New step size POS   ' + str(step_size_arr[0]) + ' due to  ' + str(accept_reject) + ' , energy is ' + str(energy))
       if phiobj.verbosity == 'High' or s == 0:
-        print 'TIME POS       sweep: '+str(tb-ta)
+        print('TIME POS       sweep: '+str(tb-ta))
 
 #some printing info
     if phiobj.verbosity_mc == 'High':
@@ -590,16 +592,16 @@ def run_montecarlo(phiobj,starting_energy, use_atom_strain_cluster, beta, chem_p
         for at in range(phiobj.nat):
           if at in phiobj.cluster_sites:
             if phiobj.magnetic <= 1:
-              print phiobj.reverse_types_dict[int(round(UTYPES[at*ncells+s,0]))] + '\t'  + str(pos_normal[s*phiobj.nat+at,0]) + '   ' + str(pos_normal[s*phiobj.nat+at,1]) + '   ' + str(pos_normal[s*phiobj.nat+at,2])            
+              print(phiobj.reverse_types_dict[int(round(UTYPES[at*ncells+s,0]))] + '\t'  + str(pos_normal[s*phiobj.nat+at,0]) + '   ' + str(pos_normal[s*phiobj.nat+at,1]) + '   ' + str(pos_normal[s*phiobj.nat+at,2])            )
             elif phiobj.magnetic == 2:
-              print phiobj.reverse_types_dict[int(round(UTYPES[at*ncells+s,4]))] + '\t'  + str(pos_normal[s*phiobj.nat+at,0]) + '   ' + str(pos_normal[s*phiobj.nat+at,1]) + '   ' + str(pos_normal[s*phiobj.nat+at,2]) + '          '+str(UTYPES[at*ncells+s,2]) + ' ' +str(UTYPES[at*ncells+s,3])+' '+str(UTYPES[at*ncells+s,4])
+              print(phiobj.reverse_types_dict[int(round(UTYPES[at*ncells+s,4]))] + '\t'  + str(pos_normal[s*phiobj.nat+at,0]) + '   ' + str(pos_normal[s*phiobj.nat+at,1]) + '   ' + str(pos_normal[s*phiobj.nat+at,2]) + '          '+str(UTYPES[at*ncells+s,2]) + ' ' +str(UTYPES[at*ncells+s,3])+' '+str(UTYPES[at*ncells+s,4]))
           else:
-            print phiobj.coords_type[at] + '\t' + str(pos_normal[s*phiobj.nat+at,0]) + '   ' + str(pos_normal[s*phiobj.nat+at,1]) + '   ' + str(pos_normal[s*phiobj.nat+at,2])
+            print(phiobj.coords_type[at] + '\t' + str(pos_normal[s*phiobj.nat+at,0]) + '   ' + str(pos_normal[s*phiobj.nat+at,1]) + '   ' + str(pos_normal[s*phiobj.nat+at,2]))
             
-      print 'CELL_PARAMETERS bohr'
+      print('CELL_PARAMETERS bohr')
       A=np.dot(phiobj.Acell_super, (eye + strain))
       for i in range(3):
-        print str(A[i,0]) + '  ' + str(A[i,1]) + '  ' + str(A[i,2])
+        print(str(A[i,0]) + '  ' + str(A[i,1]) + '  ' + str(A[i,2]))
 
 
 
@@ -613,15 +615,15 @@ def run_montecarlo(phiobj,starting_energy, use_atom_strain_cluster, beta, chem_p
       elif accept_reject[0] < accept_reject[1]:
         step_size_arr[1] = step_size_arr[1] * 0.95
         
-      print 'New step size STRAIN ' + str(step_size_arr[1]) + ' due to  ' + str(accept_reject)+ ' , energy is ' + str(energy)
+      print('New step size STRAIN ' + str(step_size_arr[1]) + ' due to  ' + str(accept_reject)+ ' , energy is ' + str(energy))
       if phiobj.verbosity == 'High' or s == 0:
-        print 'TIME STRAIN  sweep: '+str(tb-ta)
+        print('TIME STRAIN  sweep: '+str(tb-ta))
 
 #cluster step
     if use_atom_strain_cluster[2]:
       ta,tb,energy,UTYPES = mc_step_cluster(1,ta,tb,energy,UTYPES)
       if phiobj.verbosity == 'High' or s == 0:
-        print 'TIME CLUSTER sweep: '+str(tb-ta)
+        print('TIME CLUSTER sweep: '+str(tb-ta))
 
 
     energies[s] = energy
@@ -637,7 +639,7 @@ def run_montecarlo(phiobj,starting_energy, use_atom_strain_cluster, beta, chem_p
 
 
     if energy < runaway_energy - 0.002 and s > 5:
-      print 'STOPPING due to runaway'
+      print('STOPPING due to runaway')
       emax = np.max(energies)
       #look for a good structure to output
       #we choose the latest structure with 40% of max energy
@@ -658,14 +660,14 @@ def run_montecarlo(phiobj,starting_energy, use_atom_strain_cluster, beta, chem_p
             break
       
 
-      print 'recommended structure : ' + str(tocalculate)+', model energy is '+str(energies[tocalculate])
+      print('recommended structure : ' + str(tocalculate)+', model energy is '+str(energies[tocalculate]))
 
       strain_tc = strain_all[:,:,tocalculate]
       struct_tc = struct_all[:,:,:,tocalculate]
 
       if emax > 0:
 
-        print 'we vary the structure to find the maximum in energy, which is where we probably need a new data point.'
+        print('we vary the structure to find the maximum in energy, which is where we probably need a new data point.')
         strain_tc = strain_all[:,:,tocalculate]
         struct_tc = struct_all[:,:,:,tocalculate]
 
@@ -690,12 +692,12 @@ def run_montecarlo(phiobj,starting_energy, use_atom_strain_cluster, beta, chem_p
         for l in range(lam.shape[0]):
           energy_mc =  montecarlo_energy( supercell_add,supercell_sub, strain_tc*lam[l], (struct_tc-coords_ref)*lam[l]+coords_ref, coords_ref, phiobj.Acell_super, nonzero_huge_hugeT,phi_huge_huge,   types_tc,harm_normal_converted, v, vf, phiobj.magnetic,phiobj.vacancy, useewald, chem_pot, dim_max, ncells, nat, nonzero_huge_hugeT.shape[1],      nonzero_huge_hugeT.shape[0],      supercell_add.shape[0],supercell_add.shape[1], dim_u)
           e_temp.append(energy_mc)
-          print 'lambda energy ', lam[l], ' ',energy_mc
+          print('lambda energy ', lam[l], ' ',energy_mc)
           if energy_mc > emax:
             emax = energy_mc
             lmax = l
 
-        print 'maximum is at  ', lmax, ' ', emax
+        print('maximum is at  ', lmax, ' ', emax)
 
       else:
         lam = np.arange(0.1,1.3,0.1)
@@ -710,8 +712,8 @@ def run_montecarlo(phiobj,starting_energy, use_atom_strain_cluster, beta, chem_p
 #        outstr = output_struct(phiobj, ncells, struct_all[:,:,:,tocalculate], strain_all[:,:,tocalculate], cluster_all[:,:,tocalculate], output_magnetic=False)
         outstr = output_struct(phiobj, ncells, (struct_tc-coords_ref)*lam[lmax]+coords_ref, strain_tc*lam[lmax], cluster_all[:,:,tocalculate], output_magnetic=False)
 
-      print 'Energy ' + str(emax)
-      print 'Goodbye (exiting...)'
+      print('Energy ' + str(emax))
+      print('Goodbye (exiting...)')
 
 #      if phiobj.parallel:
 #      energy_mc =  montecarlo_energy( supercell_add,supercell_sub, strain, coords_unitcells, coords_ref, phiobj.Acell_super, nonzero_huge_hugeT,phi_huge_huge,   UTYPES,harm_normal_converted, v, vf, phiobj.magnetic,phiobj.vacancy, useewald, chem_pot, dim_max, ncells, nat, nonzero_huge_hugeT.shape[1],      nonzero_huge_hugeT.shape[0],      supercell_add.shape[0],supercell_add.shape[1], dim_u)
@@ -724,7 +726,7 @@ def run_montecarlo(phiobj,starting_energy, use_atom_strain_cluster, beta, chem_p
       return energies, struct_all, strain_all, cluster_all, step_size_arr, types_reorder, supercell, coords_ref, outstr
 
 
-  print 'FINAL STEP SIZE ' + str(step_size_arr)
+  print('FINAL STEP SIZE ' + str(step_size_arr))
 
 
 #here we double check to see if model is consistent
@@ -733,25 +735,25 @@ def run_montecarlo(phiobj,starting_energy, use_atom_strain_cluster, beta, chem_p
 #  else:
 #    energy_mc =  montecarlo_energy_serial( supercell_add,supercell_sub, strain, coords_unitcells, coords_ref, phiobj.Acell_super, nonzero_huge_hugeT,phi_huge_huge,   UTYPES,harm_normal_converted, v, vf, phiobj.magnetic,phiobj.vacancy, useewald, chem_pot, dim_max, ncells, nat, nonzero_huge_hugeT.shape[1],      nonzero_huge_hugeT.shape[0],      supercell_add.shape[0],supercell_add.shape[1], dim_u)
 
-  print 'en drift = ' +str(energy_mc-energy)
+  print('en drift = ' +str(energy_mc-energy))
   energy=energy_mc
 
 #in this case, where we only do step size determination, we return final structure, usually for recursive model improvement
   if nsteps_arr[1] == 0 and nsteps_arr[2] == 0 and nsteps_arr[0] > 0:
-    print 'Ending. Final structure'
+    print('Ending. Final structure')
     tocalculate = nsteps_arr[0]-1
 
     if phiobj.magnetic == 0 or phiobj.magnetic == 1 :
       outstr = output_struct(phiobj, ncells, struct_all[:,:,:,tocalculate], strain_all[:,:,tocalculate], cluster_all[:,:,tocalculate])
     elif phiobj.magnetic == 2: #heisenberg case    
       outstr = output_struct(phiobj, ncells, struct_all[:,:,:,tocalculate], strain_all[:,:,tocalculate], cluster_all[:,:,tocalculate], output_magnetic=False)
-    print 'final energy: ' + str(energies[tocalculate])
+    print('final energy: ' + str(energies[tocalculate]))
     return energies, struct_all, strain_all, cluster_all, step_size_arr, types_reorder, supercell, coords_ref, outstr
 
 
-  print 
-  print 'STARTING THERMALIZATION'
-  print '-----------------------'
+  print() 
+  print('STARTING THERMALIZATION')
+  print('-----------------------')
 
 
 
@@ -770,31 +772,31 @@ def run_montecarlo(phiobj,starting_energy, use_atom_strain_cluster, beta, chem_p
     if use_atom_strain_cluster[2]:
       ta,tb,energy,UTYPES = mc_step_cluster(5,ta,tb,energy,UTYPES)
 
-    print 'Thermalization energy step ' + str(st*5) + ' ' + str(energy)
+    print('Thermalization energy step ' + str(st*5) + ' ' + str(energy))
     
     if phiobj.verbosity_mc != 'minimal':
 
-      print 'themalization pos_normal'
-      print 'ATOMIC_POSITIONS crystal'
+      print('themalization pos_normal')
+      print('ATOMIC_POSITIONS crystal')
       for s in range(ncells):
         for at in range(phiobj.nat):
           if at in phiobj.cluster_sites:
             if phiobj.magnetic <= 1:
-              print phiobj.reverse_types_dict[int(round(UTYPES[at*ncells+s,0]))] + '\t'  + str(pos_normal[s*phiobj.nat+at,0]) + '   ' + str(pos_normal[s*phiobj.nat+at,1]) + '   ' + str(pos_normal[s*phiobj.nat+at,2])            
+              print(phiobj.reverse_types_dict[int(round(UTYPES[at*ncells+s,0]))] + '\t'  + str(pos_normal[s*phiobj.nat+at,0]) + '   ' + str(pos_normal[s*phiobj.nat+at,1]) + '   ' + str(pos_normal[s*phiobj.nat+at,2])            )
             elif phiobj.magnetic == 2:
-              print phiobj.reverse_types_dict[int(round(UTYPES[at*ncells+s,4]))] + '\t'  + str(pos_normal[s*phiobj.nat+at,0]) + '   ' + str(pos_normal[s*phiobj.nat+at,1]) + '   ' + str(pos_normal[s*phiobj.nat+at,2]) + '          '+str(UTYPES[at*ncells+s,2]) + ' ' +str(UTYPES[at*ncells+s,3])+' '+str(UTYPES[at*ncells+s,4])
+              print(phiobj.reverse_types_dict[int(round(UTYPES[at*ncells+s,4]))] + '\t'  + str(pos_normal[s*phiobj.nat+at,0]) + '   ' + str(pos_normal[s*phiobj.nat+at,1]) + '   ' + str(pos_normal[s*phiobj.nat+at,2]) + '          '+str(UTYPES[at*ncells+s,2]) + ' ' +str(UTYPES[at*ncells+s,3])+' '+str(UTYPES[at*ncells+s,4]))
           else:
-            print phiobj.coords_type[at] + '\t' + str(pos_normal[s*phiobj.nat+at,0]) + '   ' + str(pos_normal[s*phiobj.nat+at,1]) + '   ' + str(pos_normal[s*phiobj.nat+at,2])
+            print(phiobj.coords_type[at] + '\t' + str(pos_normal[s*phiobj.nat+at,0]) + '   ' + str(pos_normal[s*phiobj.nat+at,1]) + '   ' + str(pos_normal[s*phiobj.nat+at,2]))
             
 
-      print 'CELL_PARAMETERS bohr'
+      print('CELL_PARAMETERS bohr')
       A=np.dot(phiobj.Acell_super, (eye + strain))
       for i in range(3):
-        print str(A[i,0]) + '  ' + str(A[i,1]) + '  ' + str(A[i,2])
+        print(str(A[i,0]) + '  ' + str(A[i,1]) + '  ' + str(A[i,2]))
 
-      print strain
+      print(strain)
 
-  print 'Thermalization TIME ' + str(time.time() - t_therm)
+  print('Thermalization TIME ' + str(time.time() - t_therm))
 
   sys.stdout.flush()
   
@@ -802,9 +804,9 @@ def run_montecarlo(phiobj,starting_energy, use_atom_strain_cluster, beta, chem_p
   chunks = int(nsteps_arr[2]/report_freq )
   repeat_freq = 2 #does each atom repeat_freq times in a row, then the strain repeat_freq times. slighly more efficient when this is higher, as you have to recalculate the fft fewer times.
 
-  print 'PRODUCTION MC'
-  print str(nsteps_arr[2]) + ' steps total reported every ' +str(report_freq) +' so there are ' + str(chunks) + ' chunks.'
-  print '-----------------------------------------'
+  print('PRODUCTION MC')
+  print(str(nsteps_arr[2]) + ' steps total reported every ' +str(report_freq) +' so there are ' + str(chunks) + ' chunks.')
+  print('-----------------------------------------')
   energies = np.zeros(chunks*report_freq/repeat_freq,dtype=float)
   struct_all = np.zeros((phiobj.nat,ncells,3,chunks),dtype=float)
   strain_all = np.zeros((3,3,chunks),dtype=float)
@@ -857,8 +859,8 @@ def run_montecarlo(phiobj,starting_energy, use_atom_strain_cluster, beta, chem_p
       c+=1
 
     if phiobj.verbosity_mc != 'minimal':
-      print str_en
-    print 'Energy at chunk ' + str(ch)+ ' is ' + str(energy) + ' average is ' + str(np.mean(energies[0:c]))
+      print(str_en)
+    print('Energy at chunk ' + str(ch)+ ' is ' + str(energy) + ' average is ' + str(np.mean(energies[0:c])))
 
     struct_all[:,:,:,ch] = coords_unitcells[:,:,:]
     strain_all[:,:,ch] = strain[:,:]
@@ -918,28 +920,28 @@ def run_montecarlo(phiobj,starting_energy, use_atom_strain_cluster, beta, chem_p
 
 
       if ch%20 == 0:
-        print 'ATOMIC_POSITIONS crystal'
+        print('ATOMIC_POSITIONS crystal')
         for s in range(ncells):
           for at in range(phiobj.nat):
             if at in phiobj.cluster_sites:
 
               if phiobj.magnetic <= 1:
-                print phiobj.reverse_types_dict[int(round(UTYPES[at*ncells+s,0]))] + '\t'  + str(pos_normal[s*phiobj.nat+at,0]) + '   ' + str(pos_normal[s*phiobj.nat+at,1]) + '   ' + str(pos_normal[s*phiobj.nat+at,2])            
+                print(phiobj.reverse_types_dict[int(round(UTYPES[at*ncells+s,0]))] + '\t'  + str(pos_normal[s*phiobj.nat+at,0]) + '   ' + str(pos_normal[s*phiobj.nat+at,1]) + '   ' + str(pos_normal[s*phiobj.nat+at,2])            )
               elif phiobj.magnetic == 2:
-                print phiobj.reverse_types_dict[int(round(UTYPES[at*ncells+s,4]))] + '\t'  + str(pos_normal[s*phiobj.nat+at,0]) + '   ' + str(pos_normal[s*phiobj.nat+at,1]) + '   ' + str(pos_normal[s*phiobj.nat+at,2]) + '          '+str(UTYPES[at*ncells+s,2]) + ' ' +str(UTYPES[at*ncells+s,3])+' '+str(UTYPES[at*ncells+s,4])
+                print(phiobj.reverse_types_dict[int(round(UTYPES[at*ncells+s,4]))] + '\t'  + str(pos_normal[s*phiobj.nat+at,0]) + '   ' + str(pos_normal[s*phiobj.nat+at,1]) + '   ' + str(pos_normal[s*phiobj.nat+at,2]) + '          '+str(UTYPES[at*ncells+s,2]) + ' ' +str(UTYPES[at*ncells+s,3])+' '+str(UTYPES[at*ncells+s,4]))
 
             else:
-              print phiobj.coords_type[at] + '\t' + str(pos_normal[s*phiobj.nat+at,0]) + '   ' + str(pos_normal[s*phiobj.nat+at,1]) + '   ' + str(pos_normal[s*phiobj.nat+at,2])
+              print(phiobj.coords_type[at] + '\t' + str(pos_normal[s*phiobj.nat+at,0]) + '   ' + str(pos_normal[s*phiobj.nat+at,1]) + '   ' + str(pos_normal[s*phiobj.nat+at,2]))
   #          print pos_normal[s*phiobj.nat+at,:]
 
         if use_atom_strain_cluster[0] or use_atom_strain_cluster[1]:
 
-          print 'CELL_PARAMETERS bohr'
+          print('CELL_PARAMETERS bohr')
           A=np.dot(phiobj.Acell_super, (eye + strain))
           for i in range(3):
-            print str(A[i,0]) + '  ' + str(A[i,1]) + '  ' + str(A[i,2])
+            print(str(A[i,0]) + '  ' + str(A[i,1]) + '  ' + str(A[i,2]))
 
-          print
+          print()
 
         if use_atom_strain_cluster[0]:
 
@@ -951,62 +953,62 @@ def run_montecarlo(phiobj,starting_energy, use_atom_strain_cluster, beta, chem_p
           m = np.max(rms)
           if m > rms_max:
             rms_max = m
-          print 'mean rms, max rms, max overall rms (Bohr): ' + str(np.mean(rms))+ ' ' + str(m) + ' ' + str(rms_max)
-          print
+          print('mean rms, max rms, max overall rms (Bohr): ' + str(np.mean(rms))+ ' ' + str(m) + ' ' + str(rms_max))
+          print()
 
 
 
 
-          print
-          print 'Current structure averaged over unitcells '+str(np.prod(supercell))
+          print()
+          print('Current structure averaged over unitcells '+str(np.prod(supercell)))
           u_aver[:,:] = np.sum(coords_unitcells-coords_ref,1)/float(np.prod(supercell))
           u_aver[:,0] = u_aver[:,0] * supercell[0]
           u_aver[:,1] = u_aver[:,1] * supercell[1]
           u_aver[:,2] = u_aver[:,2] * supercell[2]
-          print u_aver[:,:]
-          print 
-          print 'Average over chunks and unitcells '
+          print(u_aver[:,:])
+          print()
+          print('Average over chunks and unitcells ')
           u_aver[:,:] =      np.sum( np.sum(struct_all[:,:,:,0:(ch+1)],3)/float(ch+1)    - coords_ref , 1)/float(np.prod(supercell))
           u_aver[:,0] = u_aver[:,0] * supercell[0]
           u_aver[:,1] = u_aver[:,1] * supercell[1]
           u_aver[:,2] = u_aver[:,2] * supercell[2]
-          print u_aver[:,:]
+          print(u_aver[:,:])
 
         if use_atom_strain_cluster[1]:
 
-          print
-          print 'Strain'
-          print strain
-          print 'Strain aver over steps'
-          print np.sum(strain_all[:,:,0:(ch+1)],2)/float(ch+1)
-          print 
+          print()
+          print('Strain')
+          print(strain)
+          print('Strain aver over steps')
+          print(np.sum(strain_all[:,:,0:(ch+1)],2)/float(ch+1))
+          print()
 
         if use_atom_strain_cluster[2]:
 
-          print 'Cluster expansion current  average over cells, 111: ' + str(mean_cluster_current)+' '+str(mean_111_cluster_current)
-          print 'Cluster expansion avgsteps average over cells, abs, 111, 111abs: ' + str(np.mean(cluster_mean[0:ch+1]))+' '+str(np.mean(cluster_abs_mean[0:ch+1]))+' '+str(np.mean(cluster_111_mean[0:ch+1]))+' '+str(np.mean(cluster_111_abs_mean[0:ch+1]))
+          print('Cluster expansion current  average over cells, 111: ' + str(mean_cluster_current)+' '+str(mean_111_cluster_current))
+          print('Cluster expansion avgsteps average over cells, abs, 111, 111abs: ' + str(np.mean(cluster_mean[0:ch+1]))+' '+str(np.mean(cluster_abs_mean[0:ch+1]))+' '+str(np.mean(cluster_111_mean[0:ch+1]))+' '+str(np.mean(cluster_111_abs_mean[0:ch+1])))
 
       if print222 and ch%5 == 0:
 
-        print 'Average 2x2x2 supercell over chunks and unitcells '
-        print 'c1 c2 c3 atom u_Bohr_i,j,k'
-        print '--------------------'
+        print('Average 2x2x2 supercell over chunks and unitcells ')
+        print('c1 c2 c3 atom u_Bohr_i,j,k')
+        print('--------------------')
         t222 = np.sum(u_222_all[:,:,:,:,:,0:(ch+1)],5)/float(ch+1)
         tc222 = np.sum(cluster_222_all[:,:,:,:,0:(ch+1)],4)/float(ch+1)
         for c1 in range(2):
           for c2 in range(2):
             for c3 in range(2):
               for at in range(phiobj.nat):
-                print c1,c2,c3,at,'\t',tc222[c1,c2,c3,at],"  ",t222[c1,c2,c3,at,:]
+                print(c1,c2,c3,at,'\t',tc222[c1,c2,c3,at],"  ",t222[c1,c2,c3,at,:])
 
-      print
+      print()
       if use_atom_strain_cluster[0]:
-        print 'TIME POSITIONS: '+str(tab)
+        print('TIME POSITIONS: '+str(tab))
       if use_atom_strain_cluster[1]:
-        print 'TIME STRAIN   : '+str(tab_st)
+        print('TIME STRAIN   : '+str(tab_st))
       if use_atom_strain_cluster[2]:
-        print 'TIME CLUSTER  : '+str(tab_cl)
-      print '--------------------------------'
+        print('TIME CLUSTER  : '+str(tab_cl))
+      print('--------------------------------')
 
 #recheck to see if energy differences summed up over steps are consistent with the total energy calculated from scratch.
 #this isn't strictly necessary
@@ -1016,15 +1018,15 @@ def run_montecarlo(phiobj,starting_energy, use_atom_strain_cluster, beta, chem_p
 #      else:
 #        energy_mc =  montecarlo_energy_serial( supercell_add,supercell_sub, strain, coords_unitcells, coords_ref, phiobj.Acell_super, nonzero_huge_hugeT,phi_huge_huge,   UTYPES,harm_normal_converted, v, vf, phiobj.magnetic,phiobj.vacancy, useewald, chem_pot, dim_max, ncells, nat, nonzero_huge_hugeT.shape[1],      nonzero_huge_hugeT.shape[0],      supercell_add.shape[0],supercell_add.shape[1], dim_u)
 
-      print 'en drift = ' +str(energy_mc-energy)
+      print('en drift = ' +str(energy_mc-energy))
       energy=energy_mc
 
   
   energies = energies[0:c]
 
-  print
-  print 'DONE MC'
-  print
+  print()
+  print('DONE MC')
+  print()
   return energies, struct_all, strain_all, cluster_all, step_size_arr, types_reorder, supercell, coords_ref, outstr
 
 

@@ -31,16 +31,18 @@ from cython.parallel import prange
 #####from phi_prim_usec import phi
 
 DTYPE=np.float64
-DTYPE_complex=np.complex
-DTYPE_int=np.int
+DTYPE_complex=complex #np.complex
+DTYPE_int=int #np.int
 DTYPE_single=np.float32
 
 #DTYPE_int_small=np.int8
 
 ctypedef np.float32_t DTYPE_single_t
 ctypedef np.float64_t DTYPE_t
-ctypedef np.complex_t DTYPE_complex_t
-ctypedef np.int_t DTYPE_int_t
+#ctypedef np.complex_t DTYPE_complex_t
+#ctypedef np.int_t DTYPE_int_t
+ctypedef complex DTYPE_complex_t
+ctypedef np.int64_t DTYPE_int_t
 
 ##@cython.boundscheck(False)
 
@@ -67,7 +69,7 @@ cdef int index_ijk(np.ndarray[DTYPE_int_t, ndim=1] ijk, int dim):
     elif dim == 6:
       return   ijk[0]*n*n*n*n*n + ijk[1]*n*n*n*n + ijk[2]*n*n*n + ijk[3]*n*n + ijk[4]*n + ijk[5]
     else:
-      print 'index not currently implmented index_ijk ' + str(dim)
+      print('index not currently implmented index_ijk ' + str(dim))
 
     
       
@@ -91,7 +93,7 @@ cdef np.ndarray[DTYPE_int_t, ndim=1]   ijk_index(int a,int dim):
     elif dim == 0:
         return ret
     else:
-        print 'index not currently implmented ijk_index ' + str(dim)
+        print('index not currently implmented ijk_index ' + str(dim))
 
 #    print 'a ' + str(a) + ' ' + str(dim) + ' ' + str(ret)
     return ret
@@ -192,7 +194,7 @@ def pre_setup_cython(phiobj, POS=[],POSold=[], Alist=[], SUPERCELL_LIST=[], TYPE
 
   natsupermax = np.prod(ssmax)*phiobj.nat
 
-  print 'ss_max', ssmax, natsupermax
+  print('ss_max', ssmax, natsupermax)
 
   lenPOS = len(POS[phiobj.previously_added:])
 
@@ -384,11 +386,11 @@ def pre_setup_cython(phiobj, POS=[],POSold=[], Alist=[], SUPERCELL_LIST=[], TYPE
 
   if phiobj.verbosity == 'High':
 
-    print 'TIME_pre_setup'
-    print TIME
+    print('TIME_pre_setup')
+    print(TIME)
     for T2, T1 in zip(TIME[1:],TIME[0:-1]):
-      print T2 - T1
-    print 'ttttttttttttttttttttttt'
+      print(T2 - T1)
+    print('ttttttttttttttttttttttt')
 
   sys.stdout.flush()
 
@@ -667,7 +669,7 @@ def setup_lsq_cython(nind, ntotal_ind, ngroups, Tinv, dim, phiobj, startind,tens
       ASR =  np.zeros((3,ntotal_ind),dtype=DTYPE)
 
     if phiobj.verbosity == 'High':
-      print 'adding ASR constraints'
+       print('adding ASR constraints')
 #    ASR =  np.zeros((3**dim*phiobj.nat * phiobj.natsuper**(dim-2),ntotal_ind),dtype=float)
     c_ind = 0
     TIME.append(time.time())
@@ -738,7 +740,7 @@ def setup_lsq_cython(nind, ntotal_ind, ngroups, Tinv, dim, phiobj, startind,tens
                 ASR1[0:indexcounter,:] = ASR[0:indexcounter,:]
                 ASR=ASR1
                 if phiobj.verbosity == 'High':
-                  print 'adding memory setup_lsq_cython ' + str(mem1)
+                  print('adding memory setup_lsq_cython ' + str(mem1))
 
             ASR[ smallindex, startind_c[ngrp]+ind] += Tinv_cc[c_ijk,ind] * symd #this is where we assemble the ASR matrix, keeping track of all the transformations
 
@@ -755,7 +757,7 @@ def setup_lsq_cython(nind, ntotal_ind, ngroups, Tinv, dim, phiobj, startind,tens
     ASR_smaller1 = np.array(ASR[0:indexcounter,:],dtype=float)
 
     if phiobj.verbosity == 'High':
-      print 'BEFORE there are ' + str(ASR_smaller1.shape[0]) + ' constraints '
+      print('BEFORE there are ' + str(ASR_smaller1.shape[0]) + ' constraints ')
       print
 
 
@@ -775,16 +777,16 @@ def setup_lsq_cython(nind, ntotal_ind, ngroups, Tinv, dim, phiobj, startind,tens
     TIME.append(time.time())
 
     if phiobj.verbosity == 'High':
-      print 'after eliminating duplictes there are ' + str(ASR_smaller.shape[0]) + ' nonzero constraints'
-      print
+      print('after eliminating duplictes there are ' + str(ASR_smaller.shape[0]) + ' nonzero constraints')
+      print()
 
 
 
     TIME.append(time.time())
 
     if phiobj.verbosity == 'High':
-      print 'there are ' + str(ASR_smaller.shape[0]) + ' indpt constraints'
-      print
+      print('there are ' + str(ASR_smaller.shape[0]) + ' indpt constraints')
+      print()
 
 
 # constraint due to elastic constant symmetry
@@ -794,7 +796,7 @@ def setup_lsq_cython(nind, ntotal_ind, ngroups, Tinv, dim, phiobj, startind,tens
       coords = np.dot(phiobj.coords_super, phiobj.Acell_super)
 
       if phiobj.verbosity == 'High':
-        print ' phiobj.use_elastic_constraint true, d=2'
+        print(' phiobj.use_elastic_constraint true, d=2')
       ELASTIC_s = {}
       c = -1
 
@@ -827,7 +829,7 @@ def setup_lsq_cython(nind, ntotal_ind, ngroups, Tinv, dim, phiobj, startind,tens
               c+=1
               for sym in range(sym_num):
                 X = coords[atoms_l[-2],:] - coords[atoms_l[-1],:] - m[sym,:]
-#                print ['XXX ' , atoms_l, X,sym]
+#                print(['XXX ' , atoms_l, X,sym])
                 t=Tinv_cc[c_ijk,ind] * X[ijk2[0]] * X[ijk2[1]] - Tinv_cc[c_ijk2,ind]*X[ijk[0]] * X[ijk[1]]
                 if abs(t) > 1e-5:
 #                  ELASTIC[a*3**4*2 + c,startind_c[ngrp]+ind ] += t
@@ -889,11 +891,11 @@ def setup_lsq_cython(nind, ntotal_ind, ngroups, Tinv, dim, phiobj, startind,tens
 #  print Umat
   if phiobj.verbosity == 'High':
 
-    print 'TIME_setup_lsq_fast'
-    print TIME
+    print('TIME_setup_lsq_fast')
+    print(TIME)
     for T2, T1 in zip(TIME[1:],TIME[0:-1]):
-      print T2 - T1
-    print 'ttttttttttttttttttttttt'
+      print(T2 - T1)
+    print('ttttttttttttttttttttttt')
 
   if False:
 
@@ -908,8 +910,8 @@ def setup_lsq_cython(nind, ntotal_ind, ngroups, Tinv, dim, phiobj, startind,tens
         if i == j:
           continue
         if abs(corrmat[i,j]) > 0.99 and i < j: #we have a problem
-          print 'we have a problem, strongly correlated predictors makes regression unstable: ' + str(corrmat[i,j])
-          print 'trying to fix...'
+          print('we have a problem, strongly correlated predictors makes regression unstable: ' + str(corrmat[i,j]))
+          print('trying to fix...')
 
           Umat[:,i] = Umat[:,i] + Umat[:,j]
           Umat[:,j] = 0.0

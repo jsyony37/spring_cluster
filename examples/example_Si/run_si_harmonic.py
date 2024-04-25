@@ -2,7 +2,7 @@
 
 import sys
 import numpy as np
-import cPickle as pickle
+import pickle as pickle
 
 from spring_cluster import spring_cluster
 
@@ -51,9 +51,9 @@ mysc.do_all_fitting()
 #f = forces reference
 #s = stresses reference
 
-print
-print 'IN SAMPLE TESTING'
-print
+print()
+print('IN SAMPLE TESTING')
+print()
 
 e,f,s,er,fr,sr = mysc.calc_energy_qe_output_list(file_list_train)
 
@@ -63,9 +63,9 @@ mysc.plot_comparison(fr,f,filename='forces_in_samp_harm.pdf', show=False)
 mysc.plot_comparison(er,e,filename='energies_in_samp_harm.pdf',show=False)
 
 
-print
-print 'OUT OF SAMPLE TESTING'
-print
+print()
+print('OUT OF SAMPLE TESTING')
+print()
 
 #now do the out of sample testing
 e,f,s,er,fr,sr = mysc.calc_energy_qe_output_list(file_list_test)
@@ -91,6 +91,6 @@ mysc.Fvib_freq([8,8,8], 300)
 
 mysc.write_harmonic('si.fc')
 
-print
-print 'done'
-print
+print()
+print('done')
+print()

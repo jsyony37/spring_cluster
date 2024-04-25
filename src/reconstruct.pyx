@@ -13,17 +13,19 @@ import math
 cimport cython
 from cpython cimport bool
 
-DTYPE=np.float64
-DTYPE_complex=np.complex
-DTYPE_int=np.int
+DTYPE=float #np.float64
+DTYPE_complex=complex #np.complex
+DTYPE_int=int #np.int
 DTYPE_single=np.float32
 
 #DTYPE_int_small=np.int8
 
 ctypedef np.float32_t DTYPE_single_t
 ctypedef np.float64_t DTYPE_t
-ctypedef np.complex_t DTYPE_complex_t
-ctypedef np.int_t DTYPE_int_t
+#ctypedef np.complex_t DTYPE_complex_t
+#ctypedef np.int_t DTYPE_int_t
+ctypedef complex DTYPE_complex_t
+ctypedef np.int64_t DTYPE_int_t
 
 ##@cython.boundscheck(False)
 
@@ -67,8 +69,8 @@ def reconstruct_fcs_nonzero_phi_relative_cython(myphi, phi_indpt, ngroups, nind,
     tensordim = 1
 
   if myphi.verbosity == 'High':
-    print 'tensor dimension reconstruct ' + str(tensordim)
-    print 'dim reconstruct' + str(dim)
+    print('tensor dimension reconstruct ' + str(tensordim))
+    print('dim reconstruct' + str(dim))
 
   #get starting index of each group's indpt fcs.
   startind = myphi.getstartind(ngroups, nind)
@@ -283,14 +285,14 @@ def reconstruct_fcs_nonzero_phi_relative_cython(myphi, phi_indpt, ngroups, nind,
           for sss,sym in zip(SSS,GGG):
             t += (sss+sym[0]*np.array(myphi.supercell)).tolist()
             if len(sym) > 1:
-              print 'warning, untangling with symmetry works for harmonic only, avoid boundary anharmonic terms'
+              print('warning, untangling with symmetry works for harmonic only, avoid boundary anharmonic terms')
 
           nonzero_list_temp[nnonzero,:] = atoms_prim_raw+ijk+t #here we are adding the atom index, the ijk indicies, and then the supercell indicies
           phi_nonzero_temp[nnonzero] = phi_tensor_temp[c_ijk]
           nnonzero += 1
 
         if nnonzero >= mem-50: #need to add memory to temporary arrays
-          print 'adding memory! version2'
+          print('adding memory! version2')
           sys.stdout.flush()
           mem = int(round(mem * 1.5))
 
@@ -300,7 +302,7 @@ def reconstruct_fcs_nonzero_phi_relative_cython(myphi, phi_indpt, ngroups, nind,
 #            nonzero_list_temp2 = np.zeros((mem,dimtot+3*(dimtot-1)),dtype=int)
             nonzero_list_temp2 = np.zeros((mem,dimtot+dim[1]+3*(dimtot-1)),dtype=int)
 
-          print 'adding memory! bytes version2 ' + str(nonzero_list_temp.nbytes)
+          print('adding memory! bytes version2 ' + str(nonzero_list_temp.nbytes))
           phi_nonzero_temp2 = np.zeros((mem),dtype=float)
           nonzero_list_temp2[0:nnonzero,:] = nonzero_list_temp[0:nnonzero,:]
           phi_nonzero_temp2[0:nnonzero] = phi_nonzero_temp[0:nnonzero]
@@ -319,7 +321,7 @@ def reconstruct_fcs_nonzero_phi_relative_cython(myphi, phi_indpt, ngroups, nind,
   TIME.append(time.time())
 
   if myphi.verbosity == 'High':
-    print ['TIME_recon cython loop '+str(dim) , t1,t2,t3,t4,t5]
+    print(['TIME_recon cython loop '+str(dim) , t1,t2,t3,t4,t5])
 
   #put things in correct size array
   if dim[1] < 0:
@@ -333,16 +335,16 @@ def reconstruct_fcs_nonzero_phi_relative_cython(myphi, phi_indpt, ngroups, nind,
   nonzero_list[:,:] = nonzero_list_temp[0:nnonzero,:]
   phi_nonzero[:] = phi_nonzero_temp[0:nnonzero]
 
-  print
-  print 'Non-zero phi elements ' + str(nnonzero) + ' out of a possible ' + str(natdim_prim *  ncells**(dimtot-1) * 3**dim[1]) + ' assuming no cutoff radii, etc'
-  print 
+  print()
+  print('Non-zero phi elements ' + str(nnonzero) + ' out of a possible ' + str(natdim_prim *  ncells**(dimtot-1) * 3**dim[1]) + ' assuming no cutoff radii, etc')
+  print()
   TIME.append(time.time())
 
   if myphi.verbosity == 'High':
-    print 'TIME_reconstruct cython ' + str(dim)
-    print TIME
+    print('TIME_reconstruct cython ' + str(dim))
+    print(TIME)
     for T2, T1 in zip(TIME[1:],TIME[0:-1]):
-      print T2 - T1
-    print 'ttttttttttttttttttttttt'
+      print(T2 - T1)
+    print('ttttttttttttttttttttttt')
 
   return [nonzero_list, phi_nonzero]

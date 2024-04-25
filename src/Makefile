@@ -1,3 +1,4 @@
+#CFLAGS=/Users/cpark21/miniconda3/lib/python3.9/site-packages/numpy/core/include/numpy
 
 all: prepare_sym.so   montecarlo_cluster3_parallel.so  gauss_c.so apply_sym_phy_prim.so symm_analysis.so calculate_energy_fortran.so setup_regression.so make_dist_array.so find_nonzero_highdim.so run_montecarlo.so gaussian.so gaussian_single.so  dipole_dipole_parallel.so  energy_dope4_parallel.so find_nonzero_fortran.so gaussian.so gaussian_single.so make_dist_array_fortran_parallel.so montecarlo_cluster3_parallel.so     montecarlo3_parallel.so   montecarlo_energy2_parallel.so  montecarlo_strain2_parallel.so   setup_fortran_parallel.so reconstruct.so construct_elastic_cy.so montecarlo_cluster3_serial.so     montecarlo3_serial.so   montecarlo_energy2_serial.so  montecarlo_strain2_serial.so  
 
@@ -35,10 +36,10 @@ find_nonzero_highdim.so:  find_nonzero_highdim.pyx
 	python setup_cy_find_nonzero_highdim.py build_ext --inplace
 
 gaussian.so: gaussian.f90
-	f2py -c -m --opt="-O3 -ffast-math" --f90flags="-O3"  gaussian gaussian.f90
+        f2py -c --opt="-O3 -ffast-math" --f90flags="-O3" -m gaussian gaussian.f90
 
 gaussian_single.so: gaussian_single.f90
-	f2py -c -m --opt="-O3 -ffast-math"  --f90flags="-O3"  gaussian_single gaussian_single.f90
+        f2py -c --opt="-O3 -ffast-math"  --f90flags="-O3" -m gaussian_single gaussian_single.f90
 
 #dipole_dipole.so: dipole_dipole.f90
 #	f2py -c -m --opt="-O3 -ffast-math"  --f90flags="-O3"  dipole_dipole dipole_dipole.f90
@@ -47,7 +48,7 @@ gaussian_single.so: gaussian_single.f90
 #	f2py -c -m --opt="-O3 -ffast-math"  --f90flags="-O3"  energy_dope4 energy_dope4.f90
 
 find_nonzero_fortran.so: find_nonzero_fortran.f90
-	f2py -c -m --opt="-O3 -ffast-math"  --f90flags="-O3"  find_nonzero_fortran find_nonzero_fortran.f90
+	f2py -c --opt="-O3 -ffast-math"  --f90flags="-O3" -m find_nonzero_fortran find_nonzero_fortran.f90
 
 #make_dist_array_fortran.so: make_dist_array_fortran.f90
 #	f2py -c -m --opt="-O3 -ffast-math"  --f90flags="-O3"  make_dist_array_fortran make_dist_array_fortran.f90
