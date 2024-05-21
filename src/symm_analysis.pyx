@@ -1,5 +1,8 @@
 #!/usr/bin/evn python
 
+# distutils: extra_compile_args=-fstack-protector
+#define NPY_NO_DEPRECATED_API NPY_1_7_API_VERSION
+
 import resource
 import sys
 import numpy as np
@@ -97,59 +100,38 @@ cdef    ijk_index(int a,int dim, np.ndarray[DTYPE_int_t, ndim=1]  ret):
 #cdef    ijk_index(int a,int dim, np.ndarray[DTYPE_t, ndim=1]  ret):
 #    cdef np.ndarray[DTYPE_int_t, ndim=1] ret = np.zeros((dim),dtype=DTYPE_int)
 #    cdef int n=3
-    cdef float tmp
     if dim == 1:
         ret[0] =  a
     elif dim == 2:
 #        ret[0:2] = [a/n,a%n]
-        tmp = a%3
-        ret[1] = int(tmp) #a%3
-        tmp = a/3
-        ret[0] = int(tmp) #a/3
+        ret[1] = <DTYPE_int_t>(a%3)
+        ret[0] = <DTYPE_int_t>(a/3)
     elif dim == 3:
 #        ret[0:3] =  [a/n/n,(a/n)%n, a%n]
-        tmp = a%3
-        ret[2] =  int(tmp) #  a%3
-        tmp = (a/3)%3
-        ret[1] =  int(tmp) #(a/3)%3
-        tmp = a/3/3
-        ret[0] =  int(tmp) #a/3/3
+        ret[2] =  a%3
+        ret[1] =  <DTYPE_int_t>(a/3)
+        ret[0] =  <DTYPE_int_t>(a/3/3)
     elif dim == 4:
 #        ret[0:4] = [a/n/n/n,(a/n/n)%n,(a/n)%n, a%n]
-        tmp = a%3
-        ret[3] = int(tmp) # a%3
-        tmp = (a/3)%3
-        ret[2] = int(tmp) # (a/3)%3
-        tmp = (a/3/3)%3
-        ret[1] = int(tmp) # (a/3/3)%3
-        tmp = a/3/3/3
-        ret[0] = int(tmp) # a/3/3/3
+        ret[3] = a%3
+        ret[2] = <DTYPE_int_t>((a/3)%3)
+        ret[1] = <DTYPE_int_t>((a/3/3)%3)
+        ret[0] = <DTYPE_int_t>(a/3/3/3)
     elif dim == 5:
 #        ret[0:5] = [a/n/n/n/n,(a/n/n/n)%n,(a/n/n)%n,(a/n)%n, a%n]
-        tmp = a%3
-        ret[4] = int(tmp) # a%3
-        tmp = (a/3)%3
-        ret[3] = int(tmp) #(a/3)%3
-        tmp = (a/3/3)%3
-        ret[2] = int(tmp) #(a/3/3)%3
-        tmp = (a/3/3/3)%3
-        ret[1] = int(tmp) # (a/3/3/3)%3
-        tmp = a/3/3/3/3
-        ret[0] = int(tmp) # a/3/3/3/3
+        ret[4] = a%3
+        ret[3] = <DTYPE_int_t>((a/3)%3)
+        ret[2] = <DTYPE_int_t>((a/3/3)%3)
+        ret[1] = <DTYPE_int_t>((a/3/3/3)%3)
+        ret[0] = <DTYPE_int_t>(a/3/3/3/3)
     elif dim == 6:
 #        ret[0:6] = [a/n/n/n/n/n,(a/n/n/n/n)%n,(a/n/n/n)%n,(a/n/n)%n,(a/n)%n, a%n]
-        tmp = a%3
-        ret[5] = int(tmp) # a%3
-        tmp = (a/3)%3
-        ret[4] = int(tmp) # (a/3)%3
-        tmp = (a/3/3)%3
-        ret[3] = int(tmp) # (a/3/3)%3
-        tmp = (a/3/3/3)%3
-        ret[2] = int(tmp) # (a/3/3/3)%3
-        tmp = (a/3/3/3/3)%3
-        ret[1] = int(tmp) # (a/3/3/3/3)%3
-        tmp = a/3/3/3/3/3
-        ret[0] = int(tmp) # a/3/3/3/3/3
+        ret[5] = a%3
+        ret[4] = <DTYPE_int_t>((a/3)%3)
+        ret[3] = <DTYPE_int_t>((a/3/3)%3)
+        ret[2] = <DTYPE_int_t>((a/3/3/3)%3)
+        ret[1] = <DTYPE_int_t>((a/3/3/3/3)%3)
+        ret[0] = <DTYPE_int_t>(a/3/3/3/3/3)
     elif dim == 0:
 #        return ret
         pass

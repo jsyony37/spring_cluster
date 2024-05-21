@@ -1,6 +1,7 @@
 #!/usr/bin/evn python
 
-
+# distutils: extra_compile_args=-fstack-protector
+#define NPY_NO_DEPRECATED_API NPY_1_7_API_VERSION
 
 import resource
 import sys

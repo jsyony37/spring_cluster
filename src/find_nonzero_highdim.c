@@ -4,6 +4,9 @@
 {
     "distutils": {
         "depends": [],
+        "extra_compile_args": [
+            "-fstack-protector"
+        ],
         "name": "find_nonzero_highdim",
         "sources": [
             "find_nonzero_highdim.pyx"
@@ -1581,7 +1584,7 @@ typedef struct {
 
 /* #### Code section: numeric_typedefs ### */
 
-/* "../../../miniconda3/lib/python3.9/site-packages/numpy/__init__.cython-30.pxd":730
+/* "../../../../../home1/cpark21/.local/lib/python3.9/site-packages/numpy/__init__.cython-30.pxd":730
  * # in Cython to enable them only on the right systems.
  * 
  * ctypedef npy_int8       int8_t             # <<<<<<<<<<<<<<
@@ -1590,7 +1593,7 @@ typedef struct {
  */
 typedef npy_int8 __pyx_t_5numpy_int8_t;
 
-/* "../../../miniconda3/lib/python3.9/site-packages/numpy/__init__.cython-30.pxd":731
+/* "../../../../../home1/cpark21/.local/lib/python3.9/site-packages/numpy/__init__.cython-30.pxd":731
  * 
  * ctypedef npy_int8       int8_t
  * ctypedef npy_int16      int16_t             # <<<<<<<<<<<<<<
@@ -1599,7 +1602,7 @@ typedef npy_int8 __pyx_t_5numpy_int8_t;
  */
 typedef npy_int16 __pyx_t_5numpy_int16_t;
 
-/* "../../../miniconda3/lib/python3.9/site-packages/numpy/__init__.cython-30.pxd":732
+/* "../../../../../home1/cpark21/.local/lib/python3.9/site-packages/numpy/__init__.cython-30.pxd":732
  * ctypedef npy_int8       int8_t
  * ctypedef npy_int16      int16_t
  * ctypedef npy_int32      int32_t             # <<<<<<<<<<<<<<
@@ -1608,7 +1611,7 @@ typedef npy_int16 __pyx_t_5numpy_int16_t;
  */
 typedef npy_int32 __pyx_t_5numpy_int32_t;
 
-/* "../../../miniconda3/lib/python3.9/site-packages/numpy/__init__.cython-30.pxd":733
+/* "../../../../../home1/cpark21/.local/lib/python3.9/site-packages/numpy/__init__.cython-30.pxd":733
  * ctypedef npy_int16      int16_t
  * ctypedef npy_int32      int32_t
  * ctypedef npy_int64      int64_t             # <<<<<<<<<<<<<<
@@ -1617,7 +1620,7 @@ typedef npy_int32 __pyx_t_5numpy_int32_t;
  */
 typedef npy_int64 __pyx_t_5numpy_int64_t;
 
-/* "../../../miniconda3/lib/python3.9/site-packages/numpy/__init__.cython-30.pxd":737
+/* "../../../../../home1/cpark21/.local/lib/python3.9/site-packages/numpy/__init__.cython-30.pxd":737
  * #ctypedef npy_int128     int128_t
  * 
  * ctypedef npy_uint8      uint8_t             # <<<<<<<<<<<<<<
@@ -1626,7 +1629,7 @@ typedef npy_int64 __pyx_t_5numpy_int64_t;
  */
 typedef npy_uint8 __pyx_t_5numpy_uint8_t;
 
-/* "../../../miniconda3/lib/python3.9/site-packages/numpy/__init__.cython-30.pxd":738
+/* "../../../../../home1/cpark21/.local/lib/python3.9/site-packages/numpy/__init__.cython-30.pxd":738
  * 
  * ctypedef npy_uint8      uint8_t
  * ctypedef npy_uint16     uint16_t             # <<<<<<<<<<<<<<
@@ -1635,7 +1638,7 @@ typedef npy_uint8 __pyx_t_5numpy_uint8_t;
  */
 typedef npy_uint16 __pyx_t_5numpy_uint16_t;
 
-/* "../../../miniconda3/lib/python3.9/site-packages/numpy/__init__.cython-30.pxd":739
+/* "../../../../../home1/cpark21/.local/lib/python3.9/site-packages/numpy/__init__.cython-30.pxd":739
  * ctypedef npy_uint8      uint8_t
  * ctypedef npy_uint16     uint16_t
  * ctypedef npy_uint32     uint32_t             # <<<<<<<<<<<<<<
@@ -1644,7 +1647,7 @@ typedef npy_uint16 __pyx_t_5numpy_uint16_t;
  */
 typedef npy_uint32 __pyx_t_5numpy_uint32_t;
 
-/* "../../../miniconda3/lib/python3.9/site-packages/numpy/__init__.cython-30.pxd":740
+/* "../../../../../home1/cpark21/.local/lib/python3.9/site-packages/numpy/__init__.cython-30.pxd":740
  * ctypedef npy_uint16     uint16_t
  * ctypedef npy_uint32     uint32_t
  * ctypedef npy_uint64     uint64_t             # <<<<<<<<<<<<<<
@@ -1653,7 +1656,7 @@ typedef npy_uint32 __pyx_t_5numpy_uint32_t;
  */
 typedef npy_uint64 __pyx_t_5numpy_uint64_t;
 
-/* "../../../miniconda3/lib/python3.9/site-packages/numpy/__init__.cython-30.pxd":744
+/* "../../../../../home1/cpark21/.local/lib/python3.9/site-packages/numpy/__init__.cython-30.pxd":744
  * #ctypedef npy_uint128    uint128_t
  * 
  * ctypedef npy_float32    float32_t             # <<<<<<<<<<<<<<
@@ -1662,7 +1665,7 @@ typedef npy_uint64 __pyx_t_5numpy_uint64_t;
  */
 typedef npy_float32 __pyx_t_5numpy_float32_t;
 
-/* "../../../miniconda3/lib/python3.9/site-packages/numpy/__init__.cython-30.pxd":745
+/* "../../../../../home1/cpark21/.local/lib/python3.9/site-packages/numpy/__init__.cython-30.pxd":745
  * 
  * ctypedef npy_float32    float32_t
  * ctypedef npy_float64    float64_t             # <<<<<<<<<<<<<<
@@ -1671,7 +1674,7 @@ typedef npy_float32 __pyx_t_5numpy_float32_t;
  */
 typedef npy_float64 __pyx_t_5numpy_float64_t;
 
-/* "../../../miniconda3/lib/python3.9/site-packages/numpy/__init__.cython-30.pxd":754
+/* "../../../../../home1/cpark21/.local/lib/python3.9/site-packages/numpy/__init__.cython-30.pxd":754
  * # The int types are mapped a bit surprising --
  * # numpy.int corresponds to 'l' and numpy.long to 'q'
  * ctypedef npy_long       int_t             # <<<<<<<<<<<<<<
@@ -1680,7 +1683,7 @@ typedef npy_float64 __pyx_t_5numpy_float64_t;
  */
 typedef npy_long __pyx_t_5numpy_int_t;
 
-/* "../../../miniconda3/lib/python3.9/site-packages/numpy/__init__.cython-30.pxd":755
+/* "../../../../../home1/cpark21/.local/lib/python3.9/site-packages/numpy/__init__.cython-30.pxd":755
  * # numpy.int corresponds to 'l' and numpy.long to 'q'
  * ctypedef npy_long       int_t
  * ctypedef npy_longlong   longlong_t             # <<<<<<<<<<<<<<
@@ -1689,7 +1692,7 @@ typedef npy_long __pyx_t_5numpy_int_t;
  */
 typedef npy_longlong __pyx_t_5numpy_longlong_t;
 
-/* "../../../miniconda3/lib/python3.9/site-packages/numpy/__init__.cython-30.pxd":757
+/* "../../../../../home1/cpark21/.local/lib/python3.9/site-packages/numpy/__init__.cython-30.pxd":757
  * ctypedef npy_longlong   longlong_t
  * 
  * ctypedef npy_ulong      uint_t             # <<<<<<<<<<<<<<
@@ -1698,7 +1701,7 @@ typedef npy_longlong __pyx_t_5numpy_longlong_t;
  */
 typedef npy_ulong __pyx_t_5numpy_uint_t;
 
-/* "../../../miniconda3/lib/python3.9/site-packages/numpy/__init__.cython-30.pxd":758
+/* "../../../../../home1/cpark21/.local/lib/python3.9/site-packages/numpy/__init__.cython-30.pxd":758
  * 
  * ctypedef npy_ulong      uint_t
  * ctypedef npy_ulonglong  ulonglong_t             # <<<<<<<<<<<<<<
@@ -1707,7 +1710,7 @@ typedef npy_ulong __pyx_t_5numpy_uint_t;
  */
 typedef npy_ulonglong __pyx_t_5numpy_ulonglong_t;
 
-/* "../../../miniconda3/lib/python3.9/site-packages/numpy/__init__.cython-30.pxd":760
+/* "../../../../../home1/cpark21/.local/lib/python3.9/site-packages/numpy/__init__.cython-30.pxd":760
  * ctypedef npy_ulonglong  ulonglong_t
  * 
  * ctypedef npy_intp       intp_t             # <<<<<<<<<<<<<<
@@ -1716,7 +1719,7 @@ typedef npy_ulonglong __pyx_t_5numpy_ulonglong_t;
  */
 typedef npy_intp __pyx_t_5numpy_intp_t;
 
-/* "../../../miniconda3/lib/python3.9/site-packages/numpy/__init__.cython-30.pxd":761
+/* "../../../../../home1/cpark21/.local/lib/python3.9/site-packages/numpy/__init__.cython-30.pxd":761
  * 
  * ctypedef npy_intp       intp_t
  * ctypedef npy_uintp      uintp_t             # <<<<<<<<<<<<<<
@@ -1725,7 +1728,7 @@ typedef npy_intp __pyx_t_5numpy_intp_t;
  */
 typedef npy_uintp __pyx_t_5numpy_uintp_t;
 
-/* "../../../miniconda3/lib/python3.9/site-packages/numpy/__init__.cython-30.pxd":763
+/* "../../../../../home1/cpark21/.local/lib/python3.9/site-packages/numpy/__init__.cython-30.pxd":763
  * ctypedef npy_uintp      uintp_t
  * 
  * ctypedef npy_double     float_t             # <<<<<<<<<<<<<<
@@ -1734,7 +1737,7 @@ typedef npy_uintp __pyx_t_5numpy_uintp_t;
  */
 typedef npy_double __pyx_t_5numpy_float_t;
 
-/* "../../../miniconda3/lib/python3.9/site-packages/numpy/__init__.cython-30.pxd":764
+/* "../../../../../home1/cpark21/.local/lib/python3.9/site-packages/numpy/__init__.cython-30.pxd":764
  * 
  * ctypedef npy_double     float_t
  * ctypedef npy_double     double_t             # <<<<<<<<<<<<<<
@@ -1743,7 +1746,7 @@ typedef npy_double __pyx_t_5numpy_float_t;
  */
 typedef npy_double __pyx_t_5numpy_double_t;
 
-/* "../../../miniconda3/lib/python3.9/site-packages/numpy/__init__.cython-30.pxd":765
+/* "../../../../../home1/cpark21/.local/lib/python3.9/site-packages/numpy/__init__.cython-30.pxd":765
  * ctypedef npy_double     float_t
  * ctypedef npy_double     double_t
  * ctypedef npy_longdouble longdouble_t             # <<<<<<<<<<<<<<
@@ -1752,7 +1755,7 @@ typedef npy_double __pyx_t_5numpy_double_t;
  */
 typedef npy_longdouble __pyx_t_5numpy_longdouble_t;
 
-/* "find_nonzero_highdim.pyx":29
+/* "find_nonzero_highdim.pyx":32
  * #DTYPE_int_small=np.int8
  * 
  * ctypedef np.float32_t DTYPE_single_t             # <<<<<<<<<<<<<<
@@ -1761,7 +1764,7 @@ typedef npy_longdouble __pyx_t_5numpy_longdouble_t;
  */
 typedef __pyx_t_5numpy_float32_t __pyx_t_20find_nonzero_highdim_DTYPE_single_t;
 
-/* "find_nonzero_highdim.pyx":30
+/* "find_nonzero_highdim.pyx":33
  * 
  * ctypedef np.float32_t DTYPE_single_t
  * ctypedef np.float64_t DTYPE_t             # <<<<<<<<<<<<<<
@@ -1770,7 +1773,7 @@ typedef __pyx_t_5numpy_float32_t __pyx_t_20find_nonzero_highdim_DTYPE_single_t;
  */
 typedef __pyx_t_5numpy_float64_t __pyx_t_20find_nonzero_highdim_DTYPE_t;
 
-/* "find_nonzero_highdim.pyx":34
+/* "find_nonzero_highdim.pyx":37
  * #ctypedef np.int_t DTYPE_int_t
  * ctypedef complex DTYPE_complex_t
  * ctypedef np.int64_t DTYPE_int_t             # <<<<<<<<<<<<<<
@@ -1833,7 +1836,7 @@ struct __pyx_opt_args_7cpython_11contextvars_get_value_no_default {
   PyObject *default_value;
 };
 
-/* "../../../miniconda3/lib/python3.9/site-packages/numpy/__init__.cython-30.pxd":767
+/* "../../../../../home1/cpark21/.local/lib/python3.9/site-packages/numpy/__init__.cython-30.pxd":767
  * ctypedef npy_longdouble longdouble_t
  * 
  * ctypedef npy_cfloat      cfloat_t             # <<<<<<<<<<<<<<
@@ -1842,7 +1845,7 @@ struct __pyx_opt_args_7cpython_11contextvars_get_value_no_default {
  */
 typedef npy_cfloat __pyx_t_5numpy_cfloat_t;
 
-/* "../../../miniconda3/lib/python3.9/site-packages/numpy/__init__.cython-30.pxd":768
+/* "../../../../../home1/cpark21/.local/lib/python3.9/site-packages/numpy/__init__.cython-30.pxd":768
  * 
  * ctypedef npy_cfloat      cfloat_t
  * ctypedef npy_cdouble     cdouble_t             # <<<<<<<<<<<<<<
@@ -1851,7 +1854,7 @@ typedef npy_cfloat __pyx_t_5numpy_cfloat_t;
  */
 typedef npy_cdouble __pyx_t_5numpy_cdouble_t;
 
-/* "../../../miniconda3/lib/python3.9/site-packages/numpy/__init__.cython-30.pxd":769
+/* "../../../../../home1/cpark21/.local/lib/python3.9/site-packages/numpy/__init__.cython-30.pxd":769
  * ctypedef npy_cfloat      cfloat_t
  * ctypedef npy_cdouble     cdouble_t
  * ctypedef npy_clongdouble clongdouble_t             # <<<<<<<<<<<<<<
@@ -1860,7 +1863,7 @@ typedef npy_cdouble __pyx_t_5numpy_cdouble_t;
  */
 typedef npy_clongdouble __pyx_t_5numpy_clongdouble_t;
 
-/* "../../../miniconda3/lib/python3.9/site-packages/numpy/__init__.cython-30.pxd":771
+/* "../../../../../home1/cpark21/.local/lib/python3.9/site-packages/numpy/__init__.cython-30.pxd":771
  * ctypedef npy_clongdouble clongdouble_t
  * 
  * ctypedef npy_cdouble     complex_t             # <<<<<<<<<<<<<<
@@ -3613,7 +3616,7 @@ static int __pyx_m_traverse(PyObject *m, visitproc visit, void *arg) {
 #define __pyx_codeobj__10 __pyx_mstate_global->__pyx_codeobj__10
 /* #### Code section: module_code ### */
 
-/* "../../../miniconda3/lib/python3.9/site-packages/numpy/__init__.cython-30.pxd":245
+/* "../../../../../home1/cpark21/.local/lib/python3.9/site-packages/numpy/__init__.cython-30.pxd":245
  * 
  *         @property
  *         cdef inline PyObject* base(self) nogil:             # <<<<<<<<<<<<<<
@@ -3624,7 +3627,7 @@ static int __pyx_m_traverse(PyObject *m, visitproc visit, void *arg) {
 static CYTHON_INLINE PyObject *__pyx_f_5numpy_7ndarray_4base_base(PyArrayObject *__pyx_v_self) {
   PyObject *__pyx_r;
 
-  /* "../../../miniconda3/lib/python3.9/site-packages/numpy/__init__.cython-30.pxd":248
+  /* "../../../../../home1/cpark21/.local/lib/python3.9/site-packages/numpy/__init__.cython-30.pxd":248
  *             """Returns a borrowed reference to the object owning the data/memory.
  *             """
  *             return PyArray_BASE(self)             # <<<<<<<<<<<<<<
@@ -3634,7 +3637,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_7ndarray_4base_base(PyArrayObject 
   __pyx_r = PyArray_BASE(__pyx_v_self);
   goto __pyx_L0;
 
-  /* "../../../miniconda3/lib/python3.9/site-packages/numpy/__init__.cython-30.pxd":245
+  /* "../../../../../home1/cpark21/.local/lib/python3.9/site-packages/numpy/__init__.cython-30.pxd":245
  * 
  *         @property
  *         cdef inline PyObject* base(self) nogil:             # <<<<<<<<<<<<<<
@@ -3647,7 +3650,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_7ndarray_4base_base(PyArrayObject 
   return __pyx_r;
 }
 
-/* "../../../miniconda3/lib/python3.9/site-packages/numpy/__init__.cython-30.pxd":251
+/* "../../../../../home1/cpark21/.local/lib/python3.9/site-packages/numpy/__init__.cython-30.pxd":251
  * 
  *         @property
  *         cdef inline dtype descr(self):             # <<<<<<<<<<<<<<
@@ -3661,7 +3664,7 @@ static CYTHON_INLINE PyArray_Descr *__pyx_f_5numpy_7ndarray_5descr_descr(PyArray
   PyArray_Descr *__pyx_t_1;
   __Pyx_RefNannySetupContext("descr", 1);
 
-  /* "../../../miniconda3/lib/python3.9/site-packages/numpy/__init__.cython-30.pxd":254
+  /* "../../../../../home1/cpark21/.local/lib/python3.9/site-packages/numpy/__init__.cython-30.pxd":254
  *             """Returns an owned reference to the dtype of the array.
  *             """
  *             return <dtype>PyArray_DESCR(self)             # <<<<<<<<<<<<<<
@@ -3674,7 +3677,7 @@ static CYTHON_INLINE PyArray_Descr *__pyx_f_5numpy_7ndarray_5descr_descr(PyArray
   __pyx_r = ((PyArray_Descr *)__pyx_t_1);
   goto __pyx_L0;
 
-  /* "../../../miniconda3/lib/python3.9/site-packages/numpy/__init__.cython-30.pxd":251
+  /* "../../../../../home1/cpark21/.local/lib/python3.9/site-packages/numpy/__init__.cython-30.pxd":251
  * 
  *         @property
  *         cdef inline dtype descr(self):             # <<<<<<<<<<<<<<
@@ -3689,7 +3692,7 @@ static CYTHON_INLINE PyArray_Descr *__pyx_f_5numpy_7ndarray_5descr_descr(PyArray
   return __pyx_r;
 }
 
-/* "../../../miniconda3/lib/python3.9/site-packages/numpy/__init__.cython-30.pxd":257
+/* "../../../../../home1/cpark21/.local/lib/python3.9/site-packages/numpy/__init__.cython-30.pxd":257
  * 
  *         @property
  *         cdef inline int ndim(self) nogil:             # <<<<<<<<<<<<<<
@@ -3700,7 +3703,7 @@ static CYTHON_INLINE PyArray_Descr *__pyx_f_5numpy_7ndarray_5descr_descr(PyArray
 static CYTHON_INLINE int __pyx_f_5numpy_7ndarray_4ndim_ndim(PyArrayObject *__pyx_v_self) {
   int __pyx_r;
 
-  /* "../../../miniconda3/lib/python3.9/site-packages/numpy/__init__.cython-30.pxd":260
+  /* "../../../../../home1/cpark21/.local/lib/python3.9/site-packages/numpy/__init__.cython-30.pxd":260
  *             """Returns the number of dimensions in the array.
  *             """
  *             return PyArray_NDIM(self)             # <<<<<<<<<<<<<<
@@ -3710,7 +3713,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_7ndarray_4ndim_ndim(PyArrayObject *__pyx
   __pyx_r = PyArray_NDIM(__pyx_v_self);
   goto __pyx_L0;
 
-  /* "../../../miniconda3/lib/python3.9/site-packages/numpy/__init__.cython-30.pxd":257
+  /* "../../../../../home1/cpark21/.local/lib/python3.9/site-packages/numpy/__init__.cython-30.pxd":257
  * 
  *         @property
  *         cdef inline int ndim(self) nogil:             # <<<<<<<<<<<<<<
@@ -3723,7 +3726,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_7ndarray_4ndim_ndim(PyArrayObject *__pyx
   return __pyx_r;
 }
 
-/* "../../../miniconda3/lib/python3.9/site-packages/numpy/__init__.cython-30.pxd":263
+/* "../../../../../home1/cpark21/.local/lib/python3.9/site-packages/numpy/__init__.cython-30.pxd":263
  * 
  *         @property
  *         cdef inline npy_intp *shape(self) nogil:             # <<<<<<<<<<<<<<
@@ -3734,7 +3737,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_7ndarray_4ndim_ndim(PyArrayObject *__pyx
 static CYTHON_INLINE npy_intp *__pyx_f_5numpy_7ndarray_5shape_shape(PyArrayObject *__pyx_v_self) {
   npy_intp *__pyx_r;
 
-  /* "../../../miniconda3/lib/python3.9/site-packages/numpy/__init__.cython-30.pxd":268
+  /* "../../../../../home1/cpark21/.local/lib/python3.9/site-packages/numpy/__init__.cython-30.pxd":268
  *             Can return NULL for 0-dimensional arrays.
  *             """
  *             return PyArray_DIMS(self)             # <<<<<<<<<<<<<<
@@ -3744,7 +3747,7 @@ static CYTHON_INLINE npy_intp *__pyx_f_5numpy_7ndarray_5shape_shape(PyArrayObjec
   __pyx_r = PyArray_DIMS(__pyx_v_self);
   goto __pyx_L0;
 
-  /* "../../../miniconda3/lib/python3.9/site-packages/numpy/__init__.cython-30.pxd":263
+  /* "../../../../../home1/cpark21/.local/lib/python3.9/site-packages/numpy/__init__.cython-30.pxd":263
  * 
  *         @property
  *         cdef inline npy_intp *shape(self) nogil:             # <<<<<<<<<<<<<<
@@ -3757,7 +3760,7 @@ static CYTHON_INLINE npy_intp *__pyx_f_5numpy_7ndarray_5shape_shape(PyArrayObjec
   return __pyx_r;
 }
 
-/* "../../../miniconda3/lib/python3.9/site-packages/numpy/__init__.cython-30.pxd":271
+/* "../../../../../home1/cpark21/.local/lib/python3.9/site-packages/numpy/__init__.cython-30.pxd":271
  * 
  *         @property
  *         cdef inline npy_intp *strides(self) nogil:             # <<<<<<<<<<<<<<
@@ -3768,7 +3771,7 @@ static CYTHON_INLINE npy_intp *__pyx_f_5numpy_7ndarray_5shape_shape(PyArrayObjec
 static CYTHON_INLINE npy_intp *__pyx_f_5numpy_7ndarray_7strides_strides(PyArrayObject *__pyx_v_self) {
   npy_intp *__pyx_r;
 
-  /* "../../../miniconda3/lib/python3.9/site-packages/numpy/__init__.cython-30.pxd":275
+  /* "../../../../../home1/cpark21/.local/lib/python3.9/site-packages/numpy/__init__.cython-30.pxd":275
  *             The number of elements matches the number of dimensions of the array (ndim).
  *             """
  *             return PyArray_STRIDES(self)             # <<<<<<<<<<<<<<
@@ -3778,7 +3781,7 @@ static CYTHON_INLINE npy_intp *__pyx_f_5numpy_7ndarray_7strides_strides(PyArrayO
   __pyx_r = PyArray_STRIDES(__pyx_v_self);
   goto __pyx_L0;
 
-  /* "../../../miniconda3/lib/python3.9/site-packages/numpy/__init__.cython-30.pxd":271
+  /* "../../../../../home1/cpark21/.local/lib/python3.9/site-packages/numpy/__init__.cython-30.pxd":271
  * 
  *         @property
  *         cdef inline npy_intp *strides(self) nogil:             # <<<<<<<<<<<<<<
@@ -3791,7 +3794,7 @@ static CYTHON_INLINE npy_intp *__pyx_f_5numpy_7ndarray_7strides_strides(PyArrayO
   return __pyx_r;
 }
 
-/* "../../../miniconda3/lib/python3.9/site-packages/numpy/__init__.cython-30.pxd":278
+/* "../../../../../home1/cpark21/.local/lib/python3.9/site-packages/numpy/__init__.cython-30.pxd":278
  * 
  *         @property
  *         cdef inline npy_intp size(self) nogil:             # <<<<<<<<<<<<<<
@@ -3802,7 +3805,7 @@ static CYTHON_INLINE npy_intp *__pyx_f_5numpy_7ndarray_7strides_strides(PyArrayO
 static CYTHON_INLINE npy_intp __pyx_f_5numpy_7ndarray_4size_size(PyArrayObject *__pyx_v_self) {
   npy_intp __pyx_r;
 
-  /* "../../../miniconda3/lib/python3.9/site-packages/numpy/__init__.cython-30.pxd":281
+  /* "../../../../../home1/cpark21/.local/lib/python3.9/site-packages/numpy/__init__.cython-30.pxd":281
  *             """Returns the total size (in number of elements) of the array.
  *             """
  *             return PyArray_SIZE(self)             # <<<<<<<<<<<<<<
@@ -3812,7 +3815,7 @@ static CYTHON_INLINE npy_intp __pyx_f_5numpy_7ndarray_4size_size(PyArrayObject *
   __pyx_r = PyArray_SIZE(__pyx_v_self);
   goto __pyx_L0;
 
-  /* "../../../miniconda3/lib/python3.9/site-packages/numpy/__init__.cython-30.pxd":278
+  /* "../../../../../home1/cpark21/.local/lib/python3.9/site-packages/numpy/__init__.cython-30.pxd":278
  * 
  *         @property
  *         cdef inline npy_intp size(self) nogil:             # <<<<<<<<<<<<<<
@@ -3825,7 +3828,7 @@ static CYTHON_INLINE npy_intp __pyx_f_5numpy_7ndarray_4size_size(PyArrayObject *
   return __pyx_r;
 }
 
-/* "../../../miniconda3/lib/python3.9/site-packages/numpy/__init__.cython-30.pxd":284
+/* "../../../../../home1/cpark21/.local/lib/python3.9/site-packages/numpy/__init__.cython-30.pxd":284
  * 
  *         @property
  *         cdef inline char* data(self) nogil:             # <<<<<<<<<<<<<<
@@ -3836,7 +3839,7 @@ static CYTHON_INLINE npy_intp __pyx_f_5numpy_7ndarray_4size_size(PyArrayObject *
 static CYTHON_INLINE char *__pyx_f_5numpy_7ndarray_4data_data(PyArrayObject *__pyx_v_self) {
   char *__pyx_r;
 
-  /* "../../../miniconda3/lib/python3.9/site-packages/numpy/__init__.cython-30.pxd":290
+  /* "../../../../../home1/cpark21/.local/lib/python3.9/site-packages/numpy/__init__.cython-30.pxd":290
  *             of `PyArray_DATA()` instead, which returns a 'void*'.
  *             """
  *             return PyArray_BYTES(self)             # <<<<<<<<<<<<<<
@@ -3846,7 +3849,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy_7ndarray_4data_data(PyArrayObject *__p
   __pyx_r = PyArray_BYTES(__pyx_v_self);
   goto __pyx_L0;
 
-  /* "../../../miniconda3/lib/python3.9/site-packages/numpy/__init__.cython-30.pxd":284
+  /* "../../../../../home1/cpark21/.local/lib/python3.9/site-packages/numpy/__init__.cython-30.pxd":284
  * 
  *         @property
  *         cdef inline char* data(self) nogil:             # <<<<<<<<<<<<<<
@@ -3859,7 +3862,7 @@ static CYTHON_INLINE char *__pyx_f_5numpy_7ndarray_4data_data(PyArrayObject *__p
   return __pyx_r;
 }
 
-/* "../../../miniconda3/lib/python3.9/site-packages/numpy/__init__.cython-30.pxd":773
+/* "../../../../../home1/cpark21/.local/lib/python3.9/site-packages/numpy/__init__.cython-30.pxd":773
  * ctypedef npy_cdouble     complex_t
  * 
  * cdef inline object PyArray_MultiIterNew1(a):             # <<<<<<<<<<<<<<
@@ -3876,7 +3879,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyArray_MultiIterNew1(PyObject *__
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("PyArray_MultiIterNew1", 1);
 
-  /* "../../../miniconda3/lib/python3.9/site-packages/numpy/__init__.cython-30.pxd":774
+  /* "../../../../../home1/cpark21/.local/lib/python3.9/site-packages/numpy/__init__.cython-30.pxd":774
  * 
  * cdef inline object PyArray_MultiIterNew1(a):
  *     return PyArray_MultiIterNew(1, <void*>a)             # <<<<<<<<<<<<<<
@@ -3890,7 +3893,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyArray_MultiIterNew1(PyObject *__
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "../../../miniconda3/lib/python3.9/site-packages/numpy/__init__.cython-30.pxd":773
+  /* "../../../../../home1/cpark21/.local/lib/python3.9/site-packages/numpy/__init__.cython-30.pxd":773
  * ctypedef npy_cdouble     complex_t
  * 
  * cdef inline object PyArray_MultiIterNew1(a):             # <<<<<<<<<<<<<<
@@ -3909,7 +3912,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyArray_MultiIterNew1(PyObject *__
   return __pyx_r;
 }
 
-/* "../../../miniconda3/lib/python3.9/site-packages/numpy/__init__.cython-30.pxd":776
+/* "../../../../../home1/cpark21/.local/lib/python3.9/site-packages/numpy/__init__.cython-30.pxd":776
  *     return PyArray_MultiIterNew(1, <void*>a)
  * 
  * cdef inline object PyArray_MultiIterNew2(a, b):             # <<<<<<<<<<<<<<
@@ -3926,7 +3929,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyArray_MultiIterNew2(PyObject *__
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("PyArray_MultiIterNew2", 1);
 
-  /* "../../../miniconda3/lib/python3.9/site-packages/numpy/__init__.cython-30.pxd":777
+  /* "../../../../../home1/cpark21/.local/lib/python3.9/site-packages/numpy/__init__.cython-30.pxd":777
  * 
  * cdef inline object PyArray_MultiIterNew2(a, b):
  *     return PyArray_MultiIterNew(2, <void*>a, <void*>b)             # <<<<<<<<<<<<<<
@@ -3940,7 +3943,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyArray_MultiIterNew2(PyObject *__
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "../../../miniconda3/lib/python3.9/site-packages/numpy/__init__.cython-30.pxd":776
+  /* "../../../../../home1/cpark21/.local/lib/python3.9/site-packages/numpy/__init__.cython-30.pxd":776
  *     return PyArray_MultiIterNew(1, <void*>a)
  * 
  * cdef inline object PyArray_MultiIterNew2(a, b):             # <<<<<<<<<<<<<<
@@ -3959,7 +3962,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyArray_MultiIterNew2(PyObject *__
   return __pyx_r;
 }
 
-/* "../../../miniconda3/lib/python3.9/site-packages/numpy/__init__.cython-30.pxd":779
+/* "../../../../../home1/cpark21/.local/lib/python3.9/site-packages/numpy/__init__.cython-30.pxd":779
  *     return PyArray_MultiIterNew(2, <void*>a, <void*>b)
  * 
  * cdef inline object PyArray_MultiIterNew3(a, b, c):             # <<<<<<<<<<<<<<
@@ -3976,7 +3979,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyArray_MultiIterNew3(PyObject *__
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("PyArray_MultiIterNew3", 1);
 
-  /* "../../../miniconda3/lib/python3.9/site-packages/numpy/__init__.cython-30.pxd":780
+  /* "../../../../../home1/cpark21/.local/lib/python3.9/site-packages/numpy/__init__.cython-30.pxd":780
  * 
  * cdef inline object PyArray_MultiIterNew3(a, b, c):
  *     return PyArray_MultiIterNew(3, <void*>a, <void*>b, <void*> c)             # <<<<<<<<<<<<<<
@@ -3990,7 +3993,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyArray_MultiIterNew3(PyObject *__
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "../../../miniconda3/lib/python3.9/site-packages/numpy/__init__.cython-30.pxd":779
+  /* "../../../../../home1/cpark21/.local/lib/python3.9/site-packages/numpy/__init__.cython-30.pxd":779
  *     return PyArray_MultiIterNew(2, <void*>a, <void*>b)
  * 
  * cdef inline object PyArray_MultiIterNew3(a, b, c):             # <<<<<<<<<<<<<<
@@ -4009,7 +4012,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyArray_MultiIterNew3(PyObject *__
   return __pyx_r;
 }
 
-/* "../../../miniconda3/lib/python3.9/site-packages/numpy/__init__.cython-30.pxd":782
+/* "../../../../../home1/cpark21/.local/lib/python3.9/site-packages/numpy/__init__.cython-30.pxd":782
  *     return PyArray_MultiIterNew(3, <void*>a, <void*>b, <void*> c)
  * 
  * cdef inline object PyArray_MultiIterNew4(a, b, c, d):             # <<<<<<<<<<<<<<
@@ -4026,7 +4029,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyArray_MultiIterNew4(PyObject *__
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("PyArray_MultiIterNew4", 1);
 
-  /* "../../../miniconda3/lib/python3.9/site-packages/numpy/__init__.cython-30.pxd":783
+  /* "../../../../../home1/cpark21/.local/lib/python3.9/site-packages/numpy/__init__.cython-30.pxd":783
  * 
  * cdef inline object PyArray_MultiIterNew4(a, b, c, d):
  *     return PyArray_MultiIterNew(4, <void*>a, <void*>b, <void*>c, <void*> d)             # <<<<<<<<<<<<<<
@@ -4040,7 +4043,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyArray_MultiIterNew4(PyObject *__
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "../../../miniconda3/lib/python3.9/site-packages/numpy/__init__.cython-30.pxd":782
+  /* "../../../../../home1/cpark21/.local/lib/python3.9/site-packages/numpy/__init__.cython-30.pxd":782
  *     return PyArray_MultiIterNew(3, <void*>a, <void*>b, <void*> c)
  * 
  * cdef inline object PyArray_MultiIterNew4(a, b, c, d):             # <<<<<<<<<<<<<<
@@ -4059,7 +4062,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyArray_MultiIterNew4(PyObject *__
   return __pyx_r;
 }
 
-/* "../../../miniconda3/lib/python3.9/site-packages/numpy/__init__.cython-30.pxd":785
+/* "../../../../../home1/cpark21/.local/lib/python3.9/site-packages/numpy/__init__.cython-30.pxd":785
  *     return PyArray_MultiIterNew(4, <void*>a, <void*>b, <void*>c, <void*> d)
  * 
  * cdef inline object PyArray_MultiIterNew5(a, b, c, d, e):             # <<<<<<<<<<<<<<
@@ -4076,7 +4079,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyArray_MultiIterNew5(PyObject *__
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("PyArray_MultiIterNew5", 1);
 
-  /* "../../../miniconda3/lib/python3.9/site-packages/numpy/__init__.cython-30.pxd":786
+  /* "../../../../../home1/cpark21/.local/lib/python3.9/site-packages/numpy/__init__.cython-30.pxd":786
  * 
  * cdef inline object PyArray_MultiIterNew5(a, b, c, d, e):
  *     return PyArray_MultiIterNew(5, <void*>a, <void*>b, <void*>c, <void*> d, <void*> e)             # <<<<<<<<<<<<<<
@@ -4090,7 +4093,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyArray_MultiIterNew5(PyObject *__
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "../../../miniconda3/lib/python3.9/site-packages/numpy/__init__.cython-30.pxd":785
+  /* "../../../../../home1/cpark21/.local/lib/python3.9/site-packages/numpy/__init__.cython-30.pxd":785
  *     return PyArray_MultiIterNew(4, <void*>a, <void*>b, <void*>c, <void*> d)
  * 
  * cdef inline object PyArray_MultiIterNew5(a, b, c, d, e):             # <<<<<<<<<<<<<<
@@ -4109,7 +4112,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyArray_MultiIterNew5(PyObject *__
   return __pyx_r;
 }
 
-/* "../../../miniconda3/lib/python3.9/site-packages/numpy/__init__.cython-30.pxd":788
+/* "../../../../../home1/cpark21/.local/lib/python3.9/site-packages/numpy/__init__.cython-30.pxd":788
  *     return PyArray_MultiIterNew(5, <void*>a, <void*>b, <void*>c, <void*> d, <void*> e)
  * 
  * cdef inline tuple PyDataType_SHAPE(dtype d):             # <<<<<<<<<<<<<<
@@ -4123,7 +4126,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyDataType_SHAPE(PyArray_Descr *__
   int __pyx_t_1;
   __Pyx_RefNannySetupContext("PyDataType_SHAPE", 1);
 
-  /* "../../../miniconda3/lib/python3.9/site-packages/numpy/__init__.cython-30.pxd":789
+  /* "../../../../../home1/cpark21/.local/lib/python3.9/site-packages/numpy/__init__.cython-30.pxd":789
  * 
  * cdef inline tuple PyDataType_SHAPE(dtype d):
  *     if PyDataType_HASSUBARRAY(d):             # <<<<<<<<<<<<<<
@@ -4133,7 +4136,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyDataType_SHAPE(PyArray_Descr *__
   __pyx_t_1 = PyDataType_HASSUBARRAY(__pyx_v_d);
   if (__pyx_t_1) {
 
-    /* "../../../miniconda3/lib/python3.9/site-packages/numpy/__init__.cython-30.pxd":790
+    /* "../../../../../home1/cpark21/.local/lib/python3.9/site-packages/numpy/__init__.cython-30.pxd":790
  * cdef inline tuple PyDataType_SHAPE(dtype d):
  *     if PyDataType_HASSUBARRAY(d):
  *         return <tuple>d.subarray.shape             # <<<<<<<<<<<<<<
@@ -4145,7 +4148,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyDataType_SHAPE(PyArray_Descr *__
     __pyx_r = ((PyObject*)__pyx_v_d->subarray->shape);
     goto __pyx_L0;
 
-    /* "../../../miniconda3/lib/python3.9/site-packages/numpy/__init__.cython-30.pxd":789
+    /* "../../../../../home1/cpark21/.local/lib/python3.9/site-packages/numpy/__init__.cython-30.pxd":789
  * 
  * cdef inline tuple PyDataType_SHAPE(dtype d):
  *     if PyDataType_HASSUBARRAY(d):             # <<<<<<<<<<<<<<
@@ -4154,7 +4157,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyDataType_SHAPE(PyArray_Descr *__
  */
   }
 
-  /* "../../../miniconda3/lib/python3.9/site-packages/numpy/__init__.cython-30.pxd":792
+  /* "../../../../../home1/cpark21/.local/lib/python3.9/site-packages/numpy/__init__.cython-30.pxd":792
  *         return <tuple>d.subarray.shape
  *     else:
  *         return ()             # <<<<<<<<<<<<<<
@@ -4168,7 +4171,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyDataType_SHAPE(PyArray_Descr *__
     goto __pyx_L0;
   }
 
-  /* "../../../miniconda3/lib/python3.9/site-packages/numpy/__init__.cython-30.pxd":788
+  /* "../../../../../home1/cpark21/.local/lib/python3.9/site-packages/numpy/__init__.cython-30.pxd":788
  *     return PyArray_MultiIterNew(5, <void*>a, <void*>b, <void*>c, <void*> d, <void*> e)
  * 
  * cdef inline tuple PyDataType_SHAPE(dtype d):             # <<<<<<<<<<<<<<
@@ -4183,7 +4186,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_PyDataType_SHAPE(PyArray_Descr *__
   return __pyx_r;
 }
 
-/* "../../../miniconda3/lib/python3.9/site-packages/numpy/__init__.cython-30.pxd":968
+/* "../../../../../home1/cpark21/.local/lib/python3.9/site-packages/numpy/__init__.cython-30.pxd":968
  *     int _import_umath() except -1
  * 
  * cdef inline void set_array_base(ndarray arr, object base):             # <<<<<<<<<<<<<<
@@ -4197,7 +4200,7 @@ static CYTHON_INLINE void __pyx_f_5numpy_set_array_base(PyArrayObject *__pyx_v_a
   const char *__pyx_filename = NULL;
   int __pyx_clineno = 0;
 
-  /* "../../../miniconda3/lib/python3.9/site-packages/numpy/__init__.cython-30.pxd":969
+  /* "../../../../../home1/cpark21/.local/lib/python3.9/site-packages/numpy/__init__.cython-30.pxd":969
  * 
  * cdef inline void set_array_base(ndarray arr, object base):
  *     Py_INCREF(base) # important to do this before stealing the reference below!             # <<<<<<<<<<<<<<
@@ -4206,7 +4209,7 @@ static CYTHON_INLINE void __pyx_f_5numpy_set_array_base(PyArrayObject *__pyx_v_a
  */
   Py_INCREF(__pyx_v_base);
 
-  /* "../../../miniconda3/lib/python3.9/site-packages/numpy/__init__.cython-30.pxd":970
+  /* "../../../../../home1/cpark21/.local/lib/python3.9/site-packages/numpy/__init__.cython-30.pxd":970
  * cdef inline void set_array_base(ndarray arr, object base):
  *     Py_INCREF(base) # important to do this before stealing the reference below!
  *     PyArray_SetBaseObject(arr, base)             # <<<<<<<<<<<<<<
@@ -4215,7 +4218,7 @@ static CYTHON_INLINE void __pyx_f_5numpy_set_array_base(PyArrayObject *__pyx_v_a
  */
   __pyx_t_1 = PyArray_SetBaseObject(__pyx_v_arr, __pyx_v_base); if (unlikely(__pyx_t_1 == ((int)-1))) __PYX_ERR(1, 970, __pyx_L1_error)
 
-  /* "../../../miniconda3/lib/python3.9/site-packages/numpy/__init__.cython-30.pxd":968
+  /* "../../../../../home1/cpark21/.local/lib/python3.9/site-packages/numpy/__init__.cython-30.pxd":968
  *     int _import_umath() except -1
  * 
  * cdef inline void set_array_base(ndarray arr, object base):             # <<<<<<<<<<<<<<
@@ -4230,7 +4233,7 @@ static CYTHON_INLINE void __pyx_f_5numpy_set_array_base(PyArrayObject *__pyx_v_a
   __pyx_L0:;
 }
 
-/* "../../../miniconda3/lib/python3.9/site-packages/numpy/__init__.cython-30.pxd":972
+/* "../../../../../home1/cpark21/.local/lib/python3.9/site-packages/numpy/__init__.cython-30.pxd":972
  *     PyArray_SetBaseObject(arr, base)
  * 
  * cdef inline object get_array_base(ndarray arr):             # <<<<<<<<<<<<<<
@@ -4245,7 +4248,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_get_array_base(PyArrayObject *__py
   int __pyx_t_1;
   __Pyx_RefNannySetupContext("get_array_base", 1);
 
-  /* "../../../miniconda3/lib/python3.9/site-packages/numpy/__init__.cython-30.pxd":973
+  /* "../../../../../home1/cpark21/.local/lib/python3.9/site-packages/numpy/__init__.cython-30.pxd":973
  * 
  * cdef inline object get_array_base(ndarray arr):
  *     base = PyArray_BASE(arr)             # <<<<<<<<<<<<<<
@@ -4254,7 +4257,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_get_array_base(PyArrayObject *__py
  */
   __pyx_v_base = PyArray_BASE(__pyx_v_arr);
 
-  /* "../../../miniconda3/lib/python3.9/site-packages/numpy/__init__.cython-30.pxd":974
+  /* "../../../../../home1/cpark21/.local/lib/python3.9/site-packages/numpy/__init__.cython-30.pxd":974
  * cdef inline object get_array_base(ndarray arr):
  *     base = PyArray_BASE(arr)
  *     if base is NULL:             # <<<<<<<<<<<<<<
@@ -4264,7 +4267,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_get_array_base(PyArrayObject *__py
   __pyx_t_1 = (__pyx_v_base == NULL);
   if (__pyx_t_1) {
 
-    /* "../../../miniconda3/lib/python3.9/site-packages/numpy/__init__.cython-30.pxd":975
+    /* "../../../../../home1/cpark21/.local/lib/python3.9/site-packages/numpy/__init__.cython-30.pxd":975
  *     base = PyArray_BASE(arr)
  *     if base is NULL:
  *         return None             # <<<<<<<<<<<<<<
@@ -4275,7 +4278,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_get_array_base(PyArrayObject *__py
     __pyx_r = Py_None; __Pyx_INCREF(Py_None);
     goto __pyx_L0;
 
-    /* "../../../miniconda3/lib/python3.9/site-packages/numpy/__init__.cython-30.pxd":974
+    /* "../../../../../home1/cpark21/.local/lib/python3.9/site-packages/numpy/__init__.cython-30.pxd":974
  * cdef inline object get_array_base(ndarray arr):
  *     base = PyArray_BASE(arr)
  *     if base is NULL:             # <<<<<<<<<<<<<<
@@ -4284,7 +4287,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_get_array_base(PyArrayObject *__py
  */
   }
 
-  /* "../../../miniconda3/lib/python3.9/site-packages/numpy/__init__.cython-30.pxd":976
+  /* "../../../../../home1/cpark21/.local/lib/python3.9/site-packages/numpy/__init__.cython-30.pxd":976
  *     if base is NULL:
  *         return None
  *     return <object>base             # <<<<<<<<<<<<<<
@@ -4296,7 +4299,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_get_array_base(PyArrayObject *__py
   __pyx_r = ((PyObject *)__pyx_v_base);
   goto __pyx_L0;
 
-  /* "../../../miniconda3/lib/python3.9/site-packages/numpy/__init__.cython-30.pxd":972
+  /* "../../../../../home1/cpark21/.local/lib/python3.9/site-packages/numpy/__init__.cython-30.pxd":972
  *     PyArray_SetBaseObject(arr, base)
  * 
  * cdef inline object get_array_base(ndarray arr):             # <<<<<<<<<<<<<<
@@ -4311,7 +4314,7 @@ static CYTHON_INLINE PyObject *__pyx_f_5numpy_get_array_base(PyArrayObject *__py
   return __pyx_r;
 }
 
-/* "../../../miniconda3/lib/python3.9/site-packages/numpy/__init__.cython-30.pxd":980
+/* "../../../../../home1/cpark21/.local/lib/python3.9/site-packages/numpy/__init__.cython-30.pxd":980
  * # Versions of the import_* functions which are more suitable for
  * # Cython code.
  * cdef inline int import_array() except -1:             # <<<<<<<<<<<<<<
@@ -4335,7 +4338,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_array(void) {
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("import_array", 1);
 
-  /* "../../../miniconda3/lib/python3.9/site-packages/numpy/__init__.cython-30.pxd":981
+  /* "../../../../../home1/cpark21/.local/lib/python3.9/site-packages/numpy/__init__.cython-30.pxd":981
  * # Cython code.
  * cdef inline int import_array() except -1:
  *     try:             # <<<<<<<<<<<<<<
@@ -4351,7 +4354,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_array(void) {
     __Pyx_XGOTREF(__pyx_t_3);
     /*try:*/ {
 
-      /* "../../../miniconda3/lib/python3.9/site-packages/numpy/__init__.cython-30.pxd":982
+      /* "../../../../../home1/cpark21/.local/lib/python3.9/site-packages/numpy/__init__.cython-30.pxd":982
  * cdef inline int import_array() except -1:
  *     try:
  *         __pyx_import_array()             # <<<<<<<<<<<<<<
@@ -4360,7 +4363,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_array(void) {
  */
       __pyx_t_4 = _import_array(); if (unlikely(__pyx_t_4 == ((int)-1))) __PYX_ERR(1, 982, __pyx_L3_error)
 
-      /* "../../../miniconda3/lib/python3.9/site-packages/numpy/__init__.cython-30.pxd":981
+      /* "../../../../../home1/cpark21/.local/lib/python3.9/site-packages/numpy/__init__.cython-30.pxd":981
  * # Cython code.
  * cdef inline int import_array() except -1:
  *     try:             # <<<<<<<<<<<<<<
@@ -4374,7 +4377,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_array(void) {
     goto __pyx_L8_try_end;
     __pyx_L3_error:;
 
-    /* "../../../miniconda3/lib/python3.9/site-packages/numpy/__init__.cython-30.pxd":983
+    /* "../../../../../home1/cpark21/.local/lib/python3.9/site-packages/numpy/__init__.cython-30.pxd":983
  *     try:
  *         __pyx_import_array()
  *     except Exception:             # <<<<<<<<<<<<<<
@@ -4389,7 +4392,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_array(void) {
       __Pyx_XGOTREF(__pyx_t_6);
       __Pyx_XGOTREF(__pyx_t_7);
 
-      /* "../../../miniconda3/lib/python3.9/site-packages/numpy/__init__.cython-30.pxd":984
+      /* "../../../../../home1/cpark21/.local/lib/python3.9/site-packages/numpy/__init__.cython-30.pxd":984
  *         __pyx_import_array()
  *     except Exception:
  *         raise ImportError("numpy.core.multiarray failed to import")             # <<<<<<<<<<<<<<
@@ -4404,7 +4407,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_array(void) {
     }
     goto __pyx_L5_except_error;
 
-    /* "../../../miniconda3/lib/python3.9/site-packages/numpy/__init__.cython-30.pxd":981
+    /* "../../../../../home1/cpark21/.local/lib/python3.9/site-packages/numpy/__init__.cython-30.pxd":981
  * # Cython code.
  * cdef inline int import_array() except -1:
  *     try:             # <<<<<<<<<<<<<<
@@ -4420,7 +4423,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_array(void) {
     __pyx_L8_try_end:;
   }
 
-  /* "../../../miniconda3/lib/python3.9/site-packages/numpy/__init__.cython-30.pxd":980
+  /* "../../../../../home1/cpark21/.local/lib/python3.9/site-packages/numpy/__init__.cython-30.pxd":980
  * # Versions of the import_* functions which are more suitable for
  * # Cython code.
  * cdef inline int import_array() except -1:             # <<<<<<<<<<<<<<
@@ -4443,7 +4446,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_array(void) {
   return __pyx_r;
 }
 
-/* "../../../miniconda3/lib/python3.9/site-packages/numpy/__init__.cython-30.pxd":986
+/* "../../../../../home1/cpark21/.local/lib/python3.9/site-packages/numpy/__init__.cython-30.pxd":986
  *         raise ImportError("numpy.core.multiarray failed to import")
  * 
  * cdef inline int import_umath() except -1:             # <<<<<<<<<<<<<<
@@ -4467,7 +4470,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_umath(void) {
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("import_umath", 1);
 
-  /* "../../../miniconda3/lib/python3.9/site-packages/numpy/__init__.cython-30.pxd":987
+  /* "../../../../../home1/cpark21/.local/lib/python3.9/site-packages/numpy/__init__.cython-30.pxd":987
  * 
  * cdef inline int import_umath() except -1:
  *     try:             # <<<<<<<<<<<<<<
@@ -4483,7 +4486,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_umath(void) {
     __Pyx_XGOTREF(__pyx_t_3);
     /*try:*/ {
 
-      /* "../../../miniconda3/lib/python3.9/site-packages/numpy/__init__.cython-30.pxd":988
+      /* "../../../../../home1/cpark21/.local/lib/python3.9/site-packages/numpy/__init__.cython-30.pxd":988
  * cdef inline int import_umath() except -1:
  *     try:
  *         _import_umath()             # <<<<<<<<<<<<<<
@@ -4492,7 +4495,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_umath(void) {
  */
       __pyx_t_4 = _import_umath(); if (unlikely(__pyx_t_4 == ((int)-1))) __PYX_ERR(1, 988, __pyx_L3_error)
 
-      /* "../../../miniconda3/lib/python3.9/site-packages/numpy/__init__.cython-30.pxd":987
+      /* "../../../../../home1/cpark21/.local/lib/python3.9/site-packages/numpy/__init__.cython-30.pxd":987
  * 
  * cdef inline int import_umath() except -1:
  *     try:             # <<<<<<<<<<<<<<
@@ -4506,7 +4509,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_umath(void) {
     goto __pyx_L8_try_end;
     __pyx_L3_error:;
 
-    /* "../../../miniconda3/lib/python3.9/site-packages/numpy/__init__.cython-30.pxd":989
+    /* "../../../../../home1/cpark21/.local/lib/python3.9/site-packages/numpy/__init__.cython-30.pxd":989
  *     try:
  *         _import_umath()
  *     except Exception:             # <<<<<<<<<<<<<<
@@ -4521,7 +4524,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_umath(void) {
       __Pyx_XGOTREF(__pyx_t_6);
       __Pyx_XGOTREF(__pyx_t_7);
 
-      /* "../../../miniconda3/lib/python3.9/site-packages/numpy/__init__.cython-30.pxd":990
+      /* "../../../../../home1/cpark21/.local/lib/python3.9/site-packages/numpy/__init__.cython-30.pxd":990
  *         _import_umath()
  *     except Exception:
  *         raise ImportError("numpy.core.umath failed to import")             # <<<<<<<<<<<<<<
@@ -4536,7 +4539,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_umath(void) {
     }
     goto __pyx_L5_except_error;
 
-    /* "../../../miniconda3/lib/python3.9/site-packages/numpy/__init__.cython-30.pxd":987
+    /* "../../../../../home1/cpark21/.local/lib/python3.9/site-packages/numpy/__init__.cython-30.pxd":987
  * 
  * cdef inline int import_umath() except -1:
  *     try:             # <<<<<<<<<<<<<<
@@ -4552,7 +4555,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_umath(void) {
     __pyx_L8_try_end:;
   }
 
-  /* "../../../miniconda3/lib/python3.9/site-packages/numpy/__init__.cython-30.pxd":986
+  /* "../../../../../home1/cpark21/.local/lib/python3.9/site-packages/numpy/__init__.cython-30.pxd":986
  *         raise ImportError("numpy.core.multiarray failed to import")
  * 
  * cdef inline int import_umath() except -1:             # <<<<<<<<<<<<<<
@@ -4575,7 +4578,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_umath(void) {
   return __pyx_r;
 }
 
-/* "../../../miniconda3/lib/python3.9/site-packages/numpy/__init__.cython-30.pxd":992
+/* "../../../../../home1/cpark21/.local/lib/python3.9/site-packages/numpy/__init__.cython-30.pxd":992
  *         raise ImportError("numpy.core.umath failed to import")
  * 
  * cdef inline int import_ufunc() except -1:             # <<<<<<<<<<<<<<
@@ -4599,7 +4602,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_ufunc(void) {
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("import_ufunc", 1);
 
-  /* "../../../miniconda3/lib/python3.9/site-packages/numpy/__init__.cython-30.pxd":993
+  /* "../../../../../home1/cpark21/.local/lib/python3.9/site-packages/numpy/__init__.cython-30.pxd":993
  * 
  * cdef inline int import_ufunc() except -1:
  *     try:             # <<<<<<<<<<<<<<
@@ -4615,7 +4618,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_ufunc(void) {
     __Pyx_XGOTREF(__pyx_t_3);
     /*try:*/ {
 
-      /* "../../../miniconda3/lib/python3.9/site-packages/numpy/__init__.cython-30.pxd":994
+      /* "../../../../../home1/cpark21/.local/lib/python3.9/site-packages/numpy/__init__.cython-30.pxd":994
  * cdef inline int import_ufunc() except -1:
  *     try:
  *         _import_umath()             # <<<<<<<<<<<<<<
@@ -4624,7 +4627,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_ufunc(void) {
  */
       __pyx_t_4 = _import_umath(); if (unlikely(__pyx_t_4 == ((int)-1))) __PYX_ERR(1, 994, __pyx_L3_error)
 
-      /* "../../../miniconda3/lib/python3.9/site-packages/numpy/__init__.cython-30.pxd":993
+      /* "../../../../../home1/cpark21/.local/lib/python3.9/site-packages/numpy/__init__.cython-30.pxd":993
  * 
  * cdef inline int import_ufunc() except -1:
  *     try:             # <<<<<<<<<<<<<<
@@ -4638,7 +4641,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_ufunc(void) {
     goto __pyx_L8_try_end;
     __pyx_L3_error:;
 
-    /* "../../../miniconda3/lib/python3.9/site-packages/numpy/__init__.cython-30.pxd":995
+    /* "../../../../../home1/cpark21/.local/lib/python3.9/site-packages/numpy/__init__.cython-30.pxd":995
  *     try:
  *         _import_umath()
  *     except Exception:             # <<<<<<<<<<<<<<
@@ -4653,7 +4656,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_ufunc(void) {
       __Pyx_XGOTREF(__pyx_t_6);
       __Pyx_XGOTREF(__pyx_t_7);
 
-      /* "../../../miniconda3/lib/python3.9/site-packages/numpy/__init__.cython-30.pxd":996
+      /* "../../../../../home1/cpark21/.local/lib/python3.9/site-packages/numpy/__init__.cython-30.pxd":996
  *         _import_umath()
  *     except Exception:
  *         raise ImportError("numpy.core.umath failed to import")             # <<<<<<<<<<<<<<
@@ -4668,7 +4671,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_ufunc(void) {
     }
     goto __pyx_L5_except_error;
 
-    /* "../../../miniconda3/lib/python3.9/site-packages/numpy/__init__.cython-30.pxd":993
+    /* "../../../../../home1/cpark21/.local/lib/python3.9/site-packages/numpy/__init__.cython-30.pxd":993
  * 
  * cdef inline int import_ufunc() except -1:
  *     try:             # <<<<<<<<<<<<<<
@@ -4684,7 +4687,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_ufunc(void) {
     __pyx_L8_try_end:;
   }
 
-  /* "../../../miniconda3/lib/python3.9/site-packages/numpy/__init__.cython-30.pxd":992
+  /* "../../../../../home1/cpark21/.local/lib/python3.9/site-packages/numpy/__init__.cython-30.pxd":992
  *         raise ImportError("numpy.core.umath failed to import")
  * 
  * cdef inline int import_ufunc() except -1:             # <<<<<<<<<<<<<<
@@ -4707,7 +4710,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_ufunc(void) {
   return __pyx_r;
 }
 
-/* "../../../miniconda3/lib/python3.9/site-packages/numpy/__init__.cython-30.pxd":999
+/* "../../../../../home1/cpark21/.local/lib/python3.9/site-packages/numpy/__init__.cython-30.pxd":999
  * 
  * 
  * cdef inline bint is_timedelta64_object(object obj):             # <<<<<<<<<<<<<<
@@ -4718,7 +4721,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_ufunc(void) {
 static CYTHON_INLINE int __pyx_f_5numpy_is_timedelta64_object(PyObject *__pyx_v_obj) {
   int __pyx_r;
 
-  /* "../../../miniconda3/lib/python3.9/site-packages/numpy/__init__.cython-30.pxd":1011
+  /* "../../../../../home1/cpark21/.local/lib/python3.9/site-packages/numpy/__init__.cython-30.pxd":1011
  *     bool
  *     """
  *     return PyObject_TypeCheck(obj, &PyTimedeltaArrType_Type)             # <<<<<<<<<<<<<<
@@ -4728,7 +4731,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_is_timedelta64_object(PyObject *__pyx_v_
   __pyx_r = PyObject_TypeCheck(__pyx_v_obj, (&PyTimedeltaArrType_Type));
   goto __pyx_L0;
 
-  /* "../../../miniconda3/lib/python3.9/site-packages/numpy/__init__.cython-30.pxd":999
+  /* "../../../../../home1/cpark21/.local/lib/python3.9/site-packages/numpy/__init__.cython-30.pxd":999
  * 
  * 
  * cdef inline bint is_timedelta64_object(object obj):             # <<<<<<<<<<<<<<
@@ -4741,7 +4744,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_is_timedelta64_object(PyObject *__pyx_v_
   return __pyx_r;
 }
 
-/* "../../../miniconda3/lib/python3.9/site-packages/numpy/__init__.cython-30.pxd":1014
+/* "../../../../../home1/cpark21/.local/lib/python3.9/site-packages/numpy/__init__.cython-30.pxd":1014
  * 
  * 
  * cdef inline bint is_datetime64_object(object obj):             # <<<<<<<<<<<<<<
@@ -4752,7 +4755,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_is_timedelta64_object(PyObject *__pyx_v_
 static CYTHON_INLINE int __pyx_f_5numpy_is_datetime64_object(PyObject *__pyx_v_obj) {
   int __pyx_r;
 
-  /* "../../../miniconda3/lib/python3.9/site-packages/numpy/__init__.cython-30.pxd":1026
+  /* "../../../../../home1/cpark21/.local/lib/python3.9/site-packages/numpy/__init__.cython-30.pxd":1026
  *     bool
  *     """
  *     return PyObject_TypeCheck(obj, &PyDatetimeArrType_Type)             # <<<<<<<<<<<<<<
@@ -4762,7 +4765,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_is_datetime64_object(PyObject *__pyx_v_o
   __pyx_r = PyObject_TypeCheck(__pyx_v_obj, (&PyDatetimeArrType_Type));
   goto __pyx_L0;
 
-  /* "../../../miniconda3/lib/python3.9/site-packages/numpy/__init__.cython-30.pxd":1014
+  /* "../../../../../home1/cpark21/.local/lib/python3.9/site-packages/numpy/__init__.cython-30.pxd":1014
  * 
  * 
  * cdef inline bint is_datetime64_object(object obj):             # <<<<<<<<<<<<<<
@@ -4775,7 +4778,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_is_datetime64_object(PyObject *__pyx_v_o
   return __pyx_r;
 }
 
-/* "../../../miniconda3/lib/python3.9/site-packages/numpy/__init__.cython-30.pxd":1029
+/* "../../../../../home1/cpark21/.local/lib/python3.9/site-packages/numpy/__init__.cython-30.pxd":1029
  * 
  * 
  * cdef inline npy_datetime get_datetime64_value(object obj) nogil:             # <<<<<<<<<<<<<<
@@ -4786,7 +4789,7 @@ static CYTHON_INLINE int __pyx_f_5numpy_is_datetime64_object(PyObject *__pyx_v_o
 static CYTHON_INLINE npy_datetime __pyx_f_5numpy_get_datetime64_value(PyObject *__pyx_v_obj) {
   npy_datetime __pyx_r;
 
-  /* "../../../miniconda3/lib/python3.9/site-packages/numpy/__init__.cython-30.pxd":1036
+  /* "../../../../../home1/cpark21/.local/lib/python3.9/site-packages/numpy/__init__.cython-30.pxd":1036
  *     also needed.  That can be found using `get_datetime64_unit`.
  *     """
  *     return (<PyDatetimeScalarObject*>obj).obval             # <<<<<<<<<<<<<<
@@ -4796,7 +4799,7 @@ static CYTHON_INLINE npy_datetime __pyx_f_5numpy_get_datetime64_value(PyObject *
   __pyx_r = ((PyDatetimeScalarObject *)__pyx_v_obj)->obval;
   goto __pyx_L0;
 
-  /* "../../../miniconda3/lib/python3.9/site-packages/numpy/__init__.cython-30.pxd":1029
+  /* "../../../../../home1/cpark21/.local/lib/python3.9/site-packages/numpy/__init__.cython-30.pxd":1029
  * 
  * 
  * cdef inline npy_datetime get_datetime64_value(object obj) nogil:             # <<<<<<<<<<<<<<
@@ -4809,7 +4812,7 @@ static CYTHON_INLINE npy_datetime __pyx_f_5numpy_get_datetime64_value(PyObject *
   return __pyx_r;
 }
 
-/* "../../../miniconda3/lib/python3.9/site-packages/numpy/__init__.cython-30.pxd":1039
+/* "../../../../../home1/cpark21/.local/lib/python3.9/site-packages/numpy/__init__.cython-30.pxd":1039
  * 
  * 
  * cdef inline npy_timedelta get_timedelta64_value(object obj) nogil:             # <<<<<<<<<<<<<<
@@ -4820,7 +4823,7 @@ static CYTHON_INLINE npy_datetime __pyx_f_5numpy_get_datetime64_value(PyObject *
 static CYTHON_INLINE npy_timedelta __pyx_f_5numpy_get_timedelta64_value(PyObject *__pyx_v_obj) {
   npy_timedelta __pyx_r;
 
-  /* "../../../miniconda3/lib/python3.9/site-packages/numpy/__init__.cython-30.pxd":1043
+  /* "../../../../../home1/cpark21/.local/lib/python3.9/site-packages/numpy/__init__.cython-30.pxd":1043
  *     returns the int64 value underlying scalar numpy timedelta64 object
  *     """
  *     return (<PyTimedeltaScalarObject*>obj).obval             # <<<<<<<<<<<<<<
@@ -4830,7 +4833,7 @@ static CYTHON_INLINE npy_timedelta __pyx_f_5numpy_get_timedelta64_value(PyObject
   __pyx_r = ((PyTimedeltaScalarObject *)__pyx_v_obj)->obval;
   goto __pyx_L0;
 
-  /* "../../../miniconda3/lib/python3.9/site-packages/numpy/__init__.cython-30.pxd":1039
+  /* "../../../../../home1/cpark21/.local/lib/python3.9/site-packages/numpy/__init__.cython-30.pxd":1039
  * 
  * 
  * cdef inline npy_timedelta get_timedelta64_value(object obj) nogil:             # <<<<<<<<<<<<<<
@@ -4843,7 +4846,7 @@ static CYTHON_INLINE npy_timedelta __pyx_f_5numpy_get_timedelta64_value(PyObject
   return __pyx_r;
 }
 
-/* "../../../miniconda3/lib/python3.9/site-packages/numpy/__init__.cython-30.pxd":1046
+/* "../../../../../home1/cpark21/.local/lib/python3.9/site-packages/numpy/__init__.cython-30.pxd":1046
  * 
  * 
  * cdef inline NPY_DATETIMEUNIT get_datetime64_unit(object obj) nogil:             # <<<<<<<<<<<<<<
@@ -4854,7 +4857,7 @@ static CYTHON_INLINE npy_timedelta __pyx_f_5numpy_get_timedelta64_value(PyObject
 static CYTHON_INLINE NPY_DATETIMEUNIT __pyx_f_5numpy_get_datetime64_unit(PyObject *__pyx_v_obj) {
   NPY_DATETIMEUNIT __pyx_r;
 
-  /* "../../../miniconda3/lib/python3.9/site-packages/numpy/__init__.cython-30.pxd":1050
+  /* "../../../../../home1/cpark21/.local/lib/python3.9/site-packages/numpy/__init__.cython-30.pxd":1050
  *     returns the unit part of the dtype for a numpy datetime64 object.
  *     """
  *     return <NPY_DATETIMEUNIT>(<PyDatetimeScalarObject*>obj).obmeta.base             # <<<<<<<<<<<<<<
@@ -4862,7 +4865,7 @@ static CYTHON_INLINE NPY_DATETIMEUNIT __pyx_f_5numpy_get_datetime64_unit(PyObjec
   __pyx_r = ((NPY_DATETIMEUNIT)((PyDatetimeScalarObject *)__pyx_v_obj)->obmeta.base);
   goto __pyx_L0;
 
-  /* "../../../miniconda3/lib/python3.9/site-packages/numpy/__init__.cython-30.pxd":1046
+  /* "../../../../../home1/cpark21/.local/lib/python3.9/site-packages/numpy/__init__.cython-30.pxd":1046
  * 
  * 
  * cdef inline NPY_DATETIMEUNIT get_datetime64_unit(object obj) nogil:             # <<<<<<<<<<<<<<
@@ -5168,7 +5171,7 @@ static CYTHON_INLINE PyObject *__pyx_f_7cpython_11contextvars_get_value_no_defau
   return __pyx_r;
 }
 
-/* "find_nonzero_highdim.pyx":36
+/* "find_nonzero_highdim.pyx":39
  * ctypedef np.int64_t DTYPE_int_t
  * 
  * cdef int atom_index_inv(np.ndarray[DTYPE_int_t, ndim=1] a, int nat):             # <<<<<<<<<<<<<<
@@ -5204,21 +5207,21 @@ static int __pyx_f_20find_nonzero_highdim_atom_index_inv(PyArrayObject *__pyx_v_
   __pyx_pybuffernd_a.rcbuffer = &__pyx_pybuffer_a;
   {
     __Pyx_BufFmt_StackElem __pyx_stack[1];
-    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_a.rcbuffer->pybuffer, (PyObject*)__pyx_v_a, &__Pyx_TypeInfo_nn___pyx_t_20find_nonzero_highdim_DTYPE_int_t, PyBUF_FORMAT| PyBUF_STRIDES, 1, 0, __pyx_stack) == -1)) __PYX_ERR(0, 36, __pyx_L1_error)
+    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_a.rcbuffer->pybuffer, (PyObject*)__pyx_v_a, &__Pyx_TypeInfo_nn___pyx_t_20find_nonzero_highdim_DTYPE_int_t, PyBUF_FORMAT| PyBUF_STRIDES, 1, 0, __pyx_stack) == -1)) __PYX_ERR(0, 39, __pyx_L1_error)
   }
   __pyx_pybuffernd_a.diminfo[0].strides = __pyx_pybuffernd_a.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_a.diminfo[0].shape = __pyx_pybuffernd_a.rcbuffer->pybuffer.shape[0];
 
-  /* "find_nonzero_highdim.pyx":38
+  /* "find_nonzero_highdim.pyx":41
  * cdef int atom_index_inv(np.ndarray[DTYPE_int_t, ndim=1] a, int nat):
  * #returns the atom index from a set of atom numbers
  *     cdef int dim = len(a)             # <<<<<<<<<<<<<<
  *     cdef int ret = 0
  *     if dim == 1:
  */
-  __pyx_t_1 = PyObject_Length(((PyObject *)__pyx_v_a)); if (unlikely(__pyx_t_1 == ((Py_ssize_t)-1))) __PYX_ERR(0, 38, __pyx_L1_error)
+  __pyx_t_1 = PyObject_Length(((PyObject *)__pyx_v_a)); if (unlikely(__pyx_t_1 == ((Py_ssize_t)-1))) __PYX_ERR(0, 41, __pyx_L1_error)
   __pyx_v_dim = __pyx_t_1;
 
-  /* "find_nonzero_highdim.pyx":39
+  /* "find_nonzero_highdim.pyx":42
  * #returns the atom index from a set of atom numbers
  *     cdef int dim = len(a)
  *     cdef int ret = 0             # <<<<<<<<<<<<<<
@@ -5227,7 +5230,7 @@ static int __pyx_f_20find_nonzero_highdim_atom_index_inv(PyArrayObject *__pyx_v_
  */
   __pyx_v_ret = 0;
 
-  /* "find_nonzero_highdim.pyx":40
+  /* "find_nonzero_highdim.pyx":43
  *     cdef int dim = len(a)
  *     cdef int ret = 0
  *     if dim == 1:             # <<<<<<<<<<<<<<
@@ -5237,17 +5240,17 @@ static int __pyx_f_20find_nonzero_highdim_atom_index_inv(PyArrayObject *__pyx_v_
   switch (__pyx_v_dim) {
     case 1:
 
-    /* "find_nonzero_highdim.pyx":41
+    /* "find_nonzero_highdim.pyx":44
  *     cdef int ret = 0
  *     if dim == 1:
  *         ret = a             # <<<<<<<<<<<<<<
  *     elif dim == 2:
  *         ret = a[0]*nat+a[1]
  */
-    __pyx_t_2 = __Pyx_PyInt_As_int(((PyObject *)__pyx_v_a)); if (unlikely((__pyx_t_2 == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 41, __pyx_L1_error)
+    __pyx_t_2 = __Pyx_PyInt_As_int(((PyObject *)__pyx_v_a)); if (unlikely((__pyx_t_2 == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 44, __pyx_L1_error)
     __pyx_v_ret = __pyx_t_2;
 
-    /* "find_nonzero_highdim.pyx":40
+    /* "find_nonzero_highdim.pyx":43
  *     cdef int dim = len(a)
  *     cdef int ret = 0
  *     if dim == 1:             # <<<<<<<<<<<<<<
@@ -5257,7 +5260,7 @@ static int __pyx_f_20find_nonzero_highdim_atom_index_inv(PyArrayObject *__pyx_v_
     break;
     case 2:
 
-    /* "find_nonzero_highdim.pyx":43
+    /* "find_nonzero_highdim.pyx":46
  *         ret = a
  *     elif dim == 2:
  *         ret = a[0]*nat+a[1]             # <<<<<<<<<<<<<<
@@ -5272,7 +5275,7 @@ static int __pyx_f_20find_nonzero_highdim_atom_index_inv(PyArrayObject *__pyx_v_
     } else if (unlikely(__pyx_t_3 >= __pyx_pybuffernd_a.diminfo[0].shape)) __pyx_t_2 = 0;
     if (unlikely(__pyx_t_2 != -1)) {
       __Pyx_RaiseBufferIndexError(__pyx_t_2);
-      __PYX_ERR(0, 43, __pyx_L1_error)
+      __PYX_ERR(0, 46, __pyx_L1_error)
     }
     __pyx_t_4 = 1;
     __pyx_t_2 = -1;
@@ -5282,11 +5285,11 @@ static int __pyx_f_20find_nonzero_highdim_atom_index_inv(PyArrayObject *__pyx_v_
     } else if (unlikely(__pyx_t_4 >= __pyx_pybuffernd_a.diminfo[0].shape)) __pyx_t_2 = 0;
     if (unlikely(__pyx_t_2 != -1)) {
       __Pyx_RaiseBufferIndexError(__pyx_t_2);
-      __PYX_ERR(0, 43, __pyx_L1_error)
+      __PYX_ERR(0, 46, __pyx_L1_error)
     }
     __pyx_v_ret = (((*__Pyx_BufPtrStrided1d(__pyx_t_20find_nonzero_highdim_DTYPE_int_t *, __pyx_pybuffernd_a.rcbuffer->pybuffer.buf, __pyx_t_3, __pyx_pybuffernd_a.diminfo[0].strides)) * __pyx_v_nat) + (*__Pyx_BufPtrStrided1d(__pyx_t_20find_nonzero_highdim_DTYPE_int_t *, __pyx_pybuffernd_a.rcbuffer->pybuffer.buf, __pyx_t_4, __pyx_pybuffernd_a.diminfo[0].strides)));
 
-    /* "find_nonzero_highdim.pyx":42
+    /* "find_nonzero_highdim.pyx":45
  *     if dim == 1:
  *         ret = a
  *     elif dim == 2:             # <<<<<<<<<<<<<<
@@ -5296,7 +5299,7 @@ static int __pyx_f_20find_nonzero_highdim_atom_index_inv(PyArrayObject *__pyx_v_
     break;
     case 3:
 
-    /* "find_nonzero_highdim.pyx":45
+    /* "find_nonzero_highdim.pyx":48
  *         ret = a[0]*nat+a[1]
  *     elif dim == 3:
  *         ret = a[0]*nat*nat+a[1]*nat+a[2]             # <<<<<<<<<<<<<<
@@ -5311,7 +5314,7 @@ static int __pyx_f_20find_nonzero_highdim_atom_index_inv(PyArrayObject *__pyx_v_
     } else if (unlikely(__pyx_t_4 >= __pyx_pybuffernd_a.diminfo[0].shape)) __pyx_t_2 = 0;
     if (unlikely(__pyx_t_2 != -1)) {
       __Pyx_RaiseBufferIndexError(__pyx_t_2);
-      __PYX_ERR(0, 45, __pyx_L1_error)
+      __PYX_ERR(0, 48, __pyx_L1_error)
     }
     __pyx_t_3 = 1;
     __pyx_t_2 = -1;
@@ -5321,7 +5324,7 @@ static int __pyx_f_20find_nonzero_highdim_atom_index_inv(PyArrayObject *__pyx_v_
     } else if (unlikely(__pyx_t_3 >= __pyx_pybuffernd_a.diminfo[0].shape)) __pyx_t_2 = 0;
     if (unlikely(__pyx_t_2 != -1)) {
       __Pyx_RaiseBufferIndexError(__pyx_t_2);
-      __PYX_ERR(0, 45, __pyx_L1_error)
+      __PYX_ERR(0, 48, __pyx_L1_error)
     }
     __pyx_t_5 = 2;
     __pyx_t_2 = -1;
@@ -5331,11 +5334,11 @@ static int __pyx_f_20find_nonzero_highdim_atom_index_inv(PyArrayObject *__pyx_v_
     } else if (unlikely(__pyx_t_5 >= __pyx_pybuffernd_a.diminfo[0].shape)) __pyx_t_2 = 0;
     if (unlikely(__pyx_t_2 != -1)) {
       __Pyx_RaiseBufferIndexError(__pyx_t_2);
-      __PYX_ERR(0, 45, __pyx_L1_error)
+      __PYX_ERR(0, 48, __pyx_L1_error)
     }
     __pyx_v_ret = (((((*__Pyx_BufPtrStrided1d(__pyx_t_20find_nonzero_highdim_DTYPE_int_t *, __pyx_pybuffernd_a.rcbuffer->pybuffer.buf, __pyx_t_4, __pyx_pybuffernd_a.diminfo[0].strides)) * __pyx_v_nat) * __pyx_v_nat) + ((*__Pyx_BufPtrStrided1d(__pyx_t_20find_nonzero_highdim_DTYPE_int_t *, __pyx_pybuffernd_a.rcbuffer->pybuffer.buf, __pyx_t_3, __pyx_pybuffernd_a.diminfo[0].strides)) * __pyx_v_nat)) + (*__Pyx_BufPtrStrided1d(__pyx_t_20find_nonzero_highdim_DTYPE_int_t *, __pyx_pybuffernd_a.rcbuffer->pybuffer.buf, __pyx_t_5, __pyx_pybuffernd_a.diminfo[0].strides)));
 
-    /* "find_nonzero_highdim.pyx":44
+    /* "find_nonzero_highdim.pyx":47
  *     elif dim == 2:
  *         ret = a[0]*nat+a[1]
  *     elif dim == 3:             # <<<<<<<<<<<<<<
@@ -5345,7 +5348,7 @@ static int __pyx_f_20find_nonzero_highdim_atom_index_inv(PyArrayObject *__pyx_v_
     break;
     case 4:
 
-    /* "find_nonzero_highdim.pyx":47
+    /* "find_nonzero_highdim.pyx":50
  *         ret = a[0]*nat*nat+a[1]*nat+a[2]
  *     elif dim == 4:
  *         ret = a[0]*nat*nat*nat+a[1]*nat*nat+a[2]*nat+a[3]             # <<<<<<<<<<<<<<
@@ -5360,7 +5363,7 @@ static int __pyx_f_20find_nonzero_highdim_atom_index_inv(PyArrayObject *__pyx_v_
     } else if (unlikely(__pyx_t_5 >= __pyx_pybuffernd_a.diminfo[0].shape)) __pyx_t_2 = 0;
     if (unlikely(__pyx_t_2 != -1)) {
       __Pyx_RaiseBufferIndexError(__pyx_t_2);
-      __PYX_ERR(0, 47, __pyx_L1_error)
+      __PYX_ERR(0, 50, __pyx_L1_error)
     }
     __pyx_t_3 = 1;
     __pyx_t_2 = -1;
@@ -5370,7 +5373,7 @@ static int __pyx_f_20find_nonzero_highdim_atom_index_inv(PyArrayObject *__pyx_v_
     } else if (unlikely(__pyx_t_3 >= __pyx_pybuffernd_a.diminfo[0].shape)) __pyx_t_2 = 0;
     if (unlikely(__pyx_t_2 != -1)) {
       __Pyx_RaiseBufferIndexError(__pyx_t_2);
-      __PYX_ERR(0, 47, __pyx_L1_error)
+      __PYX_ERR(0, 50, __pyx_L1_error)
     }
     __pyx_t_4 = 2;
     __pyx_t_2 = -1;
@@ -5380,7 +5383,7 @@ static int __pyx_f_20find_nonzero_highdim_atom_index_inv(PyArrayObject *__pyx_v_
     } else if (unlikely(__pyx_t_4 >= __pyx_pybuffernd_a.diminfo[0].shape)) __pyx_t_2 = 0;
     if (unlikely(__pyx_t_2 != -1)) {
       __Pyx_RaiseBufferIndexError(__pyx_t_2);
-      __PYX_ERR(0, 47, __pyx_L1_error)
+      __PYX_ERR(0, 50, __pyx_L1_error)
     }
     __pyx_t_6 = 3;
     __pyx_t_2 = -1;
@@ -5390,11 +5393,11 @@ static int __pyx_f_20find_nonzero_highdim_atom_index_inv(PyArrayObject *__pyx_v_
     } else if (unlikely(__pyx_t_6 >= __pyx_pybuffernd_a.diminfo[0].shape)) __pyx_t_2 = 0;
     if (unlikely(__pyx_t_2 != -1)) {
       __Pyx_RaiseBufferIndexError(__pyx_t_2);
-      __PYX_ERR(0, 47, __pyx_L1_error)
+      __PYX_ERR(0, 50, __pyx_L1_error)
     }
     __pyx_v_ret = (((((((*__Pyx_BufPtrStrided1d(__pyx_t_20find_nonzero_highdim_DTYPE_int_t *, __pyx_pybuffernd_a.rcbuffer->pybuffer.buf, __pyx_t_5, __pyx_pybuffernd_a.diminfo[0].strides)) * __pyx_v_nat) * __pyx_v_nat) * __pyx_v_nat) + (((*__Pyx_BufPtrStrided1d(__pyx_t_20find_nonzero_highdim_DTYPE_int_t *, __pyx_pybuffernd_a.rcbuffer->pybuffer.buf, __pyx_t_3, __pyx_pybuffernd_a.diminfo[0].strides)) * __pyx_v_nat) * __pyx_v_nat)) + ((*__Pyx_BufPtrStrided1d(__pyx_t_20find_nonzero_highdim_DTYPE_int_t *, __pyx_pybuffernd_a.rcbuffer->pybuffer.buf, __pyx_t_4, __pyx_pybuffernd_a.diminfo[0].strides)) * __pyx_v_nat)) + (*__Pyx_BufPtrStrided1d(__pyx_t_20find_nonzero_highdim_DTYPE_int_t *, __pyx_pybuffernd_a.rcbuffer->pybuffer.buf, __pyx_t_6, __pyx_pybuffernd_a.diminfo[0].strides)));
 
-    /* "find_nonzero_highdim.pyx":46
+    /* "find_nonzero_highdim.pyx":49
  *     elif dim == 3:
  *         ret = a[0]*nat*nat+a[1]*nat+a[2]
  *     elif dim == 4:             # <<<<<<<<<<<<<<
@@ -5404,7 +5407,7 @@ static int __pyx_f_20find_nonzero_highdim_atom_index_inv(PyArrayObject *__pyx_v_
     break;
     case 5:
 
-    /* "find_nonzero_highdim.pyx":49
+    /* "find_nonzero_highdim.pyx":52
  *         ret = a[0]*nat*nat*nat+a[1]*nat*nat+a[2]*nat+a[3]
  *     elif dim == 5:
  *         ret = a[0]*nat*nat*nat*nat+a[1]*nat*nat*nat+a[2]*nat*nat+a[3]*nat+a[4]             # <<<<<<<<<<<<<<
@@ -5419,7 +5422,7 @@ static int __pyx_f_20find_nonzero_highdim_atom_index_inv(PyArrayObject *__pyx_v_
     } else if (unlikely(__pyx_t_6 >= __pyx_pybuffernd_a.diminfo[0].shape)) __pyx_t_2 = 0;
     if (unlikely(__pyx_t_2 != -1)) {
       __Pyx_RaiseBufferIndexError(__pyx_t_2);
-      __PYX_ERR(0, 49, __pyx_L1_error)
+      __PYX_ERR(0, 52, __pyx_L1_error)
     }
     __pyx_t_4 = 1;
     __pyx_t_2 = -1;
@@ -5429,7 +5432,7 @@ static int __pyx_f_20find_nonzero_highdim_atom_index_inv(PyArrayObject *__pyx_v_
     } else if (unlikely(__pyx_t_4 >= __pyx_pybuffernd_a.diminfo[0].shape)) __pyx_t_2 = 0;
     if (unlikely(__pyx_t_2 != -1)) {
       __Pyx_RaiseBufferIndexError(__pyx_t_2);
-      __PYX_ERR(0, 49, __pyx_L1_error)
+      __PYX_ERR(0, 52, __pyx_L1_error)
     }
     __pyx_t_3 = 2;
     __pyx_t_2 = -1;
@@ -5439,7 +5442,7 @@ static int __pyx_f_20find_nonzero_highdim_atom_index_inv(PyArrayObject *__pyx_v_
     } else if (unlikely(__pyx_t_3 >= __pyx_pybuffernd_a.diminfo[0].shape)) __pyx_t_2 = 0;
     if (unlikely(__pyx_t_2 != -1)) {
       __Pyx_RaiseBufferIndexError(__pyx_t_2);
-      __PYX_ERR(0, 49, __pyx_L1_error)
+      __PYX_ERR(0, 52, __pyx_L1_error)
     }
     __pyx_t_5 = 3;
     __pyx_t_2 = -1;
@@ -5449,7 +5452,7 @@ static int __pyx_f_20find_nonzero_highdim_atom_index_inv(PyArrayObject *__pyx_v_
     } else if (unlikely(__pyx_t_5 >= __pyx_pybuffernd_a.diminfo[0].shape)) __pyx_t_2 = 0;
     if (unlikely(__pyx_t_2 != -1)) {
       __Pyx_RaiseBufferIndexError(__pyx_t_2);
-      __PYX_ERR(0, 49, __pyx_L1_error)
+      __PYX_ERR(0, 52, __pyx_L1_error)
     }
     __pyx_t_7 = 4;
     __pyx_t_2 = -1;
@@ -5459,11 +5462,11 @@ static int __pyx_f_20find_nonzero_highdim_atom_index_inv(PyArrayObject *__pyx_v_
     } else if (unlikely(__pyx_t_7 >= __pyx_pybuffernd_a.diminfo[0].shape)) __pyx_t_2 = 0;
     if (unlikely(__pyx_t_2 != -1)) {
       __Pyx_RaiseBufferIndexError(__pyx_t_2);
-      __PYX_ERR(0, 49, __pyx_L1_error)
+      __PYX_ERR(0, 52, __pyx_L1_error)
     }
     __pyx_v_ret = (((((((((*__Pyx_BufPtrStrided1d(__pyx_t_20find_nonzero_highdim_DTYPE_int_t *, __pyx_pybuffernd_a.rcbuffer->pybuffer.buf, __pyx_t_6, __pyx_pybuffernd_a.diminfo[0].strides)) * __pyx_v_nat) * __pyx_v_nat) * __pyx_v_nat) * __pyx_v_nat) + ((((*__Pyx_BufPtrStrided1d(__pyx_t_20find_nonzero_highdim_DTYPE_int_t *, __pyx_pybuffernd_a.rcbuffer->pybuffer.buf, __pyx_t_4, __pyx_pybuffernd_a.diminfo[0].strides)) * __pyx_v_nat) * __pyx_v_nat) * __pyx_v_nat)) + (((*__Pyx_BufPtrStrided1d(__pyx_t_20find_nonzero_highdim_DTYPE_int_t *, __pyx_pybuffernd_a.rcbuffer->pybuffer.buf, __pyx_t_3, __pyx_pybuffernd_a.diminfo[0].strides)) * __pyx_v_nat) * __pyx_v_nat)) + ((*__Pyx_BufPtrStrided1d(__pyx_t_20find_nonzero_highdim_DTYPE_int_t *, __pyx_pybuffernd_a.rcbuffer->pybuffer.buf, __pyx_t_5, __pyx_pybuffernd_a.diminfo[0].strides)) * __pyx_v_nat)) + (*__Pyx_BufPtrStrided1d(__pyx_t_20find_nonzero_highdim_DTYPE_int_t *, __pyx_pybuffernd_a.rcbuffer->pybuffer.buf, __pyx_t_7, __pyx_pybuffernd_a.diminfo[0].strides)));
 
-    /* "find_nonzero_highdim.pyx":48
+    /* "find_nonzero_highdim.pyx":51
  *     elif dim == 4:
  *         ret = a[0]*nat*nat*nat+a[1]*nat*nat+a[2]*nat+a[3]
  *     elif dim == 5:             # <<<<<<<<<<<<<<
@@ -5473,7 +5476,7 @@ static int __pyx_f_20find_nonzero_highdim_atom_index_inv(PyArrayObject *__pyx_v_
     break;
     case 6:
 
-    /* "find_nonzero_highdim.pyx":51
+    /* "find_nonzero_highdim.pyx":54
  *         ret = a[0]*nat*nat*nat*nat+a[1]*nat*nat*nat+a[2]*nat*nat+a[3]*nat+a[4]
  *     elif dim == 6:
  *         ret = a[0]*nat*nat*nat*nat*nat+a[1]*nat*nat*nat*nat+a[2]*nat*nat*nat+a[3]*nat*nat+a[4]*nat+a[5]             # <<<<<<<<<<<<<<
@@ -5488,7 +5491,7 @@ static int __pyx_f_20find_nonzero_highdim_atom_index_inv(PyArrayObject *__pyx_v_
     } else if (unlikely(__pyx_t_7 >= __pyx_pybuffernd_a.diminfo[0].shape)) __pyx_t_2 = 0;
     if (unlikely(__pyx_t_2 != -1)) {
       __Pyx_RaiseBufferIndexError(__pyx_t_2);
-      __PYX_ERR(0, 51, __pyx_L1_error)
+      __PYX_ERR(0, 54, __pyx_L1_error)
     }
     __pyx_t_5 = 1;
     __pyx_t_2 = -1;
@@ -5498,7 +5501,7 @@ static int __pyx_f_20find_nonzero_highdim_atom_index_inv(PyArrayObject *__pyx_v_
     } else if (unlikely(__pyx_t_5 >= __pyx_pybuffernd_a.diminfo[0].shape)) __pyx_t_2 = 0;
     if (unlikely(__pyx_t_2 != -1)) {
       __Pyx_RaiseBufferIndexError(__pyx_t_2);
-      __PYX_ERR(0, 51, __pyx_L1_error)
+      __PYX_ERR(0, 54, __pyx_L1_error)
     }
     __pyx_t_3 = 2;
     __pyx_t_2 = -1;
@@ -5508,7 +5511,7 @@ static int __pyx_f_20find_nonzero_highdim_atom_index_inv(PyArrayObject *__pyx_v_
     } else if (unlikely(__pyx_t_3 >= __pyx_pybuffernd_a.diminfo[0].shape)) __pyx_t_2 = 0;
     if (unlikely(__pyx_t_2 != -1)) {
       __Pyx_RaiseBufferIndexError(__pyx_t_2);
-      __PYX_ERR(0, 51, __pyx_L1_error)
+      __PYX_ERR(0, 54, __pyx_L1_error)
     }
     __pyx_t_4 = 3;
     __pyx_t_2 = -1;
@@ -5518,7 +5521,7 @@ static int __pyx_f_20find_nonzero_highdim_atom_index_inv(PyArrayObject *__pyx_v_
     } else if (unlikely(__pyx_t_4 >= __pyx_pybuffernd_a.diminfo[0].shape)) __pyx_t_2 = 0;
     if (unlikely(__pyx_t_2 != -1)) {
       __Pyx_RaiseBufferIndexError(__pyx_t_2);
-      __PYX_ERR(0, 51, __pyx_L1_error)
+      __PYX_ERR(0, 54, __pyx_L1_error)
     }
     __pyx_t_6 = 4;
     __pyx_t_2 = -1;
@@ -5528,7 +5531,7 @@ static int __pyx_f_20find_nonzero_highdim_atom_index_inv(PyArrayObject *__pyx_v_
     } else if (unlikely(__pyx_t_6 >= __pyx_pybuffernd_a.diminfo[0].shape)) __pyx_t_2 = 0;
     if (unlikely(__pyx_t_2 != -1)) {
       __Pyx_RaiseBufferIndexError(__pyx_t_2);
-      __PYX_ERR(0, 51, __pyx_L1_error)
+      __PYX_ERR(0, 54, __pyx_L1_error)
     }
     __pyx_t_8 = 5;
     __pyx_t_2 = -1;
@@ -5538,11 +5541,11 @@ static int __pyx_f_20find_nonzero_highdim_atom_index_inv(PyArrayObject *__pyx_v_
     } else if (unlikely(__pyx_t_8 >= __pyx_pybuffernd_a.diminfo[0].shape)) __pyx_t_2 = 0;
     if (unlikely(__pyx_t_2 != -1)) {
       __Pyx_RaiseBufferIndexError(__pyx_t_2);
-      __PYX_ERR(0, 51, __pyx_L1_error)
+      __PYX_ERR(0, 54, __pyx_L1_error)
     }
     __pyx_v_ret = (((((((((((*__Pyx_BufPtrStrided1d(__pyx_t_20find_nonzero_highdim_DTYPE_int_t *, __pyx_pybuffernd_a.rcbuffer->pybuffer.buf, __pyx_t_7, __pyx_pybuffernd_a.diminfo[0].strides)) * __pyx_v_nat) * __pyx_v_nat) * __pyx_v_nat) * __pyx_v_nat) * __pyx_v_nat) + (((((*__Pyx_BufPtrStrided1d(__pyx_t_20find_nonzero_highdim_DTYPE_int_t *, __pyx_pybuffernd_a.rcbuffer->pybuffer.buf, __pyx_t_5, __pyx_pybuffernd_a.diminfo[0].strides)) * __pyx_v_nat) * __pyx_v_nat) * __pyx_v_nat) * __pyx_v_nat)) + ((((*__Pyx_BufPtrStrided1d(__pyx_t_20find_nonzero_highdim_DTYPE_int_t *, __pyx_pybuffernd_a.rcbuffer->pybuffer.buf, __pyx_t_3, __pyx_pybuffernd_a.diminfo[0].strides)) * __pyx_v_nat) * __pyx_v_nat) * __pyx_v_nat)) + (((*__Pyx_BufPtrStrided1d(__pyx_t_20find_nonzero_highdim_DTYPE_int_t *, __pyx_pybuffernd_a.rcbuffer->pybuffer.buf, __pyx_t_4, __pyx_pybuffernd_a.diminfo[0].strides)) * __pyx_v_nat) * __pyx_v_nat)) + ((*__Pyx_BufPtrStrided1d(__pyx_t_20find_nonzero_highdim_DTYPE_int_t *, __pyx_pybuffernd_a.rcbuffer->pybuffer.buf, __pyx_t_6, __pyx_pybuffernd_a.diminfo[0].strides)) * __pyx_v_nat)) + (*__Pyx_BufPtrStrided1d(__pyx_t_20find_nonzero_highdim_DTYPE_int_t *, __pyx_pybuffernd_a.rcbuffer->pybuffer.buf, __pyx_t_8, __pyx_pybuffernd_a.diminfo[0].strides)));
 
-    /* "find_nonzero_highdim.pyx":50
+    /* "find_nonzero_highdim.pyx":53
  *     elif dim == 5:
  *         ret = a[0]*nat*nat*nat*nat+a[1]*nat*nat*nat+a[2]*nat*nat+a[3]*nat+a[4]
  *     elif dim == 6:             # <<<<<<<<<<<<<<
@@ -5552,7 +5555,7 @@ static int __pyx_f_20find_nonzero_highdim_atom_index_inv(PyArrayObject *__pyx_v_
     break;
     case 7:
 
-    /* "find_nonzero_highdim.pyx":53
+    /* "find_nonzero_highdim.pyx":56
  *         ret = a[0]*nat*nat*nat*nat*nat+a[1]*nat*nat*nat*nat+a[2]*nat*nat*nat+a[3]*nat*nat+a[4]*nat+a[5]
  *     elif dim == 7:
  *         ret = a[0]*nat*nat*nat*nat*nat*nat+a[1]*nat*nat*nat*nat*nat+a[2]*nat*nat*nat*nat+a[3]*nat*nat*nat+a[4]*nat*nat+a[5]*nat+a[6]             # <<<<<<<<<<<<<<
@@ -5567,7 +5570,7 @@ static int __pyx_f_20find_nonzero_highdim_atom_index_inv(PyArrayObject *__pyx_v_
     } else if (unlikely(__pyx_t_8 >= __pyx_pybuffernd_a.diminfo[0].shape)) __pyx_t_2 = 0;
     if (unlikely(__pyx_t_2 != -1)) {
       __Pyx_RaiseBufferIndexError(__pyx_t_2);
-      __PYX_ERR(0, 53, __pyx_L1_error)
+      __PYX_ERR(0, 56, __pyx_L1_error)
     }
     __pyx_t_6 = 1;
     __pyx_t_2 = -1;
@@ -5577,7 +5580,7 @@ static int __pyx_f_20find_nonzero_highdim_atom_index_inv(PyArrayObject *__pyx_v_
     } else if (unlikely(__pyx_t_6 >= __pyx_pybuffernd_a.diminfo[0].shape)) __pyx_t_2 = 0;
     if (unlikely(__pyx_t_2 != -1)) {
       __Pyx_RaiseBufferIndexError(__pyx_t_2);
-      __PYX_ERR(0, 53, __pyx_L1_error)
+      __PYX_ERR(0, 56, __pyx_L1_error)
     }
     __pyx_t_4 = 2;
     __pyx_t_2 = -1;
@@ -5587,7 +5590,7 @@ static int __pyx_f_20find_nonzero_highdim_atom_index_inv(PyArrayObject *__pyx_v_
     } else if (unlikely(__pyx_t_4 >= __pyx_pybuffernd_a.diminfo[0].shape)) __pyx_t_2 = 0;
     if (unlikely(__pyx_t_2 != -1)) {
       __Pyx_RaiseBufferIndexError(__pyx_t_2);
-      __PYX_ERR(0, 53, __pyx_L1_error)
+      __PYX_ERR(0, 56, __pyx_L1_error)
     }
     __pyx_t_3 = 3;
     __pyx_t_2 = -1;
@@ -5597,7 +5600,7 @@ static int __pyx_f_20find_nonzero_highdim_atom_index_inv(PyArrayObject *__pyx_v_
     } else if (unlikely(__pyx_t_3 >= __pyx_pybuffernd_a.diminfo[0].shape)) __pyx_t_2 = 0;
     if (unlikely(__pyx_t_2 != -1)) {
       __Pyx_RaiseBufferIndexError(__pyx_t_2);
-      __PYX_ERR(0, 53, __pyx_L1_error)
+      __PYX_ERR(0, 56, __pyx_L1_error)
     }
     __pyx_t_5 = 4;
     __pyx_t_2 = -1;
@@ -5607,7 +5610,7 @@ static int __pyx_f_20find_nonzero_highdim_atom_index_inv(PyArrayObject *__pyx_v_
     } else if (unlikely(__pyx_t_5 >= __pyx_pybuffernd_a.diminfo[0].shape)) __pyx_t_2 = 0;
     if (unlikely(__pyx_t_2 != -1)) {
       __Pyx_RaiseBufferIndexError(__pyx_t_2);
-      __PYX_ERR(0, 53, __pyx_L1_error)
+      __PYX_ERR(0, 56, __pyx_L1_error)
     }
     __pyx_t_7 = 5;
     __pyx_t_2 = -1;
@@ -5617,7 +5620,7 @@ static int __pyx_f_20find_nonzero_highdim_atom_index_inv(PyArrayObject *__pyx_v_
     } else if (unlikely(__pyx_t_7 >= __pyx_pybuffernd_a.diminfo[0].shape)) __pyx_t_2 = 0;
     if (unlikely(__pyx_t_2 != -1)) {
       __Pyx_RaiseBufferIndexError(__pyx_t_2);
-      __PYX_ERR(0, 53, __pyx_L1_error)
+      __PYX_ERR(0, 56, __pyx_L1_error)
     }
     __pyx_t_9 = 6;
     __pyx_t_2 = -1;
@@ -5627,11 +5630,11 @@ static int __pyx_f_20find_nonzero_highdim_atom_index_inv(PyArrayObject *__pyx_v_
     } else if (unlikely(__pyx_t_9 >= __pyx_pybuffernd_a.diminfo[0].shape)) __pyx_t_2 = 0;
     if (unlikely(__pyx_t_2 != -1)) {
       __Pyx_RaiseBufferIndexError(__pyx_t_2);
-      __PYX_ERR(0, 53, __pyx_L1_error)
+      __PYX_ERR(0, 56, __pyx_L1_error)
     }
     __pyx_v_ret = (((((((((((((*__Pyx_BufPtrStrided1d(__pyx_t_20find_nonzero_highdim_DTYPE_int_t *, __pyx_pybuffernd_a.rcbuffer->pybuffer.buf, __pyx_t_8, __pyx_pybuffernd_a.diminfo[0].strides)) * __pyx_v_nat) * __pyx_v_nat) * __pyx_v_nat) * __pyx_v_nat) * __pyx_v_nat) * __pyx_v_nat) + ((((((*__Pyx_BufPtrStrided1d(__pyx_t_20find_nonzero_highdim_DTYPE_int_t *, __pyx_pybuffernd_a.rcbuffer->pybuffer.buf, __pyx_t_6, __pyx_pybuffernd_a.diminfo[0].strides)) * __pyx_v_nat) * __pyx_v_nat) * __pyx_v_nat) * __pyx_v_nat) * __pyx_v_nat)) + (((((*__Pyx_BufPtrStrided1d(__pyx_t_20find_nonzero_highdim_DTYPE_int_t *, __pyx_pybuffernd_a.rcbuffer->pybuffer.buf, __pyx_t_4, __pyx_pybuffernd_a.diminfo[0].strides)) * __pyx_v_nat) * __pyx_v_nat) * __pyx_v_nat) * __pyx_v_nat)) + ((((*__Pyx_BufPtrStrided1d(__pyx_t_20find_nonzero_highdim_DTYPE_int_t *, __pyx_pybuffernd_a.rcbuffer->pybuffer.buf, __pyx_t_3, __pyx_pybuffernd_a.diminfo[0].strides)) * __pyx_v_nat) * __pyx_v_nat) * __pyx_v_nat)) + (((*__Pyx_BufPtrStrided1d(__pyx_t_20find_nonzero_highdim_DTYPE_int_t *, __pyx_pybuffernd_a.rcbuffer->pybuffer.buf, __pyx_t_5, __pyx_pybuffernd_a.diminfo[0].strides)) * __pyx_v_nat) * __pyx_v_nat)) + ((*__Pyx_BufPtrStrided1d(__pyx_t_20find_nonzero_highdim_DTYPE_int_t *, __pyx_pybuffernd_a.rcbuffer->pybuffer.buf, __pyx_t_7, __pyx_pybuffernd_a.diminfo[0].strides)) * __pyx_v_nat)) + (*__Pyx_BufPtrStrided1d(__pyx_t_20find_nonzero_highdim_DTYPE_int_t *, __pyx_pybuffernd_a.rcbuffer->pybuffer.buf, __pyx_t_9, __pyx_pybuffernd_a.diminfo[0].strides)));
 
-    /* "find_nonzero_highdim.pyx":52
+    /* "find_nonzero_highdim.pyx":55
  *     elif dim == 6:
  *         ret = a[0]*nat*nat*nat*nat*nat+a[1]*nat*nat*nat*nat+a[2]*nat*nat*nat+a[3]*nat*nat+a[4]*nat+a[5]
  *     elif dim == 7:             # <<<<<<<<<<<<<<
@@ -5641,7 +5644,7 @@ static int __pyx_f_20find_nonzero_highdim_atom_index_inv(PyArrayObject *__pyx_v_
     break;
     case 8:
 
-    /* "find_nonzero_highdim.pyx":55
+    /* "find_nonzero_highdim.pyx":58
  *         ret = a[0]*nat*nat*nat*nat*nat*nat+a[1]*nat*nat*nat*nat*nat+a[2]*nat*nat*nat*nat+a[3]*nat*nat*nat+a[4]*nat*nat+a[5]*nat+a[6]
  *     elif dim == 8:
  *         ret = a[0]*nat*nat*nat*nat*nat*nat*nat+a[1]*nat*nat*nat*nat*nat*nat+a[2]*nat*nat*nat*nat*nat+a[3]*nat*nat*nat*nat+a[4]*nat*nat*nat+a[5]*nat*nat+a[6]*nat+a[7]             # <<<<<<<<<<<<<<
@@ -5656,7 +5659,7 @@ static int __pyx_f_20find_nonzero_highdim_atom_index_inv(PyArrayObject *__pyx_v_
     } else if (unlikely(__pyx_t_9 >= __pyx_pybuffernd_a.diminfo[0].shape)) __pyx_t_2 = 0;
     if (unlikely(__pyx_t_2 != -1)) {
       __Pyx_RaiseBufferIndexError(__pyx_t_2);
-      __PYX_ERR(0, 55, __pyx_L1_error)
+      __PYX_ERR(0, 58, __pyx_L1_error)
     }
     __pyx_t_7 = 1;
     __pyx_t_2 = -1;
@@ -5666,7 +5669,7 @@ static int __pyx_f_20find_nonzero_highdim_atom_index_inv(PyArrayObject *__pyx_v_
     } else if (unlikely(__pyx_t_7 >= __pyx_pybuffernd_a.diminfo[0].shape)) __pyx_t_2 = 0;
     if (unlikely(__pyx_t_2 != -1)) {
       __Pyx_RaiseBufferIndexError(__pyx_t_2);
-      __PYX_ERR(0, 55, __pyx_L1_error)
+      __PYX_ERR(0, 58, __pyx_L1_error)
     }
     __pyx_t_5 = 2;
     __pyx_t_2 = -1;
@@ -5676,7 +5679,7 @@ static int __pyx_f_20find_nonzero_highdim_atom_index_inv(PyArrayObject *__pyx_v_
     } else if (unlikely(__pyx_t_5 >= __pyx_pybuffernd_a.diminfo[0].shape)) __pyx_t_2 = 0;
     if (unlikely(__pyx_t_2 != -1)) {
       __Pyx_RaiseBufferIndexError(__pyx_t_2);
-      __PYX_ERR(0, 55, __pyx_L1_error)
+      __PYX_ERR(0, 58, __pyx_L1_error)
     }
     __pyx_t_3 = 3;
     __pyx_t_2 = -1;
@@ -5686,7 +5689,7 @@ static int __pyx_f_20find_nonzero_highdim_atom_index_inv(PyArrayObject *__pyx_v_
     } else if (unlikely(__pyx_t_3 >= __pyx_pybuffernd_a.diminfo[0].shape)) __pyx_t_2 = 0;
     if (unlikely(__pyx_t_2 != -1)) {
       __Pyx_RaiseBufferIndexError(__pyx_t_2);
-      __PYX_ERR(0, 55, __pyx_L1_error)
+      __PYX_ERR(0, 58, __pyx_L1_error)
     }
     __pyx_t_4 = 4;
     __pyx_t_2 = -1;
@@ -5696,7 +5699,7 @@ static int __pyx_f_20find_nonzero_highdim_atom_index_inv(PyArrayObject *__pyx_v_
     } else if (unlikely(__pyx_t_4 >= __pyx_pybuffernd_a.diminfo[0].shape)) __pyx_t_2 = 0;
     if (unlikely(__pyx_t_2 != -1)) {
       __Pyx_RaiseBufferIndexError(__pyx_t_2);
-      __PYX_ERR(0, 55, __pyx_L1_error)
+      __PYX_ERR(0, 58, __pyx_L1_error)
     }
     __pyx_t_6 = 5;
     __pyx_t_2 = -1;
@@ -5706,7 +5709,7 @@ static int __pyx_f_20find_nonzero_highdim_atom_index_inv(PyArrayObject *__pyx_v_
     } else if (unlikely(__pyx_t_6 >= __pyx_pybuffernd_a.diminfo[0].shape)) __pyx_t_2 = 0;
     if (unlikely(__pyx_t_2 != -1)) {
       __Pyx_RaiseBufferIndexError(__pyx_t_2);
-      __PYX_ERR(0, 55, __pyx_L1_error)
+      __PYX_ERR(0, 58, __pyx_L1_error)
     }
     __pyx_t_8 = 6;
     __pyx_t_2 = -1;
@@ -5716,7 +5719,7 @@ static int __pyx_f_20find_nonzero_highdim_atom_index_inv(PyArrayObject *__pyx_v_
     } else if (unlikely(__pyx_t_8 >= __pyx_pybuffernd_a.diminfo[0].shape)) __pyx_t_2 = 0;
     if (unlikely(__pyx_t_2 != -1)) {
       __Pyx_RaiseBufferIndexError(__pyx_t_2);
-      __PYX_ERR(0, 55, __pyx_L1_error)
+      __PYX_ERR(0, 58, __pyx_L1_error)
     }
     __pyx_t_10 = 7;
     __pyx_t_2 = -1;
@@ -5726,11 +5729,11 @@ static int __pyx_f_20find_nonzero_highdim_atom_index_inv(PyArrayObject *__pyx_v_
     } else if (unlikely(__pyx_t_10 >= __pyx_pybuffernd_a.diminfo[0].shape)) __pyx_t_2 = 0;
     if (unlikely(__pyx_t_2 != -1)) {
       __Pyx_RaiseBufferIndexError(__pyx_t_2);
-      __PYX_ERR(0, 55, __pyx_L1_error)
+      __PYX_ERR(0, 58, __pyx_L1_error)
     }
     __pyx_v_ret = (((((((((((((((*__Pyx_BufPtrStrided1d(__pyx_t_20find_nonzero_highdim_DTYPE_int_t *, __pyx_pybuffernd_a.rcbuffer->pybuffer.buf, __pyx_t_9, __pyx_pybuffernd_a.diminfo[0].strides)) * __pyx_v_nat) * __pyx_v_nat) * __pyx_v_nat) * __pyx_v_nat) * __pyx_v_nat) * __pyx_v_nat) * __pyx_v_nat) + (((((((*__Pyx_BufPtrStrided1d(__pyx_t_20find_nonzero_highdim_DTYPE_int_t *, __pyx_pybuffernd_a.rcbuffer->pybuffer.buf, __pyx_t_7, __pyx_pybuffernd_a.diminfo[0].strides)) * __pyx_v_nat) * __pyx_v_nat) * __pyx_v_nat) * __pyx_v_nat) * __pyx_v_nat) * __pyx_v_nat)) + ((((((*__Pyx_BufPtrStrided1d(__pyx_t_20find_nonzero_highdim_DTYPE_int_t *, __pyx_pybuffernd_a.rcbuffer->pybuffer.buf, __pyx_t_5, __pyx_pybuffernd_a.diminfo[0].strides)) * __pyx_v_nat) * __pyx_v_nat) * __pyx_v_nat) * __pyx_v_nat) * __pyx_v_nat)) + (((((*__Pyx_BufPtrStrided1d(__pyx_t_20find_nonzero_highdim_DTYPE_int_t *, __pyx_pybuffernd_a.rcbuffer->pybuffer.buf, __pyx_t_3, __pyx_pybuffernd_a.diminfo[0].strides)) * __pyx_v_nat) * __pyx_v_nat) * __pyx_v_nat) * __pyx_v_nat)) + ((((*__Pyx_BufPtrStrided1d(__pyx_t_20find_nonzero_highdim_DTYPE_int_t *, __pyx_pybuffernd_a.rcbuffer->pybuffer.buf, __pyx_t_4, __pyx_pybuffernd_a.diminfo[0].strides)) * __pyx_v_nat) * __pyx_v_nat) * __pyx_v_nat)) + (((*__Pyx_BufPtrStrided1d(__pyx_t_20find_nonzero_highdim_DTYPE_int_t *, __pyx_pybuffernd_a.rcbuffer->pybuffer.buf, __pyx_t_6, __pyx_pybuffernd_a.diminfo[0].strides)) * __pyx_v_nat) * __pyx_v_nat)) + ((*__Pyx_BufPtrStrided1d(__pyx_t_20find_nonzero_highdim_DTYPE_int_t *, __pyx_pybuffernd_a.rcbuffer->pybuffer.buf, __pyx_t_8, __pyx_pybuffernd_a.diminfo[0].strides)) * __pyx_v_nat)) + (*__Pyx_BufPtrStrided1d(__pyx_t_20find_nonzero_highdim_DTYPE_int_t *, __pyx_pybuffernd_a.rcbuffer->pybuffer.buf, __pyx_t_10, __pyx_pybuffernd_a.diminfo[0].strides)));
 
-    /* "find_nonzero_highdim.pyx":54
+    /* "find_nonzero_highdim.pyx":57
  *     elif dim == 7:
  *         ret = a[0]*nat*nat*nat*nat*nat*nat+a[1]*nat*nat*nat*nat*nat+a[2]*nat*nat*nat*nat+a[3]*nat*nat*nat+a[4]*nat*nat+a[5]*nat+a[6]
  *     elif dim == 8:             # <<<<<<<<<<<<<<
@@ -5740,20 +5743,20 @@ static int __pyx_f_20find_nonzero_highdim_atom_index_inv(PyArrayObject *__pyx_v_
     break;
     default:
 
-    /* "find_nonzero_highdim.pyx":57
+    /* "find_nonzero_highdim.pyx":60
  *         ret = a[0]*nat*nat*nat*nat*nat*nat*nat+a[1]*nat*nat*nat*nat*nat*nat+a[2]*nat*nat*nat*nat*nat+a[3]*nat*nat*nat*nat+a[4]*nat*nat*nat+a[5]*nat*nat+a[6]*nat+a[7]
  *     else:
  *         print('index not currently implmented atom_index_inv find_nonzero_highdim.pyx')             # <<<<<<<<<<<<<<
  *     return ret
  * 
  */
-    __pyx_t_11 = __Pyx_PyObject_Call(__pyx_builtin_print, __pyx_tuple__3, NULL); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 57, __pyx_L1_error)
+    __pyx_t_11 = __Pyx_PyObject_Call(__pyx_builtin_print, __pyx_tuple__3, NULL); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 60, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_11);
     __Pyx_DECREF(__pyx_t_11); __pyx_t_11 = 0;
     break;
   }
 
-  /* "find_nonzero_highdim.pyx":58
+  /* "find_nonzero_highdim.pyx":61
  *     else:
  *         print('index not currently implmented atom_index_inv find_nonzero_highdim.pyx')
  *     return ret             # <<<<<<<<<<<<<<
@@ -5763,7 +5766,7 @@ static int __pyx_f_20find_nonzero_highdim_atom_index_inv(PyArrayObject *__pyx_v_
   __pyx_r = __pyx_v_ret;
   goto __pyx_L0;
 
-  /* "find_nonzero_highdim.pyx":36
+  /* "find_nonzero_highdim.pyx":39
  * ctypedef np.int64_t DTYPE_int_t
  * 
  * cdef int atom_index_inv(np.ndarray[DTYPE_int_t, ndim=1] a, int nat):             # <<<<<<<<<<<<<<
@@ -5790,7 +5793,7 @@ static int __pyx_f_20find_nonzero_highdim_atom_index_inv(PyArrayObject *__pyx_v_
   return __pyx_r;
 }
 
-/* "find_nonzero_highdim.pyx":61
+/* "find_nonzero_highdim.pyx":64
  * 
  * 
  * def find_nonzero_highdim( phiobj, int dim, float dist_cutoff, int bodycount, float dist_cut_twobody):             # <<<<<<<<<<<<<<
@@ -5863,7 +5866,7 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
           (void)__Pyx_Arg_NewRef_FASTCALL(values[0]);
           kw_args--;
         }
-        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 61, __pyx_L3_error)
+        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 64, __pyx_L3_error)
         else goto __pyx_L5_argtuple_error;
         CYTHON_FALLTHROUGH;
         case  1:
@@ -5871,9 +5874,9 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
           (void)__Pyx_Arg_NewRef_FASTCALL(values[1]);
           kw_args--;
         }
-        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 61, __pyx_L3_error)
+        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 64, __pyx_L3_error)
         else {
-          __Pyx_RaiseArgtupleInvalid("find_nonzero_highdim", 1, 5, 5, 1); __PYX_ERR(0, 61, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("find_nonzero_highdim", 1, 5, 5, 1); __PYX_ERR(0, 64, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  2:
@@ -5881,9 +5884,9 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
           (void)__Pyx_Arg_NewRef_FASTCALL(values[2]);
           kw_args--;
         }
-        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 61, __pyx_L3_error)
+        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 64, __pyx_L3_error)
         else {
-          __Pyx_RaiseArgtupleInvalid("find_nonzero_highdim", 1, 5, 5, 2); __PYX_ERR(0, 61, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("find_nonzero_highdim", 1, 5, 5, 2); __PYX_ERR(0, 64, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  3:
@@ -5891,9 +5894,9 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
           (void)__Pyx_Arg_NewRef_FASTCALL(values[3]);
           kw_args--;
         }
-        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 61, __pyx_L3_error)
+        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 64, __pyx_L3_error)
         else {
-          __Pyx_RaiseArgtupleInvalid("find_nonzero_highdim", 1, 5, 5, 3); __PYX_ERR(0, 61, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("find_nonzero_highdim", 1, 5, 5, 3); __PYX_ERR(0, 64, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  4:
@@ -5901,14 +5904,14 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
           (void)__Pyx_Arg_NewRef_FASTCALL(values[4]);
           kw_args--;
         }
-        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 61, __pyx_L3_error)
+        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 64, __pyx_L3_error)
         else {
-          __Pyx_RaiseArgtupleInvalid("find_nonzero_highdim", 1, 5, 5, 4); __PYX_ERR(0, 61, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("find_nonzero_highdim", 1, 5, 5, 4); __PYX_ERR(0, 64, __pyx_L3_error)
         }
       }
       if (unlikely(kw_args > 0)) {
         const Py_ssize_t kwd_pos_args = __pyx_nargs;
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_kwvalues, __pyx_pyargnames, 0, values + 0, kwd_pos_args, "find_nonzero_highdim") < 0)) __PYX_ERR(0, 61, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_kwvalues, __pyx_pyargnames, 0, values + 0, kwd_pos_args, "find_nonzero_highdim") < 0)) __PYX_ERR(0, 64, __pyx_L3_error)
       }
     } else if (unlikely(__pyx_nargs != 5)) {
       goto __pyx_L5_argtuple_error;
@@ -5920,14 +5923,14 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
       values[4] = __Pyx_Arg_FASTCALL(__pyx_args, 4);
     }
     __pyx_v_phiobj = values[0];
-    __pyx_v_dim = __Pyx_PyInt_As_int(values[1]); if (unlikely((__pyx_v_dim == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 61, __pyx_L3_error)
-    __pyx_v_dist_cutoff = __pyx_PyFloat_AsFloat(values[2]); if (unlikely((__pyx_v_dist_cutoff == (float)-1) && PyErr_Occurred())) __PYX_ERR(0, 61, __pyx_L3_error)
-    __pyx_v_bodycount = __Pyx_PyInt_As_int(values[3]); if (unlikely((__pyx_v_bodycount == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 61, __pyx_L3_error)
-    __pyx_v_dist_cut_twobody = __pyx_PyFloat_AsFloat(values[4]); if (unlikely((__pyx_v_dist_cut_twobody == (float)-1) && PyErr_Occurred())) __PYX_ERR(0, 61, __pyx_L3_error)
+    __pyx_v_dim = __Pyx_PyInt_As_int(values[1]); if (unlikely((__pyx_v_dim == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 64, __pyx_L3_error)
+    __pyx_v_dist_cutoff = __pyx_PyFloat_AsFloat(values[2]); if (unlikely((__pyx_v_dist_cutoff == (float)-1) && PyErr_Occurred())) __PYX_ERR(0, 64, __pyx_L3_error)
+    __pyx_v_bodycount = __Pyx_PyInt_As_int(values[3]); if (unlikely((__pyx_v_bodycount == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 64, __pyx_L3_error)
+    __pyx_v_dist_cut_twobody = __pyx_PyFloat_AsFloat(values[4]); if (unlikely((__pyx_v_dist_cut_twobody == (float)-1) && PyErr_Occurred())) __PYX_ERR(0, 64, __pyx_L3_error)
   }
   goto __pyx_L6_skip;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("find_nonzero_highdim", 1, 5, 5, __pyx_nargs); __PYX_ERR(0, 61, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("find_nonzero_highdim", 1, 5, 5, __pyx_nargs); __PYX_ERR(0, 64, __pyx_L3_error)
   __pyx_L6_skip:;
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L3_error:;
@@ -6044,43 +6047,43 @@ static PyObject *__pyx_pf_20find_nonzero_highdim_find_nonzero_highdim(CYTHON_UNU
   __pyx_pybuffernd_atoms.data = NULL;
   __pyx_pybuffernd_atoms.rcbuffer = &__pyx_pybuffer_atoms;
 
-  /* "find_nonzero_highdim.pyx":70
+  /* "find_nonzero_highdim.pyx":73
  * #returns the list of atom combinations that meet cutoff criterea
  * 
  *     cdef np.ndarray[DTYPE_t, ndim=2] dist_array = np.array(phiobj.dist_array,dtype=DTYPE) #array of distances between atoms. Preculated.             # <<<<<<<<<<<<<<
  * 
  *     cdef np.ndarray[DTYPE_int_t, ndim=2] atomlist = np.zeros((100000,dim+1),dtype=DTYPE_int)
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_np); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 70, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_np); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 73, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_array); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 70, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_array); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 73, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_phiobj, __pyx_n_s_dist_array); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 70, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_phiobj, __pyx_n_s_dist_array); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 73, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_3 = PyTuple_New(1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 70, __pyx_L1_error)
+  __pyx_t_3 = PyTuple_New(1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 73, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_GIVEREF(__pyx_t_1);
-  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_3, 0, __pyx_t_1)) __PYX_ERR(0, 70, __pyx_L1_error);
+  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_3, 0, __pyx_t_1)) __PYX_ERR(0, 73, __pyx_L1_error);
   __pyx_t_1 = 0;
-  __pyx_t_1 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 70, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 73, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __Pyx_GetModuleGlobalName(__pyx_t_4, __pyx_n_s_DTYPE); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 70, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_4, __pyx_n_s_DTYPE); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 73, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
-  if (PyDict_SetItem(__pyx_t_1, __pyx_n_s_dtype, __pyx_t_4) < 0) __PYX_ERR(0, 70, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_1, __pyx_n_s_dtype, __pyx_t_4) < 0) __PYX_ERR(0, 73, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-  __pyx_t_4 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_t_3, __pyx_t_1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 70, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_t_3, __pyx_t_1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 73, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  if (!(likely(((__pyx_t_4) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_4, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 70, __pyx_L1_error)
+  if (!(likely(((__pyx_t_4) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_4, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 73, __pyx_L1_error)
   __pyx_t_5 = ((PyArrayObject *)__pyx_t_4);
   {
     __Pyx_BufFmt_StackElem __pyx_stack[1];
     if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_dist_array.rcbuffer->pybuffer, (PyObject*)__pyx_t_5, &__Pyx_TypeInfo_nn___pyx_t_20find_nonzero_highdim_DTYPE_t, PyBUF_FORMAT| PyBUF_STRIDES, 2, 0, __pyx_stack) == -1)) {
       __pyx_v_dist_array = ((PyArrayObject *)Py_None); __Pyx_INCREF(Py_None); __pyx_pybuffernd_dist_array.rcbuffer->pybuffer.buf = NULL;
-      __PYX_ERR(0, 70, __pyx_L1_error)
+      __PYX_ERR(0, 73, __pyx_L1_error)
     } else {__pyx_pybuffernd_dist_array.diminfo[0].strides = __pyx_pybuffernd_dist_array.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_dist_array.diminfo[0].shape = __pyx_pybuffernd_dist_array.rcbuffer->pybuffer.shape[0]; __pyx_pybuffernd_dist_array.diminfo[1].strides = __pyx_pybuffernd_dist_array.rcbuffer->pybuffer.strides[1]; __pyx_pybuffernd_dist_array.diminfo[1].shape = __pyx_pybuffernd_dist_array.rcbuffer->pybuffer.shape[1];
     }
   }
@@ -6088,51 +6091,51 @@ static PyObject *__pyx_pf_20find_nonzero_highdim_find_nonzero_highdim(CYTHON_UNU
   __pyx_v_dist_array = ((PyArrayObject *)__pyx_t_4);
   __pyx_t_4 = 0;
 
-  /* "find_nonzero_highdim.pyx":72
+  /* "find_nonzero_highdim.pyx":75
  *     cdef np.ndarray[DTYPE_t, ndim=2] dist_array = np.array(phiobj.dist_array,dtype=DTYPE) #array of distances between atoms. Preculated.
  * 
  *     cdef np.ndarray[DTYPE_int_t, ndim=2] atomlist = np.zeros((100000,dim+1),dtype=DTYPE_int)             # <<<<<<<<<<<<<<
  *     cdef np.ndarray[DTYPE_int_t, ndim=2] atomlist1
  *     cdef np.ndarray[DTYPE_int_t, ndim=2] compactlist
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_4, __pyx_n_s_np); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 72, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_4, __pyx_n_s_np); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 75, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
-  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_zeros); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 72, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_zeros); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 75, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-  __pyx_t_4 = __Pyx_PyInt_From_long((__pyx_v_dim + 1)); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 72, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyInt_From_long((__pyx_v_dim + 1)); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 75, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
-  __pyx_t_3 = PyTuple_New(2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 72, __pyx_L1_error)
+  __pyx_t_3 = PyTuple_New(2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 75, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_INCREF(__pyx_int_100000);
   __Pyx_GIVEREF(__pyx_int_100000);
-  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_3, 0, __pyx_int_100000)) __PYX_ERR(0, 72, __pyx_L1_error);
+  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_3, 0, __pyx_int_100000)) __PYX_ERR(0, 75, __pyx_L1_error);
   __Pyx_GIVEREF(__pyx_t_4);
-  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_3, 1, __pyx_t_4)) __PYX_ERR(0, 72, __pyx_L1_error);
+  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_3, 1, __pyx_t_4)) __PYX_ERR(0, 75, __pyx_L1_error);
   __pyx_t_4 = 0;
-  __pyx_t_4 = PyTuple_New(1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 72, __pyx_L1_error)
+  __pyx_t_4 = PyTuple_New(1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 75, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __Pyx_GIVEREF(__pyx_t_3);
-  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_4, 0, __pyx_t_3)) __PYX_ERR(0, 72, __pyx_L1_error);
+  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_4, 0, __pyx_t_3)) __PYX_ERR(0, 75, __pyx_L1_error);
   __pyx_t_3 = 0;
-  __pyx_t_3 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 72, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 75, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_DTYPE_int); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 72, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_DTYPE_int); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 75, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_dtype, __pyx_t_2) < 0) __PYX_ERR(0, 72, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_dtype, __pyx_t_2) < 0) __PYX_ERR(0, 75, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  __pyx_t_2 = __Pyx_PyObject_Call(__pyx_t_1, __pyx_t_4, __pyx_t_3); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 72, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_Call(__pyx_t_1, __pyx_t_4, __pyx_t_3); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 75, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  if (!(likely(((__pyx_t_2) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_2, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 72, __pyx_L1_error)
+  if (!(likely(((__pyx_t_2) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_2, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 75, __pyx_L1_error)
   __pyx_t_6 = ((PyArrayObject *)__pyx_t_2);
   {
     __Pyx_BufFmt_StackElem __pyx_stack[1];
     if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_atomlist.rcbuffer->pybuffer, (PyObject*)__pyx_t_6, &__Pyx_TypeInfo_nn___pyx_t_20find_nonzero_highdim_DTYPE_int_t, PyBUF_FORMAT| PyBUF_STRIDES| PyBUF_WRITABLE, 2, 0, __pyx_stack) == -1)) {
       __pyx_v_atomlist = ((PyArrayObject *)Py_None); __Pyx_INCREF(Py_None); __pyx_pybuffernd_atomlist.rcbuffer->pybuffer.buf = NULL;
-      __PYX_ERR(0, 72, __pyx_L1_error)
+      __PYX_ERR(0, 75, __pyx_L1_error)
     } else {__pyx_pybuffernd_atomlist.diminfo[0].strides = __pyx_pybuffernd_atomlist.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_atomlist.diminfo[0].shape = __pyx_pybuffernd_atomlist.rcbuffer->pybuffer.shape[0]; __pyx_pybuffernd_atomlist.diminfo[1].strides = __pyx_pybuffernd_atomlist.rcbuffer->pybuffer.strides[1]; __pyx_pybuffernd_atomlist.diminfo[1].shape = __pyx_pybuffernd_atomlist.rcbuffer->pybuffer.shape[1];
     }
   }
@@ -6140,43 +6143,43 @@ static PyObject *__pyx_pf_20find_nonzero_highdim_find_nonzero_highdim(CYTHON_UNU
   __pyx_v_atomlist = ((PyArrayObject *)__pyx_t_2);
   __pyx_t_2 = 0;
 
-  /* "find_nonzero_highdim.pyx":75
+  /* "find_nonzero_highdim.pyx":78
  *     cdef np.ndarray[DTYPE_int_t, ndim=2] atomlist1
  *     cdef np.ndarray[DTYPE_int_t, ndim=2] compactlist
  *     cdef np.ndarray[DTYPE_int_t, ndim=1]    atoms  = np.zeros(dim,dtype=DTYPE_int)             # <<<<<<<<<<<<<<
  *     cdef int nat=phiobj.natsuper
  * #    cdef np.ndarray[DTYPE_int_t, ndim=2] atom_bool = np.zeros((nat,nat),dtype=DTYPE_int)
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_np); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 75, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_np); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 78, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_zeros); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 75, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_zeros); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 78, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  __pyx_t_2 = __Pyx_PyInt_From_int(__pyx_v_dim); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 75, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyInt_From_int(__pyx_v_dim); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 78, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_4 = PyTuple_New(1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 75, __pyx_L1_error)
+  __pyx_t_4 = PyTuple_New(1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 78, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __Pyx_GIVEREF(__pyx_t_2);
-  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_4, 0, __pyx_t_2)) __PYX_ERR(0, 75, __pyx_L1_error);
+  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_4, 0, __pyx_t_2)) __PYX_ERR(0, 78, __pyx_L1_error);
   __pyx_t_2 = 0;
-  __pyx_t_2 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 75, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 78, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_DTYPE_int); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 75, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_DTYPE_int); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 78, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  if (PyDict_SetItem(__pyx_t_2, __pyx_n_s_dtype, __pyx_t_1) < 0) __PYX_ERR(0, 75, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_2, __pyx_n_s_dtype, __pyx_t_1) < 0) __PYX_ERR(0, 78, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_3, __pyx_t_4, __pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 75, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_3, __pyx_t_4, __pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 78, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  if (!(likely(((__pyx_t_1) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_1, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 75, __pyx_L1_error)
+  if (!(likely(((__pyx_t_1) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_1, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 78, __pyx_L1_error)
   __pyx_t_7 = ((PyArrayObject *)__pyx_t_1);
   {
     __Pyx_BufFmt_StackElem __pyx_stack[1];
     if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_atoms.rcbuffer->pybuffer, (PyObject*)__pyx_t_7, &__Pyx_TypeInfo_nn___pyx_t_20find_nonzero_highdim_DTYPE_int_t, PyBUF_FORMAT| PyBUF_STRIDES| PyBUF_WRITABLE, 1, 0, __pyx_stack) == -1)) {
       __pyx_v_atoms = ((PyArrayObject *)Py_None); __Pyx_INCREF(Py_None); __pyx_pybuffernd_atoms.rcbuffer->pybuffer.buf = NULL;
-      __PYX_ERR(0, 75, __pyx_L1_error)
+      __PYX_ERR(0, 78, __pyx_L1_error)
     } else {__pyx_pybuffernd_atoms.diminfo[0].strides = __pyx_pybuffernd_atoms.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_atoms.diminfo[0].shape = __pyx_pybuffernd_atoms.rcbuffer->pybuffer.shape[0];
     }
   }
@@ -6184,20 +6187,20 @@ static PyObject *__pyx_pf_20find_nonzero_highdim_find_nonzero_highdim(CYTHON_UNU
   __pyx_v_atoms = ((PyArrayObject *)__pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "find_nonzero_highdim.pyx":76
+  /* "find_nonzero_highdim.pyx":79
  *     cdef np.ndarray[DTYPE_int_t, ndim=2] compactlist
  *     cdef np.ndarray[DTYPE_int_t, ndim=1]    atoms  = np.zeros(dim,dtype=DTYPE_int)
  *     cdef int nat=phiobj.natsuper             # <<<<<<<<<<<<<<
  * #    cdef np.ndarray[DTYPE_int_t, ndim=2] atom_bool = np.zeros((nat,nat),dtype=DTYPE_int)
  *     cdef int nonzero_atoms = 0
  */
-  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_phiobj, __pyx_n_s_natsuper); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 76, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_phiobj, __pyx_n_s_natsuper); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 79, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_8 = __Pyx_PyInt_As_int(__pyx_t_1); if (unlikely((__pyx_t_8 == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 76, __pyx_L1_error)
+  __pyx_t_8 = __Pyx_PyInt_As_int(__pyx_t_1); if (unlikely((__pyx_t_8 == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 79, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __pyx_v_nat = __pyx_t_8;
 
-  /* "find_nonzero_highdim.pyx":78
+  /* "find_nonzero_highdim.pyx":81
  *     cdef int nat=phiobj.natsuper
  * #    cdef np.ndarray[DTYPE_int_t, ndim=2] atom_bool = np.zeros((nat,nat),dtype=DTYPE_int)
  *     cdef int nonzero_atoms = 0             # <<<<<<<<<<<<<<
@@ -6206,20 +6209,20 @@ static PyObject *__pyx_pf_20find_nonzero_highdim_find_nonzero_highdim(CYTHON_UNU
  */
   __pyx_v_nonzero_atoms = 0;
 
-  /* "find_nonzero_highdim.pyx":82
+  /* "find_nonzero_highdim.pyx":85
  *     cdef int i
  *     cdef int at_prim, d
  *     cdef int natsuper = phiobj.natsuper             # <<<<<<<<<<<<<<
  *     cdef list current
  *     cdef bool insidecutoff
  */
-  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_phiobj, __pyx_n_s_natsuper); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 82, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_phiobj, __pyx_n_s_natsuper); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 85, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_8 = __Pyx_PyInt_As_int(__pyx_t_1); if (unlikely((__pyx_t_8 == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 82, __pyx_L1_error)
+  __pyx_t_8 = __Pyx_PyInt_As_int(__pyx_t_1); if (unlikely((__pyx_t_8 == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 85, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __pyx_v_natsuper = __pyx_t_8;
 
-  /* "find_nonzero_highdim.pyx":86
+  /* "find_nonzero_highdim.pyx":89
  *     cdef bool insidecutoff
  *     cdef int at1,at2
  *     cdef int mem = 100000             # <<<<<<<<<<<<<<
@@ -6228,67 +6231,67 @@ static PyObject *__pyx_pf_20find_nonzero_highdim_find_nonzero_highdim(CYTHON_UNU
  */
   __pyx_v_mem = 0x186A0;
 
-  /* "find_nonzero_highdim.pyx":89
+  /* "find_nonzero_highdim.pyx":92
  *     cdef int body
  * 
  *     atlist = []             # <<<<<<<<<<<<<<
  *     dim_allowed = []
  *     for at_prim in range(phiobj.nat):
  */
-  __pyx_t_1 = PyList_New(0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 89, __pyx_L1_error)
+  __pyx_t_1 = PyList_New(0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 92, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_v_atlist = ((PyObject*)__pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "find_nonzero_highdim.pyx":90
+  /* "find_nonzero_highdim.pyx":93
  * 
  *     atlist = []
  *     dim_allowed = []             # <<<<<<<<<<<<<<
  *     for at_prim in range(phiobj.nat):
  *         atlist.append([])
  */
-  __pyx_t_1 = PyList_New(0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 90, __pyx_L1_error)
+  __pyx_t_1 = PyList_New(0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 93, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_v_dim_allowed = ((PyObject*)__pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "find_nonzero_highdim.pyx":91
+  /* "find_nonzero_highdim.pyx":94
  *     atlist = []
  *     dim_allowed = []
  *     for at_prim in range(phiobj.nat):             # <<<<<<<<<<<<<<
  *         atlist.append([])
  *         for at_super in range(phiobj.natsuper):
  */
-  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_phiobj, __pyx_n_s_nat); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 91, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_phiobj, __pyx_n_s_nat); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 94, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_9 = __Pyx_PyInt_As_long(__pyx_t_1); if (unlikely((__pyx_t_9 == (long)-1) && PyErr_Occurred())) __PYX_ERR(0, 91, __pyx_L1_error)
+  __pyx_t_9 = __Pyx_PyInt_As_long(__pyx_t_1); if (unlikely((__pyx_t_9 == (long)-1) && PyErr_Occurred())) __PYX_ERR(0, 94, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __pyx_t_10 = __pyx_t_9;
   for (__pyx_t_8 = 0; __pyx_t_8 < __pyx_t_10; __pyx_t_8+=1) {
     __pyx_v_at_prim = __pyx_t_8;
 
-    /* "find_nonzero_highdim.pyx":92
+    /* "find_nonzero_highdim.pyx":95
  *     dim_allowed = []
  *     for at_prim in range(phiobj.nat):
  *         atlist.append([])             # <<<<<<<<<<<<<<
  *         for at_super in range(phiobj.natsuper):
  *             if dist_array[at_prim,at_super] < dist_cutoff or dist_array[at_prim,at_super] < dist_cut_twobody:
  */
-    __pyx_t_1 = PyList_New(0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 92, __pyx_L1_error)
+    __pyx_t_1 = PyList_New(0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 95, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
-    __pyx_t_11 = __Pyx_PyList_Append(__pyx_v_atlist, __pyx_t_1); if (unlikely(__pyx_t_11 == ((int)-1))) __PYX_ERR(0, 92, __pyx_L1_error)
+    __pyx_t_11 = __Pyx_PyList_Append(__pyx_v_atlist, __pyx_t_1); if (unlikely(__pyx_t_11 == ((int)-1))) __PYX_ERR(0, 95, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-    /* "find_nonzero_highdim.pyx":93
+    /* "find_nonzero_highdim.pyx":96
  *     for at_prim in range(phiobj.nat):
  *         atlist.append([])
  *         for at_super in range(phiobj.natsuper):             # <<<<<<<<<<<<<<
  *             if dist_array[at_prim,at_super] < dist_cutoff or dist_array[at_prim,at_super] < dist_cut_twobody:
  *                 atlist[at_prim].append(at_super)
  */
-    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_phiobj, __pyx_n_s_natsuper); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 93, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_phiobj, __pyx_n_s_natsuper); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 96, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
-    __pyx_t_2 = __Pyx_PyObject_CallOneArg(__pyx_builtin_range, __pyx_t_1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 93, __pyx_L1_error)
+    __pyx_t_2 = __Pyx_PyObject_CallOneArg(__pyx_builtin_range, __pyx_t_1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 96, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
     if (likely(PyList_CheckExact(__pyx_t_2)) || PyTuple_CheckExact(__pyx_t_2)) {
@@ -6296,9 +6299,9 @@ static PyObject *__pyx_pf_20find_nonzero_highdim_find_nonzero_highdim(CYTHON_UNU
       __pyx_t_12 = 0;
       __pyx_t_13 = NULL;
     } else {
-      __pyx_t_12 = -1; __pyx_t_1 = PyObject_GetIter(__pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 93, __pyx_L1_error)
+      __pyx_t_12 = -1; __pyx_t_1 = PyObject_GetIter(__pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 96, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_1);
-      __pyx_t_13 = __Pyx_PyObject_GetIterNextFunc(__pyx_t_1); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 93, __pyx_L1_error)
+      __pyx_t_13 = __Pyx_PyObject_GetIterNextFunc(__pyx_t_1); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 96, __pyx_L1_error)
     }
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
     for (;;) {
@@ -6307,28 +6310,28 @@ static PyObject *__pyx_pf_20find_nonzero_highdim_find_nonzero_highdim(CYTHON_UNU
           {
             Py_ssize_t __pyx_temp = __Pyx_PyList_GET_SIZE(__pyx_t_1);
             #if !CYTHON_ASSUME_SAFE_MACROS
-            if (unlikely((__pyx_temp < 0))) __PYX_ERR(0, 93, __pyx_L1_error)
+            if (unlikely((__pyx_temp < 0))) __PYX_ERR(0, 96, __pyx_L1_error)
             #endif
             if (__pyx_t_12 >= __pyx_temp) break;
           }
           #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
-          __pyx_t_2 = PyList_GET_ITEM(__pyx_t_1, __pyx_t_12); __Pyx_INCREF(__pyx_t_2); __pyx_t_12++; if (unlikely((0 < 0))) __PYX_ERR(0, 93, __pyx_L1_error)
+          __pyx_t_2 = PyList_GET_ITEM(__pyx_t_1, __pyx_t_12); __Pyx_INCREF(__pyx_t_2); __pyx_t_12++; if (unlikely((0 < 0))) __PYX_ERR(0, 96, __pyx_L1_error)
           #else
-          __pyx_t_2 = __Pyx_PySequence_ITEM(__pyx_t_1, __pyx_t_12); __pyx_t_12++; if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 93, __pyx_L1_error)
+          __pyx_t_2 = __Pyx_PySequence_ITEM(__pyx_t_1, __pyx_t_12); __pyx_t_12++; if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 96, __pyx_L1_error)
           __Pyx_GOTREF(__pyx_t_2);
           #endif
         } else {
           {
             Py_ssize_t __pyx_temp = __Pyx_PyTuple_GET_SIZE(__pyx_t_1);
             #if !CYTHON_ASSUME_SAFE_MACROS
-            if (unlikely((__pyx_temp < 0))) __PYX_ERR(0, 93, __pyx_L1_error)
+            if (unlikely((__pyx_temp < 0))) __PYX_ERR(0, 96, __pyx_L1_error)
             #endif
             if (__pyx_t_12 >= __pyx_temp) break;
           }
           #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
-          __pyx_t_2 = PyTuple_GET_ITEM(__pyx_t_1, __pyx_t_12); __Pyx_INCREF(__pyx_t_2); __pyx_t_12++; if (unlikely((0 < 0))) __PYX_ERR(0, 93, __pyx_L1_error)
+          __pyx_t_2 = PyTuple_GET_ITEM(__pyx_t_1, __pyx_t_12); __Pyx_INCREF(__pyx_t_2); __pyx_t_12++; if (unlikely((0 < 0))) __PYX_ERR(0, 96, __pyx_L1_error)
           #else
-          __pyx_t_2 = __Pyx_PySequence_ITEM(__pyx_t_1, __pyx_t_12); __pyx_t_12++; if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 93, __pyx_L1_error)
+          __pyx_t_2 = __Pyx_PySequence_ITEM(__pyx_t_1, __pyx_t_12); __pyx_t_12++; if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 96, __pyx_L1_error)
           __Pyx_GOTREF(__pyx_t_2);
           #endif
         }
@@ -6338,7 +6341,7 @@ static PyObject *__pyx_pf_20find_nonzero_highdim_find_nonzero_highdim(CYTHON_UNU
           PyObject* exc_type = PyErr_Occurred();
           if (exc_type) {
             if (likely(__Pyx_PyErr_GivenExceptionMatches(exc_type, PyExc_StopIteration))) PyErr_Clear();
-            else __PYX_ERR(0, 93, __pyx_L1_error)
+            else __PYX_ERR(0, 96, __pyx_L1_error)
           }
           break;
         }
@@ -6347,75 +6350,75 @@ static PyObject *__pyx_pf_20find_nonzero_highdim_find_nonzero_highdim(CYTHON_UNU
       __Pyx_XDECREF_SET(__pyx_v_at_super, __pyx_t_2);
       __pyx_t_2 = 0;
 
-      /* "find_nonzero_highdim.pyx":94
+      /* "find_nonzero_highdim.pyx":97
  *         atlist.append([])
  *         for at_super in range(phiobj.natsuper):
  *             if dist_array[at_prim,at_super] < dist_cutoff or dist_array[at_prim,at_super] < dist_cut_twobody:             # <<<<<<<<<<<<<<
  *                 atlist[at_prim].append(at_super)
  * #            elif dist_array[at_prim,at_super] < dist_cut_twobody:
  */
-      __pyx_t_2 = __Pyx_PyInt_From_int(__pyx_v_at_prim); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 94, __pyx_L1_error)
+      __pyx_t_2 = __Pyx_PyInt_From_int(__pyx_v_at_prim); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 97, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_2);
-      __pyx_t_4 = PyTuple_New(2); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 94, __pyx_L1_error)
+      __pyx_t_4 = PyTuple_New(2); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 97, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_4);
       __Pyx_GIVEREF(__pyx_t_2);
-      if (__Pyx_PyTuple_SET_ITEM(__pyx_t_4, 0, __pyx_t_2)) __PYX_ERR(0, 94, __pyx_L1_error);
+      if (__Pyx_PyTuple_SET_ITEM(__pyx_t_4, 0, __pyx_t_2)) __PYX_ERR(0, 97, __pyx_L1_error);
       __Pyx_INCREF(__pyx_v_at_super);
       __Pyx_GIVEREF(__pyx_v_at_super);
-      if (__Pyx_PyTuple_SET_ITEM(__pyx_t_4, 1, __pyx_v_at_super)) __PYX_ERR(0, 94, __pyx_L1_error);
+      if (__Pyx_PyTuple_SET_ITEM(__pyx_t_4, 1, __pyx_v_at_super)) __PYX_ERR(0, 97, __pyx_L1_error);
       __pyx_t_2 = 0;
-      __pyx_t_2 = __Pyx_PyObject_GetItem(((PyObject *)__pyx_v_dist_array), __pyx_t_4); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 94, __pyx_L1_error)
+      __pyx_t_2 = __Pyx_PyObject_GetItem(((PyObject *)__pyx_v_dist_array), __pyx_t_4); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 97, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_2);
       __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-      __pyx_t_4 = PyFloat_FromDouble(__pyx_v_dist_cutoff); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 94, __pyx_L1_error)
+      __pyx_t_4 = PyFloat_FromDouble(__pyx_v_dist_cutoff); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 97, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_4);
-      __pyx_t_3 = PyObject_RichCompare(__pyx_t_2, __pyx_t_4, Py_LT); __Pyx_XGOTREF(__pyx_t_3); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 94, __pyx_L1_error)
+      __pyx_t_3 = PyObject_RichCompare(__pyx_t_2, __pyx_t_4, Py_LT); __Pyx_XGOTREF(__pyx_t_3); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 97, __pyx_L1_error)
       __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
       __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-      __pyx_t_15 = __Pyx_PyObject_IsTrue(__pyx_t_3); if (unlikely((__pyx_t_15 < 0))) __PYX_ERR(0, 94, __pyx_L1_error)
+      __pyx_t_15 = __Pyx_PyObject_IsTrue(__pyx_t_3); if (unlikely((__pyx_t_15 < 0))) __PYX_ERR(0, 97, __pyx_L1_error)
       __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
       if (!__pyx_t_15) {
       } else {
         __pyx_t_14 = __pyx_t_15;
         goto __pyx_L8_bool_binop_done;
       }
-      __pyx_t_3 = __Pyx_PyInt_From_int(__pyx_v_at_prim); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 94, __pyx_L1_error)
+      __pyx_t_3 = __Pyx_PyInt_From_int(__pyx_v_at_prim); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 97, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_3);
-      __pyx_t_4 = PyTuple_New(2); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 94, __pyx_L1_error)
+      __pyx_t_4 = PyTuple_New(2); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 97, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_4);
       __Pyx_GIVEREF(__pyx_t_3);
-      if (__Pyx_PyTuple_SET_ITEM(__pyx_t_4, 0, __pyx_t_3)) __PYX_ERR(0, 94, __pyx_L1_error);
+      if (__Pyx_PyTuple_SET_ITEM(__pyx_t_4, 0, __pyx_t_3)) __PYX_ERR(0, 97, __pyx_L1_error);
       __Pyx_INCREF(__pyx_v_at_super);
       __Pyx_GIVEREF(__pyx_v_at_super);
-      if (__Pyx_PyTuple_SET_ITEM(__pyx_t_4, 1, __pyx_v_at_super)) __PYX_ERR(0, 94, __pyx_L1_error);
+      if (__Pyx_PyTuple_SET_ITEM(__pyx_t_4, 1, __pyx_v_at_super)) __PYX_ERR(0, 97, __pyx_L1_error);
       __pyx_t_3 = 0;
-      __pyx_t_3 = __Pyx_PyObject_GetItem(((PyObject *)__pyx_v_dist_array), __pyx_t_4); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 94, __pyx_L1_error)
+      __pyx_t_3 = __Pyx_PyObject_GetItem(((PyObject *)__pyx_v_dist_array), __pyx_t_4); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 97, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_3);
       __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-      __pyx_t_4 = PyFloat_FromDouble(__pyx_v_dist_cut_twobody); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 94, __pyx_L1_error)
+      __pyx_t_4 = PyFloat_FromDouble(__pyx_v_dist_cut_twobody); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 97, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_4);
-      __pyx_t_2 = PyObject_RichCompare(__pyx_t_3, __pyx_t_4, Py_LT); __Pyx_XGOTREF(__pyx_t_2); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 94, __pyx_L1_error)
+      __pyx_t_2 = PyObject_RichCompare(__pyx_t_3, __pyx_t_4, Py_LT); __Pyx_XGOTREF(__pyx_t_2); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 97, __pyx_L1_error)
       __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
       __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-      __pyx_t_15 = __Pyx_PyObject_IsTrue(__pyx_t_2); if (unlikely((__pyx_t_15 < 0))) __PYX_ERR(0, 94, __pyx_L1_error)
+      __pyx_t_15 = __Pyx_PyObject_IsTrue(__pyx_t_2); if (unlikely((__pyx_t_15 < 0))) __PYX_ERR(0, 97, __pyx_L1_error)
       __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
       __pyx_t_14 = __pyx_t_15;
       __pyx_L8_bool_binop_done:;
       if (__pyx_t_14) {
 
-        /* "find_nonzero_highdim.pyx":95
+        /* "find_nonzero_highdim.pyx":98
  *         for at_super in range(phiobj.natsuper):
  *             if dist_array[at_prim,at_super] < dist_cutoff or dist_array[at_prim,at_super] < dist_cut_twobody:
  *                 atlist[at_prim].append(at_super)             # <<<<<<<<<<<<<<
  * #            elif dist_array[at_prim,at_super] < dist_cut_twobody:
  * #                atlist[at_prim].append(at_super)
  */
-        __pyx_t_2 = __Pyx_GetItemInt_List(__pyx_v_atlist, __pyx_v_at_prim, int, 1, __Pyx_PyInt_From_int, 1, 1, 1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 95, __pyx_L1_error)
+        __pyx_t_2 = __Pyx_GetItemInt_List(__pyx_v_atlist, __pyx_v_at_prim, int, 1, __Pyx_PyInt_From_int, 1, 1, 1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 98, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_2);
-        __pyx_t_11 = __Pyx_PyObject_Append(__pyx_t_2, __pyx_v_at_super); if (unlikely(__pyx_t_11 == ((int)-1))) __PYX_ERR(0, 95, __pyx_L1_error)
+        __pyx_t_11 = __Pyx_PyObject_Append(__pyx_t_2, __pyx_v_at_super); if (unlikely(__pyx_t_11 == ((int)-1))) __PYX_ERR(0, 98, __pyx_L1_error)
         __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-        /* "find_nonzero_highdim.pyx":94
+        /* "find_nonzero_highdim.pyx":97
  *         atlist.append([])
  *         for at_super in range(phiobj.natsuper):
  *             if dist_array[at_prim,at_super] < dist_cutoff or dist_array[at_prim,at_super] < dist_cut_twobody:             # <<<<<<<<<<<<<<
@@ -6424,7 +6427,7 @@ static PyObject *__pyx_pf_20find_nonzero_highdim_find_nonzero_highdim(CYTHON_UNU
  */
       }
 
-      /* "find_nonzero_highdim.pyx":93
+      /* "find_nonzero_highdim.pyx":96
  *     for at_prim in range(phiobj.nat):
  *         atlist.append([])
  *         for at_super in range(phiobj.natsuper):             # <<<<<<<<<<<<<<
@@ -6434,59 +6437,59 @@ static PyObject *__pyx_pf_20find_nonzero_highdim_find_nonzero_highdim(CYTHON_UNU
     }
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-    /* "find_nonzero_highdim.pyx":99
+    /* "find_nonzero_highdim.pyx":102
  * #                atlist[at_prim].append(at_super)
  * 
  *         dim_allowed.append(len(atlist[at_prim])**(dim-1))             # <<<<<<<<<<<<<<
  * 
  * 
  */
-    __pyx_t_1 = __Pyx_GetItemInt_List(__pyx_v_atlist, __pyx_v_at_prim, int, 1, __Pyx_PyInt_From_int, 1, 1, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 99, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_GetItemInt_List(__pyx_v_atlist, __pyx_v_at_prim, int, 1, __Pyx_PyInt_From_int, 1, 1, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 102, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
-    __pyx_t_12 = PyObject_Length(__pyx_t_1); if (unlikely(__pyx_t_12 == ((Py_ssize_t)-1))) __PYX_ERR(0, 99, __pyx_L1_error)
+    __pyx_t_12 = PyObject_Length(__pyx_t_1); if (unlikely(__pyx_t_12 == ((Py_ssize_t)-1))) __PYX_ERR(0, 102, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-    __pyx_t_1 = PyFloat_FromDouble(pow(((double)__pyx_t_12), ((double)(__pyx_v_dim - 1)))); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 99, __pyx_L1_error)
+    __pyx_t_1 = PyFloat_FromDouble(pow(((double)__pyx_t_12), ((double)(__pyx_v_dim - 1)))); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 102, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
-    __pyx_t_11 = __Pyx_PyList_Append(__pyx_v_dim_allowed, __pyx_t_1); if (unlikely(__pyx_t_11 == ((int)-1))) __PYX_ERR(0, 99, __pyx_L1_error)
+    __pyx_t_11 = __Pyx_PyList_Append(__pyx_v_dim_allowed, __pyx_t_1); if (unlikely(__pyx_t_11 == ((int)-1))) __PYX_ERR(0, 102, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   }
 
-  /* "find_nonzero_highdim.pyx":102
+  /* "find_nonzero_highdim.pyx":105
  * 
  * 
  *     if phiobj.verbosity == 'High':             # <<<<<<<<<<<<<<
  *         print('dim_allowed')
  *         print(dim_allowed)
  */
-  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_phiobj, __pyx_n_s_verbosity); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 102, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_phiobj, __pyx_n_s_verbosity); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 105, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_14 = (__Pyx_PyString_Equals(__pyx_t_1, __pyx_n_s_High, Py_EQ)); if (unlikely((__pyx_t_14 < 0))) __PYX_ERR(0, 102, __pyx_L1_error)
+  __pyx_t_14 = (__Pyx_PyString_Equals(__pyx_t_1, __pyx_n_s_High, Py_EQ)); if (unlikely((__pyx_t_14 < 0))) __PYX_ERR(0, 105, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   if (__pyx_t_14) {
 
-    /* "find_nonzero_highdim.pyx":103
+    /* "find_nonzero_highdim.pyx":106
  * 
  *     if phiobj.verbosity == 'High':
  *         print('dim_allowed')             # <<<<<<<<<<<<<<
  *         print(dim_allowed)
  * #    print 'at_list'
  */
-    __pyx_t_1 = __Pyx_PyObject_Call(__pyx_builtin_print, __pyx_tuple__4, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 103, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyObject_Call(__pyx_builtin_print, __pyx_tuple__4, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 106, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-    /* "find_nonzero_highdim.pyx":104
+    /* "find_nonzero_highdim.pyx":107
  *     if phiobj.verbosity == 'High':
  *         print('dim_allowed')
  *         print(dim_allowed)             # <<<<<<<<<<<<<<
  * #    print 'at_list'
  * #    print atlist
  */
-    __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_builtin_print, __pyx_v_dim_allowed); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 104, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_builtin_print, __pyx_v_dim_allowed); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 107, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-    /* "find_nonzero_highdim.pyx":102
+    /* "find_nonzero_highdim.pyx":105
  * 
  * 
  *     if phiobj.verbosity == 'High':             # <<<<<<<<<<<<<<
@@ -6495,35 +6498,35 @@ static PyObject *__pyx_pf_20find_nonzero_highdim_find_nonzero_highdim(CYTHON_UNU
  */
   }
 
-  /* "find_nonzero_highdim.pyx":108
+  /* "find_nonzero_highdim.pyx":111
  * #    print atlist
  * 
  *     for at_prim in range(phiobj.nat):             # <<<<<<<<<<<<<<
  * 
  *         current = atlist[at_prim]
  */
-  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_phiobj, __pyx_n_s_nat); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 108, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_phiobj, __pyx_n_s_nat); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 111, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_9 = __Pyx_PyInt_As_long(__pyx_t_1); if (unlikely((__pyx_t_9 == (long)-1) && PyErr_Occurred())) __PYX_ERR(0, 108, __pyx_L1_error)
+  __pyx_t_9 = __Pyx_PyInt_As_long(__pyx_t_1); if (unlikely((__pyx_t_9 == (long)-1) && PyErr_Occurred())) __PYX_ERR(0, 111, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __pyx_t_10 = __pyx_t_9;
   for (__pyx_t_8 = 0; __pyx_t_8 < __pyx_t_10; __pyx_t_8+=1) {
     __pyx_v_at_prim = __pyx_t_8;
 
-    /* "find_nonzero_highdim.pyx":110
+    /* "find_nonzero_highdim.pyx":113
  *     for at_prim in range(phiobj.nat):
  * 
  *         current = atlist[at_prim]             # <<<<<<<<<<<<<<
  *         atoms[0] = at_prim
  *         for i in range(dim_allowed[at_prim]):
  */
-    __pyx_t_1 = __Pyx_GetItemInt_List(__pyx_v_atlist, __pyx_v_at_prim, int, 1, __Pyx_PyInt_From_int, 1, 1, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 110, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_GetItemInt_List(__pyx_v_atlist, __pyx_v_at_prim, int, 1, __Pyx_PyInt_From_int, 1, 1, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 113, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
-    if (!(likely(PyList_CheckExact(__pyx_t_1))||((__pyx_t_1) == Py_None) || __Pyx_RaiseUnexpectedTypeError("list", __pyx_t_1))) __PYX_ERR(0, 110, __pyx_L1_error)
+    if (!(likely(PyList_CheckExact(__pyx_t_1))||((__pyx_t_1) == Py_None) || __Pyx_RaiseUnexpectedTypeError("list", __pyx_t_1))) __PYX_ERR(0, 113, __pyx_L1_error)
     __Pyx_XDECREF_SET(__pyx_v_current, ((PyObject*)__pyx_t_1));
     __pyx_t_1 = 0;
 
-    /* "find_nonzero_highdim.pyx":111
+    /* "find_nonzero_highdim.pyx":114
  * 
  *         current = atlist[at_prim]
  *         atoms[0] = at_prim             # <<<<<<<<<<<<<<
@@ -6538,26 +6541,26 @@ static PyObject *__pyx_pf_20find_nonzero_highdim_find_nonzero_highdim(CYTHON_UNU
     } else if (unlikely(__pyx_t_16 >= __pyx_pybuffernd_atoms.diminfo[0].shape)) __pyx_t_17 = 0;
     if (unlikely(__pyx_t_17 != -1)) {
       __Pyx_RaiseBufferIndexError(__pyx_t_17);
-      __PYX_ERR(0, 111, __pyx_L1_error)
+      __PYX_ERR(0, 114, __pyx_L1_error)
     }
     *__Pyx_BufPtrStrided1d(__pyx_t_20find_nonzero_highdim_DTYPE_int_t *, __pyx_pybuffernd_atoms.rcbuffer->pybuffer.buf, __pyx_t_16, __pyx_pybuffernd_atoms.diminfo[0].strides) = __pyx_v_at_prim;
 
-    /* "find_nonzero_highdim.pyx":112
+    /* "find_nonzero_highdim.pyx":115
  *         current = atlist[at_prim]
  *         atoms[0] = at_prim
  *         for i in range(dim_allowed[at_prim]):             # <<<<<<<<<<<<<<
  *             d=len(current)
  *             if dim == 2:
  */
-    __pyx_t_1 = __Pyx_GetItemInt_List(__pyx_v_dim_allowed, __pyx_v_at_prim, int, 1, __Pyx_PyInt_From_int, 1, 1, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 112, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_GetItemInt_List(__pyx_v_dim_allowed, __pyx_v_at_prim, int, 1, __Pyx_PyInt_From_int, 1, 1, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 115, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
-    __pyx_t_18 = __Pyx_PyInt_As_long(__pyx_t_1); if (unlikely((__pyx_t_18 == (long)-1) && PyErr_Occurred())) __PYX_ERR(0, 112, __pyx_L1_error)
+    __pyx_t_18 = __Pyx_PyInt_As_long(__pyx_t_1); if (unlikely((__pyx_t_18 == (long)-1) && PyErr_Occurred())) __PYX_ERR(0, 115, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
     __pyx_t_19 = __pyx_t_18;
     for (__pyx_t_17 = 0; __pyx_t_17 < __pyx_t_19; __pyx_t_17+=1) {
       __pyx_v_i = __pyx_t_17;
 
-      /* "find_nonzero_highdim.pyx":113
+      /* "find_nonzero_highdim.pyx":116
  *         atoms[0] = at_prim
  *         for i in range(dim_allowed[at_prim]):
  *             d=len(current)             # <<<<<<<<<<<<<<
@@ -6566,12 +6569,12 @@ static PyObject *__pyx_pf_20find_nonzero_highdim_find_nonzero_highdim(CYTHON_UNU
  */
       if (unlikely(__pyx_v_current == Py_None)) {
         PyErr_SetString(PyExc_TypeError, "object of type 'NoneType' has no len()");
-        __PYX_ERR(0, 113, __pyx_L1_error)
+        __PYX_ERR(0, 116, __pyx_L1_error)
       }
-      __pyx_t_12 = __Pyx_PyList_GET_SIZE(__pyx_v_current); if (unlikely(__pyx_t_12 == ((Py_ssize_t)-1))) __PYX_ERR(0, 113, __pyx_L1_error)
+      __pyx_t_12 = __Pyx_PyList_GET_SIZE(__pyx_v_current); if (unlikely(__pyx_t_12 == ((Py_ssize_t)-1))) __PYX_ERR(0, 116, __pyx_L1_error)
       __pyx_v_d = __pyx_t_12;
 
-      /* "find_nonzero_highdim.pyx":114
+      /* "find_nonzero_highdim.pyx":117
  *         for i in range(dim_allowed[at_prim]):
  *             d=len(current)
  *             if dim == 2:             # <<<<<<<<<<<<<<
@@ -6581,7 +6584,7 @@ static PyObject *__pyx_pf_20find_nonzero_highdim_find_nonzero_highdim(CYTHON_UNU
       switch (__pyx_v_dim) {
         case 2:
 
-        /* "find_nonzero_highdim.pyx":115
+        /* "find_nonzero_highdim.pyx":118
  *             d=len(current)
  *             if dim == 2:
  *                 atoms[1] = current[i]             # <<<<<<<<<<<<<<
@@ -6590,11 +6593,11 @@ static PyObject *__pyx_pf_20find_nonzero_highdim_find_nonzero_highdim(CYTHON_UNU
  */
         if (unlikely(__pyx_v_current == Py_None)) {
           PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
-          __PYX_ERR(0, 115, __pyx_L1_error)
+          __PYX_ERR(0, 118, __pyx_L1_error)
         }
-        __pyx_t_1 = __Pyx_GetItemInt_List(__pyx_v_current, __pyx_v_i, int, 1, __Pyx_PyInt_From_int, 1, 1, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 115, __pyx_L1_error)
+        __pyx_t_1 = __Pyx_GetItemInt_List(__pyx_v_current, __pyx_v_i, int, 1, __Pyx_PyInt_From_int, 1, 1, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 118, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_1);
-        __pyx_t_20 = __Pyx_PyInt_As_npy_int64(__pyx_t_1); if (unlikely((__pyx_t_20 == ((npy_int64)-1)) && PyErr_Occurred())) __PYX_ERR(0, 115, __pyx_L1_error)
+        __pyx_t_20 = __Pyx_PyInt_As_npy_int64(__pyx_t_1); if (unlikely((__pyx_t_20 == ((npy_int64)-1)) && PyErr_Occurred())) __PYX_ERR(0, 118, __pyx_L1_error)
         __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
         __pyx_t_16 = 1;
         __pyx_t_21 = -1;
@@ -6604,11 +6607,11 @@ static PyObject *__pyx_pf_20find_nonzero_highdim_find_nonzero_highdim(CYTHON_UNU
         } else if (unlikely(__pyx_t_16 >= __pyx_pybuffernd_atoms.diminfo[0].shape)) __pyx_t_21 = 0;
         if (unlikely(__pyx_t_21 != -1)) {
           __Pyx_RaiseBufferIndexError(__pyx_t_21);
-          __PYX_ERR(0, 115, __pyx_L1_error)
+          __PYX_ERR(0, 118, __pyx_L1_error)
         }
         *__Pyx_BufPtrStrided1d(__pyx_t_20find_nonzero_highdim_DTYPE_int_t *, __pyx_pybuffernd_atoms.rcbuffer->pybuffer.buf, __pyx_t_16, __pyx_pybuffernd_atoms.diminfo[0].strides) = __pyx_t_20;
 
-        /* "find_nonzero_highdim.pyx":114
+        /* "find_nonzero_highdim.pyx":117
  *         for i in range(dim_allowed[at_prim]):
  *             d=len(current)
  *             if dim == 2:             # <<<<<<<<<<<<<<
@@ -6618,7 +6621,7 @@ static PyObject *__pyx_pf_20find_nonzero_highdim_find_nonzero_highdim(CYTHON_UNU
         break;
         case 3:
 
-        /* "find_nonzero_highdim.pyx":117
+        /* "find_nonzero_highdim.pyx":120
  *                 atoms[1] = current[i]
  *             elif dim == 3:
  *                 atoms[1] = current[i/d]             # <<<<<<<<<<<<<<
@@ -6627,100 +6630,19 @@ static PyObject *__pyx_pf_20find_nonzero_highdim_find_nonzero_highdim(CYTHON_UNU
  */
         if (unlikely(__pyx_v_current == Py_None)) {
           PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
-          __PYX_ERR(0, 117, __pyx_L1_error)
+          __PYX_ERR(0, 120, __pyx_L1_error)
         }
         if (unlikely(__pyx_v_d == 0)) {
           PyErr_SetString(PyExc_ZeroDivisionError, "float division");
-          __PYX_ERR(0, 117, __pyx_L1_error)
+          __PYX_ERR(0, 120, __pyx_L1_error)
         }
-        __pyx_t_1 = PyFloat_FromDouble((((double)__pyx_v_i) / ((double)__pyx_v_d))); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 117, __pyx_L1_error)
+        __pyx_t_1 = PyFloat_FromDouble((((double)__pyx_v_i) / ((double)__pyx_v_d))); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 120, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_1);
-        __pyx_t_2 = __Pyx_PyObject_GetItem(__pyx_v_current, __pyx_t_1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 117, __pyx_L1_error)
+        __pyx_t_2 = __Pyx_PyObject_GetItem(__pyx_v_current, __pyx_t_1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 120, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_2);
         __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-        __pyx_t_20 = __Pyx_PyInt_As_npy_int64(__pyx_t_2); if (unlikely((__pyx_t_20 == ((npy_int64)-1)) && PyErr_Occurred())) __PYX_ERR(0, 117, __pyx_L1_error)
+        __pyx_t_20 = __Pyx_PyInt_As_npy_int64(__pyx_t_2); if (unlikely((__pyx_t_20 == ((npy_int64)-1)) && PyErr_Occurred())) __PYX_ERR(0, 120, __pyx_L1_error)
         __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-        __pyx_t_16 = 1;
-        __pyx_t_21 = -1;
-        if (__pyx_t_16 < 0) {
-          __pyx_t_16 += __pyx_pybuffernd_atoms.diminfo[0].shape;
-          if (unlikely(__pyx_t_16 < 0)) __pyx_t_21 = 0;
-        } else if (unlikely(__pyx_t_16 >= __pyx_pybuffernd_atoms.diminfo[0].shape)) __pyx_t_21 = 0;
-        if (unlikely(__pyx_t_21 != -1)) {
-          __Pyx_RaiseBufferIndexError(__pyx_t_21);
-          __PYX_ERR(0, 117, __pyx_L1_error)
-        }
-        *__Pyx_BufPtrStrided1d(__pyx_t_20find_nonzero_highdim_DTYPE_int_t *, __pyx_pybuffernd_atoms.rcbuffer->pybuffer.buf, __pyx_t_16, __pyx_pybuffernd_atoms.diminfo[0].strides) = __pyx_t_20;
-
-        /* "find_nonzero_highdim.pyx":118
- *             elif dim == 3:
- *                 atoms[1] = current[i/d]
- *                 atoms[2] = current[i%d]             # <<<<<<<<<<<<<<
- *             elif dim == 4:
- *                 atoms[1] = current[i/d/d]
- */
-        if (unlikely(__pyx_v_current == Py_None)) {
-          PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
-          __PYX_ERR(0, 118, __pyx_L1_error)
-        }
-        if (unlikely(__pyx_v_d == 0)) {
-          PyErr_SetString(PyExc_ZeroDivisionError, "integer division or modulo by zero");
-          __PYX_ERR(0, 118, __pyx_L1_error)
-        }
-        __pyx_t_21 = __Pyx_mod_int(__pyx_v_i, __pyx_v_d);
-        __pyx_t_2 = __Pyx_GetItemInt_List(__pyx_v_current, __pyx_t_21, int, 1, __Pyx_PyInt_From_int, 1, 1, 1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 118, __pyx_L1_error)
-        __Pyx_GOTREF(__pyx_t_2);
-        __pyx_t_20 = __Pyx_PyInt_As_npy_int64(__pyx_t_2); if (unlikely((__pyx_t_20 == ((npy_int64)-1)) && PyErr_Occurred())) __PYX_ERR(0, 118, __pyx_L1_error)
-        __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-        __pyx_t_16 = 2;
-        __pyx_t_21 = -1;
-        if (__pyx_t_16 < 0) {
-          __pyx_t_16 += __pyx_pybuffernd_atoms.diminfo[0].shape;
-          if (unlikely(__pyx_t_16 < 0)) __pyx_t_21 = 0;
-        } else if (unlikely(__pyx_t_16 >= __pyx_pybuffernd_atoms.diminfo[0].shape)) __pyx_t_21 = 0;
-        if (unlikely(__pyx_t_21 != -1)) {
-          __Pyx_RaiseBufferIndexError(__pyx_t_21);
-          __PYX_ERR(0, 118, __pyx_L1_error)
-        }
-        *__Pyx_BufPtrStrided1d(__pyx_t_20find_nonzero_highdim_DTYPE_int_t *, __pyx_pybuffernd_atoms.rcbuffer->pybuffer.buf, __pyx_t_16, __pyx_pybuffernd_atoms.diminfo[0].strides) = __pyx_t_20;
-
-        /* "find_nonzero_highdim.pyx":116
- *             if dim == 2:
- *                 atoms[1] = current[i]
- *             elif dim == 3:             # <<<<<<<<<<<<<<
- *                 atoms[1] = current[i/d]
- *                 atoms[2] = current[i%d]
- */
-        break;
-        case 4:
-
-        /* "find_nonzero_highdim.pyx":120
- *                 atoms[2] = current[i%d]
- *             elif dim == 4:
- *                 atoms[1] = current[i/d/d]             # <<<<<<<<<<<<<<
- *                 atoms[2] = current[(i/d)%d]
- *                 atoms[3] = current[i%d]
- */
-        if (unlikely(__pyx_v_current == Py_None)) {
-          PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
-          __PYX_ERR(0, 120, __pyx_L1_error)
-        }
-        if (unlikely(__pyx_v_d == 0)) {
-          PyErr_SetString(PyExc_ZeroDivisionError, "float division");
-          __PYX_ERR(0, 120, __pyx_L1_error)
-        }
-        __pyx_t_22 = (((double)__pyx_v_i) / ((double)__pyx_v_d));
-        if (unlikely(__pyx_v_d == 0)) {
-          PyErr_SetString(PyExc_ZeroDivisionError, "float division");
-          __PYX_ERR(0, 120, __pyx_L1_error)
-        }
-        __pyx_t_2 = PyFloat_FromDouble((__pyx_t_22 / ((double)__pyx_v_d))); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 120, __pyx_L1_error)
-        __Pyx_GOTREF(__pyx_t_2);
-        __pyx_t_1 = __Pyx_PyObject_GetItem(__pyx_v_current, __pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 120, __pyx_L1_error)
-        __Pyx_GOTREF(__pyx_t_1);
-        __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-        __pyx_t_20 = __Pyx_PyInt_As_npy_int64(__pyx_t_1); if (unlikely((__pyx_t_20 == ((npy_int64)-1)) && PyErr_Occurred())) __PYX_ERR(0, 120, __pyx_L1_error)
-        __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
         __pyx_t_16 = 1;
         __pyx_t_21 = -1;
         if (__pyx_t_16 < 0) {
@@ -6734,30 +6656,23 @@ static PyObject *__pyx_pf_20find_nonzero_highdim_find_nonzero_highdim(CYTHON_UNU
         *__Pyx_BufPtrStrided1d(__pyx_t_20find_nonzero_highdim_DTYPE_int_t *, __pyx_pybuffernd_atoms.rcbuffer->pybuffer.buf, __pyx_t_16, __pyx_pybuffernd_atoms.diminfo[0].strides) = __pyx_t_20;
 
         /* "find_nonzero_highdim.pyx":121
+ *             elif dim == 3:
+ *                 atoms[1] = current[i/d]
+ *                 atoms[2] = current[i%d]             # <<<<<<<<<<<<<<
  *             elif dim == 4:
  *                 atoms[1] = current[i/d/d]
- *                 atoms[2] = current[(i/d)%d]             # <<<<<<<<<<<<<<
- *                 atoms[3] = current[i%d]
- *             elif dim == 5:
  */
         if (unlikely(__pyx_v_current == Py_None)) {
           PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
           __PYX_ERR(0, 121, __pyx_L1_error)
         }
         if (unlikely(__pyx_v_d == 0)) {
-          PyErr_SetString(PyExc_ZeroDivisionError, "float division");
+          PyErr_SetString(PyExc_ZeroDivisionError, "integer division or modulo by zero");
           __PYX_ERR(0, 121, __pyx_L1_error)
         }
-        __pyx_t_22 = (((double)__pyx_v_i) / ((double)__pyx_v_d));
-        if (unlikely(__pyx_v_d == 0)) {
-          PyErr_SetString(PyExc_ZeroDivisionError, "float divmod()");
-          __PYX_ERR(0, 121, __pyx_L1_error)
-        }
-        __pyx_t_1 = PyFloat_FromDouble(__Pyx_mod_double(__pyx_t_22, __pyx_v_d)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 121, __pyx_L1_error)
-        __Pyx_GOTREF(__pyx_t_1);
-        __pyx_t_2 = __Pyx_PyObject_GetItem(__pyx_v_current, __pyx_t_1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 121, __pyx_L1_error)
+        __pyx_t_21 = __Pyx_mod_int(__pyx_v_i, __pyx_v_d);
+        __pyx_t_2 = __Pyx_GetItemInt_List(__pyx_v_current, __pyx_t_21, int, 1, __Pyx_PyInt_From_int, 1, 1, 1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 121, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_2);
-        __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
         __pyx_t_20 = __Pyx_PyInt_As_npy_int64(__pyx_t_2); if (unlikely((__pyx_t_20 == ((npy_int64)-1)) && PyErr_Occurred())) __PYX_ERR(0, 121, __pyx_L1_error)
         __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
         __pyx_t_16 = 2;
@@ -6772,27 +6687,44 @@ static PyObject *__pyx_pf_20find_nonzero_highdim_find_nonzero_highdim(CYTHON_UNU
         }
         *__Pyx_BufPtrStrided1d(__pyx_t_20find_nonzero_highdim_DTYPE_int_t *, __pyx_pybuffernd_atoms.rcbuffer->pybuffer.buf, __pyx_t_16, __pyx_pybuffernd_atoms.diminfo[0].strides) = __pyx_t_20;
 
-        /* "find_nonzero_highdim.pyx":122
- *                 atoms[1] = current[i/d/d]
+        /* "find_nonzero_highdim.pyx":119
+ *             if dim == 2:
+ *                 atoms[1] = current[i]
+ *             elif dim == 3:             # <<<<<<<<<<<<<<
+ *                 atoms[1] = current[i/d]
+ *                 atoms[2] = current[i%d]
+ */
+        break;
+        case 4:
+
+        /* "find_nonzero_highdim.pyx":123
+ *                 atoms[2] = current[i%d]
+ *             elif dim == 4:
+ *                 atoms[1] = current[i/d/d]             # <<<<<<<<<<<<<<
  *                 atoms[2] = current[(i/d)%d]
- *                 atoms[3] = current[i%d]             # <<<<<<<<<<<<<<
- *             elif dim == 5:
- *                 atoms[1] = current[i/d/d/d]
+ *                 atoms[3] = current[i%d]
  */
         if (unlikely(__pyx_v_current == Py_None)) {
           PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
-          __PYX_ERR(0, 122, __pyx_L1_error)
+          __PYX_ERR(0, 123, __pyx_L1_error)
         }
         if (unlikely(__pyx_v_d == 0)) {
-          PyErr_SetString(PyExc_ZeroDivisionError, "integer division or modulo by zero");
-          __PYX_ERR(0, 122, __pyx_L1_error)
+          PyErr_SetString(PyExc_ZeroDivisionError, "float division");
+          __PYX_ERR(0, 123, __pyx_L1_error)
         }
-        __pyx_t_21 = __Pyx_mod_int(__pyx_v_i, __pyx_v_d);
-        __pyx_t_2 = __Pyx_GetItemInt_List(__pyx_v_current, __pyx_t_21, int, 1, __Pyx_PyInt_From_int, 1, 1, 1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 122, __pyx_L1_error)
+        __pyx_t_22 = (((double)__pyx_v_i) / ((double)__pyx_v_d));
+        if (unlikely(__pyx_v_d == 0)) {
+          PyErr_SetString(PyExc_ZeroDivisionError, "float division");
+          __PYX_ERR(0, 123, __pyx_L1_error)
+        }
+        __pyx_t_2 = PyFloat_FromDouble((__pyx_t_22 / ((double)__pyx_v_d))); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 123, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_2);
-        __pyx_t_20 = __Pyx_PyInt_As_npy_int64(__pyx_t_2); if (unlikely((__pyx_t_20 == ((npy_int64)-1)) && PyErr_Occurred())) __PYX_ERR(0, 122, __pyx_L1_error)
+        __pyx_t_1 = __Pyx_PyObject_GetItem(__pyx_v_current, __pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 123, __pyx_L1_error)
+        __Pyx_GOTREF(__pyx_t_1);
         __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-        __pyx_t_16 = 3;
+        __pyx_t_20 = __Pyx_PyInt_As_npy_int64(__pyx_t_1); if (unlikely((__pyx_t_20 == ((npy_int64)-1)) && PyErr_Occurred())) __PYX_ERR(0, 123, __pyx_L1_error)
+        __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+        __pyx_t_16 = 1;
         __pyx_t_21 = -1;
         if (__pyx_t_16 < 0) {
           __pyx_t_16 += __pyx_pybuffernd_atoms.diminfo[0].shape;
@@ -6800,26 +6732,16 @@ static PyObject *__pyx_pf_20find_nonzero_highdim_find_nonzero_highdim(CYTHON_UNU
         } else if (unlikely(__pyx_t_16 >= __pyx_pybuffernd_atoms.diminfo[0].shape)) __pyx_t_21 = 0;
         if (unlikely(__pyx_t_21 != -1)) {
           __Pyx_RaiseBufferIndexError(__pyx_t_21);
-          __PYX_ERR(0, 122, __pyx_L1_error)
+          __PYX_ERR(0, 123, __pyx_L1_error)
         }
         *__Pyx_BufPtrStrided1d(__pyx_t_20find_nonzero_highdim_DTYPE_int_t *, __pyx_pybuffernd_atoms.rcbuffer->pybuffer.buf, __pyx_t_16, __pyx_pybuffernd_atoms.diminfo[0].strides) = __pyx_t_20;
 
-        /* "find_nonzero_highdim.pyx":119
- *                 atoms[1] = current[i/d]
- *                 atoms[2] = current[i%d]
- *             elif dim == 4:             # <<<<<<<<<<<<<<
- *                 atoms[1] = current[i/d/d]
- *                 atoms[2] = current[(i/d)%d]
- */
-        break;
-        case 5:
-
         /* "find_nonzero_highdim.pyx":124
+ *             elif dim == 4:
+ *                 atoms[1] = current[i/d/d]
+ *                 atoms[2] = current[(i/d)%d]             # <<<<<<<<<<<<<<
  *                 atoms[3] = current[i%d]
  *             elif dim == 5:
- *                 atoms[1] = current[i/d/d/d]             # <<<<<<<<<<<<<<
- *                 atoms[2] = current[(i/d/d)%d]
- *                 atoms[3] = current[(i/d)%d]
  */
         if (unlikely(__pyx_v_current == Py_None)) {
           PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
@@ -6831,22 +6753,17 @@ static PyObject *__pyx_pf_20find_nonzero_highdim_find_nonzero_highdim(CYTHON_UNU
         }
         __pyx_t_22 = (((double)__pyx_v_i) / ((double)__pyx_v_d));
         if (unlikely(__pyx_v_d == 0)) {
-          PyErr_SetString(PyExc_ZeroDivisionError, "float division");
+          PyErr_SetString(PyExc_ZeroDivisionError, "float divmod()");
           __PYX_ERR(0, 124, __pyx_L1_error)
         }
-        __pyx_t_23 = (__pyx_t_22 / ((double)__pyx_v_d));
-        if (unlikely(__pyx_v_d == 0)) {
-          PyErr_SetString(PyExc_ZeroDivisionError, "float division");
-          __PYX_ERR(0, 124, __pyx_L1_error)
-        }
-        __pyx_t_2 = PyFloat_FromDouble((__pyx_t_23 / ((double)__pyx_v_d))); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 124, __pyx_L1_error)
-        __Pyx_GOTREF(__pyx_t_2);
-        __pyx_t_1 = __Pyx_PyObject_GetItem(__pyx_v_current, __pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 124, __pyx_L1_error)
+        __pyx_t_1 = PyFloat_FromDouble(__Pyx_mod_double(__pyx_t_22, __pyx_v_d)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 124, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_1);
-        __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-        __pyx_t_20 = __Pyx_PyInt_As_npy_int64(__pyx_t_1); if (unlikely((__pyx_t_20 == ((npy_int64)-1)) && PyErr_Occurred())) __PYX_ERR(0, 124, __pyx_L1_error)
+        __pyx_t_2 = __Pyx_PyObject_GetItem(__pyx_v_current, __pyx_t_1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 124, __pyx_L1_error)
+        __Pyx_GOTREF(__pyx_t_2);
         __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-        __pyx_t_16 = 1;
+        __pyx_t_20 = __Pyx_PyInt_As_npy_int64(__pyx_t_2); if (unlikely((__pyx_t_20 == ((npy_int64)-1)) && PyErr_Occurred())) __PYX_ERR(0, 124, __pyx_L1_error)
+        __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
+        __pyx_t_16 = 2;
         __pyx_t_21 = -1;
         if (__pyx_t_16 < 0) {
           __pyx_t_16 += __pyx_pybuffernd_atoms.diminfo[0].shape;
@@ -6859,6 +6776,92 @@ static PyObject *__pyx_pf_20find_nonzero_highdim_find_nonzero_highdim(CYTHON_UNU
         *__Pyx_BufPtrStrided1d(__pyx_t_20find_nonzero_highdim_DTYPE_int_t *, __pyx_pybuffernd_atoms.rcbuffer->pybuffer.buf, __pyx_t_16, __pyx_pybuffernd_atoms.diminfo[0].strides) = __pyx_t_20;
 
         /* "find_nonzero_highdim.pyx":125
+ *                 atoms[1] = current[i/d/d]
+ *                 atoms[2] = current[(i/d)%d]
+ *                 atoms[3] = current[i%d]             # <<<<<<<<<<<<<<
+ *             elif dim == 5:
+ *                 atoms[1] = current[i/d/d/d]
+ */
+        if (unlikely(__pyx_v_current == Py_None)) {
+          PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
+          __PYX_ERR(0, 125, __pyx_L1_error)
+        }
+        if (unlikely(__pyx_v_d == 0)) {
+          PyErr_SetString(PyExc_ZeroDivisionError, "integer division or modulo by zero");
+          __PYX_ERR(0, 125, __pyx_L1_error)
+        }
+        __pyx_t_21 = __Pyx_mod_int(__pyx_v_i, __pyx_v_d);
+        __pyx_t_2 = __Pyx_GetItemInt_List(__pyx_v_current, __pyx_t_21, int, 1, __Pyx_PyInt_From_int, 1, 1, 1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 125, __pyx_L1_error)
+        __Pyx_GOTREF(__pyx_t_2);
+        __pyx_t_20 = __Pyx_PyInt_As_npy_int64(__pyx_t_2); if (unlikely((__pyx_t_20 == ((npy_int64)-1)) && PyErr_Occurred())) __PYX_ERR(0, 125, __pyx_L1_error)
+        __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
+        __pyx_t_16 = 3;
+        __pyx_t_21 = -1;
+        if (__pyx_t_16 < 0) {
+          __pyx_t_16 += __pyx_pybuffernd_atoms.diminfo[0].shape;
+          if (unlikely(__pyx_t_16 < 0)) __pyx_t_21 = 0;
+        } else if (unlikely(__pyx_t_16 >= __pyx_pybuffernd_atoms.diminfo[0].shape)) __pyx_t_21 = 0;
+        if (unlikely(__pyx_t_21 != -1)) {
+          __Pyx_RaiseBufferIndexError(__pyx_t_21);
+          __PYX_ERR(0, 125, __pyx_L1_error)
+        }
+        *__Pyx_BufPtrStrided1d(__pyx_t_20find_nonzero_highdim_DTYPE_int_t *, __pyx_pybuffernd_atoms.rcbuffer->pybuffer.buf, __pyx_t_16, __pyx_pybuffernd_atoms.diminfo[0].strides) = __pyx_t_20;
+
+        /* "find_nonzero_highdim.pyx":122
+ *                 atoms[1] = current[i/d]
+ *                 atoms[2] = current[i%d]
+ *             elif dim == 4:             # <<<<<<<<<<<<<<
+ *                 atoms[1] = current[i/d/d]
+ *                 atoms[2] = current[(i/d)%d]
+ */
+        break;
+        case 5:
+
+        /* "find_nonzero_highdim.pyx":127
+ *                 atoms[3] = current[i%d]
+ *             elif dim == 5:
+ *                 atoms[1] = current[i/d/d/d]             # <<<<<<<<<<<<<<
+ *                 atoms[2] = current[(i/d/d)%d]
+ *                 atoms[3] = current[(i/d)%d]
+ */
+        if (unlikely(__pyx_v_current == Py_None)) {
+          PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
+          __PYX_ERR(0, 127, __pyx_L1_error)
+        }
+        if (unlikely(__pyx_v_d == 0)) {
+          PyErr_SetString(PyExc_ZeroDivisionError, "float division");
+          __PYX_ERR(0, 127, __pyx_L1_error)
+        }
+        __pyx_t_22 = (((double)__pyx_v_i) / ((double)__pyx_v_d));
+        if (unlikely(__pyx_v_d == 0)) {
+          PyErr_SetString(PyExc_ZeroDivisionError, "float division");
+          __PYX_ERR(0, 127, __pyx_L1_error)
+        }
+        __pyx_t_23 = (__pyx_t_22 / ((double)__pyx_v_d));
+        if (unlikely(__pyx_v_d == 0)) {
+          PyErr_SetString(PyExc_ZeroDivisionError, "float division");
+          __PYX_ERR(0, 127, __pyx_L1_error)
+        }
+        __pyx_t_2 = PyFloat_FromDouble((__pyx_t_23 / ((double)__pyx_v_d))); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 127, __pyx_L1_error)
+        __Pyx_GOTREF(__pyx_t_2);
+        __pyx_t_1 = __Pyx_PyObject_GetItem(__pyx_v_current, __pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 127, __pyx_L1_error)
+        __Pyx_GOTREF(__pyx_t_1);
+        __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
+        __pyx_t_20 = __Pyx_PyInt_As_npy_int64(__pyx_t_1); if (unlikely((__pyx_t_20 == ((npy_int64)-1)) && PyErr_Occurred())) __PYX_ERR(0, 127, __pyx_L1_error)
+        __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+        __pyx_t_16 = 1;
+        __pyx_t_21 = -1;
+        if (__pyx_t_16 < 0) {
+          __pyx_t_16 += __pyx_pybuffernd_atoms.diminfo[0].shape;
+          if (unlikely(__pyx_t_16 < 0)) __pyx_t_21 = 0;
+        } else if (unlikely(__pyx_t_16 >= __pyx_pybuffernd_atoms.diminfo[0].shape)) __pyx_t_21 = 0;
+        if (unlikely(__pyx_t_21 != -1)) {
+          __Pyx_RaiseBufferIndexError(__pyx_t_21);
+          __PYX_ERR(0, 127, __pyx_L1_error)
+        }
+        *__Pyx_BufPtrStrided1d(__pyx_t_20find_nonzero_highdim_DTYPE_int_t *, __pyx_pybuffernd_atoms.rcbuffer->pybuffer.buf, __pyx_t_16, __pyx_pybuffernd_atoms.diminfo[0].strides) = __pyx_t_20;
+
+        /* "find_nonzero_highdim.pyx":128
  *             elif dim == 5:
  *                 atoms[1] = current[i/d/d/d]
  *                 atoms[2] = current[(i/d/d)%d]             # <<<<<<<<<<<<<<
@@ -6867,28 +6870,28 @@ static PyObject *__pyx_pf_20find_nonzero_highdim_find_nonzero_highdim(CYTHON_UNU
  */
         if (unlikely(__pyx_v_current == Py_None)) {
           PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
-          __PYX_ERR(0, 125, __pyx_L1_error)
+          __PYX_ERR(0, 128, __pyx_L1_error)
         }
         if (unlikely(__pyx_v_d == 0)) {
           PyErr_SetString(PyExc_ZeroDivisionError, "float division");
-          __PYX_ERR(0, 125, __pyx_L1_error)
+          __PYX_ERR(0, 128, __pyx_L1_error)
         }
         __pyx_t_23 = (((double)__pyx_v_i) / ((double)__pyx_v_d));
         if (unlikely(__pyx_v_d == 0)) {
           PyErr_SetString(PyExc_ZeroDivisionError, "float division");
-          __PYX_ERR(0, 125, __pyx_L1_error)
+          __PYX_ERR(0, 128, __pyx_L1_error)
         }
         __pyx_t_22 = (__pyx_t_23 / ((double)__pyx_v_d));
         if (unlikely(__pyx_v_d == 0)) {
           PyErr_SetString(PyExc_ZeroDivisionError, "float divmod()");
-          __PYX_ERR(0, 125, __pyx_L1_error)
+          __PYX_ERR(0, 128, __pyx_L1_error)
         }
-        __pyx_t_1 = PyFloat_FromDouble(__Pyx_mod_double(__pyx_t_22, __pyx_v_d)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 125, __pyx_L1_error)
+        __pyx_t_1 = PyFloat_FromDouble(__Pyx_mod_double(__pyx_t_22, __pyx_v_d)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 128, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_1);
-        __pyx_t_2 = __Pyx_PyObject_GetItem(__pyx_v_current, __pyx_t_1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 125, __pyx_L1_error)
+        __pyx_t_2 = __Pyx_PyObject_GetItem(__pyx_v_current, __pyx_t_1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 128, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_2);
         __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-        __pyx_t_20 = __Pyx_PyInt_As_npy_int64(__pyx_t_2); if (unlikely((__pyx_t_20 == ((npy_int64)-1)) && PyErr_Occurred())) __PYX_ERR(0, 125, __pyx_L1_error)
+        __pyx_t_20 = __Pyx_PyInt_As_npy_int64(__pyx_t_2); if (unlikely((__pyx_t_20 == ((npy_int64)-1)) && PyErr_Occurred())) __PYX_ERR(0, 128, __pyx_L1_error)
         __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
         __pyx_t_16 = 2;
         __pyx_t_21 = -1;
@@ -6898,11 +6901,11 @@ static PyObject *__pyx_pf_20find_nonzero_highdim_find_nonzero_highdim(CYTHON_UNU
         } else if (unlikely(__pyx_t_16 >= __pyx_pybuffernd_atoms.diminfo[0].shape)) __pyx_t_21 = 0;
         if (unlikely(__pyx_t_21 != -1)) {
           __Pyx_RaiseBufferIndexError(__pyx_t_21);
-          __PYX_ERR(0, 125, __pyx_L1_error)
+          __PYX_ERR(0, 128, __pyx_L1_error)
         }
         *__Pyx_BufPtrStrided1d(__pyx_t_20find_nonzero_highdim_DTYPE_int_t *, __pyx_pybuffernd_atoms.rcbuffer->pybuffer.buf, __pyx_t_16, __pyx_pybuffernd_atoms.diminfo[0].strides) = __pyx_t_20;
 
-        /* "find_nonzero_highdim.pyx":126
+        /* "find_nonzero_highdim.pyx":129
  *                 atoms[1] = current[i/d/d/d]
  *                 atoms[2] = current[(i/d/d)%d]
  *                 atoms[3] = current[(i/d)%d]             # <<<<<<<<<<<<<<
@@ -6911,116 +6914,25 @@ static PyObject *__pyx_pf_20find_nonzero_highdim_find_nonzero_highdim(CYTHON_UNU
  */
         if (unlikely(__pyx_v_current == Py_None)) {
           PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
-          __PYX_ERR(0, 126, __pyx_L1_error)
+          __PYX_ERR(0, 129, __pyx_L1_error)
         }
         if (unlikely(__pyx_v_d == 0)) {
           PyErr_SetString(PyExc_ZeroDivisionError, "float division");
-          __PYX_ERR(0, 126, __pyx_L1_error)
+          __PYX_ERR(0, 129, __pyx_L1_error)
         }
         __pyx_t_22 = (((double)__pyx_v_i) / ((double)__pyx_v_d));
         if (unlikely(__pyx_v_d == 0)) {
           PyErr_SetString(PyExc_ZeroDivisionError, "float divmod()");
-          __PYX_ERR(0, 126, __pyx_L1_error)
+          __PYX_ERR(0, 129, __pyx_L1_error)
         }
-        __pyx_t_2 = PyFloat_FromDouble(__Pyx_mod_double(__pyx_t_22, __pyx_v_d)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 126, __pyx_L1_error)
+        __pyx_t_2 = PyFloat_FromDouble(__Pyx_mod_double(__pyx_t_22, __pyx_v_d)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 129, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_2);
-        __pyx_t_1 = __Pyx_PyObject_GetItem(__pyx_v_current, __pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 126, __pyx_L1_error)
+        __pyx_t_1 = __Pyx_PyObject_GetItem(__pyx_v_current, __pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 129, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_1);
         __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-        __pyx_t_20 = __Pyx_PyInt_As_npy_int64(__pyx_t_1); if (unlikely((__pyx_t_20 == ((npy_int64)-1)) && PyErr_Occurred())) __PYX_ERR(0, 126, __pyx_L1_error)
+        __pyx_t_20 = __Pyx_PyInt_As_npy_int64(__pyx_t_1); if (unlikely((__pyx_t_20 == ((npy_int64)-1)) && PyErr_Occurred())) __PYX_ERR(0, 129, __pyx_L1_error)
         __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
         __pyx_t_16 = 3;
-        __pyx_t_21 = -1;
-        if (__pyx_t_16 < 0) {
-          __pyx_t_16 += __pyx_pybuffernd_atoms.diminfo[0].shape;
-          if (unlikely(__pyx_t_16 < 0)) __pyx_t_21 = 0;
-        } else if (unlikely(__pyx_t_16 >= __pyx_pybuffernd_atoms.diminfo[0].shape)) __pyx_t_21 = 0;
-        if (unlikely(__pyx_t_21 != -1)) {
-          __Pyx_RaiseBufferIndexError(__pyx_t_21);
-          __PYX_ERR(0, 126, __pyx_L1_error)
-        }
-        *__Pyx_BufPtrStrided1d(__pyx_t_20find_nonzero_highdim_DTYPE_int_t *, __pyx_pybuffernd_atoms.rcbuffer->pybuffer.buf, __pyx_t_16, __pyx_pybuffernd_atoms.diminfo[0].strides) = __pyx_t_20;
-
-        /* "find_nonzero_highdim.pyx":127
- *                 atoms[2] = current[(i/d/d)%d]
- *                 atoms[3] = current[(i/d)%d]
- *                 atoms[4] = current[i%d]             # <<<<<<<<<<<<<<
- *             elif dim == 6:
- *                 atoms[1] = current[i/d/d/d/d]
- */
-        if (unlikely(__pyx_v_current == Py_None)) {
-          PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
-          __PYX_ERR(0, 127, __pyx_L1_error)
-        }
-        if (unlikely(__pyx_v_d == 0)) {
-          PyErr_SetString(PyExc_ZeroDivisionError, "integer division or modulo by zero");
-          __PYX_ERR(0, 127, __pyx_L1_error)
-        }
-        __pyx_t_21 = __Pyx_mod_int(__pyx_v_i, __pyx_v_d);
-        __pyx_t_1 = __Pyx_GetItemInt_List(__pyx_v_current, __pyx_t_21, int, 1, __Pyx_PyInt_From_int, 1, 1, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 127, __pyx_L1_error)
-        __Pyx_GOTREF(__pyx_t_1);
-        __pyx_t_20 = __Pyx_PyInt_As_npy_int64(__pyx_t_1); if (unlikely((__pyx_t_20 == ((npy_int64)-1)) && PyErr_Occurred())) __PYX_ERR(0, 127, __pyx_L1_error)
-        __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-        __pyx_t_16 = 4;
-        __pyx_t_21 = -1;
-        if (__pyx_t_16 < 0) {
-          __pyx_t_16 += __pyx_pybuffernd_atoms.diminfo[0].shape;
-          if (unlikely(__pyx_t_16 < 0)) __pyx_t_21 = 0;
-        } else if (unlikely(__pyx_t_16 >= __pyx_pybuffernd_atoms.diminfo[0].shape)) __pyx_t_21 = 0;
-        if (unlikely(__pyx_t_21 != -1)) {
-          __Pyx_RaiseBufferIndexError(__pyx_t_21);
-          __PYX_ERR(0, 127, __pyx_L1_error)
-        }
-        *__Pyx_BufPtrStrided1d(__pyx_t_20find_nonzero_highdim_DTYPE_int_t *, __pyx_pybuffernd_atoms.rcbuffer->pybuffer.buf, __pyx_t_16, __pyx_pybuffernd_atoms.diminfo[0].strides) = __pyx_t_20;
-
-        /* "find_nonzero_highdim.pyx":123
- *                 atoms[2] = current[(i/d)%d]
- *                 atoms[3] = current[i%d]
- *             elif dim == 5:             # <<<<<<<<<<<<<<
- *                 atoms[1] = current[i/d/d/d]
- *                 atoms[2] = current[(i/d/d)%d]
- */
-        break;
-        case 6:
-
-        /* "find_nonzero_highdim.pyx":129
- *                 atoms[4] = current[i%d]
- *             elif dim == 6:
- *                 atoms[1] = current[i/d/d/d/d]             # <<<<<<<<<<<<<<
- *                 atoms[2] = current[(i/d/d/d)%d]
- *                 atoms[3] = current[(i/d/d)%d]
- */
-        if (unlikely(__pyx_v_current == Py_None)) {
-          PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
-          __PYX_ERR(0, 129, __pyx_L1_error)
-        }
-        if (unlikely(__pyx_v_d == 0)) {
-          PyErr_SetString(PyExc_ZeroDivisionError, "float division");
-          __PYX_ERR(0, 129, __pyx_L1_error)
-        }
-        __pyx_t_22 = (((double)__pyx_v_i) / ((double)__pyx_v_d));
-        if (unlikely(__pyx_v_d == 0)) {
-          PyErr_SetString(PyExc_ZeroDivisionError, "float division");
-          __PYX_ERR(0, 129, __pyx_L1_error)
-        }
-        __pyx_t_23 = (__pyx_t_22 / ((double)__pyx_v_d));
-        if (unlikely(__pyx_v_d == 0)) {
-          PyErr_SetString(PyExc_ZeroDivisionError, "float division");
-          __PYX_ERR(0, 129, __pyx_L1_error)
-        }
-        __pyx_t_22 = (__pyx_t_23 / ((double)__pyx_v_d));
-        if (unlikely(__pyx_v_d == 0)) {
-          PyErr_SetString(PyExc_ZeroDivisionError, "float division");
-          __PYX_ERR(0, 129, __pyx_L1_error)
-        }
-        __pyx_t_1 = PyFloat_FromDouble((__pyx_t_22 / ((double)__pyx_v_d))); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 129, __pyx_L1_error)
-        __Pyx_GOTREF(__pyx_t_1);
-        __pyx_t_2 = __Pyx_PyObject_GetItem(__pyx_v_current, __pyx_t_1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 129, __pyx_L1_error)
-        __Pyx_GOTREF(__pyx_t_2);
-        __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-        __pyx_t_20 = __Pyx_PyInt_As_npy_int64(__pyx_t_2); if (unlikely((__pyx_t_20 == ((npy_int64)-1)) && PyErr_Occurred())) __PYX_ERR(0, 129, __pyx_L1_error)
-        __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-        __pyx_t_16 = 1;
         __pyx_t_21 = -1;
         if (__pyx_t_16 < 0) {
           __pyx_t_16 += __pyx_pybuffernd_atoms.diminfo[0].shape;
@@ -7033,126 +6945,85 @@ static PyObject *__pyx_pf_20find_nonzero_highdim_find_nonzero_highdim(CYTHON_UNU
         *__Pyx_BufPtrStrided1d(__pyx_t_20find_nonzero_highdim_DTYPE_int_t *, __pyx_pybuffernd_atoms.rcbuffer->pybuffer.buf, __pyx_t_16, __pyx_pybuffernd_atoms.diminfo[0].strides) = __pyx_t_20;
 
         /* "find_nonzero_highdim.pyx":130
+ *                 atoms[2] = current[(i/d/d)%d]
+ *                 atoms[3] = current[(i/d)%d]
+ *                 atoms[4] = current[i%d]             # <<<<<<<<<<<<<<
  *             elif dim == 6:
  *                 atoms[1] = current[i/d/d/d/d]
- *                 atoms[2] = current[(i/d/d/d)%d]             # <<<<<<<<<<<<<<
- *                 atoms[3] = current[(i/d/d)%d]
- *                 atoms[4] = current[(i/d)%d]
  */
         if (unlikely(__pyx_v_current == Py_None)) {
           PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
           __PYX_ERR(0, 130, __pyx_L1_error)
         }
         if (unlikely(__pyx_v_d == 0)) {
-          PyErr_SetString(PyExc_ZeroDivisionError, "float division");
+          PyErr_SetString(PyExc_ZeroDivisionError, "integer division or modulo by zero");
           __PYX_ERR(0, 130, __pyx_L1_error)
+        }
+        __pyx_t_21 = __Pyx_mod_int(__pyx_v_i, __pyx_v_d);
+        __pyx_t_1 = __Pyx_GetItemInt_List(__pyx_v_current, __pyx_t_21, int, 1, __Pyx_PyInt_From_int, 1, 1, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 130, __pyx_L1_error)
+        __Pyx_GOTREF(__pyx_t_1);
+        __pyx_t_20 = __Pyx_PyInt_As_npy_int64(__pyx_t_1); if (unlikely((__pyx_t_20 == ((npy_int64)-1)) && PyErr_Occurred())) __PYX_ERR(0, 130, __pyx_L1_error)
+        __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+        __pyx_t_16 = 4;
+        __pyx_t_21 = -1;
+        if (__pyx_t_16 < 0) {
+          __pyx_t_16 += __pyx_pybuffernd_atoms.diminfo[0].shape;
+          if (unlikely(__pyx_t_16 < 0)) __pyx_t_21 = 0;
+        } else if (unlikely(__pyx_t_16 >= __pyx_pybuffernd_atoms.diminfo[0].shape)) __pyx_t_21 = 0;
+        if (unlikely(__pyx_t_21 != -1)) {
+          __Pyx_RaiseBufferIndexError(__pyx_t_21);
+          __PYX_ERR(0, 130, __pyx_L1_error)
+        }
+        *__Pyx_BufPtrStrided1d(__pyx_t_20find_nonzero_highdim_DTYPE_int_t *, __pyx_pybuffernd_atoms.rcbuffer->pybuffer.buf, __pyx_t_16, __pyx_pybuffernd_atoms.diminfo[0].strides) = __pyx_t_20;
+
+        /* "find_nonzero_highdim.pyx":126
+ *                 atoms[2] = current[(i/d)%d]
+ *                 atoms[3] = current[i%d]
+ *             elif dim == 5:             # <<<<<<<<<<<<<<
+ *                 atoms[1] = current[i/d/d/d]
+ *                 atoms[2] = current[(i/d/d)%d]
+ */
+        break;
+        case 6:
+
+        /* "find_nonzero_highdim.pyx":132
+ *                 atoms[4] = current[i%d]
+ *             elif dim == 6:
+ *                 atoms[1] = current[i/d/d/d/d]             # <<<<<<<<<<<<<<
+ *                 atoms[2] = current[(i/d/d/d)%d]
+ *                 atoms[3] = current[(i/d/d)%d]
+ */
+        if (unlikely(__pyx_v_current == Py_None)) {
+          PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
+          __PYX_ERR(0, 132, __pyx_L1_error)
+        }
+        if (unlikely(__pyx_v_d == 0)) {
+          PyErr_SetString(PyExc_ZeroDivisionError, "float division");
+          __PYX_ERR(0, 132, __pyx_L1_error)
         }
         __pyx_t_22 = (((double)__pyx_v_i) / ((double)__pyx_v_d));
         if (unlikely(__pyx_v_d == 0)) {
           PyErr_SetString(PyExc_ZeroDivisionError, "float division");
-          __PYX_ERR(0, 130, __pyx_L1_error)
+          __PYX_ERR(0, 132, __pyx_L1_error)
         }
         __pyx_t_23 = (__pyx_t_22 / ((double)__pyx_v_d));
         if (unlikely(__pyx_v_d == 0)) {
           PyErr_SetString(PyExc_ZeroDivisionError, "float division");
-          __PYX_ERR(0, 130, __pyx_L1_error)
+          __PYX_ERR(0, 132, __pyx_L1_error)
         }
         __pyx_t_22 = (__pyx_t_23 / ((double)__pyx_v_d));
         if (unlikely(__pyx_v_d == 0)) {
-          PyErr_SetString(PyExc_ZeroDivisionError, "float divmod()");
-          __PYX_ERR(0, 130, __pyx_L1_error)
-        }
-        __pyx_t_2 = PyFloat_FromDouble(__Pyx_mod_double(__pyx_t_22, __pyx_v_d)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 130, __pyx_L1_error)
-        __Pyx_GOTREF(__pyx_t_2);
-        __pyx_t_1 = __Pyx_PyObject_GetItem(__pyx_v_current, __pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 130, __pyx_L1_error)
-        __Pyx_GOTREF(__pyx_t_1);
-        __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-        __pyx_t_20 = __Pyx_PyInt_As_npy_int64(__pyx_t_1); if (unlikely((__pyx_t_20 == ((npy_int64)-1)) && PyErr_Occurred())) __PYX_ERR(0, 130, __pyx_L1_error)
-        __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-        __pyx_t_16 = 2;
-        __pyx_t_21 = -1;
-        if (__pyx_t_16 < 0) {
-          __pyx_t_16 += __pyx_pybuffernd_atoms.diminfo[0].shape;
-          if (unlikely(__pyx_t_16 < 0)) __pyx_t_21 = 0;
-        } else if (unlikely(__pyx_t_16 >= __pyx_pybuffernd_atoms.diminfo[0].shape)) __pyx_t_21 = 0;
-        if (unlikely(__pyx_t_21 != -1)) {
-          __Pyx_RaiseBufferIndexError(__pyx_t_21);
-          __PYX_ERR(0, 130, __pyx_L1_error)
-        }
-        *__Pyx_BufPtrStrided1d(__pyx_t_20find_nonzero_highdim_DTYPE_int_t *, __pyx_pybuffernd_atoms.rcbuffer->pybuffer.buf, __pyx_t_16, __pyx_pybuffernd_atoms.diminfo[0].strides) = __pyx_t_20;
-
-        /* "find_nonzero_highdim.pyx":131
- *                 atoms[1] = current[i/d/d/d/d]
- *                 atoms[2] = current[(i/d/d/d)%d]
- *                 atoms[3] = current[(i/d/d)%d]             # <<<<<<<<<<<<<<
- *                 atoms[4] = current[(i/d)%d]
- *                 atoms[5] = current[i%d]
- */
-        if (unlikely(__pyx_v_current == Py_None)) {
-          PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
-          __PYX_ERR(0, 131, __pyx_L1_error)
-        }
-        if (unlikely(__pyx_v_d == 0)) {
-          PyErr_SetString(PyExc_ZeroDivisionError, "float division");
-          __PYX_ERR(0, 131, __pyx_L1_error)
-        }
-        __pyx_t_22 = (((double)__pyx_v_i) / ((double)__pyx_v_d));
-        if (unlikely(__pyx_v_d == 0)) {
-          PyErr_SetString(PyExc_ZeroDivisionError, "float division");
-          __PYX_ERR(0, 131, __pyx_L1_error)
-        }
-        __pyx_t_23 = (__pyx_t_22 / ((double)__pyx_v_d));
-        if (unlikely(__pyx_v_d == 0)) {
-          PyErr_SetString(PyExc_ZeroDivisionError, "float divmod()");
-          __PYX_ERR(0, 131, __pyx_L1_error)
-        }
-        __pyx_t_1 = PyFloat_FromDouble(__Pyx_mod_double(__pyx_t_23, __pyx_v_d)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 131, __pyx_L1_error)
-        __Pyx_GOTREF(__pyx_t_1);
-        __pyx_t_2 = __Pyx_PyObject_GetItem(__pyx_v_current, __pyx_t_1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 131, __pyx_L1_error)
-        __Pyx_GOTREF(__pyx_t_2);
-        __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-        __pyx_t_20 = __Pyx_PyInt_As_npy_int64(__pyx_t_2); if (unlikely((__pyx_t_20 == ((npy_int64)-1)) && PyErr_Occurred())) __PYX_ERR(0, 131, __pyx_L1_error)
-        __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-        __pyx_t_16 = 3;
-        __pyx_t_21 = -1;
-        if (__pyx_t_16 < 0) {
-          __pyx_t_16 += __pyx_pybuffernd_atoms.diminfo[0].shape;
-          if (unlikely(__pyx_t_16 < 0)) __pyx_t_21 = 0;
-        } else if (unlikely(__pyx_t_16 >= __pyx_pybuffernd_atoms.diminfo[0].shape)) __pyx_t_21 = 0;
-        if (unlikely(__pyx_t_21 != -1)) {
-          __Pyx_RaiseBufferIndexError(__pyx_t_21);
-          __PYX_ERR(0, 131, __pyx_L1_error)
-        }
-        *__Pyx_BufPtrStrided1d(__pyx_t_20find_nonzero_highdim_DTYPE_int_t *, __pyx_pybuffernd_atoms.rcbuffer->pybuffer.buf, __pyx_t_16, __pyx_pybuffernd_atoms.diminfo[0].strides) = __pyx_t_20;
-
-        /* "find_nonzero_highdim.pyx":132
- *                 atoms[2] = current[(i/d/d/d)%d]
- *                 atoms[3] = current[(i/d/d)%d]
- *                 atoms[4] = current[(i/d)%d]             # <<<<<<<<<<<<<<
- *                 atoms[5] = current[i%d]
- *             elif dim == 7:
- */
-        if (unlikely(__pyx_v_current == Py_None)) {
-          PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
-          __PYX_ERR(0, 132, __pyx_L1_error)
-        }
-        if (unlikely(__pyx_v_d == 0)) {
           PyErr_SetString(PyExc_ZeroDivisionError, "float division");
           __PYX_ERR(0, 132, __pyx_L1_error)
         }
-        __pyx_t_23 = (((double)__pyx_v_i) / ((double)__pyx_v_d));
-        if (unlikely(__pyx_v_d == 0)) {
-          PyErr_SetString(PyExc_ZeroDivisionError, "float divmod()");
-          __PYX_ERR(0, 132, __pyx_L1_error)
-        }
-        __pyx_t_2 = PyFloat_FromDouble(__Pyx_mod_double(__pyx_t_23, __pyx_v_d)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 132, __pyx_L1_error)
-        __Pyx_GOTREF(__pyx_t_2);
-        __pyx_t_1 = __Pyx_PyObject_GetItem(__pyx_v_current, __pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 132, __pyx_L1_error)
+        __pyx_t_1 = PyFloat_FromDouble((__pyx_t_22 / ((double)__pyx_v_d))); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 132, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_1);
-        __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-        __pyx_t_20 = __Pyx_PyInt_As_npy_int64(__pyx_t_1); if (unlikely((__pyx_t_20 == ((npy_int64)-1)) && PyErr_Occurred())) __PYX_ERR(0, 132, __pyx_L1_error)
+        __pyx_t_2 = __Pyx_PyObject_GetItem(__pyx_v_current, __pyx_t_1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 132, __pyx_L1_error)
+        __Pyx_GOTREF(__pyx_t_2);
         __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-        __pyx_t_16 = 4;
+        __pyx_t_20 = __Pyx_PyInt_As_npy_int64(__pyx_t_2); if (unlikely((__pyx_t_20 == ((npy_int64)-1)) && PyErr_Occurred())) __PYX_ERR(0, 132, __pyx_L1_error)
+        __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
+        __pyx_t_16 = 1;
         __pyx_t_21 = -1;
         if (__pyx_t_16 < 0) {
           __pyx_t_16 += __pyx_pybuffernd_atoms.diminfo[0].shape;
@@ -7165,26 +7036,43 @@ static PyObject *__pyx_pf_20find_nonzero_highdim_find_nonzero_highdim(CYTHON_UNU
         *__Pyx_BufPtrStrided1d(__pyx_t_20find_nonzero_highdim_DTYPE_int_t *, __pyx_pybuffernd_atoms.rcbuffer->pybuffer.buf, __pyx_t_16, __pyx_pybuffernd_atoms.diminfo[0].strides) = __pyx_t_20;
 
         /* "find_nonzero_highdim.pyx":133
+ *             elif dim == 6:
+ *                 atoms[1] = current[i/d/d/d/d]
+ *                 atoms[2] = current[(i/d/d/d)%d]             # <<<<<<<<<<<<<<
  *                 atoms[3] = current[(i/d/d)%d]
  *                 atoms[4] = current[(i/d)%d]
- *                 atoms[5] = current[i%d]             # <<<<<<<<<<<<<<
- *             elif dim == 7:
- *                 atoms[1] = current[i/d/d/d/d/d]
  */
         if (unlikely(__pyx_v_current == Py_None)) {
           PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
           __PYX_ERR(0, 133, __pyx_L1_error)
         }
         if (unlikely(__pyx_v_d == 0)) {
-          PyErr_SetString(PyExc_ZeroDivisionError, "integer division or modulo by zero");
+          PyErr_SetString(PyExc_ZeroDivisionError, "float division");
           __PYX_ERR(0, 133, __pyx_L1_error)
         }
-        __pyx_t_21 = __Pyx_mod_int(__pyx_v_i, __pyx_v_d);
-        __pyx_t_1 = __Pyx_GetItemInt_List(__pyx_v_current, __pyx_t_21, int, 1, __Pyx_PyInt_From_int, 1, 1, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 133, __pyx_L1_error)
+        __pyx_t_22 = (((double)__pyx_v_i) / ((double)__pyx_v_d));
+        if (unlikely(__pyx_v_d == 0)) {
+          PyErr_SetString(PyExc_ZeroDivisionError, "float division");
+          __PYX_ERR(0, 133, __pyx_L1_error)
+        }
+        __pyx_t_23 = (__pyx_t_22 / ((double)__pyx_v_d));
+        if (unlikely(__pyx_v_d == 0)) {
+          PyErr_SetString(PyExc_ZeroDivisionError, "float division");
+          __PYX_ERR(0, 133, __pyx_L1_error)
+        }
+        __pyx_t_22 = (__pyx_t_23 / ((double)__pyx_v_d));
+        if (unlikely(__pyx_v_d == 0)) {
+          PyErr_SetString(PyExc_ZeroDivisionError, "float divmod()");
+          __PYX_ERR(0, 133, __pyx_L1_error)
+        }
+        __pyx_t_2 = PyFloat_FromDouble(__Pyx_mod_double(__pyx_t_22, __pyx_v_d)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 133, __pyx_L1_error)
+        __Pyx_GOTREF(__pyx_t_2);
+        __pyx_t_1 = __Pyx_PyObject_GetItem(__pyx_v_current, __pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 133, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_1);
+        __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
         __pyx_t_20 = __Pyx_PyInt_As_npy_int64(__pyx_t_1); if (unlikely((__pyx_t_20 == ((npy_int64)-1)) && PyErr_Occurred())) __PYX_ERR(0, 133, __pyx_L1_error)
         __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-        __pyx_t_16 = 5;
+        __pyx_t_16 = 2;
         __pyx_t_21 = -1;
         if (__pyx_t_16 < 0) {
           __pyx_t_16 += __pyx_pybuffernd_atoms.diminfo[0].shape;
@@ -7196,22 +7084,56 @@ static PyObject *__pyx_pf_20find_nonzero_highdim_find_nonzero_highdim(CYTHON_UNU
         }
         *__Pyx_BufPtrStrided1d(__pyx_t_20find_nonzero_highdim_DTYPE_int_t *, __pyx_pybuffernd_atoms.rcbuffer->pybuffer.buf, __pyx_t_16, __pyx_pybuffernd_atoms.diminfo[0].strides) = __pyx_t_20;
 
-        /* "find_nonzero_highdim.pyx":128
- *                 atoms[3] = current[(i/d)%d]
- *                 atoms[4] = current[i%d]
- *             elif dim == 6:             # <<<<<<<<<<<<<<
+        /* "find_nonzero_highdim.pyx":134
  *                 atoms[1] = current[i/d/d/d/d]
  *                 atoms[2] = current[(i/d/d/d)%d]
+ *                 atoms[3] = current[(i/d/d)%d]             # <<<<<<<<<<<<<<
+ *                 atoms[4] = current[(i/d)%d]
+ *                 atoms[5] = current[i%d]
  */
-        break;
-        case 7:
+        if (unlikely(__pyx_v_current == Py_None)) {
+          PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
+          __PYX_ERR(0, 134, __pyx_L1_error)
+        }
+        if (unlikely(__pyx_v_d == 0)) {
+          PyErr_SetString(PyExc_ZeroDivisionError, "float division");
+          __PYX_ERR(0, 134, __pyx_L1_error)
+        }
+        __pyx_t_22 = (((double)__pyx_v_i) / ((double)__pyx_v_d));
+        if (unlikely(__pyx_v_d == 0)) {
+          PyErr_SetString(PyExc_ZeroDivisionError, "float division");
+          __PYX_ERR(0, 134, __pyx_L1_error)
+        }
+        __pyx_t_23 = (__pyx_t_22 / ((double)__pyx_v_d));
+        if (unlikely(__pyx_v_d == 0)) {
+          PyErr_SetString(PyExc_ZeroDivisionError, "float divmod()");
+          __PYX_ERR(0, 134, __pyx_L1_error)
+        }
+        __pyx_t_1 = PyFloat_FromDouble(__Pyx_mod_double(__pyx_t_23, __pyx_v_d)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 134, __pyx_L1_error)
+        __Pyx_GOTREF(__pyx_t_1);
+        __pyx_t_2 = __Pyx_PyObject_GetItem(__pyx_v_current, __pyx_t_1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 134, __pyx_L1_error)
+        __Pyx_GOTREF(__pyx_t_2);
+        __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+        __pyx_t_20 = __Pyx_PyInt_As_npy_int64(__pyx_t_2); if (unlikely((__pyx_t_20 == ((npy_int64)-1)) && PyErr_Occurred())) __PYX_ERR(0, 134, __pyx_L1_error)
+        __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
+        __pyx_t_16 = 3;
+        __pyx_t_21 = -1;
+        if (__pyx_t_16 < 0) {
+          __pyx_t_16 += __pyx_pybuffernd_atoms.diminfo[0].shape;
+          if (unlikely(__pyx_t_16 < 0)) __pyx_t_21 = 0;
+        } else if (unlikely(__pyx_t_16 >= __pyx_pybuffernd_atoms.diminfo[0].shape)) __pyx_t_21 = 0;
+        if (unlikely(__pyx_t_21 != -1)) {
+          __Pyx_RaiseBufferIndexError(__pyx_t_21);
+          __PYX_ERR(0, 134, __pyx_L1_error)
+        }
+        *__Pyx_BufPtrStrided1d(__pyx_t_20find_nonzero_highdim_DTYPE_int_t *, __pyx_pybuffernd_atoms.rcbuffer->pybuffer.buf, __pyx_t_16, __pyx_pybuffernd_atoms.diminfo[0].strides) = __pyx_t_20;
 
         /* "find_nonzero_highdim.pyx":135
+ *                 atoms[2] = current[(i/d/d/d)%d]
+ *                 atoms[3] = current[(i/d/d)%d]
+ *                 atoms[4] = current[(i/d)%d]             # <<<<<<<<<<<<<<
  *                 atoms[5] = current[i%d]
  *             elif dim == 7:
- *                 atoms[1] = current[i/d/d/d/d/d]             # <<<<<<<<<<<<<<
- *                 atoms[2] = current[(i/d/d/d/d)%d]
- *                 atoms[3] = current[(i/d/d/d)%d]
  */
         if (unlikely(__pyx_v_current == Py_None)) {
           PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
@@ -7223,32 +7145,17 @@ static PyObject *__pyx_pf_20find_nonzero_highdim_find_nonzero_highdim(CYTHON_UNU
         }
         __pyx_t_23 = (((double)__pyx_v_i) / ((double)__pyx_v_d));
         if (unlikely(__pyx_v_d == 0)) {
-          PyErr_SetString(PyExc_ZeroDivisionError, "float division");
+          PyErr_SetString(PyExc_ZeroDivisionError, "float divmod()");
           __PYX_ERR(0, 135, __pyx_L1_error)
         }
-        __pyx_t_22 = (__pyx_t_23 / ((double)__pyx_v_d));
-        if (unlikely(__pyx_v_d == 0)) {
-          PyErr_SetString(PyExc_ZeroDivisionError, "float division");
-          __PYX_ERR(0, 135, __pyx_L1_error)
-        }
-        __pyx_t_23 = (__pyx_t_22 / ((double)__pyx_v_d));
-        if (unlikely(__pyx_v_d == 0)) {
-          PyErr_SetString(PyExc_ZeroDivisionError, "float division");
-          __PYX_ERR(0, 135, __pyx_L1_error)
-        }
-        __pyx_t_22 = (__pyx_t_23 / ((double)__pyx_v_d));
-        if (unlikely(__pyx_v_d == 0)) {
-          PyErr_SetString(PyExc_ZeroDivisionError, "float division");
-          __PYX_ERR(0, 135, __pyx_L1_error)
-        }
-        __pyx_t_1 = PyFloat_FromDouble((__pyx_t_22 / ((double)__pyx_v_d))); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 135, __pyx_L1_error)
-        __Pyx_GOTREF(__pyx_t_1);
-        __pyx_t_2 = __Pyx_PyObject_GetItem(__pyx_v_current, __pyx_t_1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 135, __pyx_L1_error)
+        __pyx_t_2 = PyFloat_FromDouble(__Pyx_mod_double(__pyx_t_23, __pyx_v_d)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 135, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_2);
-        __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-        __pyx_t_20 = __Pyx_PyInt_As_npy_int64(__pyx_t_2); if (unlikely((__pyx_t_20 == ((npy_int64)-1)) && PyErr_Occurred())) __PYX_ERR(0, 135, __pyx_L1_error)
+        __pyx_t_1 = __Pyx_PyObject_GetItem(__pyx_v_current, __pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 135, __pyx_L1_error)
+        __Pyx_GOTREF(__pyx_t_1);
         __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-        __pyx_t_16 = 1;
+        __pyx_t_20 = __Pyx_PyInt_As_npy_int64(__pyx_t_1); if (unlikely((__pyx_t_20 == ((npy_int64)-1)) && PyErr_Occurred())) __PYX_ERR(0, 135, __pyx_L1_error)
+        __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+        __pyx_t_16 = 4;
         __pyx_t_21 = -1;
         if (__pyx_t_16 < 0) {
           __pyx_t_16 += __pyx_pybuffernd_atoms.diminfo[0].shape;
@@ -7261,48 +7168,26 @@ static PyObject *__pyx_pf_20find_nonzero_highdim_find_nonzero_highdim(CYTHON_UNU
         *__Pyx_BufPtrStrided1d(__pyx_t_20find_nonzero_highdim_DTYPE_int_t *, __pyx_pybuffernd_atoms.rcbuffer->pybuffer.buf, __pyx_t_16, __pyx_pybuffernd_atoms.diminfo[0].strides) = __pyx_t_20;
 
         /* "find_nonzero_highdim.pyx":136
+ *                 atoms[3] = current[(i/d/d)%d]
+ *                 atoms[4] = current[(i/d)%d]
+ *                 atoms[5] = current[i%d]             # <<<<<<<<<<<<<<
  *             elif dim == 7:
  *                 atoms[1] = current[i/d/d/d/d/d]
- *                 atoms[2] = current[(i/d/d/d/d)%d]             # <<<<<<<<<<<<<<
- *                 atoms[3] = current[(i/d/d/d)%d]
- *                 atoms[4] = current[(i/d/d)%d]
  */
         if (unlikely(__pyx_v_current == Py_None)) {
           PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
           __PYX_ERR(0, 136, __pyx_L1_error)
         }
         if (unlikely(__pyx_v_d == 0)) {
-          PyErr_SetString(PyExc_ZeroDivisionError, "float division");
+          PyErr_SetString(PyExc_ZeroDivisionError, "integer division or modulo by zero");
           __PYX_ERR(0, 136, __pyx_L1_error)
         }
-        __pyx_t_22 = (((double)__pyx_v_i) / ((double)__pyx_v_d));
-        if (unlikely(__pyx_v_d == 0)) {
-          PyErr_SetString(PyExc_ZeroDivisionError, "float division");
-          __PYX_ERR(0, 136, __pyx_L1_error)
-        }
-        __pyx_t_23 = (__pyx_t_22 / ((double)__pyx_v_d));
-        if (unlikely(__pyx_v_d == 0)) {
-          PyErr_SetString(PyExc_ZeroDivisionError, "float division");
-          __PYX_ERR(0, 136, __pyx_L1_error)
-        }
-        __pyx_t_22 = (__pyx_t_23 / ((double)__pyx_v_d));
-        if (unlikely(__pyx_v_d == 0)) {
-          PyErr_SetString(PyExc_ZeroDivisionError, "float division");
-          __PYX_ERR(0, 136, __pyx_L1_error)
-        }
-        __pyx_t_23 = (__pyx_t_22 / ((double)__pyx_v_d));
-        if (unlikely(__pyx_v_d == 0)) {
-          PyErr_SetString(PyExc_ZeroDivisionError, "float divmod()");
-          __PYX_ERR(0, 136, __pyx_L1_error)
-        }
-        __pyx_t_2 = PyFloat_FromDouble(__Pyx_mod_double(__pyx_t_23, __pyx_v_d)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 136, __pyx_L1_error)
-        __Pyx_GOTREF(__pyx_t_2);
-        __pyx_t_1 = __Pyx_PyObject_GetItem(__pyx_v_current, __pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 136, __pyx_L1_error)
+        __pyx_t_21 = __Pyx_mod_int(__pyx_v_i, __pyx_v_d);
+        __pyx_t_1 = __Pyx_GetItemInt_List(__pyx_v_current, __pyx_t_21, int, 1, __Pyx_PyInt_From_int, 1, 1, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 136, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_1);
-        __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
         __pyx_t_20 = __Pyx_PyInt_As_npy_int64(__pyx_t_1); if (unlikely((__pyx_t_20 == ((npy_int64)-1)) && PyErr_Occurred())) __PYX_ERR(0, 136, __pyx_L1_error)
         __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-        __pyx_t_16 = 2;
+        __pyx_t_16 = 5;
         __pyx_t_21 = -1;
         if (__pyx_t_16 < 0) {
           __pyx_t_16 += __pyx_pybuffernd_atoms.diminfo[0].shape;
@@ -7314,88 +7199,59 @@ static PyObject *__pyx_pf_20find_nonzero_highdim_find_nonzero_highdim(CYTHON_UNU
         }
         *__Pyx_BufPtrStrided1d(__pyx_t_20find_nonzero_highdim_DTYPE_int_t *, __pyx_pybuffernd_atoms.rcbuffer->pybuffer.buf, __pyx_t_16, __pyx_pybuffernd_atoms.diminfo[0].strides) = __pyx_t_20;
 
-        /* "find_nonzero_highdim.pyx":137
- *                 atoms[1] = current[i/d/d/d/d/d]
+        /* "find_nonzero_highdim.pyx":131
+ *                 atoms[3] = current[(i/d)%d]
+ *                 atoms[4] = current[i%d]
+ *             elif dim == 6:             # <<<<<<<<<<<<<<
+ *                 atoms[1] = current[i/d/d/d/d]
+ *                 atoms[2] = current[(i/d/d/d)%d]
+ */
+        break;
+        case 7:
+
+        /* "find_nonzero_highdim.pyx":138
+ *                 atoms[5] = current[i%d]
+ *             elif dim == 7:
+ *                 atoms[1] = current[i/d/d/d/d/d]             # <<<<<<<<<<<<<<
  *                 atoms[2] = current[(i/d/d/d/d)%d]
- *                 atoms[3] = current[(i/d/d/d)%d]             # <<<<<<<<<<<<<<
- *                 atoms[4] = current[(i/d/d)%d]
- *                 atoms[5] = current[(i/d)%d]
+ *                 atoms[3] = current[(i/d/d/d)%d]
  */
         if (unlikely(__pyx_v_current == Py_None)) {
           PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
-          __PYX_ERR(0, 137, __pyx_L1_error)
+          __PYX_ERR(0, 138, __pyx_L1_error)
         }
         if (unlikely(__pyx_v_d == 0)) {
           PyErr_SetString(PyExc_ZeroDivisionError, "float division");
-          __PYX_ERR(0, 137, __pyx_L1_error)
+          __PYX_ERR(0, 138, __pyx_L1_error)
         }
         __pyx_t_23 = (((double)__pyx_v_i) / ((double)__pyx_v_d));
         if (unlikely(__pyx_v_d == 0)) {
           PyErr_SetString(PyExc_ZeroDivisionError, "float division");
-          __PYX_ERR(0, 137, __pyx_L1_error)
+          __PYX_ERR(0, 138, __pyx_L1_error)
         }
         __pyx_t_22 = (__pyx_t_23 / ((double)__pyx_v_d));
         if (unlikely(__pyx_v_d == 0)) {
           PyErr_SetString(PyExc_ZeroDivisionError, "float division");
-          __PYX_ERR(0, 137, __pyx_L1_error)
+          __PYX_ERR(0, 138, __pyx_L1_error)
         }
         __pyx_t_23 = (__pyx_t_22 / ((double)__pyx_v_d));
         if (unlikely(__pyx_v_d == 0)) {
-          PyErr_SetString(PyExc_ZeroDivisionError, "float divmod()");
-          __PYX_ERR(0, 137, __pyx_L1_error)
-        }
-        __pyx_t_1 = PyFloat_FromDouble(__Pyx_mod_double(__pyx_t_23, __pyx_v_d)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 137, __pyx_L1_error)
-        __Pyx_GOTREF(__pyx_t_1);
-        __pyx_t_2 = __Pyx_PyObject_GetItem(__pyx_v_current, __pyx_t_1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 137, __pyx_L1_error)
-        __Pyx_GOTREF(__pyx_t_2);
-        __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-        __pyx_t_20 = __Pyx_PyInt_As_npy_int64(__pyx_t_2); if (unlikely((__pyx_t_20 == ((npy_int64)-1)) && PyErr_Occurred())) __PYX_ERR(0, 137, __pyx_L1_error)
-        __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-        __pyx_t_16 = 3;
-        __pyx_t_21 = -1;
-        if (__pyx_t_16 < 0) {
-          __pyx_t_16 += __pyx_pybuffernd_atoms.diminfo[0].shape;
-          if (unlikely(__pyx_t_16 < 0)) __pyx_t_21 = 0;
-        } else if (unlikely(__pyx_t_16 >= __pyx_pybuffernd_atoms.diminfo[0].shape)) __pyx_t_21 = 0;
-        if (unlikely(__pyx_t_21 != -1)) {
-          __Pyx_RaiseBufferIndexError(__pyx_t_21);
-          __PYX_ERR(0, 137, __pyx_L1_error)
-        }
-        *__Pyx_BufPtrStrided1d(__pyx_t_20find_nonzero_highdim_DTYPE_int_t *, __pyx_pybuffernd_atoms.rcbuffer->pybuffer.buf, __pyx_t_16, __pyx_pybuffernd_atoms.diminfo[0].strides) = __pyx_t_20;
-
-        /* "find_nonzero_highdim.pyx":138
- *                 atoms[2] = current[(i/d/d/d/d)%d]
- *                 atoms[3] = current[(i/d/d/d)%d]
- *                 atoms[4] = current[(i/d/d)%d]             # <<<<<<<<<<<<<<
- *                 atoms[5] = current[(i/d)%d]
- *                 atoms[6] = current[i%d]
- */
-        if (unlikely(__pyx_v_current == Py_None)) {
-          PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
-          __PYX_ERR(0, 138, __pyx_L1_error)
-        }
-        if (unlikely(__pyx_v_d == 0)) {
-          PyErr_SetString(PyExc_ZeroDivisionError, "float division");
-          __PYX_ERR(0, 138, __pyx_L1_error)
-        }
-        __pyx_t_23 = (((double)__pyx_v_i) / ((double)__pyx_v_d));
-        if (unlikely(__pyx_v_d == 0)) {
           PyErr_SetString(PyExc_ZeroDivisionError, "float division");
           __PYX_ERR(0, 138, __pyx_L1_error)
         }
         __pyx_t_22 = (__pyx_t_23 / ((double)__pyx_v_d));
         if (unlikely(__pyx_v_d == 0)) {
-          PyErr_SetString(PyExc_ZeroDivisionError, "float divmod()");
+          PyErr_SetString(PyExc_ZeroDivisionError, "float division");
           __PYX_ERR(0, 138, __pyx_L1_error)
         }
-        __pyx_t_2 = PyFloat_FromDouble(__Pyx_mod_double(__pyx_t_22, __pyx_v_d)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 138, __pyx_L1_error)
-        __Pyx_GOTREF(__pyx_t_2);
-        __pyx_t_1 = __Pyx_PyObject_GetItem(__pyx_v_current, __pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 138, __pyx_L1_error)
+        __pyx_t_1 = PyFloat_FromDouble((__pyx_t_22 / ((double)__pyx_v_d))); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 138, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_1);
-        __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-        __pyx_t_20 = __Pyx_PyInt_As_npy_int64(__pyx_t_1); if (unlikely((__pyx_t_20 == ((npy_int64)-1)) && PyErr_Occurred())) __PYX_ERR(0, 138, __pyx_L1_error)
+        __pyx_t_2 = __Pyx_PyObject_GetItem(__pyx_v_current, __pyx_t_1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 138, __pyx_L1_error)
+        __Pyx_GOTREF(__pyx_t_2);
         __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-        __pyx_t_16 = 4;
+        __pyx_t_20 = __Pyx_PyInt_As_npy_int64(__pyx_t_2); if (unlikely((__pyx_t_20 == ((npy_int64)-1)) && PyErr_Occurred())) __PYX_ERR(0, 138, __pyx_L1_error)
+        __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
+        __pyx_t_16 = 1;
         __pyx_t_21 = -1;
         if (__pyx_t_16 < 0) {
           __pyx_t_16 += __pyx_pybuffernd_atoms.diminfo[0].shape;
@@ -7408,11 +7264,11 @@ static PyObject *__pyx_pf_20find_nonzero_highdim_find_nonzero_highdim(CYTHON_UNU
         *__Pyx_BufPtrStrided1d(__pyx_t_20find_nonzero_highdim_DTYPE_int_t *, __pyx_pybuffernd_atoms.rcbuffer->pybuffer.buf, __pyx_t_16, __pyx_pybuffernd_atoms.diminfo[0].strides) = __pyx_t_20;
 
         /* "find_nonzero_highdim.pyx":139
+ *             elif dim == 7:
+ *                 atoms[1] = current[i/d/d/d/d/d]
+ *                 atoms[2] = current[(i/d/d/d/d)%d]             # <<<<<<<<<<<<<<
  *                 atoms[3] = current[(i/d/d/d)%d]
  *                 atoms[4] = current[(i/d/d)%d]
- *                 atoms[5] = current[(i/d)%d]             # <<<<<<<<<<<<<<
- *                 atoms[6] = current[i%d]
- *             elif dim == 8:
  */
         if (unlikely(__pyx_v_current == Py_None)) {
           PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
@@ -7424,17 +7280,32 @@ static PyObject *__pyx_pf_20find_nonzero_highdim_find_nonzero_highdim(CYTHON_UNU
         }
         __pyx_t_22 = (((double)__pyx_v_i) / ((double)__pyx_v_d));
         if (unlikely(__pyx_v_d == 0)) {
+          PyErr_SetString(PyExc_ZeroDivisionError, "float division");
+          __PYX_ERR(0, 139, __pyx_L1_error)
+        }
+        __pyx_t_23 = (__pyx_t_22 / ((double)__pyx_v_d));
+        if (unlikely(__pyx_v_d == 0)) {
+          PyErr_SetString(PyExc_ZeroDivisionError, "float division");
+          __PYX_ERR(0, 139, __pyx_L1_error)
+        }
+        __pyx_t_22 = (__pyx_t_23 / ((double)__pyx_v_d));
+        if (unlikely(__pyx_v_d == 0)) {
+          PyErr_SetString(PyExc_ZeroDivisionError, "float division");
+          __PYX_ERR(0, 139, __pyx_L1_error)
+        }
+        __pyx_t_23 = (__pyx_t_22 / ((double)__pyx_v_d));
+        if (unlikely(__pyx_v_d == 0)) {
           PyErr_SetString(PyExc_ZeroDivisionError, "float divmod()");
           __PYX_ERR(0, 139, __pyx_L1_error)
         }
-        __pyx_t_1 = PyFloat_FromDouble(__Pyx_mod_double(__pyx_t_22, __pyx_v_d)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 139, __pyx_L1_error)
-        __Pyx_GOTREF(__pyx_t_1);
-        __pyx_t_2 = __Pyx_PyObject_GetItem(__pyx_v_current, __pyx_t_1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 139, __pyx_L1_error)
+        __pyx_t_2 = PyFloat_FromDouble(__Pyx_mod_double(__pyx_t_23, __pyx_v_d)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 139, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_2);
-        __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-        __pyx_t_20 = __Pyx_PyInt_As_npy_int64(__pyx_t_2); if (unlikely((__pyx_t_20 == ((npy_int64)-1)) && PyErr_Occurred())) __PYX_ERR(0, 139, __pyx_L1_error)
+        __pyx_t_1 = __Pyx_PyObject_GetItem(__pyx_v_current, __pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 139, __pyx_L1_error)
+        __Pyx_GOTREF(__pyx_t_1);
         __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-        __pyx_t_16 = 5;
+        __pyx_t_20 = __Pyx_PyInt_As_npy_int64(__pyx_t_1); if (unlikely((__pyx_t_20 == ((npy_int64)-1)) && PyErr_Occurred())) __PYX_ERR(0, 139, __pyx_L1_error)
+        __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+        __pyx_t_16 = 2;
         __pyx_t_21 = -1;
         if (__pyx_t_16 < 0) {
           __pyx_t_16 += __pyx_pybuffernd_atoms.diminfo[0].shape;
@@ -7447,26 +7318,43 @@ static PyObject *__pyx_pf_20find_nonzero_highdim_find_nonzero_highdim(CYTHON_UNU
         *__Pyx_BufPtrStrided1d(__pyx_t_20find_nonzero_highdim_DTYPE_int_t *, __pyx_pybuffernd_atoms.rcbuffer->pybuffer.buf, __pyx_t_16, __pyx_pybuffernd_atoms.diminfo[0].strides) = __pyx_t_20;
 
         /* "find_nonzero_highdim.pyx":140
+ *                 atoms[1] = current[i/d/d/d/d/d]
+ *                 atoms[2] = current[(i/d/d/d/d)%d]
+ *                 atoms[3] = current[(i/d/d/d)%d]             # <<<<<<<<<<<<<<
  *                 atoms[4] = current[(i/d/d)%d]
  *                 atoms[5] = current[(i/d)%d]
- *                 atoms[6] = current[i%d]             # <<<<<<<<<<<<<<
- *             elif dim == 8:
- *                 atoms[1] = current[i/d/d/d/d/d/d]
  */
         if (unlikely(__pyx_v_current == Py_None)) {
           PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
           __PYX_ERR(0, 140, __pyx_L1_error)
         }
         if (unlikely(__pyx_v_d == 0)) {
-          PyErr_SetString(PyExc_ZeroDivisionError, "integer division or modulo by zero");
+          PyErr_SetString(PyExc_ZeroDivisionError, "float division");
           __PYX_ERR(0, 140, __pyx_L1_error)
         }
-        __pyx_t_21 = __Pyx_mod_int(__pyx_v_i, __pyx_v_d);
-        __pyx_t_2 = __Pyx_GetItemInt_List(__pyx_v_current, __pyx_t_21, int, 1, __Pyx_PyInt_From_int, 1, 1, 1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 140, __pyx_L1_error)
+        __pyx_t_23 = (((double)__pyx_v_i) / ((double)__pyx_v_d));
+        if (unlikely(__pyx_v_d == 0)) {
+          PyErr_SetString(PyExc_ZeroDivisionError, "float division");
+          __PYX_ERR(0, 140, __pyx_L1_error)
+        }
+        __pyx_t_22 = (__pyx_t_23 / ((double)__pyx_v_d));
+        if (unlikely(__pyx_v_d == 0)) {
+          PyErr_SetString(PyExc_ZeroDivisionError, "float division");
+          __PYX_ERR(0, 140, __pyx_L1_error)
+        }
+        __pyx_t_23 = (__pyx_t_22 / ((double)__pyx_v_d));
+        if (unlikely(__pyx_v_d == 0)) {
+          PyErr_SetString(PyExc_ZeroDivisionError, "float divmod()");
+          __PYX_ERR(0, 140, __pyx_L1_error)
+        }
+        __pyx_t_1 = PyFloat_FromDouble(__Pyx_mod_double(__pyx_t_23, __pyx_v_d)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 140, __pyx_L1_error)
+        __Pyx_GOTREF(__pyx_t_1);
+        __pyx_t_2 = __Pyx_PyObject_GetItem(__pyx_v_current, __pyx_t_1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 140, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_2);
+        __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
         __pyx_t_20 = __Pyx_PyInt_As_npy_int64(__pyx_t_2); if (unlikely((__pyx_t_20 == ((npy_int64)-1)) && PyErr_Occurred())) __PYX_ERR(0, 140, __pyx_L1_error)
         __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-        __pyx_t_16 = 6;
+        __pyx_t_16 = 3;
         __pyx_t_21 = -1;
         if (__pyx_t_16 < 0) {
           __pyx_t_16 += __pyx_pybuffernd_atoms.diminfo[0].shape;
@@ -7478,22 +7366,56 @@ static PyObject *__pyx_pf_20find_nonzero_highdim_find_nonzero_highdim(CYTHON_UNU
         }
         *__Pyx_BufPtrStrided1d(__pyx_t_20find_nonzero_highdim_DTYPE_int_t *, __pyx_pybuffernd_atoms.rcbuffer->pybuffer.buf, __pyx_t_16, __pyx_pybuffernd_atoms.diminfo[0].strides) = __pyx_t_20;
 
-        /* "find_nonzero_highdim.pyx":134
- *                 atoms[4] = current[(i/d)%d]
- *                 atoms[5] = current[i%d]
- *             elif dim == 7:             # <<<<<<<<<<<<<<
- *                 atoms[1] = current[i/d/d/d/d/d]
+        /* "find_nonzero_highdim.pyx":141
  *                 atoms[2] = current[(i/d/d/d/d)%d]
+ *                 atoms[3] = current[(i/d/d/d)%d]
+ *                 atoms[4] = current[(i/d/d)%d]             # <<<<<<<<<<<<<<
+ *                 atoms[5] = current[(i/d)%d]
+ *                 atoms[6] = current[i%d]
  */
-        break;
-        case 8:
+        if (unlikely(__pyx_v_current == Py_None)) {
+          PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
+          __PYX_ERR(0, 141, __pyx_L1_error)
+        }
+        if (unlikely(__pyx_v_d == 0)) {
+          PyErr_SetString(PyExc_ZeroDivisionError, "float division");
+          __PYX_ERR(0, 141, __pyx_L1_error)
+        }
+        __pyx_t_23 = (((double)__pyx_v_i) / ((double)__pyx_v_d));
+        if (unlikely(__pyx_v_d == 0)) {
+          PyErr_SetString(PyExc_ZeroDivisionError, "float division");
+          __PYX_ERR(0, 141, __pyx_L1_error)
+        }
+        __pyx_t_22 = (__pyx_t_23 / ((double)__pyx_v_d));
+        if (unlikely(__pyx_v_d == 0)) {
+          PyErr_SetString(PyExc_ZeroDivisionError, "float divmod()");
+          __PYX_ERR(0, 141, __pyx_L1_error)
+        }
+        __pyx_t_2 = PyFloat_FromDouble(__Pyx_mod_double(__pyx_t_22, __pyx_v_d)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 141, __pyx_L1_error)
+        __Pyx_GOTREF(__pyx_t_2);
+        __pyx_t_1 = __Pyx_PyObject_GetItem(__pyx_v_current, __pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 141, __pyx_L1_error)
+        __Pyx_GOTREF(__pyx_t_1);
+        __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
+        __pyx_t_20 = __Pyx_PyInt_As_npy_int64(__pyx_t_1); if (unlikely((__pyx_t_20 == ((npy_int64)-1)) && PyErr_Occurred())) __PYX_ERR(0, 141, __pyx_L1_error)
+        __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+        __pyx_t_16 = 4;
+        __pyx_t_21 = -1;
+        if (__pyx_t_16 < 0) {
+          __pyx_t_16 += __pyx_pybuffernd_atoms.diminfo[0].shape;
+          if (unlikely(__pyx_t_16 < 0)) __pyx_t_21 = 0;
+        } else if (unlikely(__pyx_t_16 >= __pyx_pybuffernd_atoms.diminfo[0].shape)) __pyx_t_21 = 0;
+        if (unlikely(__pyx_t_21 != -1)) {
+          __Pyx_RaiseBufferIndexError(__pyx_t_21);
+          __PYX_ERR(0, 141, __pyx_L1_error)
+        }
+        *__Pyx_BufPtrStrided1d(__pyx_t_20find_nonzero_highdim_DTYPE_int_t *, __pyx_pybuffernd_atoms.rcbuffer->pybuffer.buf, __pyx_t_16, __pyx_pybuffernd_atoms.diminfo[0].strides) = __pyx_t_20;
 
         /* "find_nonzero_highdim.pyx":142
+ *                 atoms[3] = current[(i/d/d/d)%d]
+ *                 atoms[4] = current[(i/d/d)%d]
+ *                 atoms[5] = current[(i/d)%d]             # <<<<<<<<<<<<<<
  *                 atoms[6] = current[i%d]
  *             elif dim == 8:
- *                 atoms[1] = current[i/d/d/d/d/d/d]             # <<<<<<<<<<<<<<
- *                 atoms[2] = current[(i/d/d/d/d/d)%d]
- *                 atoms[3] = current[(i/d/d/d/d)%d]
  */
         if (unlikely(__pyx_v_current == Py_None)) {
           PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
@@ -7505,37 +7427,17 @@ static PyObject *__pyx_pf_20find_nonzero_highdim_find_nonzero_highdim(CYTHON_UNU
         }
         __pyx_t_22 = (((double)__pyx_v_i) / ((double)__pyx_v_d));
         if (unlikely(__pyx_v_d == 0)) {
-          PyErr_SetString(PyExc_ZeroDivisionError, "float division");
+          PyErr_SetString(PyExc_ZeroDivisionError, "float divmod()");
           __PYX_ERR(0, 142, __pyx_L1_error)
         }
-        __pyx_t_23 = (__pyx_t_22 / ((double)__pyx_v_d));
-        if (unlikely(__pyx_v_d == 0)) {
-          PyErr_SetString(PyExc_ZeroDivisionError, "float division");
-          __PYX_ERR(0, 142, __pyx_L1_error)
-        }
-        __pyx_t_22 = (__pyx_t_23 / ((double)__pyx_v_d));
-        if (unlikely(__pyx_v_d == 0)) {
-          PyErr_SetString(PyExc_ZeroDivisionError, "float division");
-          __PYX_ERR(0, 142, __pyx_L1_error)
-        }
-        __pyx_t_23 = (__pyx_t_22 / ((double)__pyx_v_d));
-        if (unlikely(__pyx_v_d == 0)) {
-          PyErr_SetString(PyExc_ZeroDivisionError, "float division");
-          __PYX_ERR(0, 142, __pyx_L1_error)
-        }
-        __pyx_t_22 = (__pyx_t_23 / ((double)__pyx_v_d));
-        if (unlikely(__pyx_v_d == 0)) {
-          PyErr_SetString(PyExc_ZeroDivisionError, "float division");
-          __PYX_ERR(0, 142, __pyx_L1_error)
-        }
-        __pyx_t_2 = PyFloat_FromDouble((__pyx_t_22 / ((double)__pyx_v_d))); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 142, __pyx_L1_error)
-        __Pyx_GOTREF(__pyx_t_2);
-        __pyx_t_1 = __Pyx_PyObject_GetItem(__pyx_v_current, __pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 142, __pyx_L1_error)
+        __pyx_t_1 = PyFloat_FromDouble(__Pyx_mod_double(__pyx_t_22, __pyx_v_d)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 142, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_1);
-        __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-        __pyx_t_20 = __Pyx_PyInt_As_npy_int64(__pyx_t_1); if (unlikely((__pyx_t_20 == ((npy_int64)-1)) && PyErr_Occurred())) __PYX_ERR(0, 142, __pyx_L1_error)
+        __pyx_t_2 = __Pyx_PyObject_GetItem(__pyx_v_current, __pyx_t_1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 142, __pyx_L1_error)
+        __Pyx_GOTREF(__pyx_t_2);
         __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-        __pyx_t_16 = 1;
+        __pyx_t_20 = __Pyx_PyInt_As_npy_int64(__pyx_t_2); if (unlikely((__pyx_t_20 == ((npy_int64)-1)) && PyErr_Occurred())) __PYX_ERR(0, 142, __pyx_L1_error)
+        __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
+        __pyx_t_16 = 5;
         __pyx_t_21 = -1;
         if (__pyx_t_16 < 0) {
           __pyx_t_16 += __pyx_pybuffernd_atoms.diminfo[0].shape;
@@ -7548,53 +7450,26 @@ static PyObject *__pyx_pf_20find_nonzero_highdim_find_nonzero_highdim(CYTHON_UNU
         *__Pyx_BufPtrStrided1d(__pyx_t_20find_nonzero_highdim_DTYPE_int_t *, __pyx_pybuffernd_atoms.rcbuffer->pybuffer.buf, __pyx_t_16, __pyx_pybuffernd_atoms.diminfo[0].strides) = __pyx_t_20;
 
         /* "find_nonzero_highdim.pyx":143
+ *                 atoms[4] = current[(i/d/d)%d]
+ *                 atoms[5] = current[(i/d)%d]
+ *                 atoms[6] = current[i%d]             # <<<<<<<<<<<<<<
  *             elif dim == 8:
  *                 atoms[1] = current[i/d/d/d/d/d/d]
- *                 atoms[2] = current[(i/d/d/d/d/d)%d]             # <<<<<<<<<<<<<<
- *                 atoms[3] = current[(i/d/d/d/d)%d]
- *                 atoms[4] = current[(i/d/d/d)%d]
  */
         if (unlikely(__pyx_v_current == Py_None)) {
           PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
           __PYX_ERR(0, 143, __pyx_L1_error)
         }
         if (unlikely(__pyx_v_d == 0)) {
-          PyErr_SetString(PyExc_ZeroDivisionError, "float division");
+          PyErr_SetString(PyExc_ZeroDivisionError, "integer division or modulo by zero");
           __PYX_ERR(0, 143, __pyx_L1_error)
         }
-        __pyx_t_22 = (((double)__pyx_v_i) / ((double)__pyx_v_d));
-        if (unlikely(__pyx_v_d == 0)) {
-          PyErr_SetString(PyExc_ZeroDivisionError, "float division");
-          __PYX_ERR(0, 143, __pyx_L1_error)
-        }
-        __pyx_t_23 = (__pyx_t_22 / ((double)__pyx_v_d));
-        if (unlikely(__pyx_v_d == 0)) {
-          PyErr_SetString(PyExc_ZeroDivisionError, "float division");
-          __PYX_ERR(0, 143, __pyx_L1_error)
-        }
-        __pyx_t_22 = (__pyx_t_23 / ((double)__pyx_v_d));
-        if (unlikely(__pyx_v_d == 0)) {
-          PyErr_SetString(PyExc_ZeroDivisionError, "float division");
-          __PYX_ERR(0, 143, __pyx_L1_error)
-        }
-        __pyx_t_23 = (__pyx_t_22 / ((double)__pyx_v_d));
-        if (unlikely(__pyx_v_d == 0)) {
-          PyErr_SetString(PyExc_ZeroDivisionError, "float division");
-          __PYX_ERR(0, 143, __pyx_L1_error)
-        }
-        __pyx_t_22 = (__pyx_t_23 / ((double)__pyx_v_d));
-        if (unlikely(__pyx_v_d == 0)) {
-          PyErr_SetString(PyExc_ZeroDivisionError, "float divmod()");
-          __PYX_ERR(0, 143, __pyx_L1_error)
-        }
-        __pyx_t_1 = PyFloat_FromDouble(__Pyx_mod_double(__pyx_t_22, __pyx_v_d)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 143, __pyx_L1_error)
-        __Pyx_GOTREF(__pyx_t_1);
-        __pyx_t_2 = __Pyx_PyObject_GetItem(__pyx_v_current, __pyx_t_1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 143, __pyx_L1_error)
+        __pyx_t_21 = __Pyx_mod_int(__pyx_v_i, __pyx_v_d);
+        __pyx_t_2 = __Pyx_GetItemInt_List(__pyx_v_current, __pyx_t_21, int, 1, __Pyx_PyInt_From_int, 1, 1, 1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 143, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_2);
-        __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
         __pyx_t_20 = __Pyx_PyInt_As_npy_int64(__pyx_t_2); if (unlikely((__pyx_t_20 == ((npy_int64)-1)) && PyErr_Occurred())) __PYX_ERR(0, 143, __pyx_L1_error)
         __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-        __pyx_t_16 = 2;
+        __pyx_t_16 = 6;
         __pyx_t_21 = -1;
         if (__pyx_t_16 < 0) {
           __pyx_t_16 += __pyx_pybuffernd_atoms.diminfo[0].shape;
@@ -7606,76 +7481,37 @@ static PyObject *__pyx_pf_20find_nonzero_highdim_find_nonzero_highdim(CYTHON_UNU
         }
         *__Pyx_BufPtrStrided1d(__pyx_t_20find_nonzero_highdim_DTYPE_int_t *, __pyx_pybuffernd_atoms.rcbuffer->pybuffer.buf, __pyx_t_16, __pyx_pybuffernd_atoms.diminfo[0].strides) = __pyx_t_20;
 
-        /* "find_nonzero_highdim.pyx":144
- *                 atoms[1] = current[i/d/d/d/d/d/d]
+        /* "find_nonzero_highdim.pyx":137
+ *                 atoms[4] = current[(i/d)%d]
+ *                 atoms[5] = current[i%d]
+ *             elif dim == 7:             # <<<<<<<<<<<<<<
+ *                 atoms[1] = current[i/d/d/d/d/d]
+ *                 atoms[2] = current[(i/d/d/d/d)%d]
+ */
+        break;
+        case 8:
+
+        /* "find_nonzero_highdim.pyx":145
+ *                 atoms[6] = current[i%d]
+ *             elif dim == 8:
+ *                 atoms[1] = current[i/d/d/d/d/d/d]             # <<<<<<<<<<<<<<
  *                 atoms[2] = current[(i/d/d/d/d/d)%d]
- *                 atoms[3] = current[(i/d/d/d/d)%d]             # <<<<<<<<<<<<<<
- *                 atoms[4] = current[(i/d/d/d)%d]
- *                 atoms[5] = current[(i/d/d)%d]
+ *                 atoms[3] = current[(i/d/d/d/d)%d]
  */
         if (unlikely(__pyx_v_current == Py_None)) {
           PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
-          __PYX_ERR(0, 144, __pyx_L1_error)
+          __PYX_ERR(0, 145, __pyx_L1_error)
         }
         if (unlikely(__pyx_v_d == 0)) {
           PyErr_SetString(PyExc_ZeroDivisionError, "float division");
-          __PYX_ERR(0, 144, __pyx_L1_error)
+          __PYX_ERR(0, 145, __pyx_L1_error)
         }
         __pyx_t_22 = (((double)__pyx_v_i) / ((double)__pyx_v_d));
         if (unlikely(__pyx_v_d == 0)) {
           PyErr_SetString(PyExc_ZeroDivisionError, "float division");
-          __PYX_ERR(0, 144, __pyx_L1_error)
-        }
-        __pyx_t_23 = (__pyx_t_22 / ((double)__pyx_v_d));
-        if (unlikely(__pyx_v_d == 0)) {
-          PyErr_SetString(PyExc_ZeroDivisionError, "float division");
-          __PYX_ERR(0, 144, __pyx_L1_error)
-        }
-        __pyx_t_22 = (__pyx_t_23 / ((double)__pyx_v_d));
-        if (unlikely(__pyx_v_d == 0)) {
-          PyErr_SetString(PyExc_ZeroDivisionError, "float division");
-          __PYX_ERR(0, 144, __pyx_L1_error)
-        }
-        __pyx_t_23 = (__pyx_t_22 / ((double)__pyx_v_d));
-        if (unlikely(__pyx_v_d == 0)) {
-          PyErr_SetString(PyExc_ZeroDivisionError, "float divmod()");
-          __PYX_ERR(0, 144, __pyx_L1_error)
-        }
-        __pyx_t_2 = PyFloat_FromDouble(__Pyx_mod_double(__pyx_t_23, __pyx_v_d)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 144, __pyx_L1_error)
-        __Pyx_GOTREF(__pyx_t_2);
-        __pyx_t_1 = __Pyx_PyObject_GetItem(__pyx_v_current, __pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 144, __pyx_L1_error)
-        __Pyx_GOTREF(__pyx_t_1);
-        __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-        __pyx_t_20 = __Pyx_PyInt_As_npy_int64(__pyx_t_1); if (unlikely((__pyx_t_20 == ((npy_int64)-1)) && PyErr_Occurred())) __PYX_ERR(0, 144, __pyx_L1_error)
-        __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-        __pyx_t_16 = 3;
-        __pyx_t_21 = -1;
-        if (__pyx_t_16 < 0) {
-          __pyx_t_16 += __pyx_pybuffernd_atoms.diminfo[0].shape;
-          if (unlikely(__pyx_t_16 < 0)) __pyx_t_21 = 0;
-        } else if (unlikely(__pyx_t_16 >= __pyx_pybuffernd_atoms.diminfo[0].shape)) __pyx_t_21 = 0;
-        if (unlikely(__pyx_t_21 != -1)) {
-          __Pyx_RaiseBufferIndexError(__pyx_t_21);
-          __PYX_ERR(0, 144, __pyx_L1_error)
-        }
-        *__Pyx_BufPtrStrided1d(__pyx_t_20find_nonzero_highdim_DTYPE_int_t *, __pyx_pybuffernd_atoms.rcbuffer->pybuffer.buf, __pyx_t_16, __pyx_pybuffernd_atoms.diminfo[0].strides) = __pyx_t_20;
-
-        /* "find_nonzero_highdim.pyx":145
- *                 atoms[2] = current[(i/d/d/d/d/d)%d]
- *                 atoms[3] = current[(i/d/d/d/d)%d]
- *                 atoms[4] = current[(i/d/d/d)%d]             # <<<<<<<<<<<<<<
- *                 atoms[5] = current[(i/d/d)%d]
- *                 atoms[6] = current[(i/d)%d]
- */
-        if (unlikely(__pyx_v_current == Py_None)) {
-          PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
           __PYX_ERR(0, 145, __pyx_L1_error)
         }
-        if (unlikely(__pyx_v_d == 0)) {
-          PyErr_SetString(PyExc_ZeroDivisionError, "float division");
-          __PYX_ERR(0, 145, __pyx_L1_error)
-        }
-        __pyx_t_23 = (((double)__pyx_v_i) / ((double)__pyx_v_d));
+        __pyx_t_23 = (__pyx_t_22 / ((double)__pyx_v_d));
         if (unlikely(__pyx_v_d == 0)) {
           PyErr_SetString(PyExc_ZeroDivisionError, "float division");
           __PYX_ERR(0, 145, __pyx_L1_error)
@@ -7687,17 +7523,22 @@ static PyObject *__pyx_pf_20find_nonzero_highdim_find_nonzero_highdim(CYTHON_UNU
         }
         __pyx_t_23 = (__pyx_t_22 / ((double)__pyx_v_d));
         if (unlikely(__pyx_v_d == 0)) {
-          PyErr_SetString(PyExc_ZeroDivisionError, "float divmod()");
+          PyErr_SetString(PyExc_ZeroDivisionError, "float division");
           __PYX_ERR(0, 145, __pyx_L1_error)
         }
-        __pyx_t_1 = PyFloat_FromDouble(__Pyx_mod_double(__pyx_t_23, __pyx_v_d)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 145, __pyx_L1_error)
-        __Pyx_GOTREF(__pyx_t_1);
-        __pyx_t_2 = __Pyx_PyObject_GetItem(__pyx_v_current, __pyx_t_1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 145, __pyx_L1_error)
+        __pyx_t_22 = (__pyx_t_23 / ((double)__pyx_v_d));
+        if (unlikely(__pyx_v_d == 0)) {
+          PyErr_SetString(PyExc_ZeroDivisionError, "float division");
+          __PYX_ERR(0, 145, __pyx_L1_error)
+        }
+        __pyx_t_2 = PyFloat_FromDouble((__pyx_t_22 / ((double)__pyx_v_d))); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 145, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_2);
-        __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-        __pyx_t_20 = __Pyx_PyInt_As_npy_int64(__pyx_t_2); if (unlikely((__pyx_t_20 == ((npy_int64)-1)) && PyErr_Occurred())) __PYX_ERR(0, 145, __pyx_L1_error)
+        __pyx_t_1 = __Pyx_PyObject_GetItem(__pyx_v_current, __pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 145, __pyx_L1_error)
+        __Pyx_GOTREF(__pyx_t_1);
         __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-        __pyx_t_16 = 4;
+        __pyx_t_20 = __Pyx_PyInt_As_npy_int64(__pyx_t_1); if (unlikely((__pyx_t_20 == ((npy_int64)-1)) && PyErr_Occurred())) __PYX_ERR(0, 145, __pyx_L1_error)
+        __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+        __pyx_t_16 = 1;
         __pyx_t_21 = -1;
         if (__pyx_t_16 < 0) {
           __pyx_t_16 += __pyx_pybuffernd_atoms.diminfo[0].shape;
@@ -7710,11 +7551,11 @@ static PyObject *__pyx_pf_20find_nonzero_highdim_find_nonzero_highdim(CYTHON_UNU
         *__Pyx_BufPtrStrided1d(__pyx_t_20find_nonzero_highdim_DTYPE_int_t *, __pyx_pybuffernd_atoms.rcbuffer->pybuffer.buf, __pyx_t_16, __pyx_pybuffernd_atoms.diminfo[0].strides) = __pyx_t_20;
 
         /* "find_nonzero_highdim.pyx":146
+ *             elif dim == 8:
+ *                 atoms[1] = current[i/d/d/d/d/d/d]
+ *                 atoms[2] = current[(i/d/d/d/d/d)%d]             # <<<<<<<<<<<<<<
  *                 atoms[3] = current[(i/d/d/d/d)%d]
  *                 atoms[4] = current[(i/d/d/d)%d]
- *                 atoms[5] = current[(i/d/d)%d]             # <<<<<<<<<<<<<<
- *                 atoms[6] = current[(i/d)%d]
- *                 atoms[7] = current[(i)%d]
  */
         if (unlikely(__pyx_v_current == Py_None)) {
           PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
@@ -7724,7 +7565,22 @@ static PyObject *__pyx_pf_20find_nonzero_highdim_find_nonzero_highdim(CYTHON_UNU
           PyErr_SetString(PyExc_ZeroDivisionError, "float division");
           __PYX_ERR(0, 146, __pyx_L1_error)
         }
-        __pyx_t_23 = (((double)__pyx_v_i) / ((double)__pyx_v_d));
+        __pyx_t_22 = (((double)__pyx_v_i) / ((double)__pyx_v_d));
+        if (unlikely(__pyx_v_d == 0)) {
+          PyErr_SetString(PyExc_ZeroDivisionError, "float division");
+          __PYX_ERR(0, 146, __pyx_L1_error)
+        }
+        __pyx_t_23 = (__pyx_t_22 / ((double)__pyx_v_d));
+        if (unlikely(__pyx_v_d == 0)) {
+          PyErr_SetString(PyExc_ZeroDivisionError, "float division");
+          __PYX_ERR(0, 146, __pyx_L1_error)
+        }
+        __pyx_t_22 = (__pyx_t_23 / ((double)__pyx_v_d));
+        if (unlikely(__pyx_v_d == 0)) {
+          PyErr_SetString(PyExc_ZeroDivisionError, "float division");
+          __PYX_ERR(0, 146, __pyx_L1_error)
+        }
+        __pyx_t_23 = (__pyx_t_22 / ((double)__pyx_v_d));
         if (unlikely(__pyx_v_d == 0)) {
           PyErr_SetString(PyExc_ZeroDivisionError, "float division");
           __PYX_ERR(0, 146, __pyx_L1_error)
@@ -7734,14 +7590,14 @@ static PyObject *__pyx_pf_20find_nonzero_highdim_find_nonzero_highdim(CYTHON_UNU
           PyErr_SetString(PyExc_ZeroDivisionError, "float divmod()");
           __PYX_ERR(0, 146, __pyx_L1_error)
         }
-        __pyx_t_2 = PyFloat_FromDouble(__Pyx_mod_double(__pyx_t_22, __pyx_v_d)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 146, __pyx_L1_error)
-        __Pyx_GOTREF(__pyx_t_2);
-        __pyx_t_1 = __Pyx_PyObject_GetItem(__pyx_v_current, __pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 146, __pyx_L1_error)
+        __pyx_t_1 = PyFloat_FromDouble(__Pyx_mod_double(__pyx_t_22, __pyx_v_d)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 146, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_1);
-        __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-        __pyx_t_20 = __Pyx_PyInt_As_npy_int64(__pyx_t_1); if (unlikely((__pyx_t_20 == ((npy_int64)-1)) && PyErr_Occurred())) __PYX_ERR(0, 146, __pyx_L1_error)
+        __pyx_t_2 = __Pyx_PyObject_GetItem(__pyx_v_current, __pyx_t_1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 146, __pyx_L1_error)
+        __Pyx_GOTREF(__pyx_t_2);
         __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-        __pyx_t_16 = 5;
+        __pyx_t_20 = __Pyx_PyInt_As_npy_int64(__pyx_t_2); if (unlikely((__pyx_t_20 == ((npy_int64)-1)) && PyErr_Occurred())) __PYX_ERR(0, 146, __pyx_L1_error)
+        __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
+        __pyx_t_16 = 2;
         __pyx_t_21 = -1;
         if (__pyx_t_16 < 0) {
           __pyx_t_16 += __pyx_pybuffernd_atoms.diminfo[0].shape;
@@ -7754,11 +7610,11 @@ static PyObject *__pyx_pf_20find_nonzero_highdim_find_nonzero_highdim(CYTHON_UNU
         *__Pyx_BufPtrStrided1d(__pyx_t_20find_nonzero_highdim_DTYPE_int_t *, __pyx_pybuffernd_atoms.rcbuffer->pybuffer.buf, __pyx_t_16, __pyx_pybuffernd_atoms.diminfo[0].strides) = __pyx_t_20;
 
         /* "find_nonzero_highdim.pyx":147
+ *                 atoms[1] = current[i/d/d/d/d/d/d]
+ *                 atoms[2] = current[(i/d/d/d/d/d)%d]
+ *                 atoms[3] = current[(i/d/d/d/d)%d]             # <<<<<<<<<<<<<<
  *                 atoms[4] = current[(i/d/d/d)%d]
  *                 atoms[5] = current[(i/d/d)%d]
- *                 atoms[6] = current[(i/d)%d]             # <<<<<<<<<<<<<<
- *                 atoms[7] = current[(i)%d]
- * #           print atoms
  */
         if (unlikely(__pyx_v_current == Py_None)) {
           PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
@@ -7770,17 +7626,32 @@ static PyObject *__pyx_pf_20find_nonzero_highdim_find_nonzero_highdim(CYTHON_UNU
         }
         __pyx_t_22 = (((double)__pyx_v_i) / ((double)__pyx_v_d));
         if (unlikely(__pyx_v_d == 0)) {
+          PyErr_SetString(PyExc_ZeroDivisionError, "float division");
+          __PYX_ERR(0, 147, __pyx_L1_error)
+        }
+        __pyx_t_23 = (__pyx_t_22 / ((double)__pyx_v_d));
+        if (unlikely(__pyx_v_d == 0)) {
+          PyErr_SetString(PyExc_ZeroDivisionError, "float division");
+          __PYX_ERR(0, 147, __pyx_L1_error)
+        }
+        __pyx_t_22 = (__pyx_t_23 / ((double)__pyx_v_d));
+        if (unlikely(__pyx_v_d == 0)) {
+          PyErr_SetString(PyExc_ZeroDivisionError, "float division");
+          __PYX_ERR(0, 147, __pyx_L1_error)
+        }
+        __pyx_t_23 = (__pyx_t_22 / ((double)__pyx_v_d));
+        if (unlikely(__pyx_v_d == 0)) {
           PyErr_SetString(PyExc_ZeroDivisionError, "float divmod()");
           __PYX_ERR(0, 147, __pyx_L1_error)
         }
-        __pyx_t_1 = PyFloat_FromDouble(__Pyx_mod_double(__pyx_t_22, __pyx_v_d)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 147, __pyx_L1_error)
-        __Pyx_GOTREF(__pyx_t_1);
-        __pyx_t_2 = __Pyx_PyObject_GetItem(__pyx_v_current, __pyx_t_1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 147, __pyx_L1_error)
+        __pyx_t_2 = PyFloat_FromDouble(__Pyx_mod_double(__pyx_t_23, __pyx_v_d)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 147, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_2);
-        __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-        __pyx_t_20 = __Pyx_PyInt_As_npy_int64(__pyx_t_2); if (unlikely((__pyx_t_20 == ((npy_int64)-1)) && PyErr_Occurred())) __PYX_ERR(0, 147, __pyx_L1_error)
+        __pyx_t_1 = __Pyx_PyObject_GetItem(__pyx_v_current, __pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 147, __pyx_L1_error)
+        __Pyx_GOTREF(__pyx_t_1);
         __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-        __pyx_t_16 = 6;
+        __pyx_t_20 = __Pyx_PyInt_As_npy_int64(__pyx_t_1); if (unlikely((__pyx_t_20 == ((npy_int64)-1)) && PyErr_Occurred())) __PYX_ERR(0, 147, __pyx_L1_error)
+        __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+        __pyx_t_16 = 3;
         __pyx_t_21 = -1;
         if (__pyx_t_16 < 0) {
           __pyx_t_16 += __pyx_pybuffernd_atoms.diminfo[0].shape;
@@ -7793,26 +7664,43 @@ static PyObject *__pyx_pf_20find_nonzero_highdim_find_nonzero_highdim(CYTHON_UNU
         *__Pyx_BufPtrStrided1d(__pyx_t_20find_nonzero_highdim_DTYPE_int_t *, __pyx_pybuffernd_atoms.rcbuffer->pybuffer.buf, __pyx_t_16, __pyx_pybuffernd_atoms.diminfo[0].strides) = __pyx_t_20;
 
         /* "find_nonzero_highdim.pyx":148
+ *                 atoms[2] = current[(i/d/d/d/d/d)%d]
+ *                 atoms[3] = current[(i/d/d/d/d)%d]
+ *                 atoms[4] = current[(i/d/d/d)%d]             # <<<<<<<<<<<<<<
  *                 atoms[5] = current[(i/d/d)%d]
  *                 atoms[6] = current[(i/d)%d]
- *                 atoms[7] = current[(i)%d]             # <<<<<<<<<<<<<<
- * #           print atoms
- * 
  */
         if (unlikely(__pyx_v_current == Py_None)) {
           PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
           __PYX_ERR(0, 148, __pyx_L1_error)
         }
         if (unlikely(__pyx_v_d == 0)) {
-          PyErr_SetString(PyExc_ZeroDivisionError, "integer division or modulo by zero");
+          PyErr_SetString(PyExc_ZeroDivisionError, "float division");
           __PYX_ERR(0, 148, __pyx_L1_error)
         }
-        __pyx_t_21 = __Pyx_mod_int(__pyx_v_i, __pyx_v_d);
-        __pyx_t_2 = __Pyx_GetItemInt_List(__pyx_v_current, __pyx_t_21, int, 1, __Pyx_PyInt_From_int, 1, 1, 1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 148, __pyx_L1_error)
+        __pyx_t_23 = (((double)__pyx_v_i) / ((double)__pyx_v_d));
+        if (unlikely(__pyx_v_d == 0)) {
+          PyErr_SetString(PyExc_ZeroDivisionError, "float division");
+          __PYX_ERR(0, 148, __pyx_L1_error)
+        }
+        __pyx_t_22 = (__pyx_t_23 / ((double)__pyx_v_d));
+        if (unlikely(__pyx_v_d == 0)) {
+          PyErr_SetString(PyExc_ZeroDivisionError, "float division");
+          __PYX_ERR(0, 148, __pyx_L1_error)
+        }
+        __pyx_t_23 = (__pyx_t_22 / ((double)__pyx_v_d));
+        if (unlikely(__pyx_v_d == 0)) {
+          PyErr_SetString(PyExc_ZeroDivisionError, "float divmod()");
+          __PYX_ERR(0, 148, __pyx_L1_error)
+        }
+        __pyx_t_1 = PyFloat_FromDouble(__Pyx_mod_double(__pyx_t_23, __pyx_v_d)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 148, __pyx_L1_error)
+        __Pyx_GOTREF(__pyx_t_1);
+        __pyx_t_2 = __Pyx_PyObject_GetItem(__pyx_v_current, __pyx_t_1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 148, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_2);
+        __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
         __pyx_t_20 = __Pyx_PyInt_As_npy_int64(__pyx_t_2); if (unlikely((__pyx_t_20 == ((npy_int64)-1)) && PyErr_Occurred())) __PYX_ERR(0, 148, __pyx_L1_error)
         __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-        __pyx_t_16 = 7;
+        __pyx_t_16 = 4;
         __pyx_t_21 = -1;
         if (__pyx_t_16 < 0) {
           __pyx_t_16 += __pyx_pybuffernd_atoms.diminfo[0].shape;
@@ -7824,7 +7712,122 @@ static PyObject *__pyx_pf_20find_nonzero_highdim_find_nonzero_highdim(CYTHON_UNU
         }
         *__Pyx_BufPtrStrided1d(__pyx_t_20find_nonzero_highdim_DTYPE_int_t *, __pyx_pybuffernd_atoms.rcbuffer->pybuffer.buf, __pyx_t_16, __pyx_pybuffernd_atoms.diminfo[0].strides) = __pyx_t_20;
 
-        /* "find_nonzero_highdim.pyx":141
+        /* "find_nonzero_highdim.pyx":149
+ *                 atoms[3] = current[(i/d/d/d/d)%d]
+ *                 atoms[4] = current[(i/d/d/d)%d]
+ *                 atoms[5] = current[(i/d/d)%d]             # <<<<<<<<<<<<<<
+ *                 atoms[6] = current[(i/d)%d]
+ *                 atoms[7] = current[(i)%d]
+ */
+        if (unlikely(__pyx_v_current == Py_None)) {
+          PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
+          __PYX_ERR(0, 149, __pyx_L1_error)
+        }
+        if (unlikely(__pyx_v_d == 0)) {
+          PyErr_SetString(PyExc_ZeroDivisionError, "float division");
+          __PYX_ERR(0, 149, __pyx_L1_error)
+        }
+        __pyx_t_23 = (((double)__pyx_v_i) / ((double)__pyx_v_d));
+        if (unlikely(__pyx_v_d == 0)) {
+          PyErr_SetString(PyExc_ZeroDivisionError, "float division");
+          __PYX_ERR(0, 149, __pyx_L1_error)
+        }
+        __pyx_t_22 = (__pyx_t_23 / ((double)__pyx_v_d));
+        if (unlikely(__pyx_v_d == 0)) {
+          PyErr_SetString(PyExc_ZeroDivisionError, "float divmod()");
+          __PYX_ERR(0, 149, __pyx_L1_error)
+        }
+        __pyx_t_2 = PyFloat_FromDouble(__Pyx_mod_double(__pyx_t_22, __pyx_v_d)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 149, __pyx_L1_error)
+        __Pyx_GOTREF(__pyx_t_2);
+        __pyx_t_1 = __Pyx_PyObject_GetItem(__pyx_v_current, __pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 149, __pyx_L1_error)
+        __Pyx_GOTREF(__pyx_t_1);
+        __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
+        __pyx_t_20 = __Pyx_PyInt_As_npy_int64(__pyx_t_1); if (unlikely((__pyx_t_20 == ((npy_int64)-1)) && PyErr_Occurred())) __PYX_ERR(0, 149, __pyx_L1_error)
+        __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+        __pyx_t_16 = 5;
+        __pyx_t_21 = -1;
+        if (__pyx_t_16 < 0) {
+          __pyx_t_16 += __pyx_pybuffernd_atoms.diminfo[0].shape;
+          if (unlikely(__pyx_t_16 < 0)) __pyx_t_21 = 0;
+        } else if (unlikely(__pyx_t_16 >= __pyx_pybuffernd_atoms.diminfo[0].shape)) __pyx_t_21 = 0;
+        if (unlikely(__pyx_t_21 != -1)) {
+          __Pyx_RaiseBufferIndexError(__pyx_t_21);
+          __PYX_ERR(0, 149, __pyx_L1_error)
+        }
+        *__Pyx_BufPtrStrided1d(__pyx_t_20find_nonzero_highdim_DTYPE_int_t *, __pyx_pybuffernd_atoms.rcbuffer->pybuffer.buf, __pyx_t_16, __pyx_pybuffernd_atoms.diminfo[0].strides) = __pyx_t_20;
+
+        /* "find_nonzero_highdim.pyx":150
+ *                 atoms[4] = current[(i/d/d/d)%d]
+ *                 atoms[5] = current[(i/d/d)%d]
+ *                 atoms[6] = current[(i/d)%d]             # <<<<<<<<<<<<<<
+ *                 atoms[7] = current[(i)%d]
+ * #           print atoms
+ */
+        if (unlikely(__pyx_v_current == Py_None)) {
+          PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
+          __PYX_ERR(0, 150, __pyx_L1_error)
+        }
+        if (unlikely(__pyx_v_d == 0)) {
+          PyErr_SetString(PyExc_ZeroDivisionError, "float division");
+          __PYX_ERR(0, 150, __pyx_L1_error)
+        }
+        __pyx_t_22 = (((double)__pyx_v_i) / ((double)__pyx_v_d));
+        if (unlikely(__pyx_v_d == 0)) {
+          PyErr_SetString(PyExc_ZeroDivisionError, "float divmod()");
+          __PYX_ERR(0, 150, __pyx_L1_error)
+        }
+        __pyx_t_1 = PyFloat_FromDouble(__Pyx_mod_double(__pyx_t_22, __pyx_v_d)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 150, __pyx_L1_error)
+        __Pyx_GOTREF(__pyx_t_1);
+        __pyx_t_2 = __Pyx_PyObject_GetItem(__pyx_v_current, __pyx_t_1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 150, __pyx_L1_error)
+        __Pyx_GOTREF(__pyx_t_2);
+        __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+        __pyx_t_20 = __Pyx_PyInt_As_npy_int64(__pyx_t_2); if (unlikely((__pyx_t_20 == ((npy_int64)-1)) && PyErr_Occurred())) __PYX_ERR(0, 150, __pyx_L1_error)
+        __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
+        __pyx_t_16 = 6;
+        __pyx_t_21 = -1;
+        if (__pyx_t_16 < 0) {
+          __pyx_t_16 += __pyx_pybuffernd_atoms.diminfo[0].shape;
+          if (unlikely(__pyx_t_16 < 0)) __pyx_t_21 = 0;
+        } else if (unlikely(__pyx_t_16 >= __pyx_pybuffernd_atoms.diminfo[0].shape)) __pyx_t_21 = 0;
+        if (unlikely(__pyx_t_21 != -1)) {
+          __Pyx_RaiseBufferIndexError(__pyx_t_21);
+          __PYX_ERR(0, 150, __pyx_L1_error)
+        }
+        *__Pyx_BufPtrStrided1d(__pyx_t_20find_nonzero_highdim_DTYPE_int_t *, __pyx_pybuffernd_atoms.rcbuffer->pybuffer.buf, __pyx_t_16, __pyx_pybuffernd_atoms.diminfo[0].strides) = __pyx_t_20;
+
+        /* "find_nonzero_highdim.pyx":151
+ *                 atoms[5] = current[(i/d/d)%d]
+ *                 atoms[6] = current[(i/d)%d]
+ *                 atoms[7] = current[(i)%d]             # <<<<<<<<<<<<<<
+ * #           print atoms
+ * 
+ */
+        if (unlikely(__pyx_v_current == Py_None)) {
+          PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
+          __PYX_ERR(0, 151, __pyx_L1_error)
+        }
+        if (unlikely(__pyx_v_d == 0)) {
+          PyErr_SetString(PyExc_ZeroDivisionError, "integer division or modulo by zero");
+          __PYX_ERR(0, 151, __pyx_L1_error)
+        }
+        __pyx_t_21 = __Pyx_mod_int(__pyx_v_i, __pyx_v_d);
+        __pyx_t_2 = __Pyx_GetItemInt_List(__pyx_v_current, __pyx_t_21, int, 1, __Pyx_PyInt_From_int, 1, 1, 1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 151, __pyx_L1_error)
+        __Pyx_GOTREF(__pyx_t_2);
+        __pyx_t_20 = __Pyx_PyInt_As_npy_int64(__pyx_t_2); if (unlikely((__pyx_t_20 == ((npy_int64)-1)) && PyErr_Occurred())) __PYX_ERR(0, 151, __pyx_L1_error)
+        __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
+        __pyx_t_16 = 7;
+        __pyx_t_21 = -1;
+        if (__pyx_t_16 < 0) {
+          __pyx_t_16 += __pyx_pybuffernd_atoms.diminfo[0].shape;
+          if (unlikely(__pyx_t_16 < 0)) __pyx_t_21 = 0;
+        } else if (unlikely(__pyx_t_16 >= __pyx_pybuffernd_atoms.diminfo[0].shape)) __pyx_t_21 = 0;
+        if (unlikely(__pyx_t_21 != -1)) {
+          __Pyx_RaiseBufferIndexError(__pyx_t_21);
+          __PYX_ERR(0, 151, __pyx_L1_error)
+        }
+        *__Pyx_BufPtrStrided1d(__pyx_t_20find_nonzero_highdim_DTYPE_int_t *, __pyx_pybuffernd_atoms.rcbuffer->pybuffer.buf, __pyx_t_16, __pyx_pybuffernd_atoms.diminfo[0].strides) = __pyx_t_20;
+
+        /* "find_nonzero_highdim.pyx":144
  *                 atoms[5] = current[(i/d)%d]
  *                 atoms[6] = current[i%d]
  *             elif dim == 8:             # <<<<<<<<<<<<<<
@@ -7835,7 +7838,7 @@ static PyObject *__pyx_pf_20find_nonzero_highdim_find_nonzero_highdim(CYTHON_UNU
         default: break;
       }
 
-      /* "find_nonzero_highdim.pyx":154
+      /* "find_nonzero_highdim.pyx":157
  * 
  *             #We found sets of atoms near the first atom, now check that entire group is within cutoff.
  *             insidecutoff = True             # <<<<<<<<<<<<<<
@@ -7845,7 +7848,7 @@ static PyObject *__pyx_pf_20find_nonzero_highdim_find_nonzero_highdim(CYTHON_UNU
       __Pyx_INCREF(Py_True);
       __Pyx_XDECREF_SET(__pyx_v_insidecutoff, ((PyBoolObject *)Py_True));
 
-      /* "find_nonzero_highdim.pyx":155
+      /* "find_nonzero_highdim.pyx":158
  *             #We found sets of atoms near the first atom, now check that entire group is within cutoff.
  *             insidecutoff = True
  *             if dim > 1:             # <<<<<<<<<<<<<<
@@ -7855,16 +7858,16 @@ static PyObject *__pyx_pf_20find_nonzero_highdim_find_nonzero_highdim(CYTHON_UNU
       __pyx_t_14 = (__pyx_v_dim > 1);
       if (__pyx_t_14) {
 
-        /* "find_nonzero_highdim.pyx":157
+        /* "find_nonzero_highdim.pyx":160
  *             if dim > 1:
  * 
  *                 body = np.unique(atoms).shape[0]             # <<<<<<<<<<<<<<
  * 
  *                 if body > bodycount:
  */
-        __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_np); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 157, __pyx_L1_error)
+        __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_np); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 160, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_1);
-        __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_unique); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 157, __pyx_L1_error)
+        __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_unique); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 160, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_4);
         __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
         __pyx_t_1 = NULL;
@@ -7885,21 +7888,21 @@ static PyObject *__pyx_pf_20find_nonzero_highdim_find_nonzero_highdim(CYTHON_UNU
           PyObject *__pyx_callargs[2] = {__pyx_t_1, ((PyObject *)__pyx_v_atoms)};
           __pyx_t_2 = __Pyx_PyObject_FastCall(__pyx_t_4, __pyx_callargs+1-__pyx_t_21, 1+__pyx_t_21);
           __Pyx_XDECREF(__pyx_t_1); __pyx_t_1 = 0;
-          if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 157, __pyx_L1_error)
+          if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 160, __pyx_L1_error)
           __Pyx_GOTREF(__pyx_t_2);
           __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
         }
-        __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_shape); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 157, __pyx_L1_error)
+        __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_shape); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 160, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_4);
         __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-        __pyx_t_2 = __Pyx_GetItemInt(__pyx_t_4, 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 157, __pyx_L1_error)
+        __pyx_t_2 = __Pyx_GetItemInt(__pyx_t_4, 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 160, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_2);
         __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-        __pyx_t_21 = __Pyx_PyInt_As_int(__pyx_t_2); if (unlikely((__pyx_t_21 == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 157, __pyx_L1_error)
+        __pyx_t_21 = __Pyx_PyInt_As_int(__pyx_t_2); if (unlikely((__pyx_t_21 == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 160, __pyx_L1_error)
         __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
         __pyx_v_body = __pyx_t_21;
 
-        /* "find_nonzero_highdim.pyx":159
+        /* "find_nonzero_highdim.pyx":162
  *                 body = np.unique(atoms).shape[0]
  * 
  *                 if body > bodycount:             # <<<<<<<<<<<<<<
@@ -7909,7 +7912,7 @@ static PyObject *__pyx_pf_20find_nonzero_highdim_find_nonzero_highdim(CYTHON_UNU
         __pyx_t_14 = (__pyx_v_body > __pyx_v_bodycount);
         if (__pyx_t_14) {
 
-          /* "find_nonzero_highdim.pyx":160
+          /* "find_nonzero_highdim.pyx":163
  * 
  *                 if body > bodycount:
  *                     continue             # <<<<<<<<<<<<<<
@@ -7918,7 +7921,7 @@ static PyObject *__pyx_pf_20find_nonzero_highdim_find_nonzero_highdim(CYTHON_UNU
  */
           goto __pyx_L14_continue;
 
-          /* "find_nonzero_highdim.pyx":159
+          /* "find_nonzero_highdim.pyx":162
  *                 body = np.unique(atoms).shape[0]
  * 
  *                 if body > bodycount:             # <<<<<<<<<<<<<<
@@ -7927,7 +7930,7 @@ static PyObject *__pyx_pf_20find_nonzero_highdim_find_nonzero_highdim(CYTHON_UNU
  */
         }
 
-        /* "find_nonzero_highdim.pyx":162
+        /* "find_nonzero_highdim.pyx":165
  *                     continue
  * 
  *                 for at1 in atoms:             # <<<<<<<<<<<<<<
@@ -7939,9 +7942,9 @@ static PyObject *__pyx_pf_20find_nonzero_highdim_find_nonzero_highdim(CYTHON_UNU
           __pyx_t_12 = 0;
           __pyx_t_13 = NULL;
         } else {
-          __pyx_t_12 = -1; __pyx_t_2 = PyObject_GetIter(((PyObject *)__pyx_v_atoms)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 162, __pyx_L1_error)
+          __pyx_t_12 = -1; __pyx_t_2 = PyObject_GetIter(((PyObject *)__pyx_v_atoms)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 165, __pyx_L1_error)
           __Pyx_GOTREF(__pyx_t_2);
-          __pyx_t_13 = __Pyx_PyObject_GetIterNextFunc(__pyx_t_2); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 162, __pyx_L1_error)
+          __pyx_t_13 = __Pyx_PyObject_GetIterNextFunc(__pyx_t_2); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 165, __pyx_L1_error)
         }
         for (;;) {
           if (likely(!__pyx_t_13)) {
@@ -7949,28 +7952,28 @@ static PyObject *__pyx_pf_20find_nonzero_highdim_find_nonzero_highdim(CYTHON_UNU
               {
                 Py_ssize_t __pyx_temp = __Pyx_PyList_GET_SIZE(__pyx_t_2);
                 #if !CYTHON_ASSUME_SAFE_MACROS
-                if (unlikely((__pyx_temp < 0))) __PYX_ERR(0, 162, __pyx_L1_error)
+                if (unlikely((__pyx_temp < 0))) __PYX_ERR(0, 165, __pyx_L1_error)
                 #endif
                 if (__pyx_t_12 >= __pyx_temp) break;
               }
               #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
-              __pyx_t_4 = PyList_GET_ITEM(__pyx_t_2, __pyx_t_12); __Pyx_INCREF(__pyx_t_4); __pyx_t_12++; if (unlikely((0 < 0))) __PYX_ERR(0, 162, __pyx_L1_error)
+              __pyx_t_4 = PyList_GET_ITEM(__pyx_t_2, __pyx_t_12); __Pyx_INCREF(__pyx_t_4); __pyx_t_12++; if (unlikely((0 < 0))) __PYX_ERR(0, 165, __pyx_L1_error)
               #else
-              __pyx_t_4 = __Pyx_PySequence_ITEM(__pyx_t_2, __pyx_t_12); __pyx_t_12++; if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 162, __pyx_L1_error)
+              __pyx_t_4 = __Pyx_PySequence_ITEM(__pyx_t_2, __pyx_t_12); __pyx_t_12++; if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 165, __pyx_L1_error)
               __Pyx_GOTREF(__pyx_t_4);
               #endif
             } else {
               {
                 Py_ssize_t __pyx_temp = __Pyx_PyTuple_GET_SIZE(__pyx_t_2);
                 #if !CYTHON_ASSUME_SAFE_MACROS
-                if (unlikely((__pyx_temp < 0))) __PYX_ERR(0, 162, __pyx_L1_error)
+                if (unlikely((__pyx_temp < 0))) __PYX_ERR(0, 165, __pyx_L1_error)
                 #endif
                 if (__pyx_t_12 >= __pyx_temp) break;
               }
               #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
-              __pyx_t_4 = PyTuple_GET_ITEM(__pyx_t_2, __pyx_t_12); __Pyx_INCREF(__pyx_t_4); __pyx_t_12++; if (unlikely((0 < 0))) __PYX_ERR(0, 162, __pyx_L1_error)
+              __pyx_t_4 = PyTuple_GET_ITEM(__pyx_t_2, __pyx_t_12); __Pyx_INCREF(__pyx_t_4); __pyx_t_12++; if (unlikely((0 < 0))) __PYX_ERR(0, 165, __pyx_L1_error)
               #else
-              __pyx_t_4 = __Pyx_PySequence_ITEM(__pyx_t_2, __pyx_t_12); __pyx_t_12++; if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 162, __pyx_L1_error)
+              __pyx_t_4 = __Pyx_PySequence_ITEM(__pyx_t_2, __pyx_t_12); __pyx_t_12++; if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 165, __pyx_L1_error)
               __Pyx_GOTREF(__pyx_t_4);
               #endif
             }
@@ -7980,17 +7983,17 @@ static PyObject *__pyx_pf_20find_nonzero_highdim_find_nonzero_highdim(CYTHON_UNU
               PyObject* exc_type = PyErr_Occurred();
               if (exc_type) {
                 if (likely(__Pyx_PyErr_GivenExceptionMatches(exc_type, PyExc_StopIteration))) PyErr_Clear();
-                else __PYX_ERR(0, 162, __pyx_L1_error)
+                else __PYX_ERR(0, 165, __pyx_L1_error)
               }
               break;
             }
             __Pyx_GOTREF(__pyx_t_4);
           }
-          __pyx_t_21 = __Pyx_PyInt_As_int(__pyx_t_4); if (unlikely((__pyx_t_21 == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 162, __pyx_L1_error)
+          __pyx_t_21 = __Pyx_PyInt_As_int(__pyx_t_4); if (unlikely((__pyx_t_21 == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 165, __pyx_L1_error)
           __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
           __pyx_v_at1 = __pyx_t_21;
 
-          /* "find_nonzero_highdim.pyx":163
+          /* "find_nonzero_highdim.pyx":166
  * 
  *                 for at1 in atoms:
  *                     for at2 in atoms:             # <<<<<<<<<<<<<<
@@ -8002,9 +8005,9 @@ static PyObject *__pyx_pf_20find_nonzero_highdim_find_nonzero_highdim(CYTHON_UNU
             __pyx_t_24 = 0;
             __pyx_t_25 = NULL;
           } else {
-            __pyx_t_24 = -1; __pyx_t_4 = PyObject_GetIter(((PyObject *)__pyx_v_atoms)); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 163, __pyx_L1_error)
+            __pyx_t_24 = -1; __pyx_t_4 = PyObject_GetIter(((PyObject *)__pyx_v_atoms)); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 166, __pyx_L1_error)
             __Pyx_GOTREF(__pyx_t_4);
-            __pyx_t_25 = __Pyx_PyObject_GetIterNextFunc(__pyx_t_4); if (unlikely(!__pyx_t_25)) __PYX_ERR(0, 163, __pyx_L1_error)
+            __pyx_t_25 = __Pyx_PyObject_GetIterNextFunc(__pyx_t_4); if (unlikely(!__pyx_t_25)) __PYX_ERR(0, 166, __pyx_L1_error)
           }
           for (;;) {
             if (likely(!__pyx_t_25)) {
@@ -8012,28 +8015,28 @@ static PyObject *__pyx_pf_20find_nonzero_highdim_find_nonzero_highdim(CYTHON_UNU
                 {
                   Py_ssize_t __pyx_temp = __Pyx_PyList_GET_SIZE(__pyx_t_4);
                   #if !CYTHON_ASSUME_SAFE_MACROS
-                  if (unlikely((__pyx_temp < 0))) __PYX_ERR(0, 163, __pyx_L1_error)
+                  if (unlikely((__pyx_temp < 0))) __PYX_ERR(0, 166, __pyx_L1_error)
                   #endif
                   if (__pyx_t_24 >= __pyx_temp) break;
                 }
                 #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
-                __pyx_t_1 = PyList_GET_ITEM(__pyx_t_4, __pyx_t_24); __Pyx_INCREF(__pyx_t_1); __pyx_t_24++; if (unlikely((0 < 0))) __PYX_ERR(0, 163, __pyx_L1_error)
+                __pyx_t_1 = PyList_GET_ITEM(__pyx_t_4, __pyx_t_24); __Pyx_INCREF(__pyx_t_1); __pyx_t_24++; if (unlikely((0 < 0))) __PYX_ERR(0, 166, __pyx_L1_error)
                 #else
-                __pyx_t_1 = __Pyx_PySequence_ITEM(__pyx_t_4, __pyx_t_24); __pyx_t_24++; if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 163, __pyx_L1_error)
+                __pyx_t_1 = __Pyx_PySequence_ITEM(__pyx_t_4, __pyx_t_24); __pyx_t_24++; if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 166, __pyx_L1_error)
                 __Pyx_GOTREF(__pyx_t_1);
                 #endif
               } else {
                 {
                   Py_ssize_t __pyx_temp = __Pyx_PyTuple_GET_SIZE(__pyx_t_4);
                   #if !CYTHON_ASSUME_SAFE_MACROS
-                  if (unlikely((__pyx_temp < 0))) __PYX_ERR(0, 163, __pyx_L1_error)
+                  if (unlikely((__pyx_temp < 0))) __PYX_ERR(0, 166, __pyx_L1_error)
                   #endif
                   if (__pyx_t_24 >= __pyx_temp) break;
                 }
                 #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
-                __pyx_t_1 = PyTuple_GET_ITEM(__pyx_t_4, __pyx_t_24); __Pyx_INCREF(__pyx_t_1); __pyx_t_24++; if (unlikely((0 < 0))) __PYX_ERR(0, 163, __pyx_L1_error)
+                __pyx_t_1 = PyTuple_GET_ITEM(__pyx_t_4, __pyx_t_24); __Pyx_INCREF(__pyx_t_1); __pyx_t_24++; if (unlikely((0 < 0))) __PYX_ERR(0, 166, __pyx_L1_error)
                 #else
-                __pyx_t_1 = __Pyx_PySequence_ITEM(__pyx_t_4, __pyx_t_24); __pyx_t_24++; if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 163, __pyx_L1_error)
+                __pyx_t_1 = __Pyx_PySequence_ITEM(__pyx_t_4, __pyx_t_24); __pyx_t_24++; if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 166, __pyx_L1_error)
                 __Pyx_GOTREF(__pyx_t_1);
                 #endif
               }
@@ -8043,17 +8046,17 @@ static PyObject *__pyx_pf_20find_nonzero_highdim_find_nonzero_highdim(CYTHON_UNU
                 PyObject* exc_type = PyErr_Occurred();
                 if (exc_type) {
                   if (likely(__Pyx_PyErr_GivenExceptionMatches(exc_type, PyExc_StopIteration))) PyErr_Clear();
-                  else __PYX_ERR(0, 163, __pyx_L1_error)
+                  else __PYX_ERR(0, 166, __pyx_L1_error)
                 }
                 break;
               }
               __Pyx_GOTREF(__pyx_t_1);
             }
-            __pyx_t_21 = __Pyx_PyInt_As_int(__pyx_t_1); if (unlikely((__pyx_t_21 == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 163, __pyx_L1_error)
+            __pyx_t_21 = __Pyx_PyInt_As_int(__pyx_t_1); if (unlikely((__pyx_t_21 == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 166, __pyx_L1_error)
             __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
             __pyx_v_at2 = __pyx_t_21;
 
-            /* "find_nonzero_highdim.pyx":164
+            /* "find_nonzero_highdim.pyx":167
  *                 for at1 in atoms:
  *                     for at2 in atoms:
  *                         if dist_array[at1,at2] > dist_cutoff:             # <<<<<<<<<<<<<<
@@ -8073,12 +8076,12 @@ static PyObject *__pyx_pf_20find_nonzero_highdim_find_nonzero_highdim(CYTHON_UNU
             } else if (unlikely(__pyx_t_26 >= __pyx_pybuffernd_dist_array.diminfo[1].shape)) __pyx_t_21 = 1;
             if (unlikely(__pyx_t_21 != -1)) {
               __Pyx_RaiseBufferIndexError(__pyx_t_21);
-              __PYX_ERR(0, 164, __pyx_L1_error)
+              __PYX_ERR(0, 167, __pyx_L1_error)
             }
             __pyx_t_14 = ((*__Pyx_BufPtrStrided2d(__pyx_t_20find_nonzero_highdim_DTYPE_t *, __pyx_pybuffernd_dist_array.rcbuffer->pybuffer.buf, __pyx_t_16, __pyx_pybuffernd_dist_array.diminfo[0].strides, __pyx_t_26, __pyx_pybuffernd_dist_array.diminfo[1].strides)) > __pyx_v_dist_cutoff);
             if (__pyx_t_14) {
 
-              /* "find_nonzero_highdim.pyx":165
+              /* "find_nonzero_highdim.pyx":168
  *                     for at2 in atoms:
  *                         if dist_array[at1,at2] > dist_cutoff:
  *                             insidecutoff = False             # <<<<<<<<<<<<<<
@@ -8088,7 +8091,7 @@ static PyObject *__pyx_pf_20find_nonzero_highdim_find_nonzero_highdim(CYTHON_UNU
               __Pyx_INCREF(Py_False);
               __Pyx_DECREF_SET(__pyx_v_insidecutoff, ((PyBoolObject *)Py_False));
 
-              /* "find_nonzero_highdim.pyx":166
+              /* "find_nonzero_highdim.pyx":169
  *                         if dist_array[at1,at2] > dist_cutoff:
  *                             insidecutoff = False
  *                             break             # <<<<<<<<<<<<<<
@@ -8097,7 +8100,7 @@ static PyObject *__pyx_pf_20find_nonzero_highdim_find_nonzero_highdim(CYTHON_UNU
  */
               goto __pyx_L21_break;
 
-              /* "find_nonzero_highdim.pyx":164
+              /* "find_nonzero_highdim.pyx":167
  *                 for at1 in atoms:
  *                     for at2 in atoms:
  *                         if dist_array[at1,at2] > dist_cutoff:             # <<<<<<<<<<<<<<
@@ -8106,7 +8109,7 @@ static PyObject *__pyx_pf_20find_nonzero_highdim_find_nonzero_highdim(CYTHON_UNU
  */
             }
 
-            /* "find_nonzero_highdim.pyx":163
+            /* "find_nonzero_highdim.pyx":166
  * 
  *                 for at1 in atoms:
  *                     for at2 in atoms:             # <<<<<<<<<<<<<<
@@ -8121,19 +8124,19 @@ static PyObject *__pyx_pf_20find_nonzero_highdim_find_nonzero_highdim(CYTHON_UNU
           goto __pyx_L23_for_end;
           __pyx_L23_for_end:;
 
-          /* "find_nonzero_highdim.pyx":167
+          /* "find_nonzero_highdim.pyx":170
  *                             insidecutoff = False
  *                             break
  *                     if insidecutoff == False:             # <<<<<<<<<<<<<<
  *                         break
  * 
  */
-          __pyx_t_4 = PyObject_RichCompare(((PyObject *)__pyx_v_insidecutoff), Py_False, Py_EQ); __Pyx_XGOTREF(__pyx_t_4); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 167, __pyx_L1_error)
-          __pyx_t_14 = __Pyx_PyObject_IsTrue(__pyx_t_4); if (unlikely((__pyx_t_14 < 0))) __PYX_ERR(0, 167, __pyx_L1_error)
+          __pyx_t_4 = PyObject_RichCompare(((PyObject *)__pyx_v_insidecutoff), Py_False, Py_EQ); __Pyx_XGOTREF(__pyx_t_4); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 170, __pyx_L1_error)
+          __pyx_t_14 = __Pyx_PyObject_IsTrue(__pyx_t_4); if (unlikely((__pyx_t_14 < 0))) __PYX_ERR(0, 170, __pyx_L1_error)
           __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
           if (__pyx_t_14) {
 
-            /* "find_nonzero_highdim.pyx":168
+            /* "find_nonzero_highdim.pyx":171
  *                             break
  *                     if insidecutoff == False:
  *                         break             # <<<<<<<<<<<<<<
@@ -8142,7 +8145,7 @@ static PyObject *__pyx_pf_20find_nonzero_highdim_find_nonzero_highdim(CYTHON_UNU
  */
             goto __pyx_L19_break;
 
-            /* "find_nonzero_highdim.pyx":167
+            /* "find_nonzero_highdim.pyx":170
  *                             insidecutoff = False
  *                             break
  *                     if insidecutoff == False:             # <<<<<<<<<<<<<<
@@ -8151,7 +8154,7 @@ static PyObject *__pyx_pf_20find_nonzero_highdim_find_nonzero_highdim(CYTHON_UNU
  */
           }
 
-          /* "find_nonzero_highdim.pyx":162
+          /* "find_nonzero_highdim.pyx":165
  *                     continue
  * 
  *                 for at1 in atoms:             # <<<<<<<<<<<<<<
@@ -8166,7 +8169,7 @@ static PyObject *__pyx_pf_20find_nonzero_highdim_find_nonzero_highdim(CYTHON_UNU
         goto __pyx_L25_for_end;
         __pyx_L25_for_end:;
 
-        /* "find_nonzero_highdim.pyx":170
+        /* "find_nonzero_highdim.pyx":173
  *                         break
  * 
  *                 if body <= 2 and insidecutoff == False:             # <<<<<<<<<<<<<<
@@ -8179,14 +8182,14 @@ static PyObject *__pyx_pf_20find_nonzero_highdim_find_nonzero_highdim(CYTHON_UNU
           __pyx_t_14 = __pyx_t_15;
           goto __pyx_L27_bool_binop_done;
         }
-        __pyx_t_2 = PyObject_RichCompare(((PyObject *)__pyx_v_insidecutoff), Py_False, Py_EQ); __Pyx_XGOTREF(__pyx_t_2); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 170, __pyx_L1_error)
-        __pyx_t_15 = __Pyx_PyObject_IsTrue(__pyx_t_2); if (unlikely((__pyx_t_15 < 0))) __PYX_ERR(0, 170, __pyx_L1_error)
+        __pyx_t_2 = PyObject_RichCompare(((PyObject *)__pyx_v_insidecutoff), Py_False, Py_EQ); __Pyx_XGOTREF(__pyx_t_2); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 173, __pyx_L1_error)
+        __pyx_t_15 = __Pyx_PyObject_IsTrue(__pyx_t_2); if (unlikely((__pyx_t_15 < 0))) __PYX_ERR(0, 173, __pyx_L1_error)
         __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
         __pyx_t_14 = __pyx_t_15;
         __pyx_L27_bool_binop_done:;
         if (__pyx_t_14) {
 
-          /* "find_nonzero_highdim.pyx":171
+          /* "find_nonzero_highdim.pyx":174
  * 
  *                 if body <= 2 and insidecutoff == False:
  *                     insidecutoff = True             # <<<<<<<<<<<<<<
@@ -8196,7 +8199,7 @@ static PyObject *__pyx_pf_20find_nonzero_highdim_find_nonzero_highdim(CYTHON_UNU
           __Pyx_INCREF(Py_True);
           __Pyx_DECREF_SET(__pyx_v_insidecutoff, ((PyBoolObject *)Py_True));
 
-          /* "find_nonzero_highdim.pyx":172
+          /* "find_nonzero_highdim.pyx":175
  *                 if body <= 2 and insidecutoff == False:
  *                     insidecutoff = True
  *                     for at1 in atoms:             # <<<<<<<<<<<<<<
@@ -8208,9 +8211,9 @@ static PyObject *__pyx_pf_20find_nonzero_highdim_find_nonzero_highdim(CYTHON_UNU
             __pyx_t_12 = 0;
             __pyx_t_13 = NULL;
           } else {
-            __pyx_t_12 = -1; __pyx_t_2 = PyObject_GetIter(((PyObject *)__pyx_v_atoms)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 172, __pyx_L1_error)
+            __pyx_t_12 = -1; __pyx_t_2 = PyObject_GetIter(((PyObject *)__pyx_v_atoms)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 175, __pyx_L1_error)
             __Pyx_GOTREF(__pyx_t_2);
-            __pyx_t_13 = __Pyx_PyObject_GetIterNextFunc(__pyx_t_2); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 172, __pyx_L1_error)
+            __pyx_t_13 = __Pyx_PyObject_GetIterNextFunc(__pyx_t_2); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 175, __pyx_L1_error)
           }
           for (;;) {
             if (likely(!__pyx_t_13)) {
@@ -8218,28 +8221,28 @@ static PyObject *__pyx_pf_20find_nonzero_highdim_find_nonzero_highdim(CYTHON_UNU
                 {
                   Py_ssize_t __pyx_temp = __Pyx_PyList_GET_SIZE(__pyx_t_2);
                   #if !CYTHON_ASSUME_SAFE_MACROS
-                  if (unlikely((__pyx_temp < 0))) __PYX_ERR(0, 172, __pyx_L1_error)
+                  if (unlikely((__pyx_temp < 0))) __PYX_ERR(0, 175, __pyx_L1_error)
                   #endif
                   if (__pyx_t_12 >= __pyx_temp) break;
                 }
                 #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
-                __pyx_t_4 = PyList_GET_ITEM(__pyx_t_2, __pyx_t_12); __Pyx_INCREF(__pyx_t_4); __pyx_t_12++; if (unlikely((0 < 0))) __PYX_ERR(0, 172, __pyx_L1_error)
+                __pyx_t_4 = PyList_GET_ITEM(__pyx_t_2, __pyx_t_12); __Pyx_INCREF(__pyx_t_4); __pyx_t_12++; if (unlikely((0 < 0))) __PYX_ERR(0, 175, __pyx_L1_error)
                 #else
-                __pyx_t_4 = __Pyx_PySequence_ITEM(__pyx_t_2, __pyx_t_12); __pyx_t_12++; if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 172, __pyx_L1_error)
+                __pyx_t_4 = __Pyx_PySequence_ITEM(__pyx_t_2, __pyx_t_12); __pyx_t_12++; if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 175, __pyx_L1_error)
                 __Pyx_GOTREF(__pyx_t_4);
                 #endif
               } else {
                 {
                   Py_ssize_t __pyx_temp = __Pyx_PyTuple_GET_SIZE(__pyx_t_2);
                   #if !CYTHON_ASSUME_SAFE_MACROS
-                  if (unlikely((__pyx_temp < 0))) __PYX_ERR(0, 172, __pyx_L1_error)
+                  if (unlikely((__pyx_temp < 0))) __PYX_ERR(0, 175, __pyx_L1_error)
                   #endif
                   if (__pyx_t_12 >= __pyx_temp) break;
                 }
                 #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
-                __pyx_t_4 = PyTuple_GET_ITEM(__pyx_t_2, __pyx_t_12); __Pyx_INCREF(__pyx_t_4); __pyx_t_12++; if (unlikely((0 < 0))) __PYX_ERR(0, 172, __pyx_L1_error)
+                __pyx_t_4 = PyTuple_GET_ITEM(__pyx_t_2, __pyx_t_12); __Pyx_INCREF(__pyx_t_4); __pyx_t_12++; if (unlikely((0 < 0))) __PYX_ERR(0, 175, __pyx_L1_error)
                 #else
-                __pyx_t_4 = __Pyx_PySequence_ITEM(__pyx_t_2, __pyx_t_12); __pyx_t_12++; if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 172, __pyx_L1_error)
+                __pyx_t_4 = __Pyx_PySequence_ITEM(__pyx_t_2, __pyx_t_12); __pyx_t_12++; if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 175, __pyx_L1_error)
                 __Pyx_GOTREF(__pyx_t_4);
                 #endif
               }
@@ -8249,17 +8252,17 @@ static PyObject *__pyx_pf_20find_nonzero_highdim_find_nonzero_highdim(CYTHON_UNU
                 PyObject* exc_type = PyErr_Occurred();
                 if (exc_type) {
                   if (likely(__Pyx_PyErr_GivenExceptionMatches(exc_type, PyExc_StopIteration))) PyErr_Clear();
-                  else __PYX_ERR(0, 172, __pyx_L1_error)
+                  else __PYX_ERR(0, 175, __pyx_L1_error)
                 }
                 break;
               }
               __Pyx_GOTREF(__pyx_t_4);
             }
-            __pyx_t_21 = __Pyx_PyInt_As_int(__pyx_t_4); if (unlikely((__pyx_t_21 == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 172, __pyx_L1_error)
+            __pyx_t_21 = __Pyx_PyInt_As_int(__pyx_t_4); if (unlikely((__pyx_t_21 == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 175, __pyx_L1_error)
             __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
             __pyx_v_at1 = __pyx_t_21;
 
-            /* "find_nonzero_highdim.pyx":173
+            /* "find_nonzero_highdim.pyx":176
  *                     insidecutoff = True
  *                     for at1 in atoms:
  *                         for at2 in atoms:             # <<<<<<<<<<<<<<
@@ -8271,9 +8274,9 @@ static PyObject *__pyx_pf_20find_nonzero_highdim_find_nonzero_highdim(CYTHON_UNU
               __pyx_t_24 = 0;
               __pyx_t_25 = NULL;
             } else {
-              __pyx_t_24 = -1; __pyx_t_4 = PyObject_GetIter(((PyObject *)__pyx_v_atoms)); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 173, __pyx_L1_error)
+              __pyx_t_24 = -1; __pyx_t_4 = PyObject_GetIter(((PyObject *)__pyx_v_atoms)); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 176, __pyx_L1_error)
               __Pyx_GOTREF(__pyx_t_4);
-              __pyx_t_25 = __Pyx_PyObject_GetIterNextFunc(__pyx_t_4); if (unlikely(!__pyx_t_25)) __PYX_ERR(0, 173, __pyx_L1_error)
+              __pyx_t_25 = __Pyx_PyObject_GetIterNextFunc(__pyx_t_4); if (unlikely(!__pyx_t_25)) __PYX_ERR(0, 176, __pyx_L1_error)
             }
             for (;;) {
               if (likely(!__pyx_t_25)) {
@@ -8281,28 +8284,28 @@ static PyObject *__pyx_pf_20find_nonzero_highdim_find_nonzero_highdim(CYTHON_UNU
                   {
                     Py_ssize_t __pyx_temp = __Pyx_PyList_GET_SIZE(__pyx_t_4);
                     #if !CYTHON_ASSUME_SAFE_MACROS
-                    if (unlikely((__pyx_temp < 0))) __PYX_ERR(0, 173, __pyx_L1_error)
+                    if (unlikely((__pyx_temp < 0))) __PYX_ERR(0, 176, __pyx_L1_error)
                     #endif
                     if (__pyx_t_24 >= __pyx_temp) break;
                   }
                   #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
-                  __pyx_t_1 = PyList_GET_ITEM(__pyx_t_4, __pyx_t_24); __Pyx_INCREF(__pyx_t_1); __pyx_t_24++; if (unlikely((0 < 0))) __PYX_ERR(0, 173, __pyx_L1_error)
+                  __pyx_t_1 = PyList_GET_ITEM(__pyx_t_4, __pyx_t_24); __Pyx_INCREF(__pyx_t_1); __pyx_t_24++; if (unlikely((0 < 0))) __PYX_ERR(0, 176, __pyx_L1_error)
                   #else
-                  __pyx_t_1 = __Pyx_PySequence_ITEM(__pyx_t_4, __pyx_t_24); __pyx_t_24++; if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 173, __pyx_L1_error)
+                  __pyx_t_1 = __Pyx_PySequence_ITEM(__pyx_t_4, __pyx_t_24); __pyx_t_24++; if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 176, __pyx_L1_error)
                   __Pyx_GOTREF(__pyx_t_1);
                   #endif
                 } else {
                   {
                     Py_ssize_t __pyx_temp = __Pyx_PyTuple_GET_SIZE(__pyx_t_4);
                     #if !CYTHON_ASSUME_SAFE_MACROS
-                    if (unlikely((__pyx_temp < 0))) __PYX_ERR(0, 173, __pyx_L1_error)
+                    if (unlikely((__pyx_temp < 0))) __PYX_ERR(0, 176, __pyx_L1_error)
                     #endif
                     if (__pyx_t_24 >= __pyx_temp) break;
                   }
                   #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
-                  __pyx_t_1 = PyTuple_GET_ITEM(__pyx_t_4, __pyx_t_24); __Pyx_INCREF(__pyx_t_1); __pyx_t_24++; if (unlikely((0 < 0))) __PYX_ERR(0, 173, __pyx_L1_error)
+                  __pyx_t_1 = PyTuple_GET_ITEM(__pyx_t_4, __pyx_t_24); __Pyx_INCREF(__pyx_t_1); __pyx_t_24++; if (unlikely((0 < 0))) __PYX_ERR(0, 176, __pyx_L1_error)
                   #else
-                  __pyx_t_1 = __Pyx_PySequence_ITEM(__pyx_t_4, __pyx_t_24); __pyx_t_24++; if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 173, __pyx_L1_error)
+                  __pyx_t_1 = __Pyx_PySequence_ITEM(__pyx_t_4, __pyx_t_24); __pyx_t_24++; if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 176, __pyx_L1_error)
                   __Pyx_GOTREF(__pyx_t_1);
                   #endif
                 }
@@ -8312,17 +8315,17 @@ static PyObject *__pyx_pf_20find_nonzero_highdim_find_nonzero_highdim(CYTHON_UNU
                   PyObject* exc_type = PyErr_Occurred();
                   if (exc_type) {
                     if (likely(__Pyx_PyErr_GivenExceptionMatches(exc_type, PyExc_StopIteration))) PyErr_Clear();
-                    else __PYX_ERR(0, 173, __pyx_L1_error)
+                    else __PYX_ERR(0, 176, __pyx_L1_error)
                   }
                   break;
                 }
                 __Pyx_GOTREF(__pyx_t_1);
               }
-              __pyx_t_21 = __Pyx_PyInt_As_int(__pyx_t_1); if (unlikely((__pyx_t_21 == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 173, __pyx_L1_error)
+              __pyx_t_21 = __Pyx_PyInt_As_int(__pyx_t_1); if (unlikely((__pyx_t_21 == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 176, __pyx_L1_error)
               __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
               __pyx_v_at2 = __pyx_t_21;
 
-              /* "find_nonzero_highdim.pyx":174
+              /* "find_nonzero_highdim.pyx":177
  *                     for at1 in atoms:
  *                         for at2 in atoms:
  *                             if dist_array[at1,at2] > dist_cut_twobody:             # <<<<<<<<<<<<<<
@@ -8342,12 +8345,12 @@ static PyObject *__pyx_pf_20find_nonzero_highdim_find_nonzero_highdim(CYTHON_UNU
               } else if (unlikely(__pyx_t_16 >= __pyx_pybuffernd_dist_array.diminfo[1].shape)) __pyx_t_21 = 1;
               if (unlikely(__pyx_t_21 != -1)) {
                 __Pyx_RaiseBufferIndexError(__pyx_t_21);
-                __PYX_ERR(0, 174, __pyx_L1_error)
+                __PYX_ERR(0, 177, __pyx_L1_error)
               }
               __pyx_t_14 = ((*__Pyx_BufPtrStrided2d(__pyx_t_20find_nonzero_highdim_DTYPE_t *, __pyx_pybuffernd_dist_array.rcbuffer->pybuffer.buf, __pyx_t_26, __pyx_pybuffernd_dist_array.diminfo[0].strides, __pyx_t_16, __pyx_pybuffernd_dist_array.diminfo[1].strides)) > __pyx_v_dist_cut_twobody);
               if (__pyx_t_14) {
 
-                /* "find_nonzero_highdim.pyx":175
+                /* "find_nonzero_highdim.pyx":178
  *                         for at2 in atoms:
  *                             if dist_array[at1,at2] > dist_cut_twobody:
  *                                 insidecutoff = False             # <<<<<<<<<<<<<<
@@ -8357,7 +8360,7 @@ static PyObject *__pyx_pf_20find_nonzero_highdim_find_nonzero_highdim(CYTHON_UNU
                 __Pyx_INCREF(Py_False);
                 __Pyx_DECREF_SET(__pyx_v_insidecutoff, ((PyBoolObject *)Py_False));
 
-                /* "find_nonzero_highdim.pyx":176
+                /* "find_nonzero_highdim.pyx":179
  *                             if dist_array[at1,at2] > dist_cut_twobody:
  *                                 insidecutoff = False
  *                                 break             # <<<<<<<<<<<<<<
@@ -8366,7 +8369,7 @@ static PyObject *__pyx_pf_20find_nonzero_highdim_find_nonzero_highdim(CYTHON_UNU
  */
                 goto __pyx_L32_break;
 
-                /* "find_nonzero_highdim.pyx":174
+                /* "find_nonzero_highdim.pyx":177
  *                     for at1 in atoms:
  *                         for at2 in atoms:
  *                             if dist_array[at1,at2] > dist_cut_twobody:             # <<<<<<<<<<<<<<
@@ -8375,7 +8378,7 @@ static PyObject *__pyx_pf_20find_nonzero_highdim_find_nonzero_highdim(CYTHON_UNU
  */
               }
 
-              /* "find_nonzero_highdim.pyx":173
+              /* "find_nonzero_highdim.pyx":176
  *                     insidecutoff = True
  *                     for at1 in atoms:
  *                         for at2 in atoms:             # <<<<<<<<<<<<<<
@@ -8390,19 +8393,19 @@ static PyObject *__pyx_pf_20find_nonzero_highdim_find_nonzero_highdim(CYTHON_UNU
             goto __pyx_L34_for_end;
             __pyx_L34_for_end:;
 
-            /* "find_nonzero_highdim.pyx":177
+            /* "find_nonzero_highdim.pyx":180
  *                                 insidecutoff = False
  *                                 break
  *                         if insidecutoff == False:             # <<<<<<<<<<<<<<
  *                             break
  * 
  */
-            __pyx_t_4 = PyObject_RichCompare(((PyObject *)__pyx_v_insidecutoff), Py_False, Py_EQ); __Pyx_XGOTREF(__pyx_t_4); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 177, __pyx_L1_error)
-            __pyx_t_14 = __Pyx_PyObject_IsTrue(__pyx_t_4); if (unlikely((__pyx_t_14 < 0))) __PYX_ERR(0, 177, __pyx_L1_error)
+            __pyx_t_4 = PyObject_RichCompare(((PyObject *)__pyx_v_insidecutoff), Py_False, Py_EQ); __Pyx_XGOTREF(__pyx_t_4); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 180, __pyx_L1_error)
+            __pyx_t_14 = __Pyx_PyObject_IsTrue(__pyx_t_4); if (unlikely((__pyx_t_14 < 0))) __PYX_ERR(0, 180, __pyx_L1_error)
             __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
             if (__pyx_t_14) {
 
-              /* "find_nonzero_highdim.pyx":178
+              /* "find_nonzero_highdim.pyx":181
  *                                 break
  *                         if insidecutoff == False:
  *                             break             # <<<<<<<<<<<<<<
@@ -8411,7 +8414,7 @@ static PyObject *__pyx_pf_20find_nonzero_highdim_find_nonzero_highdim(CYTHON_UNU
  */
               goto __pyx_L30_break;
 
-              /* "find_nonzero_highdim.pyx":177
+              /* "find_nonzero_highdim.pyx":180
  *                                 insidecutoff = False
  *                                 break
  *                         if insidecutoff == False:             # <<<<<<<<<<<<<<
@@ -8420,7 +8423,7 @@ static PyObject *__pyx_pf_20find_nonzero_highdim_find_nonzero_highdim(CYTHON_UNU
  */
             }
 
-            /* "find_nonzero_highdim.pyx":172
+            /* "find_nonzero_highdim.pyx":175
  *                 if body <= 2 and insidecutoff == False:
  *                     insidecutoff = True
  *                     for at1 in atoms:             # <<<<<<<<<<<<<<
@@ -8435,7 +8438,7 @@ static PyObject *__pyx_pf_20find_nonzero_highdim_find_nonzero_highdim(CYTHON_UNU
           goto __pyx_L36_for_end;
           __pyx_L36_for_end:;
 
-          /* "find_nonzero_highdim.pyx":170
+          /* "find_nonzero_highdim.pyx":173
  *                         break
  * 
  *                 if body <= 2 and insidecutoff == False:             # <<<<<<<<<<<<<<
@@ -8444,19 +8447,19 @@ static PyObject *__pyx_pf_20find_nonzero_highdim_find_nonzero_highdim(CYTHON_UNU
  */
         }
 
-        /* "find_nonzero_highdim.pyx":182
+        /* "find_nonzero_highdim.pyx":185
  * 
  * 
  *                 if insidecutoff == False:             # <<<<<<<<<<<<<<
  *                     continue
  * 
  */
-        __pyx_t_2 = PyObject_RichCompare(((PyObject *)__pyx_v_insidecutoff), Py_False, Py_EQ); __Pyx_XGOTREF(__pyx_t_2); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 182, __pyx_L1_error)
-        __pyx_t_14 = __Pyx_PyObject_IsTrue(__pyx_t_2); if (unlikely((__pyx_t_14 < 0))) __PYX_ERR(0, 182, __pyx_L1_error)
+        __pyx_t_2 = PyObject_RichCompare(((PyObject *)__pyx_v_insidecutoff), Py_False, Py_EQ); __Pyx_XGOTREF(__pyx_t_2); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 185, __pyx_L1_error)
+        __pyx_t_14 = __Pyx_PyObject_IsTrue(__pyx_t_2); if (unlikely((__pyx_t_14 < 0))) __PYX_ERR(0, 185, __pyx_L1_error)
         __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
         if (__pyx_t_14) {
 
-          /* "find_nonzero_highdim.pyx":183
+          /* "find_nonzero_highdim.pyx":186
  * 
  *                 if insidecutoff == False:
  *                     continue             # <<<<<<<<<<<<<<
@@ -8465,7 +8468,7 @@ static PyObject *__pyx_pf_20find_nonzero_highdim_find_nonzero_highdim(CYTHON_UNU
  */
           goto __pyx_L14_continue;
 
-          /* "find_nonzero_highdim.pyx":182
+          /* "find_nonzero_highdim.pyx":185
  * 
  * 
  *                 if insidecutoff == False:             # <<<<<<<<<<<<<<
@@ -8474,7 +8477,7 @@ static PyObject *__pyx_pf_20find_nonzero_highdim_find_nonzero_highdim(CYTHON_UNU
  */
         }
 
-        /* "find_nonzero_highdim.pyx":155
+        /* "find_nonzero_highdim.pyx":158
  *             #We found sets of atoms near the first atom, now check that entire group is within cutoff.
  *             insidecutoff = True
  *             if dim > 1:             # <<<<<<<<<<<<<<
@@ -8483,17 +8486,17 @@ static PyObject *__pyx_pf_20find_nonzero_highdim_find_nonzero_highdim(CYTHON_UNU
  */
       }
 
-      /* "find_nonzero_highdim.pyx":186
+      /* "find_nonzero_highdim.pyx":189
  * 
  * 
  *             a = atom_index_inv(atoms,natsuper) #inverse transform to get the index the rest of the code uses             # <<<<<<<<<<<<<<
  *             atomlist[nonzero_atoms,0] = a
  *             atomlist[nonzero_atoms,1:] = atoms
  */
-      __pyx_t_21 = __pyx_f_20find_nonzero_highdim_atom_index_inv(((PyArrayObject *)__pyx_v_atoms), __pyx_v_natsuper); if (unlikely(__pyx_t_21 == ((int)-1) && PyErr_Occurred())) __PYX_ERR(0, 186, __pyx_L1_error)
+      __pyx_t_21 = __pyx_f_20find_nonzero_highdim_atom_index_inv(((PyArrayObject *)__pyx_v_atoms), __pyx_v_natsuper); if (unlikely(__pyx_t_21 == ((int)-1) && PyErr_Occurred())) __PYX_ERR(0, 189, __pyx_L1_error)
       __pyx_v_a = __pyx_t_21;
 
-      /* "find_nonzero_highdim.pyx":187
+      /* "find_nonzero_highdim.pyx":190
  * 
  *             a = atom_index_inv(atoms,natsuper) #inverse transform to get the index the rest of the code uses
  *             atomlist[nonzero_atoms,0] = a             # <<<<<<<<<<<<<<
@@ -8513,31 +8516,31 @@ static PyObject *__pyx_pf_20find_nonzero_highdim_find_nonzero_highdim(CYTHON_UNU
       } else if (unlikely(__pyx_t_26 >= __pyx_pybuffernd_atomlist.diminfo[1].shape)) __pyx_t_21 = 1;
       if (unlikely(__pyx_t_21 != -1)) {
         __Pyx_RaiseBufferIndexError(__pyx_t_21);
-        __PYX_ERR(0, 187, __pyx_L1_error)
+        __PYX_ERR(0, 190, __pyx_L1_error)
       }
       *__Pyx_BufPtrStrided2d(__pyx_t_20find_nonzero_highdim_DTYPE_int_t *, __pyx_pybuffernd_atomlist.rcbuffer->pybuffer.buf, __pyx_t_16, __pyx_pybuffernd_atomlist.diminfo[0].strides, __pyx_t_26, __pyx_pybuffernd_atomlist.diminfo[1].strides) = __pyx_v_a;
 
-      /* "find_nonzero_highdim.pyx":188
+      /* "find_nonzero_highdim.pyx":191
  *             a = atom_index_inv(atoms,natsuper) #inverse transform to get the index the rest of the code uses
  *             atomlist[nonzero_atoms,0] = a
  *             atomlist[nonzero_atoms,1:] = atoms             # <<<<<<<<<<<<<<
  *             nonzero_atoms += 1
  * 
  */
-      __pyx_t_2 = __Pyx_PyInt_From_int(__pyx_v_nonzero_atoms); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 188, __pyx_L1_error)
+      __pyx_t_2 = __Pyx_PyInt_From_int(__pyx_v_nonzero_atoms); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 191, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_2);
-      __pyx_t_4 = PyTuple_New(2); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 188, __pyx_L1_error)
+      __pyx_t_4 = PyTuple_New(2); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 191, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_4);
       __Pyx_GIVEREF(__pyx_t_2);
-      if (__Pyx_PyTuple_SET_ITEM(__pyx_t_4, 0, __pyx_t_2)) __PYX_ERR(0, 188, __pyx_L1_error);
+      if (__Pyx_PyTuple_SET_ITEM(__pyx_t_4, 0, __pyx_t_2)) __PYX_ERR(0, 191, __pyx_L1_error);
       __Pyx_INCREF(__pyx_slice__5);
       __Pyx_GIVEREF(__pyx_slice__5);
-      if (__Pyx_PyTuple_SET_ITEM(__pyx_t_4, 1, __pyx_slice__5)) __PYX_ERR(0, 188, __pyx_L1_error);
+      if (__Pyx_PyTuple_SET_ITEM(__pyx_t_4, 1, __pyx_slice__5)) __PYX_ERR(0, 191, __pyx_L1_error);
       __pyx_t_2 = 0;
-      if (unlikely((PyObject_SetItem(((PyObject *)__pyx_v_atomlist), __pyx_t_4, ((PyObject *)__pyx_v_atoms)) < 0))) __PYX_ERR(0, 188, __pyx_L1_error)
+      if (unlikely((PyObject_SetItem(((PyObject *)__pyx_v_atomlist), __pyx_t_4, ((PyObject *)__pyx_v_atoms)) < 0))) __PYX_ERR(0, 191, __pyx_L1_error)
       __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-      /* "find_nonzero_highdim.pyx":189
+      /* "find_nonzero_highdim.pyx":192
  *             atomlist[nonzero_atoms,0] = a
  *             atomlist[nonzero_atoms,1:] = atoms
  *             nonzero_atoms += 1             # <<<<<<<<<<<<<<
@@ -8546,7 +8549,7 @@ static PyObject *__pyx_pf_20find_nonzero_highdim_find_nonzero_highdim(CYTHON_UNU
  */
       __pyx_v_nonzero_atoms = (__pyx_v_nonzero_atoms + 1);
 
-      /* "find_nonzero_highdim.pyx":191
+      /* "find_nonzero_highdim.pyx":194
  *             nonzero_atoms += 1
  * 
  *             if nonzero_atoms >= mem: #check if we are running out of memory             # <<<<<<<<<<<<<<
@@ -8556,7 +8559,7 @@ static PyObject *__pyx_pf_20find_nonzero_highdim_find_nonzero_highdim(CYTHON_UNU
       __pyx_t_14 = (__pyx_v_nonzero_atoms >= __pyx_v_mem);
       if (__pyx_t_14) {
 
-        /* "find_nonzero_highdim.pyx":192
+        /* "find_nonzero_highdim.pyx":195
  * 
  *             if nonzero_atoms >= mem: #check if we are running out of memory
  *                 mem = mem * 2             # <<<<<<<<<<<<<<
@@ -8565,47 +8568,47 @@ static PyObject *__pyx_pf_20find_nonzero_highdim_find_nonzero_highdim(CYTHON_UNU
  */
         __pyx_v_mem = (__pyx_v_mem * 2);
 
-        /* "find_nonzero_highdim.pyx":193
+        /* "find_nonzero_highdim.pyx":196
  *             if nonzero_atoms >= mem: #check if we are running out of memory
  *                 mem = mem * 2
  *                 atomlist1 = np.zeros((mem,dim+1),dtype=DTYPE_int)             # <<<<<<<<<<<<<<
  *                 atomlist1[0:nonzero_atoms,:] = atomlist[0:nonzero_atoms,:]
  *                 atomlist = atomlist1
  */
-        __Pyx_GetModuleGlobalName(__pyx_t_4, __pyx_n_s_np); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 193, __pyx_L1_error)
+        __Pyx_GetModuleGlobalName(__pyx_t_4, __pyx_n_s_np); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 196, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_4);
-        __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_zeros); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 193, __pyx_L1_error)
+        __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_zeros); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 196, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_2);
         __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-        __pyx_t_4 = __Pyx_PyInt_From_int(__pyx_v_mem); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 193, __pyx_L1_error)
+        __pyx_t_4 = __Pyx_PyInt_From_int(__pyx_v_mem); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 196, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_4);
-        __pyx_t_1 = __Pyx_PyInt_From_long((__pyx_v_dim + 1)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 193, __pyx_L1_error)
+        __pyx_t_1 = __Pyx_PyInt_From_long((__pyx_v_dim + 1)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 196, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_1);
-        __pyx_t_3 = PyTuple_New(2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 193, __pyx_L1_error)
+        __pyx_t_3 = PyTuple_New(2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 196, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_3);
         __Pyx_GIVEREF(__pyx_t_4);
-        if (__Pyx_PyTuple_SET_ITEM(__pyx_t_3, 0, __pyx_t_4)) __PYX_ERR(0, 193, __pyx_L1_error);
+        if (__Pyx_PyTuple_SET_ITEM(__pyx_t_3, 0, __pyx_t_4)) __PYX_ERR(0, 196, __pyx_L1_error);
         __Pyx_GIVEREF(__pyx_t_1);
-        if (__Pyx_PyTuple_SET_ITEM(__pyx_t_3, 1, __pyx_t_1)) __PYX_ERR(0, 193, __pyx_L1_error);
+        if (__Pyx_PyTuple_SET_ITEM(__pyx_t_3, 1, __pyx_t_1)) __PYX_ERR(0, 196, __pyx_L1_error);
         __pyx_t_4 = 0;
         __pyx_t_1 = 0;
-        __pyx_t_1 = PyTuple_New(1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 193, __pyx_L1_error)
+        __pyx_t_1 = PyTuple_New(1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 196, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_1);
         __Pyx_GIVEREF(__pyx_t_3);
-        if (__Pyx_PyTuple_SET_ITEM(__pyx_t_1, 0, __pyx_t_3)) __PYX_ERR(0, 193, __pyx_L1_error);
+        if (__Pyx_PyTuple_SET_ITEM(__pyx_t_1, 0, __pyx_t_3)) __PYX_ERR(0, 196, __pyx_L1_error);
         __pyx_t_3 = 0;
-        __pyx_t_3 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 193, __pyx_L1_error)
+        __pyx_t_3 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 196, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_3);
-        __Pyx_GetModuleGlobalName(__pyx_t_4, __pyx_n_s_DTYPE_int); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 193, __pyx_L1_error)
+        __Pyx_GetModuleGlobalName(__pyx_t_4, __pyx_n_s_DTYPE_int); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 196, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_4);
-        if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_dtype, __pyx_t_4) < 0) __PYX_ERR(0, 193, __pyx_L1_error)
+        if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_dtype, __pyx_t_4) < 0) __PYX_ERR(0, 196, __pyx_L1_error)
         __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-        __pyx_t_4 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_t_1, __pyx_t_3); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 193, __pyx_L1_error)
+        __pyx_t_4 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_t_1, __pyx_t_3); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 196, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_4);
         __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
         __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
         __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-        if (!(likely(((__pyx_t_4) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_4, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 193, __pyx_L1_error)
+        if (!(likely(((__pyx_t_4) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_4, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 196, __pyx_L1_error)
         __pyx_t_27 = ((PyArrayObject *)__pyx_t_4);
         {
           __Pyx_BufFmt_StackElem __pyx_stack[1];
@@ -8622,53 +8625,53 @@ static PyObject *__pyx_pf_20find_nonzero_highdim_find_nonzero_highdim(CYTHON_UNU
             __pyx_t_28 = __pyx_t_29 = __pyx_t_30 = 0;
           }
           __pyx_pybuffernd_atomlist1.diminfo[0].strides = __pyx_pybuffernd_atomlist1.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_atomlist1.diminfo[0].shape = __pyx_pybuffernd_atomlist1.rcbuffer->pybuffer.shape[0]; __pyx_pybuffernd_atomlist1.diminfo[1].strides = __pyx_pybuffernd_atomlist1.rcbuffer->pybuffer.strides[1]; __pyx_pybuffernd_atomlist1.diminfo[1].shape = __pyx_pybuffernd_atomlist1.rcbuffer->pybuffer.shape[1];
-          if (unlikely((__pyx_t_21 < 0))) __PYX_ERR(0, 193, __pyx_L1_error)
+          if (unlikely((__pyx_t_21 < 0))) __PYX_ERR(0, 196, __pyx_L1_error)
         }
         __pyx_t_27 = 0;
         __Pyx_XDECREF_SET(__pyx_v_atomlist1, ((PyArrayObject *)__pyx_t_4));
         __pyx_t_4 = 0;
 
-        /* "find_nonzero_highdim.pyx":194
+        /* "find_nonzero_highdim.pyx":197
  *                 mem = mem * 2
  *                 atomlist1 = np.zeros((mem,dim+1),dtype=DTYPE_int)
  *                 atomlist1[0:nonzero_atoms,:] = atomlist[0:nonzero_atoms,:]             # <<<<<<<<<<<<<<
  *                 atomlist = atomlist1
  * 
  */
-        __pyx_t_4 = __Pyx_PyInt_From_int(__pyx_v_nonzero_atoms); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 194, __pyx_L1_error)
+        __pyx_t_4 = __Pyx_PyInt_From_int(__pyx_v_nonzero_atoms); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 197, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_4);
-        __pyx_t_3 = PySlice_New(__pyx_int_0, __pyx_t_4, Py_None); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 194, __pyx_L1_error)
+        __pyx_t_3 = PySlice_New(__pyx_int_0, __pyx_t_4, Py_None); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 197, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_3);
         __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-        __pyx_t_4 = PyTuple_New(2); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 194, __pyx_L1_error)
+        __pyx_t_4 = PyTuple_New(2); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 197, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_4);
         __Pyx_GIVEREF(__pyx_t_3);
-        if (__Pyx_PyTuple_SET_ITEM(__pyx_t_4, 0, __pyx_t_3)) __PYX_ERR(0, 194, __pyx_L1_error);
+        if (__Pyx_PyTuple_SET_ITEM(__pyx_t_4, 0, __pyx_t_3)) __PYX_ERR(0, 197, __pyx_L1_error);
         __Pyx_INCREF(__pyx_slice__6);
         __Pyx_GIVEREF(__pyx_slice__6);
-        if (__Pyx_PyTuple_SET_ITEM(__pyx_t_4, 1, __pyx_slice__6)) __PYX_ERR(0, 194, __pyx_L1_error);
+        if (__Pyx_PyTuple_SET_ITEM(__pyx_t_4, 1, __pyx_slice__6)) __PYX_ERR(0, 197, __pyx_L1_error);
         __pyx_t_3 = 0;
-        __pyx_t_3 = __Pyx_PyObject_GetItem(((PyObject *)__pyx_v_atomlist), __pyx_t_4); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 194, __pyx_L1_error)
+        __pyx_t_3 = __Pyx_PyObject_GetItem(((PyObject *)__pyx_v_atomlist), __pyx_t_4); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 197, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_3);
         __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-        __pyx_t_4 = __Pyx_PyInt_From_int(__pyx_v_nonzero_atoms); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 194, __pyx_L1_error)
+        __pyx_t_4 = __Pyx_PyInt_From_int(__pyx_v_nonzero_atoms); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 197, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_4);
-        __pyx_t_1 = PySlice_New(__pyx_int_0, __pyx_t_4, Py_None); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 194, __pyx_L1_error)
+        __pyx_t_1 = PySlice_New(__pyx_int_0, __pyx_t_4, Py_None); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 197, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_1);
         __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-        __pyx_t_4 = PyTuple_New(2); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 194, __pyx_L1_error)
+        __pyx_t_4 = PyTuple_New(2); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 197, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_4);
         __Pyx_GIVEREF(__pyx_t_1);
-        if (__Pyx_PyTuple_SET_ITEM(__pyx_t_4, 0, __pyx_t_1)) __PYX_ERR(0, 194, __pyx_L1_error);
+        if (__Pyx_PyTuple_SET_ITEM(__pyx_t_4, 0, __pyx_t_1)) __PYX_ERR(0, 197, __pyx_L1_error);
         __Pyx_INCREF(__pyx_slice__6);
         __Pyx_GIVEREF(__pyx_slice__6);
-        if (__Pyx_PyTuple_SET_ITEM(__pyx_t_4, 1, __pyx_slice__6)) __PYX_ERR(0, 194, __pyx_L1_error);
+        if (__Pyx_PyTuple_SET_ITEM(__pyx_t_4, 1, __pyx_slice__6)) __PYX_ERR(0, 197, __pyx_L1_error);
         __pyx_t_1 = 0;
-        if (unlikely((PyObject_SetItem(((PyObject *)__pyx_v_atomlist1), __pyx_t_4, __pyx_t_3) < 0))) __PYX_ERR(0, 194, __pyx_L1_error)
+        if (unlikely((PyObject_SetItem(((PyObject *)__pyx_v_atomlist1), __pyx_t_4, __pyx_t_3) < 0))) __PYX_ERR(0, 197, __pyx_L1_error)
         __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
         __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-        /* "find_nonzero_highdim.pyx":195
+        /* "find_nonzero_highdim.pyx":198
  *                 atomlist1 = np.zeros((mem,dim+1),dtype=DTYPE_int)
  *                 atomlist1[0:nonzero_atoms,:] = atomlist[0:nonzero_atoms,:]
  *                 atomlist = atomlist1             # <<<<<<<<<<<<<<
@@ -8690,12 +8693,12 @@ static PyObject *__pyx_pf_20find_nonzero_highdim_find_nonzero_highdim(CYTHON_UNU
             __pyx_t_30 = __pyx_t_29 = __pyx_t_28 = 0;
           }
           __pyx_pybuffernd_atomlist.diminfo[0].strides = __pyx_pybuffernd_atomlist.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_atomlist.diminfo[0].shape = __pyx_pybuffernd_atomlist.rcbuffer->pybuffer.shape[0]; __pyx_pybuffernd_atomlist.diminfo[1].strides = __pyx_pybuffernd_atomlist.rcbuffer->pybuffer.strides[1]; __pyx_pybuffernd_atomlist.diminfo[1].shape = __pyx_pybuffernd_atomlist.rcbuffer->pybuffer.shape[1];
-          if (unlikely((__pyx_t_21 < 0))) __PYX_ERR(0, 195, __pyx_L1_error)
+          if (unlikely((__pyx_t_21 < 0))) __PYX_ERR(0, 198, __pyx_L1_error)
         }
         __Pyx_INCREF((PyObject *)__pyx_v_atomlist1);
         __Pyx_DECREF_SET(__pyx_v_atomlist, ((PyArrayObject *)__pyx_v_atomlist1));
 
-        /* "find_nonzero_highdim.pyx":191
+        /* "find_nonzero_highdim.pyx":194
  *             nonzero_atoms += 1
  * 
  *             if nonzero_atoms >= mem: #check if we are running out of memory             # <<<<<<<<<<<<<<
@@ -8707,51 +8710,51 @@ static PyObject *__pyx_pf_20find_nonzero_highdim_find_nonzero_highdim(CYTHON_UNU
     }
   }
 
-  /* "find_nonzero_highdim.pyx":198
+  /* "find_nonzero_highdim.pyx":201
  * 
  * 
  *     compactlist = np.array(atomlist[0:nonzero_atoms, :],dtype=DTYPE_int)             # <<<<<<<<<<<<<<
  * 
  *     return [nonzero_atoms,compactlist]
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_np); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 198, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_np); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 201, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_array); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 198, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_array); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 201, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  __pyx_t_3 = __Pyx_PyInt_From_int(__pyx_v_nonzero_atoms); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 198, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyInt_From_int(__pyx_v_nonzero_atoms); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 201, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  __pyx_t_1 = PySlice_New(__pyx_int_0, __pyx_t_3, Py_None); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 198, __pyx_L1_error)
+  __pyx_t_1 = PySlice_New(__pyx_int_0, __pyx_t_3, Py_None); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 201, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  __pyx_t_3 = PyTuple_New(2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 198, __pyx_L1_error)
+  __pyx_t_3 = PyTuple_New(2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 201, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_GIVEREF(__pyx_t_1);
-  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_3, 0, __pyx_t_1)) __PYX_ERR(0, 198, __pyx_L1_error);
+  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_3, 0, __pyx_t_1)) __PYX_ERR(0, 201, __pyx_L1_error);
   __Pyx_INCREF(__pyx_slice__6);
   __Pyx_GIVEREF(__pyx_slice__6);
-  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_3, 1, __pyx_slice__6)) __PYX_ERR(0, 198, __pyx_L1_error);
+  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_3, 1, __pyx_slice__6)) __PYX_ERR(0, 201, __pyx_L1_error);
   __pyx_t_1 = 0;
-  __pyx_t_1 = __Pyx_PyObject_GetItem(((PyObject *)__pyx_v_atomlist), __pyx_t_3); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 198, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_GetItem(((PyObject *)__pyx_v_atomlist), __pyx_t_3); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 201, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  __pyx_t_3 = PyTuple_New(1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 198, __pyx_L1_error)
+  __pyx_t_3 = PyTuple_New(1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 201, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_GIVEREF(__pyx_t_1);
-  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_3, 0, __pyx_t_1)) __PYX_ERR(0, 198, __pyx_L1_error);
+  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_3, 0, __pyx_t_1)) __PYX_ERR(0, 201, __pyx_L1_error);
   __pyx_t_1 = 0;
-  __pyx_t_1 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 198, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 201, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_DTYPE_int); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 198, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_DTYPE_int); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 201, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  if (PyDict_SetItem(__pyx_t_1, __pyx_n_s_dtype, __pyx_t_2) < 0) __PYX_ERR(0, 198, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_1, __pyx_n_s_dtype, __pyx_t_2) < 0) __PYX_ERR(0, 201, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  __pyx_t_2 = __Pyx_PyObject_Call(__pyx_t_4, __pyx_t_3, __pyx_t_1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 198, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_Call(__pyx_t_4, __pyx_t_3, __pyx_t_1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 201, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  if (!(likely(((__pyx_t_2) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_2, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 198, __pyx_L1_error)
+  if (!(likely(((__pyx_t_2) == Py_None) || likely(__Pyx_TypeTest(__pyx_t_2, __pyx_ptype_5numpy_ndarray))))) __PYX_ERR(0, 201, __pyx_L1_error)
   __pyx_t_31 = ((PyArrayObject *)__pyx_t_2);
   {
     __Pyx_BufFmt_StackElem __pyx_stack[1];
@@ -8768,33 +8771,33 @@ static PyObject *__pyx_pf_20find_nonzero_highdim_find_nonzero_highdim(CYTHON_UNU
       __pyx_t_28 = __pyx_t_29 = __pyx_t_30 = 0;
     }
     __pyx_pybuffernd_compactlist.diminfo[0].strides = __pyx_pybuffernd_compactlist.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_compactlist.diminfo[0].shape = __pyx_pybuffernd_compactlist.rcbuffer->pybuffer.shape[0]; __pyx_pybuffernd_compactlist.diminfo[1].strides = __pyx_pybuffernd_compactlist.rcbuffer->pybuffer.strides[1]; __pyx_pybuffernd_compactlist.diminfo[1].shape = __pyx_pybuffernd_compactlist.rcbuffer->pybuffer.shape[1];
-    if (unlikely((__pyx_t_8 < 0))) __PYX_ERR(0, 198, __pyx_L1_error)
+    if (unlikely((__pyx_t_8 < 0))) __PYX_ERR(0, 201, __pyx_L1_error)
   }
   __pyx_t_31 = 0;
   __pyx_v_compactlist = ((PyArrayObject *)__pyx_t_2);
   __pyx_t_2 = 0;
 
-  /* "find_nonzero_highdim.pyx":200
+  /* "find_nonzero_highdim.pyx":203
  *     compactlist = np.array(atomlist[0:nonzero_atoms, :],dtype=DTYPE_int)
  * 
  *     return [nonzero_atoms,compactlist]             # <<<<<<<<<<<<<<
  */
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_2 = __Pyx_PyInt_From_int(__pyx_v_nonzero_atoms); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 200, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyInt_From_int(__pyx_v_nonzero_atoms); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 203, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_1 = PyList_New(2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 200, __pyx_L1_error)
+  __pyx_t_1 = PyList_New(2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 203, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_GIVEREF(__pyx_t_2);
-  if (__Pyx_PyList_SET_ITEM(__pyx_t_1, 0, __pyx_t_2)) __PYX_ERR(0, 200, __pyx_L1_error);
+  if (__Pyx_PyList_SET_ITEM(__pyx_t_1, 0, __pyx_t_2)) __PYX_ERR(0, 203, __pyx_L1_error);
   __Pyx_INCREF((PyObject *)__pyx_v_compactlist);
   __Pyx_GIVEREF((PyObject *)__pyx_v_compactlist);
-  if (__Pyx_PyList_SET_ITEM(__pyx_t_1, 1, ((PyObject *)__pyx_v_compactlist))) __PYX_ERR(0, 200, __pyx_L1_error);
+  if (__Pyx_PyList_SET_ITEM(__pyx_t_1, 1, ((PyObject *)__pyx_v_compactlist))) __PYX_ERR(0, 203, __pyx_L1_error);
   __pyx_t_2 = 0;
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "find_nonzero_highdim.pyx":61
+  /* "find_nonzero_highdim.pyx":64
  * 
  * 
  * def find_nonzero_highdim( phiobj, int dim, float dist_cutoff, int bodycount, float dist_cut_twobody):             # <<<<<<<<<<<<<<
@@ -8936,8 +8939,8 @@ static int __Pyx_CreateStringTabAndInitStrings(void) {
 }
 /* #### Code section: cached_builtins ### */
 static CYTHON_SMALL_CODE int __Pyx_InitCachedBuiltins(void) {
-  __pyx_builtin_print = __Pyx_GetBuiltinName(__pyx_n_s_print); if (!__pyx_builtin_print) __PYX_ERR(0, 57, __pyx_L1_error)
-  __pyx_builtin_range = __Pyx_GetBuiltinName(__pyx_n_s_range); if (!__pyx_builtin_range) __PYX_ERR(0, 91, __pyx_L1_error)
+  __pyx_builtin_print = __Pyx_GetBuiltinName(__pyx_n_s_print); if (!__pyx_builtin_print) __PYX_ERR(0, 60, __pyx_L1_error)
+  __pyx_builtin_range = __Pyx_GetBuiltinName(__pyx_n_s_range); if (!__pyx_builtin_range) __PYX_ERR(0, 94, __pyx_L1_error)
   __pyx_builtin_ImportError = __Pyx_GetBuiltinName(__pyx_n_s_ImportError); if (!__pyx_builtin_ImportError) __PYX_ERR(1, 984, __pyx_L1_error)
   return 0;
   __pyx_L1_error:;
@@ -8949,7 +8952,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("__Pyx_InitCachedConstants", 0);
 
-  /* "../../../miniconda3/lib/python3.9/site-packages/numpy/__init__.cython-30.pxd":984
+  /* "../../../../../home1/cpark21/.local/lib/python3.9/site-packages/numpy/__init__.cython-30.pxd":984
  *         __pyx_import_array()
  *     except Exception:
  *         raise ImportError("numpy.core.multiarray failed to import")             # <<<<<<<<<<<<<<
@@ -8960,7 +8963,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple_);
   __Pyx_GIVEREF(__pyx_tuple_);
 
-  /* "../../../miniconda3/lib/python3.9/site-packages/numpy/__init__.cython-30.pxd":990
+  /* "../../../../../home1/cpark21/.local/lib/python3.9/site-packages/numpy/__init__.cython-30.pxd":990
  *         _import_umath()
  *     except Exception:
  *         raise ImportError("numpy.core.umath failed to import")             # <<<<<<<<<<<<<<
@@ -8971,61 +8974,61 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__2);
   __Pyx_GIVEREF(__pyx_tuple__2);
 
-  /* "find_nonzero_highdim.pyx":57
+  /* "find_nonzero_highdim.pyx":60
  *         ret = a[0]*nat*nat*nat*nat*nat*nat*nat+a[1]*nat*nat*nat*nat*nat*nat+a[2]*nat*nat*nat*nat*nat+a[3]*nat*nat*nat*nat+a[4]*nat*nat*nat+a[5]*nat*nat+a[6]*nat+a[7]
  *     else:
  *         print('index not currently implmented atom_index_inv find_nonzero_highdim.pyx')             # <<<<<<<<<<<<<<
  *     return ret
  * 
  */
-  __pyx_tuple__3 = PyTuple_Pack(1, __pyx_kp_s_index_not_currently_implmented_a); if (unlikely(!__pyx_tuple__3)) __PYX_ERR(0, 57, __pyx_L1_error)
+  __pyx_tuple__3 = PyTuple_Pack(1, __pyx_kp_s_index_not_currently_implmented_a); if (unlikely(!__pyx_tuple__3)) __PYX_ERR(0, 60, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__3);
   __Pyx_GIVEREF(__pyx_tuple__3);
 
-  /* "find_nonzero_highdim.pyx":103
+  /* "find_nonzero_highdim.pyx":106
  * 
  *     if phiobj.verbosity == 'High':
  *         print('dim_allowed')             # <<<<<<<<<<<<<<
  *         print(dim_allowed)
  * #    print 'at_list'
  */
-  __pyx_tuple__4 = PyTuple_Pack(1, __pyx_n_s_dim_allowed); if (unlikely(!__pyx_tuple__4)) __PYX_ERR(0, 103, __pyx_L1_error)
+  __pyx_tuple__4 = PyTuple_Pack(1, __pyx_n_s_dim_allowed); if (unlikely(!__pyx_tuple__4)) __PYX_ERR(0, 106, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__4);
   __Pyx_GIVEREF(__pyx_tuple__4);
 
-  /* "find_nonzero_highdim.pyx":188
+  /* "find_nonzero_highdim.pyx":191
  *             a = atom_index_inv(atoms,natsuper) #inverse transform to get the index the rest of the code uses
  *             atomlist[nonzero_atoms,0] = a
  *             atomlist[nonzero_atoms,1:] = atoms             # <<<<<<<<<<<<<<
  *             nonzero_atoms += 1
  * 
  */
-  __pyx_slice__5 = PySlice_New(__pyx_int_1, Py_None, Py_None); if (unlikely(!__pyx_slice__5)) __PYX_ERR(0, 188, __pyx_L1_error)
+  __pyx_slice__5 = PySlice_New(__pyx_int_1, Py_None, Py_None); if (unlikely(!__pyx_slice__5)) __PYX_ERR(0, 191, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_slice__5);
   __Pyx_GIVEREF(__pyx_slice__5);
 
-  /* "find_nonzero_highdim.pyx":194
+  /* "find_nonzero_highdim.pyx":197
  *                 mem = mem * 2
  *                 atomlist1 = np.zeros((mem,dim+1),dtype=DTYPE_int)
  *                 atomlist1[0:nonzero_atoms,:] = atomlist[0:nonzero_atoms,:]             # <<<<<<<<<<<<<<
  *                 atomlist = atomlist1
  * 
  */
-  __pyx_slice__6 = PySlice_New(Py_None, Py_None, Py_None); if (unlikely(!__pyx_slice__6)) __PYX_ERR(0, 194, __pyx_L1_error)
+  __pyx_slice__6 = PySlice_New(Py_None, Py_None, Py_None); if (unlikely(!__pyx_slice__6)) __PYX_ERR(0, 197, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_slice__6);
   __Pyx_GIVEREF(__pyx_slice__6);
 
-  /* "find_nonzero_highdim.pyx":61
+  /* "find_nonzero_highdim.pyx":64
  * 
  * 
  * def find_nonzero_highdim( phiobj, int dim, float dist_cutoff, int bodycount, float dist_cut_twobody):             # <<<<<<<<<<<<<<
  * #Find the atom combinations of a given dimension that are within a cutoff radius
  * 
  */
-  __pyx_tuple__9 = PyTuple_Pack(26, __pyx_n_s_phiobj, __pyx_n_s_dim, __pyx_n_s_dist_cutoff, __pyx_n_s_bodycount, __pyx_n_s_dist_cut_twobody, __pyx_n_s_dist_array, __pyx_n_s_atomlist, __pyx_n_s_atomlist1, __pyx_n_s_compactlist, __pyx_n_s_atoms, __pyx_n_s_nat, __pyx_n_s_nonzero_atoms, __pyx_n_s_a, __pyx_n_s_i, __pyx_n_s_at_prim, __pyx_n_s_d, __pyx_n_s_natsuper, __pyx_n_s_current, __pyx_n_s_insidecutoff, __pyx_n_s_at1, __pyx_n_s_at2, __pyx_n_s_mem, __pyx_n_s_body, __pyx_n_s_atlist, __pyx_n_s_dim_allowed, __pyx_n_s_at_super); if (unlikely(!__pyx_tuple__9)) __PYX_ERR(0, 61, __pyx_L1_error)
+  __pyx_tuple__9 = PyTuple_Pack(26, __pyx_n_s_phiobj, __pyx_n_s_dim, __pyx_n_s_dist_cutoff, __pyx_n_s_bodycount, __pyx_n_s_dist_cut_twobody, __pyx_n_s_dist_array, __pyx_n_s_atomlist, __pyx_n_s_atomlist1, __pyx_n_s_compactlist, __pyx_n_s_atoms, __pyx_n_s_nat, __pyx_n_s_nonzero_atoms, __pyx_n_s_a, __pyx_n_s_i, __pyx_n_s_at_prim, __pyx_n_s_d, __pyx_n_s_natsuper, __pyx_n_s_current, __pyx_n_s_insidecutoff, __pyx_n_s_at1, __pyx_n_s_at2, __pyx_n_s_mem, __pyx_n_s_body, __pyx_n_s_atlist, __pyx_n_s_dim_allowed, __pyx_n_s_at_super); if (unlikely(!__pyx_tuple__9)) __PYX_ERR(0, 64, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__9);
   __Pyx_GIVEREF(__pyx_tuple__9);
-  __pyx_codeobj__10 = (PyObject*)__Pyx_PyCode_New(5, 0, 0, 26, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__9, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_find_nonzero_highdim_pyx, __pyx_n_s_find_nonzero_highdim, 61, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__10)) __PYX_ERR(0, 61, __pyx_L1_error)
+  __pyx_codeobj__10 = (PyObject*)__Pyx_PyCode_New(5, 0, 0, 26, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__9, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_find_nonzero_highdim_pyx, __pyx_n_s_find_nonzero_highdim, 64, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__10)) __PYX_ERR(0, 64, __pyx_L1_error)
   __Pyx_RefNannyFinishContext();
   return 0;
   __pyx_L1_error:;
@@ -9460,175 +9463,175 @@ if (!__Pyx_RefNanny) {
   if (__Pyx_patch_abc() < 0) __PYX_ERR(0, 1, __pyx_L1_error)
   #endif
 
-  /* "find_nonzero_highdim.pyx":3
- * #!/usr/bin/evn python
+  /* "find_nonzero_highdim.pyx":6
+ * #define NPY_NO_DEPRECATED_API NPY_1_7_API_VERSION
  * 
  * import resource             # <<<<<<<<<<<<<<
  * import sys
  * import numpy as np
  */
-  __pyx_t_2 = __Pyx_ImportDottedModule(__pyx_n_s_resource, NULL); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 3, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_ImportDottedModule(__pyx_n_s_resource, NULL); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 6, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_resource, __pyx_t_2) < 0) __PYX_ERR(0, 3, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_resource, __pyx_t_2) < 0) __PYX_ERR(0, 6, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "find_nonzero_highdim.pyx":4
+  /* "find_nonzero_highdim.pyx":7
  * 
  * import resource
  * import sys             # <<<<<<<<<<<<<<
  * import numpy as np
  * cimport numpy as np
  */
-  __pyx_t_2 = __Pyx_ImportDottedModule(__pyx_n_s_sys, NULL); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 4, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_ImportDottedModule(__pyx_n_s_sys, NULL); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 7, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_sys, __pyx_t_2) < 0) __PYX_ERR(0, 4, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_sys, __pyx_t_2) < 0) __PYX_ERR(0, 7, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "find_nonzero_highdim.pyx":5
+  /* "find_nonzero_highdim.pyx":8
  * import resource
  * import sys
  * import numpy as np             # <<<<<<<<<<<<<<
  * cimport numpy as np
  * from gauss_c import theirgauss
  */
-  __pyx_t_2 = __Pyx_ImportDottedModule(__pyx_n_s_numpy, NULL); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 5, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_ImportDottedModule(__pyx_n_s_numpy, NULL); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 8, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_np, __pyx_t_2) < 0) __PYX_ERR(0, 5, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_np, __pyx_t_2) < 0) __PYX_ERR(0, 8, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "find_nonzero_highdim.pyx":7
+  /* "find_nonzero_highdim.pyx":10
  * import numpy as np
  * cimport numpy as np
  * from gauss_c import theirgauss             # <<<<<<<<<<<<<<
  * import time
  * import copy as copy
  */
-  __pyx_t_2 = PyList_New(1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 7, __pyx_L1_error)
+  __pyx_t_2 = PyList_New(1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 10, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_INCREF(__pyx_n_s_theirgauss);
   __Pyx_GIVEREF(__pyx_n_s_theirgauss);
-  if (__Pyx_PyList_SET_ITEM(__pyx_t_2, 0, __pyx_n_s_theirgauss)) __PYX_ERR(0, 7, __pyx_L1_error);
-  __pyx_t_3 = __Pyx_Import(__pyx_n_s_gauss_c, __pyx_t_2, 0); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 7, __pyx_L1_error)
+  if (__Pyx_PyList_SET_ITEM(__pyx_t_2, 0, __pyx_n_s_theirgauss)) __PYX_ERR(0, 10, __pyx_L1_error);
+  __pyx_t_3 = __Pyx_Import(__pyx_n_s_gauss_c, __pyx_t_2, 0); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 10, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  __pyx_t_2 = __Pyx_ImportFrom(__pyx_t_3, __pyx_n_s_theirgauss); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 7, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_ImportFrom(__pyx_t_3, __pyx_n_s_theirgauss); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 10, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_theirgauss, __pyx_t_2) < 0) __PYX_ERR(0, 7, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_theirgauss, __pyx_t_2) < 0) __PYX_ERR(0, 10, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "find_nonzero_highdim.pyx":8
+  /* "find_nonzero_highdim.pyx":11
  * cimport numpy as np
  * from gauss_c import theirgauss
  * import time             # <<<<<<<<<<<<<<
  * import copy as copy
  * import gaussian_single
  */
-  __pyx_t_3 = __Pyx_ImportDottedModule(__pyx_n_s_time, NULL); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 8, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_ImportDottedModule(__pyx_n_s_time, NULL); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 11, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_time, __pyx_t_3) < 0) __PYX_ERR(0, 8, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_time, __pyx_t_3) < 0) __PYX_ERR(0, 11, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "find_nonzero_highdim.pyx":9
+  /* "find_nonzero_highdim.pyx":12
  * from gauss_c import theirgauss
  * import time
  * import copy as copy             # <<<<<<<<<<<<<<
  * import gaussian_single
  * import math
  */
-  __pyx_t_3 = __Pyx_ImportDottedModule(__pyx_n_s_copy, NULL); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 9, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_ImportDottedModule(__pyx_n_s_copy, NULL); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 12, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_copy, __pyx_t_3) < 0) __PYX_ERR(0, 9, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_copy, __pyx_t_3) < 0) __PYX_ERR(0, 12, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "find_nonzero_highdim.pyx":10
+  /* "find_nonzero_highdim.pyx":13
  * import time
  * import copy as copy
  * import gaussian_single             # <<<<<<<<<<<<<<
  * import math
  * cimport cython
  */
-  __pyx_t_3 = __Pyx_ImportDottedModule(__pyx_n_s_gaussian_single, NULL); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 10, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_ImportDottedModule(__pyx_n_s_gaussian_single, NULL); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 13, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_gaussian_single, __pyx_t_3) < 0) __PYX_ERR(0, 10, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_gaussian_single, __pyx_t_3) < 0) __PYX_ERR(0, 13, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "find_nonzero_highdim.pyx":11
+  /* "find_nonzero_highdim.pyx":14
  * import copy as copy
  * import gaussian_single
  * import math             # <<<<<<<<<<<<<<
  * cimport cython
  * from cpython cimport bool
  */
-  __pyx_t_3 = __Pyx_ImportDottedModule(__pyx_n_s_math, NULL); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 11, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_ImportDottedModule(__pyx_n_s_math, NULL); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 14, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_math, __pyx_t_3) < 0) __PYX_ERR(0, 11, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_math, __pyx_t_3) < 0) __PYX_ERR(0, 14, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "find_nonzero_highdim.pyx":22
+  /* "find_nonzero_highdim.pyx":25
  * #####from phi_prim_usec import phi
  * 
  * DTYPE=np.float64             # <<<<<<<<<<<<<<
  * DTYPE_complex=complex #np.complex
  * DTYPE_int=int #np.int
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_np); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 22, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_np); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 25, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_float64); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 22, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_float64); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 25, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_DTYPE, __pyx_t_2) < 0) __PYX_ERR(0, 22, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_DTYPE, __pyx_t_2) < 0) __PYX_ERR(0, 25, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "find_nonzero_highdim.pyx":23
+  /* "find_nonzero_highdim.pyx":26
  * 
  * DTYPE=np.float64
  * DTYPE_complex=complex #np.complex             # <<<<<<<<<<<<<<
  * DTYPE_int=int #np.int
  * DTYPE_single=np.float32
  */
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_DTYPE_complex, ((PyObject *)(&PyComplex_Type))) < 0) __PYX_ERR(0, 23, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_DTYPE_complex, ((PyObject *)(&PyComplex_Type))) < 0) __PYX_ERR(0, 26, __pyx_L1_error)
 
-  /* "find_nonzero_highdim.pyx":24
+  /* "find_nonzero_highdim.pyx":27
  * DTYPE=np.float64
  * DTYPE_complex=complex #np.complex
  * DTYPE_int=int #np.int             # <<<<<<<<<<<<<<
  * DTYPE_single=np.float32
  * 
  */
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_DTYPE_int, ((PyObject *)(&PyInt_Type))) < 0) __PYX_ERR(0, 24, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_DTYPE_int, ((PyObject *)(&PyInt_Type))) < 0) __PYX_ERR(0, 27, __pyx_L1_error)
 
-  /* "find_nonzero_highdim.pyx":25
+  /* "find_nonzero_highdim.pyx":28
  * DTYPE_complex=complex #np.complex
  * DTYPE_int=int #np.int
  * DTYPE_single=np.float32             # <<<<<<<<<<<<<<
  * 
  * #DTYPE_int_small=np.int8
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_np); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 25, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_np); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 28, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_float32); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 25, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_float32); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 28, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_DTYPE_single, __pyx_t_3) < 0) __PYX_ERR(0, 25, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_DTYPE_single, __pyx_t_3) < 0) __PYX_ERR(0, 28, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "find_nonzero_highdim.pyx":61
+  /* "find_nonzero_highdim.pyx":64
  * 
  * 
  * def find_nonzero_highdim( phiobj, int dim, float dist_cutoff, int bodycount, float dist_cut_twobody):             # <<<<<<<<<<<<<<
  * #Find the atom combinations of a given dimension that are within a cutoff radius
  * 
  */
-  __pyx_t_3 = __Pyx_CyFunction_New(&__pyx_mdef_20find_nonzero_highdim_1find_nonzero_highdim, 0, __pyx_n_s_find_nonzero_highdim, NULL, __pyx_n_s_find_nonzero_highdim, __pyx_d, ((PyObject *)__pyx_codeobj__10)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 61, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_CyFunction_New(&__pyx_mdef_20find_nonzero_highdim_1find_nonzero_highdim, 0, __pyx_n_s_find_nonzero_highdim, NULL, __pyx_n_s_find_nonzero_highdim, __pyx_d, ((PyObject *)__pyx_codeobj__10)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 64, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_find_nonzero_highdim, __pyx_t_3) < 0) __PYX_ERR(0, 61, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_find_nonzero_highdim, __pyx_t_3) < 0) __PYX_ERR(0, 64, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
   /* "find_nonzero_highdim.pyx":1
  * #!/usr/bin/evn python             # <<<<<<<<<<<<<<
  * 
- * import resource
+ * #distutils: extra_compile_args=-fstack-protector
  */
   __pyx_t_3 = __Pyx_PyDict_NewPresized(0); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 1, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);

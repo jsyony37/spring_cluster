@@ -28,18 +28,10 @@ if USE_CYTHON == True or USE_CYTHON == "auto":
 
 
 if USE_CYTHON:
-    #    extensions = [
-    #        Extension(
-    #            filename,                    # Module name
-    #            sources=[filename+".pyx"],      # Cython source file
-    #            extra_compile_args=["-I/Users/cpark21/miniconda3/lib/python3.9/site-packages/numpy/core/include"],  # Include path to NumPy's header files
-    #        )
-    #    ]
-    #    setup(ext_modules=cythonize(extensions))
-    setup(ext_modules=cythonize(filename + ".pyx"))
+#    setup(ext_modules=cythonize(filename + ".pyx"))
+    setup(ext_modules=[Extension(filename, [filename + ".pyx"],extra_compile_args=['-fstack-protector'])])    
 else:
     print("COMPILING C VERSION")
-    setup(ext_modules=[Extension(filename, [filename + ".c"])])
-
+    setup(ext_modules=[Extension(filename, [filename + ".c"],extra_compile_args=['-fstack-protector'])])
 
 # done
